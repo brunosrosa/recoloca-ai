@@ -1,14 +1,16 @@
 # GUIA AVANÇADO PARA DESENVOLVIMENTO SOLO COM AGENTES DE IA MENTORES (Aplicado ao Projeto Recoloca.ai)
 
-**Versão:** 2.0
+**Versão:** 2.1
 
 **Data de Criação:** 28 de maio de 2025
 
+**Data de Última Atualização:** 29 de maio de 2025
+
 **Baseado em:**
 
-- [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.2)
-- [[02_Requisitos/ERS.md]] (v0.3)
-- Guia Avançado v1 (documento original)
+- [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3)
+- [[02_Requisitos/ERS.md]] (v0.5)
+- Guia Avançado v2.0 (documento anterior)
 
 ## Seção 1: Introdução – A Nova Fronteira do Desenvolvimento Solo com Mentoria de IA
 
@@ -26,13 +28,13 @@ Enquanto o [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] define o "o quê" e
 
 ### 1.3. O Projeto Recoloca.ai como Campo de Provas
 
-O **Recoloca.ai**, conforme detalhado na [[02_Requisitos/ERS.md]], visa oferecer:
+O **Recoloca.ai**, conforme detalhado na [[02_Requisitos/ERS.md]] (v0.5), visa oferecer:
 
 1.  **Gerenciamento Inteligente de Candidaturas (Kanban)**
 2.  **Otimização de Currículos Potencializada por IA**
 3.  **Assistente de IA para Coaching e Suporte Contextualizado**
 
-Desenvolvido com **Flutter (PWA)**, **Python/FastAPI (Backend)**, **Supabase (DB/Auth)** e **Google Gemini (LLM via OpenRouter)**, o projeto apresenta desafios inerentes ao desenvolvimento solo, como a amplitude da stack e a complexidade das funcionalidades de IA (ex: parsing de PDF, análise semântica). Este guia demonstrará como a mentoria de IA pode mitigar esses desafios.
+Desenvolvido com **Flutter (PWA)**, **Python/FastAPI (Backend)**, **Supabase (DB/Auth)** e **Google Gemini (LLM via OpenRouter)**, o projeto apresenta desafios inerentes ao desenvolvimento solo, como a amplitude da stack e a complexidade das funcionalidades de IA (ex: parsing de PDF, análise semântica, importação de vagas via link com LLM). Este guia demonstrará como a mentoria de IA pode mitigar esses desafios.
 
 ## Seção 2: O Framework de Desenvolvimento Solo Aumentado por IA
 
@@ -50,7 +52,7 @@ O modelo "Desenvolvimento Solo Ágil Aumentado por IA" se baseia nos seguintes p
 
 ### 2.2. O Papel do Desenvolvedor "Maestro"
 
-Conforme detalhado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#2.2. Papel do Desenvolvedor como "Maestro"]], o Maestro é responsável por:
+Conforme detalhado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 2.2), o Maestro é responsável por:
 
 -   Definir a **visão estratégica** e priorizar o backlog.
 -   **Orquestrar os Agentes de IA Mentores**, projetando e refinando prompts.
@@ -64,11 +66,11 @@ Conforme detalhado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#2.2. Papel
 
 ### 2.3. O SDLC Ágil Adaptado
 
-O Ciclo de Vida de Desenvolvimento de Software (SDLC) Ágil é adaptado para integrar intensivamente os Agentes de IA Mentores:
+O Ciclo de Vida de Desenvolvimento de Software (SDLC) Ágil é adaptado para integrar intensivamente os Agentes de IA Mentores, conforme descrito no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 2.3):
 
 1.  **Concepção e Refinamento:** Maestro e `@AgenteMentorPO` colaboram na criação de Histórias de Usuário (HUs) e Critérios de Aceite (ACs) a partir da [[02_Requisitos/ERS.md]].
 2.  **Design (HLD/LLD/API/UX/UI):** Agentes como `@AgenteMentorArquitetoHLD`, `@AgenteMentorArquitetoLLD`, `@AgenteMentorAPI`, e `@AgenteMentorUIDesign` auxiliam na criação de artefatos de design (diagramas, especificações, mockups), validados pelo Maestro.
-3.  **Desenvolvimento:** `@AgentesMentoresDev` (Flutter, FastAPI, JS), guiados pelo `@AgenteOrquestrador` e LLDs/APIs, geram código. O Maestro revisa, depura, refatora e implementa partes críticas.
+3.  **Desenvolvimento:** `@AgentesMentoresDev` (Flutter, FastAPI), guiados pelo `@AgenteOrquestrador` e LLDs/APIs, geram código. O Maestro revisa, depura, refatora e implementa partes críticas. O `@AgenteMentorDevJS` atuará em Pós-MVP para a extensão.
 4.  **Testes:** `@AgenteMentorQA` auxilia na geração de planos e casos de teste. O Maestro supervisiona e valida a qualidade.
 5.  **Documentação Contínua:** `@AgenteMentorDocumentacao` auxilia na manutenção da "Documentação Viva".
 6.  **Deploy e Operações:** `@AgenteMentorDevOps` (conceitual, implementado via scripts e **Pipedream**) auxilia na automação de CI/CD.
@@ -84,7 +86,7 @@ Ele é a ponte entre a "Documentação Viva" (acessada via RAG), as ideias do Ma
 
 ### 3.2. Funcionalidades do `@AgenteOrquestrador`
 
-Conforme delineado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#3.1. O Agente Orquestrador de Prompts (Implementação no Trae IDE)]]:
+Conforme delineado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 3.1):
 
 1.  **Análise da Documentação Existente (via RAG):** Processa documentos chave do projeto (ex: [[02_Requisitos/ERS.md]], [[03_Arquitetura_e_Design/HLD.md]]) para extrair contexto.
 2.  **Geração de Perguntas Poderosas:** Formula perguntas estratégicas para clarificar ambiguidades, identificar informações faltantes e definir escopo.
@@ -103,13 +105,13 @@ Este agente não apenas traduz, mas **refina os requisitos** ao forçar uma aná
 
 A metodologia se apoia em um conjunto de Agentes de IA Mentores especializados, configurados no **Trae IDE** e acessando modelos **Google Gemini Pro/Flash** via **OpenRouter**. Cada agente possui uma persona, habilidades (definidas por prompt base e regras em [[.trae/rules/project_rules.md]]) e utiliza templates de [[05_Prompts/Templates_Base/]]. O RAG fornece o contexto específico do projeto.
 
-A referência primária para seus papéis é a **Tabela Essencial** (ver Apêndice B) e o detalhamento no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#3.2. Detalhamento dos Agentes Mentores por Fase do SDLC]].
+A referência primária para seus papéis é a **Tabela Essencial** (ver Apêndice B) e o detalhamento no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 3.2).
 
-### 4.1. Agentes por Fase do SDLC (Resumo)
+### 4.1. Agentes por Fase do SDLC (Resumo Alinhado com ERS v0.5 e Plano Mestre v1.3)
 
 -   `@AgenteMentorPO` **(Product Owner):**
     -   **Foco:** Definição e Refinamento de Requisitos.
-    -   **Tarefas:** Gerar HUs (em [[02_Requisitos/HU_AC/]]) e ACs a partir da [[02_Requisitos/ERS.md]].
+    -   **Tarefas:** Gerar HUs (em [[02_Requisitos/HU_AC/]]) e ACs a partir da [[02_Requisitos/ERS.md]] (v0.5).
 -   `@AgenteMentorArquitetoHLD` **(Arquiteto de Software - HLD):**
     -   **Foco:** Design de Alto Nível.
     -   **Tarefas:** Criar/otimizar [[03_Arquitetura_e_Design/HLD.md]], gerar diagramas de arquitetura (Mermaid.js).
@@ -125,7 +127,7 @@ A referência primária para seus papéis é a **Tabela Essencial** (ver Apêndi
 -   `@AgenteMentorDevFlutter` **(Desenvolvedor Flutter/Dart):**
     -   **Foco:** Desenvolvimento Frontend (PWA).
     -   **Tarefas:** Criar widgets, lógica de UI, gerenciamento de estado (Provider/Riverpod), chamadas à API, testes.
--   `@AgenteMentorDevJS` **(Desenvolvedor de Extensão Chrome):**
+-   `@AgenteMentorDevJS` **(Desenvolvedor de Extensão Chrome - Pós-MVP):**
     -   **Foco:** Desenvolvimento da Extensão.
     -   **Tarefas:** Lógica de extração de dados, comunicação com backend, UI da extensão.
 -   `@AgenteMentorQA` **(Analista de QA/Testes):**
@@ -148,12 +150,12 @@ Para que os Agentes de IA Mentores sejam eficazes, eles precisam de acesso a inf
 
 ### 5.1. A Estratégia RAG do Recoloca.ai
 
-Conforme detalhado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#5.1. Estratégia RAG para o Recoloca.ai]], o sistema RAG é crucial para fornecer contexto específico do projeto aos LLMs.
+Conforme detalhado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 5.1), o sistema RAG é crucial para fornecer contexto específico do projeto aos LLMs.
 
 -   **Base de Conhecimento:** Documentos Markdown do projeto (ERS, HLD, LLDs, este Guia, etc.) armazenados em [[08_Knowledge_Base_RAG_Sources/]].
 -   **Tecnologias:**
     -   **Framework:** **LangChain** (Python) para orquestrar o pipeline RAG.
-    -   **Vector Store:** **FAISS** para uma implementação local e eficiente.
+    -   **Vector Store:** **FAISS** para uma implementação local e eficiente. Considerar Supabase pgvector como evolução Pós-MVP.
     -   **Embedding Model:** Um modelo como `all-MiniLM-L6-v2` (via Sentence Transformers).
 -   **Processo de Indexação:** Um script ([[scripts/rag_indexer.py]]) monitora alterações na base de conhecimento, carrega, divide em chunks, gera embeddings e atualiza o índice FAISS.
 -   **Processo de Consulta:** Agentes no Trae IDE, via `@AgenteOrquestrador` ou diretamente, consultam o RAG. A consulta é convertida em embedding, busca os chunks mais relevantes, e estes são injetados no prompt do LLM.
@@ -163,105 +165,115 @@ Conforme detalhado no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#5.1. Estra
 
 A "Documentação Viva" é o coração da gestão de conhecimento do projeto.
 
--   **Ferramenta Central:** **Obsidian**, para criar, organizar e interligar toda a documentação (Planos, ERS, HLD, LLDs, ADRs, Style Guide, API Specs, Prompts, Kanban).
+-   **Ferramenta Central:** **Obsidian**, para criar, organizar e interligar toda a documentação.
 -   **Controle de Versão:** **Git** (repositório no GitHub), com o vault do Obsidian sendo versionado. O plugin "Obsidian Git" facilita o processo.
--   **Atualização Contínua:** A documentação é um artefato dinâmico, refletindo o estado atual do projeto. O `@AgenteMentorDocumentacao` auxilia, e o Maestro é o curador final.
+-   **Atualização Contínua:** A documentação é um artefato dinâmico. O `@AgenteMentorDocumentacao` auxilia, e o Maestro é o curador final.
 -   **Estrutura:** Organizada conforme [[Apêndice A: Estrutura das Pastas]] para facilitar a navegação e o processamento pelo RAG.
 
 ### 5.3. Ferramentas de Suporte e Integração
 
 -   **Trae IDE:** Ambiente central para codificação e interação com os Agentes Mentores. Suas "Rules" ([[.trae/rules/user_rules.md]], [[.trae/rules/project_rules.md]]) customizam o comportamento dos agentes.
--   **OpenRouter:** Gateway para acesso flexível e gerenciado aos modelos Gemini, permitindo testes e otimização de custos.
+-   **OpenRouter:** Gateway para acesso flexível e gerenciado aos modelos Gemini.
 -   **Pipedream:** Plataforma de automação para CI/CD (deploy em Vercel/Render), gatilhos para reindexar o RAG, notificações, etc.
 -   **FlutterFlow:** Opcional, para prototipagem rápida de UI pelo `@AgenteMentorDevFlutter` ou Maestro.
 
 A combinação dessas ferramentas e estratégias garante que os Agentes de IA operem com o máximo de informação relevante, mantendo-se "afiados" e alinhados com a evolução do projeto Recoloca.ai.
+
 ## Seção 6: O Processo de Human-in-the-Loop (HITL) Evolutivo
 
-O **Human-in-the-Loop (HITL)** é um componente não negociável desta metodologia, garantindo qualidade, segurança, alinhamento ético e aprendizado contínuo tanto para o Maestro quanto para os Agentes de IA. Conforme descrito no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#6.2. Modelo de Human-in-the-Loop (HITL) Evolutivo para o Recoloca.ai]], o processo HITL evoluirá em fases:
+O **Human-in-the-Loop (HITL)** é um componente não negociável desta metodologia, garantindo qualidade, segurança, alinhamento ético e aprendizado contínuo tanto para o Maestro quanto para os Agentes de IA. Conforme descrito no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 6.2), o processo HITL evoluirá em fases:
+
 ### 6.1. Fase 1: Supervisão Intensa e Detalhada
 
 -   **Aplicabilidade:** MVP Inicial, novas funcionalidades críticas, ou quando um agente é usado para uma tarefa inédita.
--   **Descrição:** O Maestro revisa minuciosamente **todo o output significativo** dos Agentes de IA (HUs, ACs, diagramas, especificações, blocos de código, casos de teste).
--   **Foco:** Validação rigorosa, correção, e aprendizado sobre como otimizar prompts e guiar os agentes.
+-   **Descrição:** O Maestro revisa minuciosamente **todo o output significativo** dos Agentes de IA.
+-   **Foco:** Validação rigorosa, correção, e aprendizado sobre como otimizar prompts.
 -   **Critérios de Confiança:** Baixa a média confiança inicial.
--   **Feedback para Agentes:** Detalhado, explicando correções e o porquê, para "treinar" implicitamente os agentes (refinando seus prompts base, templates ou as regras no Trae IDE).
+-   **Feedback para Agentes:** Detalhado, para "treinar" implicitamente os agentes.
+
 ### 6.2. Fase 2: Autonomia Guiada e Revisão por Amostragem
 
--   **Aplicabilidade:** Funcionalidades maduras, tarefas repetitivas onde os agentes já demonstraram proficiência.
--   **Descrição:** O Maestro foca a revisão detalhada em áreas de **maior risco, complexidade ou impacto no usuário**. Para tarefas onde os agentes são consistentemente confiáveis (ex: gerar CRUD básico a partir de um LLD claro), a revisão pode ser por amostragem ou focada em pontos chave (integrações, lógica de segurança).
--   **Foco:** Eficiência, delegação com confiança, monitoramento de métricas de qualidade (bugs, retrabalho).
--   **Critérios de Confiança:** Média a alta confiança em agentes específicos para tarefas bem definidas.
--   **Feedback para Agentes:** Mais focado em exceções ou oportunidades de melhoria incremental.
+-   **Aplicabilidade:** Funcionalidades maduras, tarefas repetitivas.
+-   **Descrição:** O Maestro foca a revisão detalhada em áreas de **maior risco**. Para tarefas confiáveis, revisão por amostragem.
+-   **Foco:** Eficiência, delegação com confiança, monitoramento de métricas.
+-   **Critérios de Confiança:** Média a alta confiança em agentes específicos.
+-   **Feedback para Agentes:** Focado em exceções ou melhorias incrementais.
+
 ### 6.3. Fase 3: Controle Supervisor e Foco Estratégico
 
--   **Aplicabilidade:** Ideal de longo prazo, quando os agentes e o sistema RAG estão altamente maduros.
--   **Descrição:** O Maestro atua mais como um **revisor final de alto nível** (arquitetura global, UX, estratégia de produto) e tomador de decisões estratégicas. Agentes operam com maior autonomia em seus domínios de especialização.
--   **Foco:** Inovação, pesquisa, estratégia de produto, e mentoria de alto nível para os agentes (refinando suas especializações e a base de conhecimento RAG).
--   **Critérios de Confiança:** Alta confiança, baseada em histórico de desempenho e métricas robustas.
--   **Feedback para Agentes:** Focado em refinar a base de conhecimento RAG, ajustar "meta-prompts" ou regras de alto nível para os agentes.
+-   **Aplicabilidade:** Ideal de longo prazo, com agentes e RAG maduros.
+-   **Descrição:** O Maestro atua como **revisor final de alto nível**. Agentes operam com maior autonomia.
+-   **Foco:** Inovação, estratégia de produto, mentoria de alto nível para os agentes.
+-   **Critérios de Confiança:** Alta confiança, baseada em histórico e métricas.
+-   **Feedback para Agentes:** Focado em refinar a base RAG e regras de alto nível.
 
-O feedback fornecido pelo Maestro durante as revisões HITL é crucial. Ele não apenas valida o trabalho, mas também serve como dados para o **refinamento contínuo** dos [[05_Prompts/Templates_Base/]], das regras em [[.trae/rules/]], e do conteúdo da base RAG, melhorando o desempenho futuro dos agentes e fortalecendo a parceria Maestro-IA.
+O feedback do Maestro durante o HITL é crucial para o **refinamento contínuo** dos [[05_Prompts/Templates_Base/]], das regras em [[.trae/rules/]], e da base RAG.
+
 ## Seção 7: Considerações para o Desenvolvedor Solo Neurodivergente
 
 A metodologia de "Desenvolvimento Solo Ágil Aumentado por IA" foi concebida levando em consideração as características de um desenvolvedor **neurodivergente**, especificamente com **TDAH (Transtorno do Déficit de Atenção com Hiperatividade)** e **Altas Habilidades/Superdotação (AH/SD)** – um perfil também conhecido como Dupla Excepcionalidade (2e). O objetivo é criar um ambiente de trabalho que potencialize os pontos fortes e mitigue os desafios associados.
+
 ### 7.1. Alinhando a Metodologia com o Perfil Neurodivergente
 
--   **Hiperfoco e Variedade:** A capacidade de alternar entre o papel de "Maestro" (estratégia, design, revisão) e a execução de tarefas específicas (codificação manual de partes complexas), juntamente com a interação com múltiplos Agentes de IA especializados, oferece a variedade e o nível de engajamento que podem sustentar o hiperfoco produtivo.
+-   **Hiperfoco e Variedade:** A alternância entre papéis (Maestro, executor) e a interação com múltiplos Agentes de IA oferece variedade e engajamento.
 -   **Estrutura e Clareza:**
-    -   A **"Documentação Viva" no Obsidian**, com sua estrutura de links e organização visual, serve como um "segundo cérebro" externo, ajudando a organizar pensamentos e informações.
-    -   O **`@AgenteOrquestrador`** auxilia na quebra de tarefas complexas em prompts menores e mais gerenciáveis, fornecendo clareza e reduzindo a sobrecarga cognitiva inicial.
-    -   O **Kanban no Obsidian** ([[KANBAN_Recoloca_AI.md]]) oferece uma visualização clara do progresso e das prioridades.
--   **Redução de Tarefas Repetitivas e Monótonas:** A delegação de tarefas como geração de boilerplate, documentação inicial e casos de teste básicos para os Agentes de IA libera o Maestro de atividades que podem ser particularmente desmotivadoras para quem tem TDAH.
--   **Feedback Imediato e Iteração Rápida:** O ciclo de interação com os agentes, a revisão HITL e os deploys frequentes (CI/CD) proporcionam o feedback rápido que é benéfico para manter o engajamento e a motivação.
--   **Estímulo Intelectual:** A colaboração com Agentes de IA como "sparring partners", a necessidade de engenharia de prompt criativa e a resolução de problemas complexos oferecem o estímulo intelectual que indivíduos com AH/SD frequentemente buscam.
+    -   A **"Documentação Viva" no Obsidian** serve como "segundo cérebro".
+    -   O **`@AgenteOrquestrador`** auxilia na quebra de tarefas.
+    -   O **Kanban no Obsidian** ([[KANBAN_Recoloca_AI.md]]) oferece visualização clara.
+-   **Redução de Tarefas Repetitivas:** Delegação para Agentes de IA libera o Maestro.
+-   **Feedback Imediato e Iteração Rápida:** Mantém engajamento e motivação.
+-   **Estímulo Intelectual:** Colaboração com IA, engenharia de prompt e resolução de problemas complexos.
+
 ### 7.2. Ferramentas e Técnicas de Suporte
 
--   **Obsidian:** Além de ser a base da "Documentação Viva", suas funcionalidades de linking, grafos e plugins (Kanban, Git) ajudam na organização, visualização de conexões e gerenciamento de fluxo de trabalho.
--   **Trae IDE:** A capacidade de criar agentes customizados e definir regras ([[.trae/rules/user_rules.md]], [[.trae/rules/project_rules.md]]) permite que o Maestro molde o comportamento da IA para suas necessidades específicas, reduzindo o atrito na interação.
--   **Pipedream:** A automação de fluxos de trabalho (CI/CD, atualizações do RAG) reduz a carga de tarefas administrativas e propensas a esquecimento.
--   **Técnicas de Gerenciamento de Tempo:** Embora não seja parte do guia de IA, o Maestro pode integrar técnicas como Pomodoro ou time blocking, com o Kanban servindo de base para a definição dessas sessões de trabalho.
--   **Minimização de Distrações:** O ambiente de desenvolvimento solo, combinado com o foco proporcionado pela interação estruturada com os agentes, pode ajudar a minimizar distrações externas.
+-   **Obsidian:** Organização, linking, grafos, plugins (Kanban, Git).
+-   **Trae IDE:** Agentes customizados e regras para moldar o comportamento da IA.
+-   **Pipedream:** Automação de fluxos de trabalho.
+-   **Técnicas de Gerenciamento de Tempo:** Pomodoro, time blocking, com Kanban como base.
+-   **Minimização de Distrações:** Ambiente de desenvolvimento solo e interação estruturada com agentes.
+
 ### 7.3. O Papel da IA como Suporte Executivo
 
-Para o desenvolvedor com desafios nas funções executivas (comuns no TDAH), os Agentes de IA podem, indiretamente, oferecer suporte:
+Para o desenvolvedor com desafios nas funções executivas:
 
--   `@AgenteOrquestrador`: Ajuda no planejamento e na quebra de tarefas.
--   `@AgenteMentorPO`: Auxilia na manutenção da perspectiva do usuário e na priorização.
--   `@AgenteMentorDocumentacao`: Reduz a carga da tarefa de documentar, que pode ser difícil de iniciar ou manter.
+-   `@AgenteOrquestrador`: Ajuda no planejamento e quebra de tarefas.
+-   `@AgenteMentorPO`: Auxilia na manutenção da perspectiva do usuário e priorização.
+-   `@AgenteMentorDocumentacao`: Reduz a carga da tarefa de documentar.
 
-Ao reconhecer e integrar proativamente as necessidades do perfil neurodivergente na metodologia e na escolha de ferramentas, o objetivo é criar um sistema de desenvolvimento que seja não apenas produtivo, mas também **sustentável e gratificante** para o Maestro.
+Ao reconhecer e integrar proativamente as necessidades do perfil neurodivergente, o objetivo é criar um sistema de desenvolvimento **produtivo, sustentável e gratificante**.
+
 ## Seção 8: Conclusão e Recomendações Metodológicas
 
-O "Guia Avançado para Desenvolvimento Solo com Agentes de IA Mentores", aplicado ao projeto Recoloca.ai, representa uma **abordagem inovadora e pragmática** para a construção de software por um único indivíduo. Ao posicionar o desenvolvedor como um **"Maestro"** e os Agentes de IA como **"Mentores" especializados**, esta metodologia visa amplificar drasticamente as capacidades humanas, permitindo a criação de produtos complexos e de alta qualidade.
+O "Guia Avançado para Desenvolvimento Solo com Agentes de IA Mentores", aplicado ao projeto Recoloca.ai, representa uma **abordagem inovadora e pragmática**. Ao posicionar o desenvolvedor como um **"Maestro"** e os Agentes de IA como **"Mentores"**, esta metodologia visa amplificar as capacidades humanas.
+
 ### 8.1. Síntese dos Benefícios
 
--   **Aumento de Produtividade:** Automação de tarefas repetitivas e aceleração de fases como design, codificação e testes.
--   **Ampliação de Expertise:** Acesso a "especialistas virtuais" em diversas áreas, mitigando lacunas de conhecimento do desenvolvedor solo.
--   **Melhoria da Qualidade:** Processos de HITL, revisão por IA (segurança, padrões) e geração assistida de testes contribuem para um produto mais robusto.
--   **Foco no Valor Agregado:** O Maestro pode se concentrar em aspectos estratégicos, criativos e na experiência do usuário.
--   **Gestão de Conhecimento Eficaz:** A "Documentação Viva" e o sistema RAG garantem consistência e contexto para toda a "equipe" (Maestro e Agentes).
--   **Desenvolvimento Sustentável:** Adaptação às necessidades do desenvolvedor solo, incluindo considerações para perfis neurodivergentes, promovendo bem-estar e engajamento a longo prazo.
+-   **Aumento de Produtividade:** Automação e aceleração.
+-   **Ampliação de Expertise:** Acesso a "especialistas virtuais".
+-   **Melhoria da Qualidade:** Processos HITL, revisão por IA.
+-   **Foco no Valor Agregado:** Maestro em aspectos estratégicos e criativos.
+-   **Gestão de Conhecimento Eficaz:** "Documentação Viva" e RAG.
+-   **Desenvolvimento Sustentável:** Adaptação às necessidades do desenvolvedor solo.
+
 ### 8.2. Recomendações Chave para o Maestro do Recoloca.ai
 
-1.  **Abrace a Iteração Contínua:** Tanto o software quanto a própria metodologia de colaboração com a IA devem evoluir. Esteja aberto a experimentar, aprender e refinar constantemente os prompts, as interações com os agentes e os fluxos de trabalho.
-2.  **Invista na Engenharia de Prompt:** A clareza e a qualidade dos seus prompts são diretamente proporcionais à qualidade do output da IA. Dedique tempo para dominar esta arte, utilizando o `@AgenteOrquestrador` como seu principal aliado.
-3.  **Mantenha a "Documentação Viva" Realmente Viva:** A precisão e atualização da sua base de conhecimento no Obsidian são cruciais para a eficácia do RAG e, consequentemente, dos seus Agentes Mentores.
-4.  **Seja um Curador Ativo do HITL:** Sua supervisão é insubstituível. Adapte o nível de escrutínio conforme a maturidade dos agentes, mas nunca abdique do seu papel crítico de validação e direcionamento.
-5.  **Cultive a Parceria com a IA:** Encare os agentes não como meras ferramentas, mas como colaboradores. Desafie-os, aprenda com eles e permita que eles desafiem suas premissas.
-6.  **Priorize a Segurança e a Ética:** Especialmente ao lidar com dados de usuários e funcionalidades de IA que impactam decisões de carreira, mantenha um olhar crítico sobre segurança, privacidade (LGPD) e mitigação de vieses.
-7.  **Cuide da Sua Energia e Foco:** Utilize as ferramentas e a estrutura desta metodologia para criar um ambiente de trabalho que respeite seus ritmos e potencialize suas capacidades únicas.
+1.  **Abrace a Iteração Contínua:** Software e metodologia devem evoluir.
+2.  **Invista na Engenharia de Prompt:** Clareza e qualidade dos prompts são cruciais.
+3.  **Mantenha a "Documentação Viva" Realmente Viva:** Precisão e atualização da base RAG são essenciais.
+4.  **Seja um Curador Ativo do HITL:** Sua supervisão é insubstituível.
+5.  **Cultive a Parceria com a IA:** Encare os agentes como colaboradores.
+6.  **Priorize a Segurança e a Ética:** Especialmente com dados de usuários e IA.
+7.  **Cuide da Sua Energia e Foco:** Utilize a metodologia para um ambiente de trabalho que respeite seus ritmos.
 
-O sucesso do Recoloca.ai, e de qualquer empreendimento solo aumentado por IA, reside na **sinergia eficaz entre a inteligência humana e a artificial**. Este guia fornece o mapa e as ferramentas; a jornada de maestria é contínua.
+O sucesso do Recoloca.ai reside na **sinergia eficaz entre a inteligência humana e a artificial**.
 
 ---
 ## Apêndice A: Estrutura das Pastas (Referência)
 
-A estrutura de pastas do vault do Obsidian para o projeto Recoloca.ai é fundamental para a organização da "Documentação Viva" e para o funcionamento eficiente do sistema RAG. Ela está detalhada no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] e replicada aqui para referência rápida (pode haver pequenas variações conforme a evolução do projeto):
+A estrutura de pastas do vault do Obsidian para o projeto Recoloca.ai é fundamental para a organização da "Documentação Viva" e para o funcionamento eficiente do sistema RAG. Ela está detalhada no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3) e replicada aqui para referência rápida (pode haver pequenas variações conforme a evolução do projeto):
 
-```
+``` folder structure
 Recoloca.ai/
-
 ├── 00_Gerenciamento_Projeto/
 │ ├── KANBAN_Recoloca_AI.md
 │ └── TAP.md
@@ -314,28 +326,29 @@ Recoloca.ai/
 └── scripts/
 └── rag_indexer.py
 ```
-## Apêndice B: Tabela Essencial - Papéis dos Agentes Mentores de IA (Atualizada)
+## Apêndice B: Tabela Essencial - Papéis dos Agentes Mentores de IA (Atualizada para v2.1)
 
-Esta tabela resume os Agentes de IA Mentores, suas principais responsabilidades e ferramentas/modelos, alinhada com a arquitetura definida no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#3.2. Detalhamento dos Agentes Mentores por Fase do SDLC]] e as tecnologias do Recoloca.ai.
+Esta tabela resume os Agentes de IA Mentores, suas principais responsabilidades e ferramentas/modelos, alinhada com a arquitetura definida no [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3, Seção 3.2) e as tecnologias do Recoloca.ai.
 
 | Fase do SDLC Ágil               | Agente Mentor de IA (Trae IDE) | Principais Tarefas Assistidas para Recoloca.ai                                                                                                                           | Ferramentas/Modelos de IA Chave                                                               | Contexto RAG Primário                                                                                                                           |
 | :------------------------------ | :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Definição de Requisitos**     | `@AgenteMentorPO`              | Gerar Histórias de Usuário e Critérios de Aceite (em [[02_Requisitos/HU_AC/]]) a partir da [[02_Requisitos/ERS.md]], refinar requisitos para clareza da IA.              | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[02_Requisitos/ERS.md]], [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]                                                                     |
-| **Design de Alto Nível (HLD)**  | `@AgenteMentorArquitetoHLD`    | Criar/refinar [[03_Arquitetura_e_Design/HLD.md]], diagramas de arquitetura (Mermaid.js), definir interações entre módulos.                                               | Google Gemini (Pro via OpenRouter), Trae IDE, Mermaid.js                                      | [[02_Requisitos/ERS.md]],  [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]                                                                    |
-| **Design de Baixo Nível (LLD)** | `@AgenteMentorArquitetoLLD`    | Detalhar classes, funções, modelos de dados para módulos em [[03_Arquitetura_e_Design/LLD/]], diagramas de sequência/classes (Mermaid.js).                               | Google Gemini (Pro via OpenRouter), Trae IDE, Mermaid.js                                      | [[03_Arquitetura_e_Design/HLD.md]], [[02_Requisitos/ERS.md]]                                                                                    |
-| **Especificação de API**        | `@AgenteMentorAPI`             | Gerar/manter especificações OpenAPI 3.0 (ex: [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]).                                                         | Google Gemini (Pro via OpenRouter), Trae IDE                                                  | [[02_Requisitos/ERS.md]], [[03_Arquitetura_e_Design/HLD.md]]                                                                                    |
-| **Desenvolvimento Backend**     | `@AgenteMentorDevFastAPI`      | Gerar código Python/FastAPI para endpoints, lógica de negócios, interação com Supabase, testes unitários (pytest).                                                       | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]], [[03_Arquitetura_e_Design/LLD/]], Padrões Seguros                            |
-| **Desenvolvimento Frontend**    | `@AgenteMentorDevFlutter`      | Criar widgets Flutter/Dart, lógica de UI, gerenciamento de estado (Provider/Riverpod), chamadas à API, testes.                                                           | Google Gemini (Pro/Flash via OpenRouter), Trae IDE, (Opcional: FlutterFlow para prototipagem) | [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]], [[03_Arquitetura_e_Design/LLD/]], [[03_Arquitetura_e_Design/STYLE_GUIDE.md]] |
-| **Desenvolvimento Extensão**    | `@AgenteMentorDevJS`           | Implementar lógica de extração de dados (JS), comunicação com backend, UI da extensão.                                                                                   | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[02_Requisitos/ERS.md]] (seção da extensão), [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]                                 |
-| **Testes e QA**                 | `@AgenteMentorQA`              | Gerar planos de teste ([[06_Qualidade_e_Testes/PGQ.md]]), casos de teste (Gherkin em [[06_Qualidade_e_Testes/Casos_de_Teste/]]), scripts de testes unitários/integração. | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[02_Requisitos/ERS.md]], [[02_Requisitos/HU_AC/]], [[03_Arquitetura_e_Design/LLD/]]                                                            |
-| **Documentação**                | `@AgenteMentorDocumentacao`    | Gerar comentários/docstrings, explicar algoritmos, auxiliar na manutenção da "Documentação Viva" e curadoria da base RAG ([[08_Knowledge_Base_RAG_Sources/]]).           | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | Código-fonte, [[02_Requisitos/ERS.md]], [[03_Arquitetura_e_Design/HLD.md]], [[03_Arquitetura_e_Design/LLD/]]                                    |
-| **Segurança**                   | `@AgenteMentorSeguranca`       | Revisar código e design (OWASP Top 10, OWASP LLM Top 10, LGPD), instruir sobre práticas seguras.                                                                         | Google Gemini (Pro via OpenRouter), Trae IDE                                                  | [[02_Requisitos/ERS.md]] (seção de segurança), Padrões de Código Seguro, Documentação OWASP                                                     |
-| **Orquestração de Prompts**     | `@AgenteOrquestrador`          | Analisar documentação (RAG), gerar perguntas esclarecedoras, auxiliar na criação de prompts eficazes para outros agentes.                                                | Google Gemini (Pro via OpenRouter), Trae IDE, LangChain/FAISS (via RAG)                       | Toda a "Documentação Viva", especialmente [[02_Requisitos/ERS.md]] e [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]                          |
+| **Definição de Requisitos** | `@AgenteMentorPO`              | Gerar Histórias de Usuário e Critérios de Aceite (em [[02_Requisitos/HU_AC/]]) a partir da [[02_Requisitos/ERS.md]] (v0.5), refinar requisitos para clareza da IA.              | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[02_Requisitos/ERS.md]] (v0.5), [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3)                                                                     |
+| **Design de Alto Nível (HLD)** | `@AgenteMentorArquitetoHLD`    | Criar/refinar [[03_Arquitetura_e_Design/HLD.md]], diagramas de arquitetura (Mermaid.js), definir interações entre módulos.                                               | Google Gemini (Pro via OpenRouter), Trae IDE, Mermaid.js                                      | [[02_Requisitos/ERS.md]] (v0.5),  [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3)                                                                    |
+| **Design de Baixo Nível (LLD)** | `@AgenteMentorArquitetoLLD`    | Detalhar classes, funções, modelos de dados para módulos em [[03_Arquitetura_e_Design/LLD/]], diagramas de sequência/classes (Mermaid.js).                               | Google Gemini (Pro via OpenRouter), Trae IDE, Mermaid.js                                      | [[03_Arquitetura_e_Design/HLD.md]], [[02_Requisitos/ERS.md]] (v0.5)                                                                                    |
+| **Especificação de API** | `@AgenteMentorAPI`             | Gerar/manter especificações OpenAPI 3.0 (ex: [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]).                                                         | Google Gemini (Pro via OpenRouter), Trae IDE                                                  | [[02_Requisitos/ERS.md]] (v0.5), [[03_Arquitetura_e_Design/HLD.md]]                                                                                    |
+| **Desenvolvimento Backend** | `@AgenteMentorDevFastAPI`      | Gerar código Python/FastAPI para endpoints, lógica de negócios, interação com Supabase, testes unitários (pytest).                                                       | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]], [[03_Arquitetura_e_Design/LLD/]], Padrões Seguros                            |
+| **Desenvolvimento Frontend** | `@AgenteMentorDevFlutter`      | Criar widgets Flutter/Dart, lógica de UI, gerenciamento de estado (Provider/Riverpod), chamadas à API, testes.                                                           | Google Gemini (Pro/Flash via OpenRouter), Trae IDE, (Opcional: FlutterFlow para prototipagem) | [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]], [[03_Arquitetura_e_Design/LLD/]], [[03_Arquitetura_e_Design/STYLE_GUIDE.md]] |
+| **Desenvolvimento Extensão (Pós-MVP)** | `@AgenteMentorDevJS`           | Implementar lógica de extração de dados (JS), comunicação com backend, UI da extensão.                                                                                   | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[02_Requisitos/ERS.md]] (v0.5 - seção da extensão), [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]                                 |
+| **Testes e QA** | `@AgenteMentorQA`              | Gerar planos de teste ([[06_Qualidade_e_Testes/PGQ.md]]), casos de teste (Gherkin em [[06_Qualidade_e_Testes/Casos_de_Teste/]]), scripts de testes unitários/integração. | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | [[02_Requisitos/ERS.md]] (v0.5), [[02_Requisitos/HU_AC/]], [[03_Arquitetura_e_Design/LLD/]]                                                            |
+| **Documentação** | `@AgenteMentorDocumentacao`    | Gerar comentários/docstrings, explicar algoritmos, auxiliar na manutenção da "Documentação Viva" e curadoria da base RAG ([[08_Knowledge_Base_RAG_Sources/]]).           | Google Gemini (Pro/Flash via OpenRouter), Trae IDE                                            | Código-fonte, [[02_Requisitos/ERS.md]] (v0.5), [[03_Arquitetura_e_Design/HLD.md]], [[03_Arquitetura_e_Design/LLD/]]                                    |
+| **Segurança** | `@AgenteMentorSeguranca`       | Revisar código e design (OWASP Top 10, OWASP LLM Top 10, LGPD), instruir sobre práticas seguras.                                                                         | Google Gemini (Pro via OpenRouter), Trae IDE                                                  | [[02_Requisitos/ERS.md]] (v0.5 - seção de segurança), Padrões de Código Seguro, Documentação OWASP                                                     |
+| **Orquestração de Prompts** | `@AgenteOrquestrador`          | Analisar documentação (RAG), gerar perguntas esclarecedoras, auxiliar na criação de prompts eficazes para outros agentes.                                                | Google Gemini (Pro via OpenRouter), Trae IDE, LangChain/FAISS (via RAG)                       | Toda a "Documentação Viva", especialmente [[02_Requisitos/ERS.md]] (v0.5) e [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.3)                          |
+
 ## Apêndice C: Exemplos de Prompts Base para Agentes
 
 Os templates de prompts detalhados e específicos para cada agente e tarefa são gerenciados na pasta [[05_Prompts/Templates_Base/]] e [[05_Prompts/Prompts_Especificos/]] dentro do vault do Obsidian.
 
-A estrutura geral de um template de prompt (conforme [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md#7.2. Templates de Prompts e Engenharia de Prompt Contínua]]) inclui:
+A estrutura geral de um template de prompt (conforme [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] v1.3, Seção 7.2) inclui:
 
 1.  **Metadados:** Agente Alvo, Versão, Objetivo.
 2.  **PERSONA DO AGENTE:** Instruções sobre papel, expertise, tom de voz, interação com RAG.
@@ -346,10 +359,10 @@ A estrutura geral de um template de prompt (conforme [[01_Guias_Centrais/PLANO_M
 
 **Exemplo Conceitual de Interação (Maestro para `@AgenteOrquestrador`):**
 
-**Maestro:** "`@AgenteOrquestrador`, preciso gerar o código para o endpoint de login do usuário (RF-AUTH-003 da [[02_Requisitos/ERS.md]]). O LLD está em [[03_Arquitetura_e_Design/LLD/LLD_Modulo_Auth.md#Endpoint de Login]] e a API spec em [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml#paths/~1auth~1login]]. Ajude-me a preparar o prompt para o `@AgenteMentorDevFastAPI`."
+**Maestro:** "`@AgenteOrquestrador`, preciso gerar o código para o endpoint de login do usuário (RF-AUTH-003 da [[02_Requisitos/ERS.md]] v0.5). O LLD está em [[03_Arquitetura_e_Design/LLD/LLD_Modulo_Auth.md#Endpoint de Login]] e a API spec em [[03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml#paths/~1auth~1login]]. Ajude-me a preparar o prompt para o `@AgenteMentorDevFastAPI`."
 
 **`@AgenteOrquestrador` (após consulta RAG e análise):** "Entendido, Maestro. Para o RF-AUTH-003 e as especificações fornecidas:
-1.  A ERS menciona proteção contra brute-force. Devemos especificar o mecanismo exato (ex: rate limiting por IP e conta, CAPTCHA após X falhas) no prompt para o `@AgenteMentorDevFastAPI`, ou ele deve sugerir uma abordagem padrão?
+1.  A ERS v0.5 menciona proteção contra brute-force. Devemos especificar o mecanismo exato (ex: rate limiting por IP e conta, CAPTCHA após X falhas) no prompt para o `@AgenteMentorDevFastAPI`, ou ele deve sugerir uma abordagem padrão?
 2.  O LLD detalha o uso de JWT. O template de prompt para FastAPI já inclui a geração de JWT, mas devemos reforçar algum aspecto específico do token (ex: tempo de expiração, claims customizadas) para o Recoloca.ai?
 3.  Quais códigos de status HTTP específicos e mensagens de erro devem ser retornados para: (a) sucesso, (b) email não encontrado, (c) senha incorreta, (d) conta bloqueada por brute-force?
 Com essas respostas, posso montar um prompt otimizado para o `@AgenteMentorDevFastAPI` utilizando o template [[05_Prompts/Templates_Base/TPL_Gerar_Codigo_FastAPI_Endpoint.md]]."
@@ -357,4 +370,5 @@ Com essas respostas, posso montar um prompt otimizado para o `@AgenteMentorDevFa
 Esta interação demonstra como o `@AgenteOrquestrador` atua proativamente para garantir que o prompt final seja completo e preciso, antes da delegação ao agente executor.
 
 ---
-**FIM DO GUIA AVANÇADO (v2.0)**
+**FIM DO GUIA AVANÇADO (v2.1)**
+```

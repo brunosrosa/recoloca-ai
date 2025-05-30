@@ -231,7 +231,7 @@ A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. De
 ---
 **Manutenibilidade** `RNF-MAINT` (Código modular, documentado)
 ---
--   **RNF-MAINT-00 X (Configuração como Código):** Infraestrutura (ex: `render. Yaml`) e CI/CD DEVEM ser gerenciados como código.
+-   **RNF-MAINT-00 X (Configuração como Código):** Infraestrutura (ex: `render` `Yaml`) e CI/CD DEVEM ser gerenciados como código.
 
 ---
 **IA: Precisão, Ética e Relevância** `RNF-IA` (Consolidado e Detalhado)
@@ -240,7 +240,7 @@ A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. De
     -   Sugestões da IA (CV, coach) DEVEM ser relevantes e úteis.
     -   Score de Adequação e Range Salarial DEVEM ser consistentes e baseados em lógica defensável.
     -   **Precisão Parsing PDF + Categorização IA (Meta):** Extração de texto bruto > 98% para PDFs textuais. Categorização semântica das seções do CV pela IA > 90% ANTES da validação do usuário. A etapa de validação pelo usuário (RF-CV-002) é crucial.
--   **RNF-IA-002 (Engenharia de Prompt):** Processo contínuo de desenvolvimento, teste e refinamento de prompts eficazes e robustos para PT-BR, EN, ES. Templates gerenciados em ` [[05_Prompts/]] `.
+-   **RNF-IA-002 (Engenharia de Prompt):** Processo contínuo de desenvolvimento, teste e refinamento de prompts eficazes e robustos para PT-BR, EN, ES. Templates gerenciados em [[05_Prompts/]].
 -   **RNF-IA-003 (Mitigação de Vieses e Ética):**
     -   Utilizar LLMs de provedores com foco em mitigação de vieses.
     -   Prompts explícitos para evitar vieses (gênero, raça, etc.) e focar em qualificações objetivas.
