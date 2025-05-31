@@ -1,7 +1,6 @@
 ---
-
 kanban-plugin: board
-
+sticker: emoji//2b55
 ---
 
 ## 🧊 Backlog Geral
