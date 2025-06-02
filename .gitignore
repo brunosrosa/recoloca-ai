@@ -1,0 +1,53 @@
+# Arquivo.gitignore para o Projeto Recoloca.AI
+
+# 1. Ambientes Virtuais Python
+# Substitua 'Python_virt-env_RAG/' pelo nome exato da sua pasta de ambiente virtual se for diferente.
+Python_virt-env_RAG/
+venv/
+.venv/
+env/
+ENV/
+
+# 2. Arquivos compilados/cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 3. Infraestrutura RAG - Dados Gerados
+# Não versionar o índice FAISS, pois ele é gerado a partir dos source_documents
+# e pode ser grande.
+rag_infra/index_store/
+
+# 4. Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# 5. Arquivos específicos de IDEs/Editores
+.idea/            # Para IntelliJ, PyCharm, Android Studio, etc.
+.vscode/          # Para VS Code (exceto se você quiser versionar configurações de launch/tasks compartilhadas)
+*.sublime-project
+*.sublime-workspace
+
+# 6. Arquivos específicos do Sistema Operacional
+.DS_Store         # macOS
+Thumbs.db         # Windows
+ehthumbs.db       # Windows
+
+# 7. Logs (se forem logs de execução e não templates de configuração de log)
+*.log
+logs/*.log        # Se você tiver arquivos.log dentro da pasta logs/
+
+# 8. Arquivos de build/distribuição (se aplicável no futuro)
+build/
+dist/
+*.egg-info/
+
+# 9. Arquivos de configuração local/sensíveis (se houver)
+# Exemplo:.env (para variáveis de ambiente locais)
+.env
+
+# Outros arquivos temporários ou específicos de ferramentas
+.pytest_cache/
+.mypy_cache/
+.coverage
+.space/
