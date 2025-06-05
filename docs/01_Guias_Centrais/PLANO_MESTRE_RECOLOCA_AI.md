@@ -1,17 +1,20 @@
+---
+sticker: lucide//check
+---
 # PLANO MESTRE DO PROJETO RECOLOCA.AI
 
 **Data de Criação**: 26 de maio de 2025
 
-**Data de Última Atualização**: 30 de maio de 2025
+**Data de Última Atualização**: 03 de junho de 2025
 
-**Versão**: 1.4
+**Versão**: 1.5
 
 **Autor Principal (Maestro)**: Bruno S. Rosa
 
-**Assistência IA:** Gemini (Personalizado para colaboração e co-evolução)
+**Assistência IA**: Gemini (Personalizado para colaboração e co-evolução)
 ## Sumário Executivo
 
-Este **Plano Mestre** é o documento central e a **fonte da verdade** para o desenvolvimento, manutenção e evolução contínua do projeto **Recoloca.ai**. Ele consolida a visão estratégica, as decisões arquiteturais, o framework de "Desenvolvimento Solo Ágil Aumentado por IA", os fluxos de trabalho detalhados, as ferramentas selecionadas e o roadmap para a construção do Micro-SaaS Recoloca.ai. Este documento é uma **"Documentação Viva"**, mantida e atualizada no Obsidian e versionada com Git, servindo como guia para o desenvolvedor solo ("Maestro") e como base de conhecimento fundamental para seus Agentes de IA Mentores configurados no Trae IDE. Ele está alinhado com a [[docs/02_Requisitos/ERS.md]] (v0.5 ou mais recente) e o [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.2 ou mais recente).
+Este **Plano Mestre** é o documento central e a **fonte da verdade** para o desenvolvimento, manutenção e evolução contínua do projeto **Recoloca.ai**. Ele consolida a visão estratégica, as decisões arquiteturais, o framework de "Desenvolvimento Solo Ágil Aumentado por IA", os fluxos de trabalho detalhados, as ferramentas selecionadas e o roadmap para a construção do Micro-SaaS Recoloca.ai. Este documento é uma **"Documentação Viva"**, mantida e atualizada no Obsidian e versionada com Git, servindo como guia para o desenvolvedor solo ("Maestro") e como base de conhecimento fundamental para seus Agentes de IA Mentores configurados no Trae IDE. Ele está alinhado com a [[docs/02_Requisitos/ERS.md]] (v0.5 ou mais recente) e o [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.3 ou mais recente).
 ## 1. Introdução ao Recoloca.ai
 
 ### 1.1. Visão Geral do Produto e Problema de Mercado
@@ -169,14 +172,13 @@ Este documento será a **referência central** para o desenvolvedor "Maestro" e 
     
 
 **Características Esperadas:** Familiaridade com navegação na web, uso de aplicativos online e abertura para utilizar ferramentas baseadas em Inteligência Artificial. Valorizam a eficiência, a orientação personalizada, uma UX superior e a melhoria contínua.
-
 ## 2. Metodologia e Framework de Desenvolvimento Adotados
 
 ### 2.1. O Modelo "Desenvolvimento Solo Ágil Aumentado por IA"
 
-A metodologia de desenvolvimento adotada para o Recoloca.ai é o **"Desenvolvimento Solo Ágil Aumentado por Inteligência Artificial"**, conforme detalhado conceitualmente no documento [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]. Esta abordagem reinterpreta os princípios ágeis e a colaboração com IA para o contexto de um desenvolvedor individual com características neurodivergentes (TDAH/AHSD), visando maximizar a produtividade e o bem-estar.
+A metodologia de desenvolvimento adotada para o Recoloca.ai é o **"Desenvolvimento Solo Ágil Aumentado por Inteligência Artificial"**, conforme detalhado conceitualmente no documento [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.3). Esta abordagem reinterpreta os princípios ágeis e a colaboração com IA para o contexto de um desenvolvedor individual com características neurodivergentes (TDAH/AHSD), visando maximizar a produtividade e o bem-estar.
 
-**Princípios Chave (Resumo do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]):**
+**Princípios Chave (Resumo do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v2.3):**
 
 - O desenvolvedor solo atua como um **"Maestro"** de uma orquestra de **Agentes de IA especializados ("Mentores")**.
     
@@ -273,7 +275,6 @@ O Ciclo de Vida de Desenvolvimento de Software (SDLC) Ágil tradicional é adapt
 ## 3. Arquitetura de Agentes de IA Mentores do Recoloca.ai
 
 A espinha dorsal da metodologia de desenvolvimento é uma arquitetura de Agentes de IA Mentores, implementados primariamente como agentes customizados no **Trae IDE**. Estes agentes utilizarão o **Google Gemini Pro/Flash** (acessados via **OpenRouter** ou diretamente) e serão guiados pelas regras definidas em [[.trae/rules/user_rules.md]] e [[.trae/rules/project_rules.md]].
-
 ### 3.1. O Agente Orquestrador de Prompts e Mentor de Product Management
 
 Este é o **primeiro e mais crucial agente**, atuando como um "meta-agente" ou "agente de interface" entre o Maestro e os demais Agentes Mentores, e como o principal **PM Mentor** do Maestro.
@@ -288,13 +289,13 @@ Este é o **primeiro e mais crucial agente**, atuando como um "meta-agente" ou "
         
     2. Auxiliar o Maestro a formular instruções (prompts) claras, precisas, contextualmente ricas e otimizadas para os outros Agentes Mentores.
         
-- **Funcionalidades (Conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v2.2, Seção 3.2):**
+- **Funcionalidades (Conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v2.3, Seção 3.2):**
     
     1. **Análise da Documentação Estratégica e Tática (via RAG):** Processa e "compreende" documentos chave do projeto (Plano Mestre, ERS, HLD, materiais de PM) para extrair contexto relevante.
         
     2. **Geração de Perguntas Estratégicas e Esclarecedoras (com viés de PM):** Antes de focar no prompt para um agente executor, formula perguntas ao Maestro para validar o "porquê", o problema do usuário, a UVP, métricas de sucesso, riscos e priorização.
         
-    3. **Criação Assistida de Prompts Eficazes:** Após o diálogo estratégico com o Maestro, auxilia na montagem de prompts detalhados e estruturados para os agentes de destino, incorporando o contexto estratégico validado, referências diretas à documentação, sugerindo técnicas de engenharia de prompt e utilizando os templates de [[docs/05_Prompts/Templates_Base/]].
+    3. **Criação Assistida de Prompts Eficazes:** Após o diálogo estratégico com o Maestro, auxilia na montagem de prompts detalhados e estruturados para os agentes de destino, incorporando o contexto estratégico validado, referências diretas à documentação, sugerindo técnicas de engenharia de prompt e utilizando os templates de [[docs/05_Prompts/01_Templates_Base/]].
         
 - **Implementação no Trae IDE:**
     
@@ -306,7 +307,7 @@ Este é o **primeiro e mais crucial agente**, atuando como um "meta-agente" ou "
         
 ### 3.2. Detalhamento dos Agentes Mentores por Fase do SDLC
 
-Os seguintes Agentes Mentores serão configurados no Trae IDE, cada um com uma persona, conjunto de habilidades (definidas pelo prompt base, [[.trae/rules/project_rules.md]] e contexto RAG) e utilizando templates de prompts específicos de [[docs/05_Prompts/Templates_Base/]]. A referência principal para seus papéis é a **Tabela Essencial do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]**.
+Os seguintes Agentes Mentores serão configurados no Trae IDE, cada um com uma persona, conjunto de habilidades (definidas pelo prompt base, [[.trae/rules/project_rules.md]] e contexto RAG) e utilizando templates de prompts específicos de [[docs/05_Prompts/01_Templates_Base/]]. A referência principal para seus papéis é a **Tabela Essencial do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v2.3**.
 
 1. `@AgenteMentorPO` **(Product Owner):**
     
@@ -366,7 +367,7 @@ Os seguintes Agentes Mentores serão configurados no Trae IDE, cada um com uma p
     
     - **Foco:** Documentação de Código e Manutenção da "Documentação Viva".
         
-    - **Tarefas:** Gerar comentários e docstrings (Python Google Style, Dartdoc), explicar algoritmos complexos, auxiliar na sincronização da "Documentação Viva" no Obsidian e na curadoria/atualização da base de conhecimento para o RAG ([[knowledge_base_rag/]]).
+    - **Tarefas:** Gerar comentários e docstrings (Python Google Style, Dartdoc), explicar algoritmos complexos, auxiliar na sincronização da "Documentação Viva" no Obsidian e na curadoria/atualização da base de conhecimento para o RAG ([[rag_infra/source_documents]]).
         
 ## 4. Arquitetura Técnica e Tecnologias
 
@@ -392,7 +393,9 @@ Conforme definido na [[docs/02_Requisitos/ERS.md]] (v0.5, Seção 2.4) e refinam
         
     - Pós-processamento: **LLM (Gemini Flash/Pro)** para categorização semântica.
         
-- **Vector DB (para RAG):** **FAISS** (local inicial). Considerar **Supabase pgvector** (Pós-MVP).
+- **Vector DB (para RAG):** **FAISS-GPU** (local inicial, utilizando CUDA). Considerar **Supabase pgvector** (Pós-MVP).
+    
+- **Embedding Model (para RAG):** **`BAAI/bge-m3`** (via Sentence Transformers).
     
 - **Hospedagem:**
     
@@ -420,6 +423,10 @@ Conforme definido na [[docs/02_Requisitos/ERS.md]] (v0.5, Seção 2.4) e refinam
     
 - **Prototipagem de UI (Opcional):** **FlutterFlow**
     
+- **Framework para RAG:** **LangChain** (Python)
+    
+- **Biblioteca para Embeddings:** **Sentence Transformers** (Python)
+    
 ### 4.3. Arquitetura de Alto Nível (HLD) do Recoloca.ai
 
 _O `@AgenteMentorArquitetoHLD` detalhará e manterá este HLD no arquivo [[docs/03_Arquitetura_e_Design/HLD.md]]. Um esboço inicial dos componentes e suas interações é:_
@@ -434,7 +441,7 @@ _O `@AgenteMentorArquitetoHLD` detalhará e manterá este HLD no arquivo [[docs/
     
 5. **Pipedream (Automação):** CI/CD, notificações, gatilhos RAG.
     
-6. **Sistema RAG Local (LangChain + FAISS):** Indexação da "Documentação Viva".
+6. **Sistema RAG Local (LangChain + FAISS-GPU + Sentence Transformers):** Indexação da "Documentação Viva" utilizando o modelo `BAAI/bge-m3`.
     
 7. **Extensão de Navegador (Chrome - Pós-MVP):** Extração de dados, comunicação com Backend API.
     
@@ -446,29 +453,31 @@ _(Um diagrama Mermaid.js detalhado será incluído e mantido no [[docs/03_Arquit
 
 Para garantir que os Agentes de IA Mentores operem com informações atualizadas, específicas do projeto e consistentes com a "Documentação Viva", será implementado um sistema de **Retrieval Augmented Generation (RAG)**.
 
-- **Base de Conhecimento para RAG:** Localizada na pasta [[knowledge_base_rag/]]. Conterá versões otimizadas para RAG da documentação do projeto (ex: [[knowledge_base_rag/ERS_para_RAG.md]]) e materiais de referência (ex: [[knowledge_base_rag/PM_Knowledge/]] para o `@AgenteOrquestrador`).
+- **Base de Conhecimento para RAG:** Localizada na pasta [[rag_infra/souce_documents]]. Conterá versões otimizadas para RAG da documentação do projeto (ex: [[rag_infra/souce_documents/ERS_para_RAG.md]]) e materiais de referência (ex: [[rag_infra/souce_documents/PM_Knowledge/]] para o `@AgenteOrquestrador`).
     
 - **Tecnologias RAG:**
     
     - **Framework:** **LangChain** (Python).
         
-    - **Vector Store:** **FAISS** (local inicial), considerar Supabase pgvector (Pós-MVP).
+    - **Vector Store:** **FAISS-GPU** (local inicial, utilizando CUDA para aceleração). Considerar Supabase pgvector (Pós-MVP).
         
-    - **Embedding Model:** `all-MiniLM-L6-v2` (ou similar).
+    - **Embedding Model:** **`BAAI/bge-m3`**. Este modelo será carregado e utilizado através da biblioteca **Sentence Transformers**.
         
-- **Processo de Indexação:** Script [[scripts/rag_indexer.py]] para monitorar, carregar, dividir, gerar embeddings e atualizar o índice FAISS.
+    - **Bibliotecas Adicionais:** `pymupdf` para extração de texto de PDFs na base de conhecimento, se necessário.
+        
+- **Processo de Indexação:** Script [[rag_infra/core_logic/rag_indexer.py]] para monitorar, carregar documentos (Markdown, PDF), dividir em chunks, gerar embeddings usando `BAAI/bge-m3` via Sentence Transformers, e atualizar o índice FAISS-GPU.
     
-- **Processo de Consulta (Retrieval) pelos Agentes:** Agentes no Trae IDE, via `@AgenteOrquestrador` ou diretamente, consultam o RAG.
+- **Processo de Consulta (Retrieval) pelos Agentes:** Agentes no Trae IDE, via `@AgenteOrquestrador` ou diretamente, consultam o RAG. A consulta do usuário é convertida em um embedding (usando o mesmo modelo `BAAI/bge-m3`), os chunks mais relevantes são recuperados do índice FAISS-GPU, e esses chunks são injetados no prompt do LLM (Gemini) para fornecer contexto.
     
-- **Monitoramento e Refinamento do RAG:** Verificações periódicas da qualidade e relevância dos resultados.
+- **Monitoramento e Refinamento do RAG:** Verificações periódicas da qualidade e relevância dos resultados. O feedback do Maestro durante o HITL será usado para refinar os chunks, a estratégia de splitting ou até mesmo considerar a reindexação com parâmetros ajustados.
     
 ### 5.2. A "Documentação Viva" no Obsidian e Git
 
 Todo o conhecimento do projeto será mantido e interligado no **Obsidian**.
 
-- **Estrutura de Pastas:** Conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md#Apêndice A: Estrutura das Pastas do Projeto Recoloca.ai (Vault Obsidian)]].
+- **Estrutura de Pastas:** Conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md#Apêndice A: Estrutura das Pastas]].
     
-- **Links Bidirecionais:** Uso intensivo de links wiki (formato [[docs/Caminho/Arquivo.md]]).
+- **Links Bidirecionais:** Uso intensivo de links wiki (formato `[[docs/Caminho/Arquivo.md]]`).
     
 - **Controle de Versão:** Todo o vault do Obsidian será um repositório **Git**.
     
@@ -498,7 +507,7 @@ O fluxo de trabalho será iterativo e incremental, seguindo os princípios ágei
     
 ### 6.2. Modelo de Human-in-the-Loop (HITL) Evolutivo para o Recoloca.ai
 
-O HITL evoluirá em fases, adaptando-se à maturidade dos agentes:
+O HITL evoluirá em fases, adaptando-se à maturidade dos agentes, conforme detalhado no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.3, Seção 6):
 
 - **Fase 1: Supervisão Intensa e Detalhada (MVP Inicial)**
     
@@ -508,7 +517,6 @@ O HITL evoluirá em fases, adaptando-se à maturidade dos agentes:
     
 
 O feedback do Maestro durante o HITL é crucial para o refinamento contínuo dos prompts e da base RAG.
-
 ### 6.3. Diagrama Visual do Fluxo de Trabalho (Mermaid.js)
 
 _(Um diagrama Mermaid.js será mantido no arquivo [[docs/03_Arquitetura_e_Design/FLUXO_TRABALHO_GERAL.md]].)_
@@ -534,17 +542,41 @@ A eficácia dos Agentes de IA depende da qualidade dos prompts.
     
 ## 8. Próximos Passos Críticos (Pós-Alinhamento Documental)
 
-Após o alinhamento deste Plano Mestre e do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] com a [[docs/02_Requisitos/ERS.md]] v0.5, os próximos passos práticos imediatos, conforme detalhado na ERS e no Kanban, são:
+Após o alinhamento deste Plano Mestre (v1.5) e do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.3) com a [[docs/02_Requisitos/ERS.md]] (v0.5), os próximos passos práticos imediatos, conforme detalhado na ERS e no Kanban, são:
 
-1. **Validação Técnica da Arquitetura de Autenticação (Protótipo RLS FastAPI/Supabase)**
+1. **Configuração do Ambiente de Desenvolvimento RAG:**
     
-2. **Estimativa Detalhada de Custos Operacionais (API Gemini, Infraestrutura)**
+    - Criação do ambiente Conda (`Agents_RAG_Env` com Python 3.10).
+        
+    - Instalação das bibliotecas: `pytorch` (com CUDA 12.1), `faiss-gpu`, `langchain`, `sentence-transformers`, `pymupdf`, `python-dotenv`, `jupyter`.
+        
+    - Verificação da instalação e funcionamento do `faiss-gpu` com CUDA.
+        
+    - Download do modelo `BAAI/bge-m3`.
+        
+2. **Desenvolvimento do Script de Indexação RAG (`scripts/rag_indexer.py`):**
     
-3. **Validação Qualitativa com Usuários-Alvo (Protótipos de Baixa Fidelidade e Entrevistas)**
+    - Implementar a lógica para carregar documentos Markdown da pasta `docs/08_Knowledge_Base_RAG_Sources/`.
+        
+    - Implementar o chunking de texto.
+        
+    - Implementar a geração de embeddings com `BAAI/bge-m3` via Sentence Transformers.
+        
+    - Implementar a criação e salvamento do índice FAISS-GPU.
+        
+3. **Teste Inicial do Pipeline RAG:**
     
-4. **Configuração Inicial dos Agentes de IA no Trae IDE** (especialmente `@AgenteOrquestrador` e `@AgenteMentorPO`).
+    - Indexar um conjunto pequeno de documentos.
+        
+    - Realizar consultas de teste para verificar a relevância dos resultados.
+        
+4. **Configuração Inicial dos Agentes de IA no Trae IDE:** Foco no `@AgenteOrquestrador` e `@AgenteMentorPO`, integrando a capacidade de consulta ao RAG.
     
-5. **Setup Inicial do RAG** (indexação da documentação viva).
+5. **Validação Técnica da Arquitetura de Autenticação (Protótipo RLS FastAPI/Supabase)**
+    
+6. **Estimativa Detalhada de Custos Operacionais (API Gemini, Infraestrutura)**
+    
+7. **Validação Qualitativa com Usuários-Alvo (Protótipos de Baixa Fidelidade e Entrevistas)**
     
 
 Estes passos são cruciais para mitigar riscos e validar premissas antes do desenvolvimento intensivo do MVP.
@@ -555,10 +587,13 @@ Estes passos são cruciais para mitigar riscos e validar premissas antes do dese
 Será mantido e atualizado no arquivo [[docs/01_Guias_Centrais/GLOSSARIO_Recoloca_AI.md]].
 ### 9.2. Referências Chave
 
-- Documentação Oficial: Google Gemini, Flutter, FastAPI, Supabase, Trae IDE, OpenRouter, LangChain, FAISS, Pipedream, Vercel, Render, Mermaid.js.
+- Documentação Oficial: Google Gemini, Flutter, FastAPI, Supabase, Trae IDE, OpenRouter, LangChain, FAISS, Sentence Transformers, Pymupdf, Pipedream, Vercel, Render, Mermaid.js.
     
 - Padrões e Guias: Material Design 3, OWASP Top 10, OWASP LLM Top 10.
     
 - Artigos e Livros sobre Product Management (para o RAG do `@AgenteOrquestrador`).
     
-## FIM DO DOCUMENTO PLANO_MESTRE_RECOLOCA_AI.md (v1.4)
+- Repositório do Modelo `BAAI/bge-m3` no Hugging Face.
+    
+
+--- FIM DO DOCUMENTO PLANO_MESTRE_RECOLOCA_AI.md (v1.5) ---

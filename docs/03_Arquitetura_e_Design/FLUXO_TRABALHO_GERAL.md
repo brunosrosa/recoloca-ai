@@ -1,3 +1,6 @@
+---
+sticker: lucide//rotate-ccw
+---
 # FLUXO DE TRABALHO GERAL DO PROJETO RECOLOCA.AI
 
 **Versão**: 1.0
@@ -15,7 +18,7 @@ O objetivo é fornecer uma visão clara do processo, desde a identificação de 
 ## 2. Diagrama do Fluxo de Trabalho (Mermaid.js)
 
 ```mermaid
-graph TD
+graph LR
     A["💡 Maestro: Identifica Ideia/Necessidade <br> ou Item do Backlog no Kanban"] --> B{🎯 Validação Estratégica?};
 
     B -- Sim --> C["Maestro + @AgenteOrquestrador (PM Mentor):<br>1. Alinhar com Objetivos do Plano Mestre<br>2. Definir Problema do Usuário e UVP<br>3. Considerar Métricas/KPIs<br>4. Análise de Riscos e Priorização (RICE, etc.)<br>5. Consultar RAG (PM Knowledge e Docs do Projeto)"];

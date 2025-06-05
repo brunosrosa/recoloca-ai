@@ -1,3 +1,6 @@
+---
+sticker: lucide//heart-crack
+---
 # Especificação de Requisitos de Software (ERS): Recoloca. Ai
 
 **Versão**: 0.5
@@ -72,7 +75,6 @@ Este documento está organizado da seguinte forma:
 
 ### 2.1. Perspectiva do Produto
 O Recoloca. Ai é uma plataforma SaaS web (PWA robusta construída com Flutter) que se posiciona como o **"cockpit do candidato"**. Ele não é um portal de vagas, mas uma ferramenta de produtividade e inteligência que auxilia o profissional a gerenciar suas candidaturas, otimizar seus materiais e se preparar melhor para os desafios da recolocação, integrando-se ao ecossistema de busca de vagas existente.
-
 ### 2.2. Funções do Produto (Resumo MVP)
 1.  Gerenciamento Visual e Enriquecido de Candidaturas (Kanban).
 2.  Importação de Vagas via Link com Processamento LLM.
@@ -83,13 +85,11 @@ O Recoloca. Ai é uma plataforma SaaS web (PWA robusta construída com Flutter) 
 7.  Assistente IA para Coaching Básico e Proativo.
 8.  Gerenciamento de Conta e Currículos Base (Multi-idioma PT, EN, ES).
 9.  Modelo Freemium com Tiers de Funcionalidades.
-
 ### 2.3. Características dos Usuários
 - **Público Principal (MVP):** Profissionais de Tecnologia da Informação (Desenvolvedores, Analistas, QAs, Designers, Product Managers, etc.) no Brasil, buscando recolocação ou novas oportunidades.
 - **Nível de Experiência:** Desde juniores buscando o primeiro emprego até seniores e especialistas.
 - **Necessidades:** Organização, eficiência, destaque em processos seletivos, insights sobre o mercado, redução da ansiedade e frustração.
 - **Habilidades Técnicas Esperadas:** Confortáveis com ferramentas digitais e SaaS.
-
 ### 2.4. Restrições Gerais e Tecnológicas
 - **Desenvolvimento Solo:** O escopo do MVP deve ser gerenciável por um único desenvolvedor ("Maestro") com auxílio de Agentes de IA.
 - **Orçamento:** Custos de APIs (Gemini) e infraestrutura (Supabase, Vercel/Render) devem ser considerados para a sustentabilidade do modelo Freemium.
@@ -107,13 +107,11 @@ O Recoloca. Ai é uma plataforma SaaS web (PWA robusta construída com Flutter) 
     - Hospedagem: Frontend PWA em **Vercel** (ou similar); Backend FastAPI em **Render** (ou similar); Supabase para BaaS.
     - Vector DB (para RAG): **FAISS** para implementação local inicial; considerar Supabase pgvector (Pós-MVP).
 - **Importação de Vagas (MVP):** Foco na importação via link com processamento LLM. Extensão de navegador para captura direta (ex: LinkedIn) é Pós-MVP.
-
 ### 2.5. Premissas e Dependências
 - Disponibilidade e funcionalidade das APIs do Google Gemini e serviços do Supabase.
 - O usuário fornecerá informações precisas em seu currículo base e nos links das vagas.
 - Acesso a pesquisas e dados de mercado para treinar/alimentar o RAG da IA de estimativa salarial.
 - A arquitetura RLS entre FastAPI e Supabase será validada via protótipo.
-
 ## 3. Requisitos Funcionais (RF)
 
 A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. Detalhes de processo e output são fornecidos para clareza dos Agentes de IA.

@@ -7,42 +7,45 @@ venv/
 .venv/
 env/
 ENV/
+# 3. Arquivos compilados/cache do Python
+__pycache__/
+*.pyc
 
-# 2. Arquivos compilados/cache do Python
+# 4. Arquivos compilados/cache do Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# 3. Infraestrutura RAG - Dados Gerados
+# 5. Infraestrutura RAG - Dados Gerados
 # Não versionar o índice FAISS, pois ele é gerado a partir dos source_documents
-# e pode ser grande.
+# e pode ser grande!
 rag_infra/index_store/
 
-# 4. Jupyter Notebook Checkpoints
+# 6. Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
 
-# 5. Arquivos específicos de IDEs/Editores
+# 7. Arquivos específicos de IDEs/Editores
 .idea/            # Para IntelliJ, PyCharm, Android Studio, etc.
 .vscode/          # Para VS Code (exceto se você quiser versionar configurações de launch/tasks compartilhadas)
 *.sublime-project
 *.sublime-workspace
 
-# 6. Arquivos específicos do Sistema Operacional
+# 8. Arquivos específicos do Sistema Operacional
 .DS_Store         # macOS
 Thumbs.db         # Windows
 ehthumbs.db       # Windows
 
-# 7. Logs (se forem logs de execução e não templates de configuração de log)
+# 9. Logs (se forem logs de execução e não templates de configuração de log)
 *.log
 logs/*.log        # Se você tiver arquivos.log dentro da pasta logs/
 
-# 8. Arquivos de build/distribuição (se aplicável no futuro)
+# 10. Arquivos de build/distribuição (se aplicável no futuro)
 build/
 dist/
 *.egg-info/
 
-# 9. Arquivos de configuração local/sensíveis (se houver)
+# 11. Arquivos de configuração local/sensíveis (se houver)
 # Exemplo:.env (para variáveis de ambiente locais)
 .env
 
