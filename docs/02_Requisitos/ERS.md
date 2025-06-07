@@ -3,21 +3,21 @@ sticker: lucide//heart-crack
 ---
 # Especificação de Requisitos de Software (ERS): Recoloca. Ai
 
-**Versão**: 0.5
+**Versão**: 0.6
 
 **Data de Criação**: 26 de maio de 2025
 
-**Data de atualização**: 29 de maio de 2025
+**Data de atualização**: 03 de junho de 2025
 
 **Baseado em**:
-- [[PLANO_MESTRE_RECOLOCA_AI]] (v 1.2)
-- ERS Recoloca.Ai (v 0.3, v 0.4)
-- Sessões de Pesquisa e Estratégia (Maio de 2025)
+- [[PLANO_MESTRE_RECOLOCA_AI]] (v 1.5)
+- ERS Recoloca.Ai (v 0.5)
+- Sessões de Pesquisa e Estratégia (Maio/Junho de 2025)
 ## 1. Introdução
 
 ### 1.1. Propósito
 
-Este documento especifica os **requisitos funcionais** (RF) e **não funcionais** (RNF) para a Versão Mínima Viável (MVP) e a evolução inicial da plataforma **Recoloca. Ai**. O Recoloca. Ai é um Micro-SaaS projetado para auxiliar profissionais no Brasil (com foco inicial em Tecnologia da Informação) no processo de recolocação profissional, atuando como um "cockpit" que combina gerenciamento de candidaturas, otimização de currículos com Inteligência Artificial (IA) e um assistente de IA para coaching. Esta especificação foi refinada com base em pesquisa de mercado, análise de concorrência e validação de proposta de valor, buscando um equilíbrio entre visão estratégica e detalhamento suficiente para guiar o desenvolvimento assistido por IA.
+Este documento especifica os **requisitos funcionais** (RF) e **não funcionais** (RNF) para a Versão Mínima Viável (MVP) e a evolução inicial da plataforma **Recoloca. Ai**. O Recoloca. Ai é um Micro-SaaS projetado para auxiliar **profissionais de TI de nível Pleno e Sênior no Brasil** no processo de recolocação profissional, atuando como um "cockpit" que combina gerenciamento de candidaturas, otimização de currículos com Inteligência Artificial (IA) e um assistente de IA para coaching. Esta especificação foi refinada com base em pesquisa de mercado, análise de concorrência e validação de proposta de valor, buscando um equilíbrio entre visão estratégica e detalhamento suficiente para guiar o desenvolvimento assistido por IA, alinhado com a versão 1.5 do [[PLANO_MESTRE_RECOLOCA_AI]].
 
 Este documento destina-se a:
 - Guiar o desenvolvimento do produto pelo "Maestro" (desenvolvedor solo).
@@ -29,10 +29,19 @@ Este documento destina-se a:
 O escopo do MVP do Recoloca. Ai visa entregar valor central através das seguintes funcionalidades principais:
 1.  **Gerenciamento de Candidaturas (Kanban):** Um sistema visual para o usuário organizar e acompanhar suas aplicações a vagas.
 2.  **Importação Inteligente de Vagas:** Facilidade para adicionar vagas à plataforma, inicialmente via link com processamento por LLM.
-3.  **Otimização de Currículo Baseada em IA:** Análise de currículo do usuário em relação a descrições de vagas, com sugestões de melhoria e score de adequação.
+3.  **Otimização de Currículo Baseada em IA:** Análise de currículo do usuário em relação a descrições de vagas, com sugestões de melhoria e score de adequação (**Momento AHA! Principal**).
 4.  **Estimativa de Range Salarial com IA:** Análise da descrição da vaga para fornecer uma estimativa de faixa salarial.
 5.  **Assistente de IA para Coaching Básico:** Suporte inicial para dúvidas e orientações sobre o processo de recolocação.
 6.  **Módulo de Métricas Pessoais:** Para acompanhamento do funil de candidatura.
+
+### 1.3. Estratégia de Produto e Priorização
+**Diferencial Competitivo Principal:** Assistente/Coach de IA contextual que analisa vagas e perfil do usuário.
+
+**Momento AHA! Definido:** Edição do currículo base com IA para combinar perfeitamente com a descrição da vaga específica.
+
+**Abordagem de Desenvolvimento:** Wizard-style focado na jornada completa do usuário, priorizando fluxo de valor sobre complexidade técnica.
+
+**Jornada Detalhada:** Documentada em [[docs/02_Requisitos/HU_AC/HU_MVP_Jornada_Usuario.md]]
 
 Funcionalidades como Web Clipper avançado (extensão de navegador para múltiplos sites), simulação de entrevistas detalhadas, gerenciador de networking aprofundado e biblioteca de recursos extensa são consideradas para evoluções futuras (Pós-MVP) ou como parte de tiers premium. O foco inicial é em profissionais de TI no Brasil, com currículos e vagas primariamente em Português, Inglês e Espanhol. A PWA será a plataforma primária, com a extensão de navegador (para captura de vagas do LinkedIn) sendo Pós-MVP.
 ### 1.3. Definições, Acrônimos e Abreviações
@@ -86,7 +95,7 @@ O Recoloca. Ai é uma plataforma SaaS web (PWA robusta construída com Flutter) 
 8.  Gerenciamento de Conta e Currículos Base (Multi-idioma PT, EN, ES).
 9.  Modelo Freemium com Tiers de Funcionalidades.
 ### 2.3. Características dos Usuários
-- **Público Principal (MVP):** Profissionais de Tecnologia da Informação (Desenvolvedores, Analistas, QAs, Designers, Product Managers, etc.) no Brasil, buscando recolocação ou novas oportunidades.
+- **Público Principal (MVP):** Profissionais de Tecnologia da Informação de **nível Pleno e Sênior** (Desenvolvedores, Analistas, QAs, Designers, Product Managers, etc.) no Brasil, buscando recolocação ou novas oportunidades.
 - **Nível de Experiência:** Desde juniores buscando o primeiro emprego até seniores e especialistas.
 - **Necessidades:** Organização, eficiência, destaque em processos seletivos, insights sobre o mercado, redução da ansiedade e frustração.
 - **Habilidades Técnicas Esperadas:** Confortáveis com ferramentas digitais e SaaS.
@@ -156,7 +165,7 @@ A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. De
 -   **RF-KAN-005:** O sistema DEVE fornecer um dashboard de métricas pessoais (funil de candidatura):
     -   _Processo: _ Coleta dados dos status das vagas e interações. Apresenta visualmente: Nº de aplicações/período, Taxas de conversão entre etapas (ex: Salvas -> Aplicadas, Aplicadas -> Entrevistas), Tempo médio em cada etapa.
     -   _Output: _ Gráficos e números resumindo o progresso do usuário.
--   **RF-KAN-006 (Tier Gratuito):** Limite de **15 vagas ativas** (não em "Recusada/Fechada").
+- **RF-KAN-006 (Tier Gratuito):** Limite de **10 vagas ativas** (não em "Recusada/Fechada").
 -   **RF-KAN-007 (Tier Pago):** Vagas ativas ilimitadas.
 
 ---
@@ -186,7 +195,7 @@ A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. De
     -   _Output IA: _ Range salarial estimado (ex: R $X.XXX - R$Y.YYY), com aviso de que é uma estimativa.
 -   **RF-CV-006:** O sistema DEVE permitir download do currículo otimizado em PDF (usando templates profissionais e ATS-friendly).
 -   **RF-CV-007:** O sistema DEVE permitir salvar versões otimizadas e que o usuário escolha se elas atualizam o "Currículo Base Ativo".
--   **RF-CV-008 (Tier Gratuito - Contagem):** Limite de **5 "Otimizações Completas" por mês** (análise IA + score + sugestões + range salarial).
+- **RF-CV-008 (Tier Gratuito - Contagem):** Limite de **3 "Otimizações Completas" por mês** (análise IA + score + sugestões + range salarial).
 -   **RF-CV-009 (Tier Pago):** Otimizações "ilimitadas" (sujeito a política de uso justo, ex: 100/mês). Acesso a templates de CV avançados e análises mais detalhadas da IA (conforme ERS v 0.3, RF-CV-012).
 
 ---
@@ -200,7 +209,7 @@ A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. De
     -   _Output: _ Notificações/mensagens no chat.
 -   **RF-COACH-003:** IA Coach DEVE fornecer orientações sobre soft skills, tendências de mercado e preparação para entrevistas.
 -   **RF-COACH-004:** IA Coach DEVE usar métricas do usuário (RF-KAN-005) para identificar gargalos e sugerir foco.
--   **RF-COACH-005 (Tier Gratuito):** Limite de **30 interações/dia**. Respostas mais genéricas.
+- **RF-COACH-005 (Tier Gratuito):** Limite de **15 interações/dia**. Respostas mais genéricas.
 -   **RF-COACH-006 (Tier Pago):** Interações "ilimitadas". Respostas mais elaboradas (Gemini Pro). Simulações de entrevista interativas com feedback (Pós-MVP).
 
 ## 4. Requisitos Não Funcionais (RNF)
@@ -246,7 +255,11 @@ A seguir, os IDs dos requisitos são prefixados com `RF-[MÓDULO]-[NÚMERO]`. De
     -   Mecanismo para usuários reportarem sugestões inadequadas.
     -   Transparência sobre uso e limitações da IA.
 -   **RNF-IA-004 (Consistência da Persona do Chatbot):** Persona (RF-COACH-001) DEVE ser mantida consistentemente.
--   **RNF-IA-005 (Rastreabilidade e Explicabilidade - XAI):** Sempre que possível, fornecer justificativas ou destacar evidências para as sugestões/análises da IA.
+- **RNF-IA-005 (Rastreabilidade e Explicabilidade - XAI):** O sistema DEVE fornecer justificativas claras e compreensíveis para as principais sugestões e análises da IA (especialmente em otimização de CV e score de adequação), permitindo ao usuário entender o "porquê" das recomendações. Isso pode incluir destacar as seções do CV ou da vaga que mais influenciaram o resultado.
+- **RNF-IA-006 (Governança de IA e Conformidade Ética):**
+    - O sistema DEVE seguir os princípios de IA Responsável definidos no [[PLANO_MESTRE_RECOLOCA_AI]] (Transparência, Mitigação de Vieses, Privacidade, Controle Humano, Módulo Educativo).
+    - O sistema DEVE estar em conformidade com a LGPD e preparado para adaptações futuras relacionadas a regulações de IA (como o PL 2.338/2023, se aprovado e aplicável).
+    - Auditorias e monitoramento contínuo dos modelos e sugestões da IA DEVEM ser planejados para garantir a conformidade e a ética.
 
 ---
 **Internacionalização (i 18 n) e Localização (l 10 n)** `RNF-I 18 N` 

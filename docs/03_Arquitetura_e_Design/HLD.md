@@ -9,7 +9,7 @@ sticker: lucide//heart-crack
 
 **Data de Última Atualização**: 03 de junho de 2025
 
-**Autor**: @AgenteMentorArquitetoHLD (com supervisão do Maestro Bruno S. Rosa)
+**Autor**: @AgenteM_ArquitetoHLD (com supervisão do Maestro Bruno S. Rosa)
 
 **Baseado em**:
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5)
@@ -83,7 +83,7 @@ graph RL
     subgraph "Ambiente de Desenvolvimento e Metodologia"
         Maestro["🧑‍💻 Maestro (Bruno S. Rosa)"]
         TraeIDE["🛠️ Trae IDE"]
-        AgentesIA["🤖 Agentes de IA Mentores<br>(Inclui @AgenteMentorDocumentacao)"]
+        AgentesIA["🤖 Agentes de IA Mentores<br>(Inclui @AgenteM_Documentacao)"]
         RAG_Dev["📚 Sistema RAG Local<br>(LangChain, FAISS-GPU, BAAI/bge-m3)"]
         Obsidian["📓 Obsidian (Documentação Viva)"]
         GitRepo_Dev["📦 Repositório Git<br>(Fonte da Verdade)"]
@@ -362,15 +362,15 @@ graph RL
     
 ### 5.3. Fluxo de Consulta ao RAG por um Agente de IA (Desenvolvimento)
 
-1. Maestro interage com um Agente de IA no Trae IDE (ex: `@AgenteMentorArquitetoHLD` para discutir uma decisão de design).
+1. Maestro interage com um Agente de IA no Trae IDE (ex: `@AgenteM_ArquitetoHLD` para discutir uma decisão de design).
     
 2. O Trae IDE (ou a lógica do `@AgenteOrquestrador`) formula uma consulta para o Sistema RAG Local com base na pergunta do Maestro.
     
 3. O Sistema RAG Local (`rag_retriever.py`) busca no índice FAISS-GPU os chunks de texto mais relevantes da "Documentação Viva" (ex: ADRs existentes, HLD, ERS).
     
-4. Os chunks recuperados são injetados no prompt enviado ao LLM Gemini que motoriza o `@AgenteMentorArquitetoHLD`.
+4. Os chunks recuperados são injetados no prompt enviado ao LLM Gemini que motoriza o `@AgenteM_ArquitetoHLD`.
     
-5. O `@AgenteMentorArquitetoHLD` utiliza esse contexto para gerar uma resposta mais informada e específica para o projeto.
+5. O `@AgenteM_ArquitetoHLD` utiliza esse contexto para gerar uma resposta mais informada e específica para o projeto.
     
 ## 6. Considerações Arquiteturais Chave
 

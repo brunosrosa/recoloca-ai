@@ -80,7 +80,7 @@ O Ciclo de Vida de Desenvolvimento de Software (SDLC) Ágil é adaptado para int
     -   `@AgenteMentorDocumentacao` auxilia na geração de comentários, docstrings e na manutenção da "Documentação Viva" no Obsidian.
     -   Maestro garante que todas as decisões e implementações sejam documentadas.
 6.  **Deploy e Operações (DevOps):**
-    -   `@AgenteMentorDevOps` (conceitual, implementado via scripts e **Pipedream**) auxilia na automação de CI/CD para Vercel, Render e Supabase.
+    -   `@AgenteM_DevOps` (conceitual, implementado via scripts e **Pipedream**) auxilia na automação de CI/CD para Vercel, Render e Supabase.
     -   Maestro supervisiona e gerencia a infraestrutura e os processos de deploy.
 7.  **Monitoramento, Feedback e Iteração:**
     -   Coleta de feedback do usuário (pós-MVP) e métricas de uso.
@@ -133,34 +133,34 @@ A metodologia se apoia em um conjunto de Agentes de IA Mentores especializados, 
 A referência primária para seus papéis é a **Tabela Essencial** (ver Apêndice B) e o detalhamento no [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5, Seção 3.2).
 ### 4.1. Agentes por Fase do SDLC (Resumo Alinhado com ERS v0.5 e Plano Mestre v1.5)
 
--   `@AgenteMentorPO` **(Product Owner):**
+-   `@AgenteM_PO` **(Product Owner):**
     -   **Foco:** Definição e Refinamento de Requisitos Táticos.
     -   **Tarefas:** Gerar HUs (em [[docs/02_Requisitos/HU_AC/]]) e ACs a partir da [[docs/02_Requisitos/ERS.md]] (v0.5), após alinhamento estratégico com o Maestro e o `@AgenteOrquestrador`. **Deve ser instruído a considerar o contexto estratégico fornecido pelo `@AgenteOrquestrador`**.
--   `@AgenteMentorArquitetoHLD` **(Arquiteto de Software - HLD):**
+-   `@AgenteM_ArquitetoHLD` **(Arquiteto de Software - HLD):**
     -   **Foco:** Design de Alto Nível.
     -   **Tarefas:** Criar/otimizar [[docs/03_Arquitetura_e_Design/HLD.md]], gerar diagramas de arquitetura (Mermaid.js).
--   `@AgenteMentorArquitetoLLD` **(Arquiteto/Designer de Software - LLD):**
+-   `@AgenteM_ArquitetoLLD` **(Arquiteto/Designer de Software - LLD):**
     -   **Foco:** Design de Baixo Nível.
     -   **Tarefas:** Detalhar classes, funções, modelos de dados em [[docs/03_Arquitetura_e_Design/LLD/]], diagramas de sequência/classes (Mermaid.js).
--   `@AgenteMentorAPI` **(Arquiteto de APIs):**
+-   `@AgenteM_API` **(Arquiteto de APIs):**
     -   **Foco:** Especificação de APIs.
     -   **Tarefas:** Gerar/manter especificações OpenAPI 3.0 (ex: [[docs/03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]).
--   `@AgenteMentorDevFastAPI` **(Desenvolvedor Python/FastAPI):**
+-   `@AgenteM_DevFastAPI` **(Desenvolvedor Python/FastAPI):**
     -   **Foco:** Desenvolvimento Backend.
     -   **Tarefas:** Gerar código Python/FastAPI, interações com Supabase, testes unitários (pytest).
--   `@AgenteMentorDevFlutter` **(Desenvolvedor Flutter/Dart):**
+-   `@AgenteM_DevFlutter` **(Desenvolvedor Flutter/Dart):**
     -   **Foco:** Desenvolvimento Frontend (PWA).
     -   **Tarefas:** Criar widgets, lógica de UI, gerenciamento de estado (Provider/Riverpod), chamadas à API, testes.
--   `@AgenteMentorDevJS` **(Desenvolvedor de Extensão Chrome - Pós-MVP):**
+-   `@AgenteM_DevJS` **(Desenvolvedor de Extensão Chrome - Pós-MVP):**
     -   **Foco:** Desenvolvimento da Extensão.
     -   **Tarefas:** Lógica de extração de dados, comunicação com backend, UI da extensão.
--   `@AgenteMentorQA` **(Analista de QA/Testes):**
+-   `@AgenteM_QA` **(Analista de QA/Testes):**
     -   **Foco:** Garantia de Qualidade.
     -   **Tarefas:** Gerar planos de teste ([[docs/06_Qualidade_e_Testes/PGQ.md]]), casos de teste (Gherkin em [[docs/06_Qualidade_e_Testes/Casos_de_Teste/]]), scripts de testes.
--   `@AgenteMentorSeguranca` **(Analista de Segurança):**
+-   `@AgenteM_Seguranca` **(Analista de Segurança):**
     -   **Foco:** Segurança de Código e Arquitetura.
     -   **Tarefas:** Revisar código e design, instruir sobre práticas seguras (OWASP Top 10, OWASP LLM Top 10, LGPD).
--   `@AgenteMentorDocumentacao` **(Documentador Técnico):**
+-   `@AgenteM_Documentacao` **(Documentador Técnico):**
     -   **Foco:** Documentação de Código e "Documentação Viva".
     -   **Tarefas:** Gerar comentários/docstrings, auxiliar na manutenção da "Documentação Viva" e curadoria da base RAG ([[rag_infra/souce_documents/]]).
 ### 4.2. Interação e Colaboração entre Agentes
@@ -198,10 +198,155 @@ A "Documentação Viva" é o coração da gestão de conhecimento do projeto.
 -   **FlutterFlow:** Opcional, para prototipagem rápida de UI pelo `@AgenteMentorDevFlutter` ou Maestro. Pode acelerar a criação de mockups interativos ou gerar código Flutter base para telas menos complexas.
 
 A combinação dessas ferramentas e estratégias garante que os Agentes de IA operem com o máximo de informação relevante, mantendo-se "afiados" e alinhados com a evolução do projeto Recoloca.ai.
-## Seção 6: O Processo de Human-in-the-Loop (HITL) Evolutivo
+## Seção 6: Convenções de Gerenciamento de Tarefas com Kanban
+
+### 6.1. Sistema de Identificação de Tarefas (IDs)
+
+Para garantir organização, rastreabilidade e facilitar a comunicação entre o Maestro e os Agentes de IA, todas as tarefas no [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]] seguem um sistema estruturado de identificação:
+
+**Formato:** `[TIPO-DOMÍNIO-###]`
+
+#### 6.1.1. Tipos de Atividade (TIPO)
+
+- **EST** - Estratégia: Atividades de planejamento estratégico, definição de roadmap, análise de mercado
+- **REQ** - Requisitos: Elaboração e refinamento de requisitos, HUs, ACs
+- **ARC** - Arquitetura: Design de alto nível (HLD), baixo nível (LLD), decisões arquiteturais
+- **UXD** - UX/UI Design: Design de experiência do usuário, interfaces, mockups, protótipos
+- **DEV** - Desenvolvimento: Codificação, implementação de features, correções de bugs
+- **QAT** - Qualidade e Testes: Testes unitários, integração, E2E, estratégias de QA
+- **DOC** - Documentação: Criação e manutenção da documentação viva, comentários de código
+- **IMP** - Implementação de Infraestrutura: RAG, agentes, ferramentas, automações
+- **VAL** - Validação: Pesquisas com usuários, testes de usabilidade, validação de hipóteses
+- **ENV** - Ambiente e Deploy: Configuração de ambientes, CI/CD, infraestrutura
+- **MNG** - Gerenciamento: Atividades de gestão de projeto, planejamento de sprints
+- **CFG** - Configuração: Setup inicial de ferramentas, configurações de desenvolvimento
+- **PES** - Pesquisa: Investigação de tecnologias, análise de concorrentes, estudos de mercado
+- **AGT** - Agentes: Criação, refinamento e operacionalização de agentes de IA
+- **API** - APIs: Especificação, documentação e refinamento de APIs
+- **INF** - Infraestrutura: Monitoramento, logging, performance
+- **PRO** - Protótipo: Desenvolvimento de protótipos e provas de conceito
+
+#### 6.1.2. Domínios de Aplicação (DOMÍNIO)
+
+- **GER** - Geral/Transversal: Atividades que afetam todo o projeto
+- **KAN** - Módulo Kanban: Funcionalidades do sistema de gerenciamento de candidaturas
+- **AUTH** - Módulo de Autenticação: Sistema de login, registro, segurança
+- **CV** - Módulo de Otimização de CV: Parsing, análise e otimização de currículos
+- **COA** - Módulo Coach IA: Assistente inteligente e coaching
+- **PAY** - Módulo de Pagamentos: Sistema de cobrança e assinaturas
+- **IMP** - Módulo de Importação: Importação de vagas via links
+- **RAG** - Sistema RAG: Retrieval Augmented Generation
+- **AGT** - Agentes de IA: Configuração e operação dos agentes mentores
+- **UX** - Experiência do Usuário: Design e usabilidade transversal
+- **TEC** - Técnico: Aspectos técnicos transversais
+- **NEG** - Negócio: Estratégia de negócio e monetização
+- **VAL** - Validação: Testes com usuários e validação de mercado
+- **DEV** - Desenvolvimento: Aspectos gerais de desenvolvimento
+- **SPR** - Sprint: Planejamento e gestão de sprints
+- **FER** - Ferramentas: Pesquisa e configuração de ferramentas
+- **PLA** - Planejamento: Atividades de planejamento estratégico
+- **PRF** - Perfis: Criação e refinamento de perfis de agentes
+- **ARC** - Arquitetura: Documentação e decisões arquiteturais
+- **FUT** - Futuro: Planejamento de features pós-MVP
+- **JUR** - Jurídico: Aspectos legais e conformidade (LGPD)
+- **CFG** - Configuração: Setup e configuração de ferramentas
+- **MCP** - MCPs: Model Context Protocol e integrações
+- **DAT** - Dados: Coleta e processamento de dados
+- **PRO** - Protótipo: Desenvolvimento de protótipos
+- **PLA** - Playbook: Documentação de processos e metodologias
+
+#### 6.1.3. Numeração Sequencial (###)
+
+- Numeração sequencial de 001 a 999 dentro de cada combinação TIPO-DOMÍNIO
+- Permite até 999 tarefas por categoria, suficiente para o escopo do projeto
+
+### 6.2. Estados e Fluxo de Trabalho
+
+#### 6.2.1. Estados das Tarefas
+
+- **[ ]** - **A Fazer**: Tarefa identificada e priorizada, aguardando início
+- **[x]** - **Concluída**: Tarefa finalizada e validada pelo Maestro
+
+#### 6.2.2. Fluxo de Estados
+
+1. **Criação**: Nova tarefa é adicionada com status "A Fazer" [ ]
+2. **Execução**: Maestro trabalha na tarefa (pode envolver agentes de IA)
+3. **Validação**: Maestro revisa e valida o resultado
+4. **Conclusão**: Tarefa marcada como concluída [x]
+
+### 6.3. Priorização e Organização
+
+#### 6.3.1. Critérios de Priorização
+
+1. **Dependências**: Tarefas que desbloqueiam outras têm prioridade
+2. **Valor para o MVP**: Funcionalidades core do MVP têm precedência
+3. **Risco**: Tarefas com maior incerteza técnica são priorizadas para validação antecipada
+4. **Esforço vs. Impacto**: Aplicação de frameworks como RICE quando necessário
+
+#### 6.3.2. Organização no Arquivo
+
+- **Tarefas A Fazer**: Organizadas por prioridade (mais prioritárias no topo)
+- **Tarefas Concluídas**: Mantidas no final do arquivo para histórico
+- **Agrupamento**: Tarefas relacionadas podem ser agrupadas com sub-itens quando apropriado
+
+### 6.4. Integração com Agentes de IA
+
+#### 6.4.1. Referenciamento em Prompts
+
+Ao interagir com agentes de IA, sempre referencie o ID da tarefa:
+- "Trabalhando na tarefa **[DEV-KAN-001]** - Desenvolvimento do Módulo Kanban..."
+- "Esta implementação refere-se ao **[IMP-RAG-001]** - RAG - Operacionalização..."
+
+#### 6.4.2. Contexto para o @AgenteOrquestrador
+
+O `@AgenteOrquestrador` deve:
+- Consultar o Kanban via RAG para entender prioridades atuais
+- Questionar alinhamento de novas ideias com tarefas priorizadas
+- Sugerir criação de novos IDs quando necessário
+- Auxiliar na decomposição de tarefas grandes em sub-tarefas
+
+### 6.5. Sincronização com Plugin Obsidian Kanban
+
+#### 6.5.1. Configuração do Plugin
+
+- **Arquivo Base**: [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]
+- **Colunas**: "A Fazer" e "Concluído" (mapeadas para [ ] e [x])
+- **Filtros**: Possibilidade de filtrar por TIPO ou DOMÍNIO usando tags
+
+#### 6.5.2. Manutenção da Consistência
+
+- Alterações no plugin devem ser refletidas no arquivo Markdown
+- Commits regulares para versionamento das mudanças no Kanban
+- Backup automático via Obsidian Git plugin
+
+### 6.6. Métricas e Acompanhamento
+
+#### 6.6.1. Métricas de Produtividade
+
+- **Velocity**: Número de tarefas concluídas por período
+- **Lead Time**: Tempo médio entre criação e conclusão de tarefas
+- **Distribuição por Tipo**: Análise de onde o tempo está sendo investido
+
+#### 6.6.2. Análise de Padrões
+
+- Identificação de gargalos por domínio ou tipo de atividade
+- Análise de dependências críticas
+- Evolução da complexidade das tarefas ao longo do tempo
+
+### 6.7. Evolução e Refinamento
+
+Este sistema de convenções é vivo e deve evoluir conforme as necessidades do projeto:
+
+- **Novos Tipos/Domínios**: Podem ser adicionados conforme necessário
+- **Refinamento de Critérios**: Priorização pode ser ajustada com base na experiência
+- **Automações**: Futuras integrações podem automatizar parte do processo
+- **Feedback dos Agentes**: Insights dos agentes de IA podem sugerir melhorias
+
+A manutenção dessas convenções garante que o Kanban permaneça uma ferramenta eficaz de gestão e comunicação, tanto para o Maestro quanto para os Agentes de IA Mentores.
+## Seção 7: O Processo de Human-in-the-Loop (HITL) Evolutivo
 
 O **Human-in-the-Loop (HITL)** é um componente não negociável desta metodologia, garantindo qualidade, segurança, alinhamento ético e aprendizado contínuo tanto para o Maestro quanto para os Agentes de IA. Conforme descrito no [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5, Seção 6.2), o processo HITL evoluirá em fases:
-### 6.1. Fase 1: Supervisão Intensa e Detalhada
+### 7.1. Fase 1: Supervisão Intensa e Detalhada
 
 -   **Aplicabilidade:** MVP Inicial, novas funcionalidades críticas, ou quando um agente é usado para uma tarefa inédita ou de alta complexidade.
 -   **Descrição:** O Maestro revisa minuciosamente **todo o output significativo** dos Agentes de IA (HUs, ACs, diagramas, especificações de API, blocos de código > X linhas, casos de teste críticos, etc.). A revisão não é apenas sobre correção, mas sobre entendimento do "raciocínio" do agente.
@@ -224,27 +369,27 @@ O **Human-in-the-Loop (HITL)** é um componente não negociável desta metodolog
 -   **Feedback para Agentes:** Focado em refinar a base RAG com conhecimento de ponta, ajustar regras de alto nível dos agentes, e explorar novas formas de colaboração.
 
 O feedback fornecido pelo Maestro durante o HITL é crucial para o **refinamento contínuo** dos [[docs/05_Prompts/01_Templates_Base/]], das regras em [[.trae/rules/]], e da base RAG. É um ciclo de aprendizado mútuo.
-## Seção 7: Considerações para o Desenvolvedor Solo Neurodivergente
+## Seção 8: Considerações para o Desenvolvedor Solo Neurodivergente
 
 A metodologia de "Desenvolvimento Solo Ágil Aumentado por IA" foi concebida levando em consideração as características de um desenvolvedor **neurodivergente**, especificamente com **TDAH (Transtorno do Déficit de Atenção com Hiperatividade)** e **Altas Habilidades/Superdotação (AH/SD)** – um perfil também conhecido como Dupla Excepcionalidade (2e). O objetivo é criar um ambiente de trabalho que potencialize os pontos fortes e mitigue os desafios associados.
-### 7.1. Alinhando a Metodologia com o Perfil Neurodivergente
+### 8.1. Alinhando a Metodologia com o Perfil Neurodivergente
 
 -   **Hiperfoco e Variedade:** A alternância entre papéis (Maestro, executor, estrategista, revisor) e a interação com múltiplos Agentes de IA especializados em diferentes domínios oferece a variedade e o nível de estímulo que podem engajar o hiperfoco de forma produtiva.
 -   **Estrutura e Clareza Externa:**
     -   A **"Documentação Viva" no Obsidian**, com seus links e estrutura visual, serve como um "segundo cérebro" confiável, ajudando a organizar pensamentos e a rastrear informações.
     -   O **`@AgenteOrquestrador`**, especialmente com seu papel de PM Mentor, auxilia na quebra de tarefas complexas em partes menores e mais gerenciáveis, e na manutenção do foco estratégico.
-    -   O **Kanban no Obsidian** ([[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]]) oferece uma visualização clara do progresso e das prioridades, reduzindo a sobrecarga mental de ter que lembrar de todas as tarefas.
+    -   O **Kanban no Obsidian** ([[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]) oferece uma visualização clara do progresso e das prioridades, reduzindo a sobrecarga mental de ter que lembrar de todas as tarefas.
 -   **Redução de Tarefas Monótonas e Repetitivas:** A delegação de tarefas como geração de boilerplate, documentação inicial ou testes básicos para os Agentes de IA libera o Maestro para se concentrar em aspectos mais desafiadores e interessantes do projeto.
 -   **Feedback Imediato e Iteração Rápida:** A capacidade de obter respostas e resultados rápidos dos Agentes de IA pode manter o engajamento e a motivação, características importantes para quem tem TDAH.
 -   **Estímulo Intelectual e Resolução de Problemas Complexos:** A colaboração com IA, a engenharia de prompt, o design de sistemas de agentes e a resolução de problemas complexos inerentes ao projeto são altamente estimulantes para mentes com AH/SD.
-### 7.2. Ferramentas e Técnicas de Suporte
+### 8.2. Ferramentas e Técnicas de Suporte
 
 -   **Obsidian:** Além da organização, a capacidade de customização com plugins (Kanban, Git, Dataview, etc.) permite adaptar a ferramenta às preferências individuais de fluxo de trabalho.
 -   **Trae IDE:** A configuração de Agentes customizados e "Rules" permite que o Maestro molde o comportamento da IA para melhor se adequar ao seu estilo de pensamento e necessidades.
 -   **Pipedream:** A automação de fluxos de trabalho reduz a necessidade de lembrar e executar manualmente tarefas rotineiras de CI/CD ou manutenção do RAG.
 -   **Técnicas de Gerenciamento de Tempo:** O uso consciente de técnicas como Pomodoro, time blocking (com o Kanban como base para definir os blocos) e a definição de metas claras para cada sessão de trabalho podem ajudar a gerenciar o foco e a energia.
 -   **Minimização de Distrações:** O ambiente de desenvolvimento solo, combinado com interações estruturadas e focadas com os agentes (em vez de interrupções imprevisíveis de uma equipe humana), pode ser benéfico.
-### 7.3. O Papel da IA como Suporte Executivo e Estratégico
+### 8.3. O Papel da IA como Suporte Executivo e Estratégico
 
 Para o desenvolvedor com desafios nas funções executivas (planejamento, organização, iniciação de tarefas, memória de trabalho), a IA pode oferecer um suporte valioso:
 
@@ -253,10 +398,10 @@ Para o desenvolvedor com desafios nas funções executivas (planejamento, organi
 -   `@AgenteMentorDocumentacao`: Reduz a carga da tarefa de documentar, que pode ser um desafio para a manutenção do foco, garantindo que o conhecimento não se perca.
 
 Ao reconhecer e integrar proativamente as necessidades do perfil neurodivergente, o objetivo é criar um sistema de desenvolvimento **produtivo, sustentável e gratificante**, onde a IA não apenas aumenta a capacidade técnica, mas também apoia o bem-estar e a eficácia do Maestro.
-## Seção 8: Conclusão e Recomendações Metodológicas
+## Seção 9: Conclusão e Recomendações Metodológicas
 
 O "Guia Avançado para Desenvolvimento Solo com Agentes de IA Mentores", aplicado ao projeto Recoloca.ai, representa uma **abordagem inovadora e pragmática**. Ao posicionar o desenvolvedor como um **"Maestro"** e os Agentes de IA como **"Mentores"** (com o `@AgenteOrquestrador` atuando como um PM Mentor chave), esta metodologia visa amplificar as capacidades humanas de forma holística.
-### 8.1. Síntese dos Benefícios
+### 9.1. Síntese dos Benefícios
 
 -   **Aumento de Produtividade:** Automação de tarefas repetitivas e aceleração do desenvolvimento.
 -   **Ampliação de Expertise:** Acesso a "especialistas virtuais" em diversas áreas, incluindo estratégia de produto.
@@ -264,7 +409,7 @@ O "Guia Avançado para Desenvolvimento Solo com Agentes de IA Mentores", aplicad
 -   **Foco** no Valor **Agregado:** O Maestro se concentra em aspectos estratégicos, criativos e de alto impacto.
 -   **Gestão de Conhecimento Eficaz:** A "Documentação Viva" e o sistema RAG garantem que o conhecimento seja preservado e utilizado.
 -   **Desenvolvimento Sustentável e Adaptado:** A metodologia considera e busca apoiar as características do desenvolvedor solo, incluindo o perfil neurodivergente.
-### 8.2. Recomendações Chave para o Maestro do Recoloca.ai
+### 9.2. Recomendações Chave para o Maestro do Recoloca.ai
 
 1.  **Abrace a Iteração Contínua:** Tanto o software quanto a metodologia de colaboração com a IA devem evoluir com base nos aprendizados.
 2.  **Invista na Engenharia de Prompt e na Curadoria do `@AgenteOrquestrador`:** A clareza, o contexto estratégico e a qualidade dos prompts são cruciais. O `@AgenteOrquestrador` é seu principal aliado nisso.
@@ -290,7 +435,7 @@ Recoloca.AI/
 │ └── project_rules.md # Regras de IA específicas do projeto Recoloca.ai
 ├── docs/ # Documentação principal do projeto
 │ ├── 00_Gerenciamento_Projeto/
-│ │ ├── KANBAN_Recoloca_AI.md # Kanban principal do projeto
+│ │ ├── KANBAN_INTERNO_PROJETO.md # Kanban principal do projeto
 │ │ ├── TAP.md # Termo de Abertura do Projeto
 │ │ ├── PGE.md # Plano de Gerenciamento do Projeto
 │ │ ├── PGP.md # Plano de Gerenciamento do Escopo

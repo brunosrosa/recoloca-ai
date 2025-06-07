@@ -35,123 +35,123 @@ A seguir, apresentamos os Agentes de IA Mentores essenciais para o desenvolvimen
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteOrquestrador.md|Perfil Detalhado]]
         
-- **`@AgenteMentorPO`** (Product Owner Mentor Especialista em Requisitos Ágeis)
+- **`@AgenteM_PO`** (Product Owner Mentor Especialista em Requisitos Ágeis)
     
     - **Foco:** Product Owner Mentor Especialista em Requisitos Ágeis
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorPO.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_PO.md|Perfil Detalhado]]
         
-- **`@AgenteMentorUXDesigner`** (UX Designer e Pesquisador Mentor Sênior)
+- **`@AgenteM_UXDesigner`** (UX Designer e Pesquisador Mentor Sênior)
     
     - **Foco:** UX Designer e Pesquisador Mentor Sênior
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorUXDesigner.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_UXDesigner.md|Perfil Detalhado]]
         
-- **`@AgenteMentorUIDesigner`** (UI Designer e Visual Mentor Sênior)
+- **`@AgenteM_UIDesigner`** (UI Designer e Visual Mentor Sênior)
     
     - **Foco:** UI Designer e Visual Mentor Sênior
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorUIDesigner.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_UIDesigner.md|Perfil Detalhado]]
         
-- **`@AgenteMentorArquitetoHLD`** (Arquiteto de Software Mentor - Foco em High-Level Design)
+- **`@AgenteM_ArquitetoHLD`** (Arquiteto de Software Mentor - Foco em High-Level Design)
     
     - **Foco:** Arquiteto de Software Mentor - Foco em High-Level Design
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorArquitetoHLD.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_ArquitetoHLD.md|Perfil Detalhado]]
         
-- **`@AgenteMentorArquitetoLLD`** (Arquiteto/Designer de Software Mentor - Foco em Low-Level Design)
+- **`@AgenteM_ArquitetoLLD`** (Arquiteto/Designer de Software Mentor - Foco em Low-Level Design)
     
     - **Foco:** Arquiteto/Designer de Software Mentor - Foco em Low-Level Design
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorArquitetoLLD.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_ArquitetoLLD.md|Perfil Detalhado]]
         
-- **`@AgenteMentorAPI`** (Arquiteto de APIs Mentor - Especialista em OpenAPI)
+- **`@AgenteM_API`** (Arquiteto de APIs Mentor - Especialista em OpenAPI)
     
     - **Foco:** Arquiteto de APIs Mentor - Especialista em OpenAPI
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorAPI.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_API.md|Perfil Detalhado]]
         
-- **`@AgenteMentorDevFastAPI`** (Desenvolvedor Python/FastAPI Mentor Sênior)
+- **`@AgenteM_DevFastAPI`** (Desenvolvedor Python/FastAPI Mentor Sênior)
     
     - **Foco:** Desenvolvedor Python/FastAPI Mentor Sênior
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorDevFastAPI.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevFastAPI.md|Perfil Detalhado]]
         
-- **`@AgenteMentorDevFlutter`** (Desenvolvedor Flutter/Dart Mentor Sênior)
+- **`@AgenteM_DevFlutter`** (Desenvolvedor Flutter/Dart Mentor Sênior)
     
     - **Foco:** Desenvolvedor Flutter/Dart Mentor Sênior
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorDevFlutter.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevFlutter.md|Perfil Detalhado]]
         
-- **`@AgenteMentorQA`** (Analista de QA e Testes Mentor Sênior)
+- **`@AgenteM_QA`** (Analista de QA e Testes Mentor Sênior)
     
     - **Foco:** Analista de QA e Testes Mentor Sênior
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorQA.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_QA.md|Perfil Detalhado]]
         
-- **`@AgenteMentorSeguranca`** (Analista de Segurança Mentor Sênior - AppSec & Cloud)
+- **`@AgenteM_Seguranca`** (Analista de Segurança Mentor Sênior - AppSec & Cloud)
     
     - **Foco:** Analista de Segurança Mentor Sênior - AppSec & Cloud
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorSeguranca.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Seguranca.md|Perfil Detalhado]]
         
-- **`@AgenteMentorDocumentacao`** (Documentador Técnico Mentor Especialista)
+- **`@AgenteM_Documentacao`** (Documentador Técnico Mentor Especialista)
     
     - **Foco:** Documentador Técnico Mentor Especialista
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorDocumentacao.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Documentacao.md|Perfil Detalhado]]
         
-- **`@AgenteMentorDevOps`** (Especialista em CI/CD e Automação de Operações Mentor)
+- **`@AgenteM_DevOps`** (Especialista em CI/CD e Automação de Operações Mentor)
     
     - **Foco:** Especialista em CI/CD e Automação de Operações Mentor
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorDevOps.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevOps.md|Perfil Detalhado]]
         
-- **`@AgenteMentorDevJS`** (Desenvolvedor de Extensão Chrome Mentor Sênior - Pós-MVP)
+- **`@AgenteM_DevJS`** (Desenvolvedor de Extensão Chrome Mentor Sênior - Pós-MVP)
     
     - **Foco:** Desenvolvedor de Extensão Chrome Mentor Sênior - Pós-MVP
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteMentorDevJS.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevJS.md|Perfil Detalhado]]
         
-- **`@AgenteAnalistaPerformanceOtimizacao`** (APO - Analista de Performance e Otimização Mentor)
+- **`@AgenteM_Performance`** (APO - Analista de Performance e Otimização Mentor)
     
     - **Foco:** Analista de Performance e Otimização Mentor (Perfil a ser detalhado)
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteAnalistaPerformanceOtimizacao.md|Criar/Ver Perfil]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Performance.md|Criar/Ver Perfil]]
         
 ## 3. Visão de Evolução do Squad (Agentes Futuros)
 
 À medida que o Recoloca.ai evolui e novas necessidades surgem, o squad de Agentes de IA Mentores poderá ser expandido. Alguns papéis futuros potenciais incluem (perfis a serem criados em `[[docs/04_Agentes_IA/Perfis/FuturosPerfis/]]`):
 
-- **`@AgenteMentorDados`** (Analista de Dados e BI Mentor):
+- **`@AgenteM_Dados`** (Analista de Dados e BI Mentor):
     
     - **Foco:** Auxiliar na coleta, análise e visualização de dados de uso da plataforma, métricas de produto e KPIs. Poderia ajudar a projetar dashboards (ex: com Metabase ou similar, conceitualmente) e a extrair insights para a tomada de decisão estratégica.
         
-- **`@AgenteMentorMarketingDigital`** (Especialista em Marketing Digital Mentor):
+- **`@AgenteM_MarketingDigital`** (Especialista em Marketing Digital Mentor):
     
     - **Foco:** Orientar sobre estratégias de aquisição de usuários, SEO, marketing de conteúdo, e campanhas para promover o Recoloca.ai, especialmente após o MVP.
         
-- **`@AgenteMentorLegal`** (Consultor Jurídico Mentor - Foco em Tech Law):
+- **`@AgenteM_Legal`** (Consultor Jurídico Mentor - Foco em Tech Law):
     
     - **Foco:** Fornecer orientação sobre aspectos legais relacionados a SaaS, privacidade de dados (além da LGPD básica), termos de serviço, e propriedade intelectual, especialmente se o produto se expandir ou lidar com dados mais sensíveis.
         
-- **`@AgenteMentorFinanceiro`** (Consultor Financeiro Mentor - Foco em SaaS):
+- **`@AgenteM_Financeiro`** (Consultor Financeiro Mentor - Foco em SaaS):
     
     - **Foco:** Auxiliar no planejamento financeiro, modelagem de custos, precificação de tiers, e análise de métricas financeiras de SaaS (MRR, ARR, Churn, LTV) para garantir a sustentabilidade e crescimento do Recoloca.ai.
         
-- **`@AgenteMentorSuporteUsuario`** (Mentor de Suporte ao Usuário e Comunidade):
+- **`@AgenteM_SuporteUsuario`** (Mentor de Suporte ao Usuário e Comunidade):
     
     - **Foco:** Ajudar a definir estratégias de atendimento, FAQs, e gestão de comunidade conforme a base de usuários cresce.
         
-- **`@AgenteMentorGrowth`** (Mentor de Growth Hacking):
+- **`@AgenteM_Growth`** (Mentor de Growth Hacking):
     
     - **Foco:** Experimentação rápida e táticas de crescimento acelerado.
         
-- **`@AgenteMentorConteudoEducacional`** (Mentor de Conteúdo Educacional e Onboarding):
+- **`@AgenteM_ConteudoEducacional`** (Mentor de Conteúdo Educacional e Onboarding):
     
     - **Foco:** Estruturar e refinar conteúdo educacional para usuários.
         
-- **`@AgenteMentorI18nL10n`** (Mentor de Internacionalização e Localização):
+- **`@AgenteM_I18nL10n`** (Mentor de Internacionalização e Localização):
     
     - **Foco:** Adaptação do produto para diferentes idiomas e culturas.
         
@@ -164,12 +164,12 @@ Este diagrama em Mermaid.js ilustra um fluxo de trabalho idealizado, enfatizando
 ```mermaid
 graph LR
     A["🏁 Início da Feature/Correção (Ideia/Bug Report)"] --> B{{"❓ Validação Estratégica e de Requisitos<br>(Maestro + @AgenteOrquestrador)"}};
-    B -- "Estratégia Aprovada" --> C["📝 Definição de HUs/ACs<br>(Maestro + @AgenteMentorPO)"];
-    C --> C_Doc["📄 Criação/Atualização: [[docs/02_Requisitos/HU_AC/...]]<br>(@AgenteMentorDocumentacao assiste)"];
+    B -- "Estratégia Aprovada" --> C["📝 Definição de HUs/ACs<br>(Maestro + @AgenteM_PO)"];
+    C --> C_Doc["📄 Criação/Atualização: [[docs/02_Requisitos/HU_AC/...]]<br>(@AgenteM_Documentacao assiste)"];
     
     subgraph "Ciclo de Documentação Contínua"
         direction LR
-        RAG_Update["🔄 Atualização da Base RAG<br>com nova documentação<br>(Maestro/Script + @AgenteMentorDocumentacao)"]
+        RAG_Update["🔄 Atualização da Base RAG<br>com nova documentação<br>(Maestro/Script + @AgenteM_Documentacao)"]
         C_Doc --> RAG_Update;
         D_Doc --> RAG_Update;
         E_Doc_Internal --> RAG_Update;
@@ -178,17 +178,17 @@ graph LR
         I_Doc --> RAG_Update;
     end
 
-    C_Doc --> D{{"📐 Design UX/UI e Arquitetura (HLD/LLD/API)<br>(Maestro + @AgenteMentorUXDesigner, @AgenteMentorUIDesigner, @AgenteMentorArquitetoHLD, @AgenteMentorArquitetoLLD, @AgenteMentorAPI)"}};
-    D -- "Design Aprovado" --> D_Doc["📄 Criação/Atualização: [[docs/03_Arquitetura_e_Design/...]]<br>(@AgenteMentorDocumentacao assiste)"];
-    D_Doc --> E["💻 Desenvolvimento do Código<br>(Maestro + @AgenteMentorDevFastAPI, @AgenteMentorDevFlutter, etc.)"];
-    E --> E_Doc_Internal["✍️ Geração de Docstrings/Comentários no Código<br>(@AgenteMentorDocumentacao assiste @AgentesDev)"];
-    E_Doc_Internal --> F["🧪 Geração de Casos de Teste e Testes Unitários<br>(Maestro + @AgenteMentorQA + @AgentesDev)"];
-    F --> F_Doc["📄 Criação/Atualização: [[docs/06_Qualidade_e_Testes/...]]<br>(@AgenteMentorDocumentacao assiste)"];
+    C_Doc --> D{{"📐 Design UX/UI e Arquitetura (HLD/LLD/API)<br>(Maestro + @AgenteM_UXDesigner, @AgenteM_UIDesigner, @AgenteM_ArquitetoHLD, @AgenteM_ArquitetoLLD, @AgenteM_API)"}};
+    D -- "Design Aprovado" --> D_Doc["📄 Criação/Atualização: [[docs/03_Arquitetura_e_Design/...]]<br>(@AgenteM_Documentacao assiste)"];
+    D_Doc --> E["💻 Desenvolvimento do Código<br>(Maestro + @AgenteM_DevFastAPI, @AgenteM_DevFlutter, etc.)"];
+    E --> E_Doc_Internal["✍️ Geração de Docstrings/Comentários no Código<br>(@AgenteM_Documentacao assiste @AgentesDev)"];
+    E_Doc_Internal --> F["🧪 Geração de Casos de Teste e Testes Unitários<br>(Maestro + @AgenteM_QA + @AgentesDev)"];
+    F --> F_Doc["📄 Criação/Atualização: [[docs/06_Qualidade_e_Testes/...]]<br>(@AgenteM_Documentacao assiste)"];
     F_Doc --> G["⚙️ Implementação de Testes e Execução"];
-    G --> H{{"🐞 Revisão de Código, Testes e Segurança<br>(Maestro + @AgenteMentorSeguranca)"}};
+    G --> H{{"🐞 Revisão de Código, Testes e Segurança<br>(Maestro + @AgenteM_Seguranca)"}};
     H -- "Ajustes Necessários" --> E;
-    H -- "Tudo OK" --> I["🚀 Preparação para Deploy<br>(Maestro + @AgenteMentorDevOps)"];
-    I --> I_Doc["📄 Criação/Atualização: [[docs/07_Operacoes_e_Deploy/...]]<br>(@AgenteMentorDocumentacao assiste)"];
+    H -- "Tudo OK" --> I["🚀 Preparação para Deploy<br>(Maestro + @AgenteM_DevOps)"];
+    I --> I_Doc["📄 Criação/Atualização: [[docs/07_Operacoes_e_Deploy/...]]<br>(@AgenteM_Documentacao assiste)"];
     I_Doc --> J["🚢 Deploy em Ambiente de Teste/Produção"];
     J --> K["🔍 Monitoramento e Feedback Pós-Deploy"];
     K --> A;
@@ -212,7 +212,7 @@ graph LR
 
 1. O fluxo começa com uma ideia ou necessidade, que passa por validação estratégica com o `@AgenteOrquestrador`.
     
-2. Requisitos são detalhados pelo `@AgenteMentorPO`, e a documentação correspondente é criada/atualizada.
+2. Requisitos são detalhados pelo `@AgenteM_PO`, e a documentação correspondente é criada/atualizada.
     
 3. O design (UX, UI, Arquitetura) é elaborado pelos agentes especializados, e seus artefatos são documentados.
     
@@ -224,7 +224,7 @@ graph LR
     
 7. A preparação para o deploy também envolve a documentação dos procedimentos.
     
-8. **Crucialmente**, cada etapa de criação/atualização de artefatos documentais (HUs, Designs, Casos de Teste, Guias de Deploy) alimenta a "Documentação Viva". O `@AgenteMentorDocumentacao` desempenha um papel de assistência contínua.
+8. **Crucialmente**, cada etapa de criação/atualização de artefatos documentais (HUs, Designs, Casos de Teste, Guias de Deploy) alimenta a "Documentação Viva". O `@AgenteM_Documentacao` desempenha um papel de assistência contínua.
     
 9. A "Documentação Viva" atualizada é então usada para **refrescar** a **base de conhecimento do Sistema RAG**, garantindo que todos os agentes (incluindo o `@AgenteOrquestrador`) tenham acesso ao contexto mais recente para as interações futuras.
     

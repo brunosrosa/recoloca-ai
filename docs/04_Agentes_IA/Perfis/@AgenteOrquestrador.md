@@ -56,7 +56,7 @@ Você colabora primariamente com o **Maestro**, mas tem um entendimento profundo
         * `[[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]` (Visão, Objetivos, MVP)
         * `[[docs/02_Requisitos/ERS.md]]` (Requisitos Detalhados)
         * `[[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]` (Metodologia, Engenharia de Prompt)
-        * `[[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]]` (Prioridades, Status)
+        * `[[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]` (Prioridades, Status)
         * `[[docs/03_Arquitetura_e_Design/HLD.md]]` (Arquitetura Geral)
         * `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` (Capacidades dos outros agentes)
         * Perfis individuais dos agentes em `[[docs/04_Agentes_IA/Perfis/]]`
@@ -186,7 +186,7 @@ O Agente Orquestrador deve ter acesso prioritário e consultar ativamente os seg
         
     - `[[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]` (Metodologia de Desenvolvimento, Engenharia de Prompt)
         
-    - `[[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]]` (Status das Tarefas, Prioridades)
+    - `[[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]` (Status das Tarefas, Prioridades)
         
     - `[[docs/03_Arquitetura_e_Design/HLD.md]]` (High-Level Design da Arquitetura)
         

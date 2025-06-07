@@ -30,7 +30,7 @@ O **Recoloca.ai** é um Micro-SaaS inovador projetado para **transformar** a exp
 - Sensação de isolamento e falta de orientação durante o processo.
     
 
-O Recoloca.ai visa solucionar essas dores oferecendo uma plataforma integrada que atua como o **"cockpit do candidato"**, combinando **gerenciamento inteligente de candidaturas (Kanban)**, **otimização de currículos potencializada por Inteligência Artificial (IA)** e um **assistente de IA para coaching e suporte contextualizado**. O objetivo é empoderar os profissionais brasileiros, fornecendo ferramentas e orientação para que naveguem pelo processo de recolocação com maior eficiência, estratégia e confiança, aumentando significativamente suas chances de sucesso.
+O Recoloca.ai visa solucionar essas dores oferecendo uma plataforma integrada que atua como o **"cockpit do candidato"**, combinando **gerenciamento inteligente de candidaturas (Kanban)**, **otimização de currículos potencializada por Inteligência Artificial (IA)** e um **assistente de IA para coaching e suporte contextualizado**. Nosso objetivo é **transformar a experiência de recolocação profissional no Brasil**, empoderando os profissionais de TI Pleno/Sênior com ferramentas e orientação para que naveguem pelo processo com maior eficiência, estratégia e confiança, aumentando significativamente suas chances de sucesso e garantindo um alinhamento preciso com as demandas do mercado.
 ### 1.2. Propósito deste Plano Mestre
 
 Este **Plano Mestre** serve como o **documento fundamental e unificador** para todas as fases do ciclo de vida do Recoloca.ai. Seu propósito é:
@@ -73,7 +73,7 @@ Este documento será a **referência central** para o desenvolvedor "Maestro" e 
         
     - Dashboard de métricas pessoais (funil de candidatura).
         
-    - Limite de 15 vagas ativas para o tier gratuito.
+    - Limite de 10 vagas ativas para o tier gratuito.
         
 2. **Importação Inteligente de Vagas `RF-IMP` (MVP):**
     
@@ -101,7 +101,7 @@ Este documento será a **referência central** para o desenvolvedor "Maestro" e 
         
     - Gerenciamento de versões e atualização do "Currículo Base Ativo".
         
-    - Limite de 5 "Otimizações Completas" por mês para o tier gratuito.
+    - Limite de 3 "Otimizações Completas" por mês para o tier gratuito.
         
 4. **Assistente de IA para Coaching Básico `RF-COACH`:**
     
@@ -117,7 +117,7 @@ Este documento será a **referência central** para o desenvolvedor "Maestro" e 
         
     - Uso de métricas do usuário para identificar gargalos e sugerir foco.
         
-    - Limite de 30 interações/dia para o tier gratuito.
+    - Limite de 15 interações/dia para o tier gratuito.
         
 5. **Autenticação e Gerenciamento de Conta `RF-AUTH`:**
     
@@ -166,7 +166,7 @@ Este documento será a **referência central** para o desenvolvedor "Maestro" e 
     
 ### 1.4. Público-Alvo
 
-- **Primário:** Profissionais brasileiros, com foco inicial do MVP em **profissionais de tecnologia** (desenvolvedores, analistas, QAs, designers, gerentes de produto, etc.) que estão ativamente buscando uma nova oportunidade de emprego ou em transição de carreira.
+- **Primário:** Profissionais brasileiros, com foco inicial do MVP em **profissionais de TI Pleno/Sênior** (desenvolvedores, analistas, QAs, designers, gerentes de produto, etc.) que estão ativamente buscando uma nova oportunidade de emprego ou em transição de carreira.
     
 - **Secundário:** Profissionais brasileiros de diversas áreas que desejam se manter preparados para futuras oportunidades, otimizar seus currículos e melhorar suas habilidades de entrevista.
     
@@ -309,65 +309,89 @@ Este é o **primeiro e mais crucial agente**, atuando como um "meta-agente" ou "
 
 Os seguintes Agentes Mentores serão configurados no Trae IDE, cada um com uma persona, conjunto de habilidades (definidas pelo prompt base, [[.trae/rules/project_rules.md]] e contexto RAG) e utilizando templates de prompts específicos de [[docs/05_Prompts/01_Templates_Base/]]. A referência principal para seus papéis é a **Tabela Essencial do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v2.3**.
 
-1. `@AgenteMentorPO` **(Product Owner):**
+1. `@AgenteM_PO` **(Product Owner):**
     
     - **Foco:** Definição e Refinamento de Requisitos Táticos.
         
     - **Tarefas:** Gerar Histórias de Usuário (em [[docs/02_Requisitos/HU_AC/]]) e Critérios de Aceite (ACs) a partir da [[docs/02_Requisitos/ERS.md]], após alinhamento estratégico com o Maestro e o `@AgenteOrquestrador`. Deve ser instruído a considerar o contexto estratégico fornecido pelo `@AgenteOrquestrador`.
         
-2. `@AgenteMentorArquitetoHLD` **(Arquiteto de Software - HLD):**
+2. `@AgenteM_ArquitetoHLD` **(Arquiteto de Software - HLD):**
     
     - **Foco:** Design de Alto Nível.
         
     - **Tarefas:** Criar/otimizar o [[docs/03_Arquitetura_e_Design/HLD.md]], gerar diagramas de arquitetura (componentes, interações) em Mermaid.js, definir interações entre módulos e com sistemas externos, identificar riscos arquiteturais.
         
-3. `@AgenteMentorArquitetoLLD` **(Arquiteto/Designer de Software - LLD):**
+3. `@AgenteM_ArquitetoLLD` **(Arquiteto/Designer de Software - LLD):**
     
     - **Foco:** Design de Baixo Nível.
         
     - **Tarefas:** Detalhar classes, funções, modelos de dados e algoritmos para os módulos em [[docs/03_Arquitetura_e_Design/LLD/]], criar diagramas de sequência e de classes em Mermaid.js.
         
-4. `@AgenteMentorAPI` **(Arquiteto de APIs):**
+4. `@AgenteM_API` **(Arquiteto de APIs):**
     
     - **Foco:** Especificação de APIs.
         
     - **Tarefas:** Gerar e manter as especificações OpenAPI 3.0 em YAML (ex: [[docs/03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]) para os serviços de backend.
         
-5. `@AgenteMentorDevFastAPI` **(Desenvolvedor Python/FastAPI):**
+5. `@AgenteM_DevFastAPI` **(Desenvolvedor Python/FastAPI):**
     
     - **Foco:** Desenvolvimento Backend.
         
     - **Tarefas:** Gerar código Python/FastAPI para endpoints, implementar lógica de negócios, interações com Supabase, e testes unitários (pytest).
         
-6. `@AgenteMentorDevFlutter` **(Desenvolvedor Flutter/Dart):**
+6. `@AgenteM_DevFlutter` **(Desenvolvedor Flutter/Dart):**
     
     - **Foco:** Desenvolvimento Frontend (PWA).
         
     - **Tarefas:** Criar widgets de UI responsivos, implementar lógica de UI, gerenciamento de estado (Provider/Riverpod), chamadas à API backend, e testes unitários/widget.
         
-7. `@AgenteMentorDevJS` **(Desenvolvedor de Extensão Chrome - Pós-MVP):**
+7. `@AgenteM_DevJS` **(Desenvolvedor de Extensão Chrome - Pós-MVP):**
     
     - **Foco:** Desenvolvimento da Extensão de Navegador.
         
     - **Tarefas:** Implementar lógica de extração de dados de job boards, comunicação segura com o backend, e a UI da extensão.
         
-8. `@AgenteMentorQA` **(Analista de QA/Testes):**
+8. `@AgenteM_QA` **(Analista de QA/Testes):**
     
     - **Foco:** Garantia de Qualidade.
         
     - **Tarefas:** Gerar planos de teste ([[docs/06_Qualidade_e_Testes/PGQ.md]]), casos de teste (em Gherkin, armazenados em [[docs/06_Qualidade_e_Testes/Casos_de_Teste/]]), e gerar scripts de testes unitários e de integração.
         
-9. `@AgenteMentorSeguranca` **(Analista de Segurança):**
+9. `@AgenteM_Seguranca` **(Analista de Segurança):**
     
     - **Foco:** Segurança de Código e Arquitetura.
         
     - **Tarefas:** Revisar código gerado e artefatos de design em busca de vulnerabilidades (OWASP Top 10, OWASP LLM Top 10), instruir outros agentes sobre práticas seguras, sugerir melhorias de segurança.
         
-10. `@AgenteMentorDocumentacao` **(Documentador Técnico):**
+10. `@AgenteM_Documentacao` **(Documentador Técnico):**
     
     - **Foco:** Documentação de Código e Manutenção da "Documentação Viva".
         
     - **Tarefas:** Gerar comentários e docstrings (Python Google Style, Dartdoc), explicar algoritmos complexos, auxiliar na sincronização da "Documentação Viva" no Obsidian e na curadoria/atualização da base de conhecimento para o RAG ([[rag_infra/source_documents]]).
+        
+11. `@AgenteM_DevOps` **(DevOps Engineer - Conceitual):**
+    
+    - **Foco:** Integração Contínua e Deploy.
+        
+    - **Tarefas:** Gerar scripts de CI/CD (conceituais), configurações de deploy, e instruções para automação via Pipedream.
+        
+12. `@AgenteM_UIDesigner` **(UI Designer):**
+    
+    - **Foco:** Design de Interface de Usuário.
+        
+    - **Tarefas:** Criar wireframes, mockups, protótipos de alta fidelidade, definir sistema de design (cores, tipografia, componentes), gerar especificações visuais para desenvolvedores.
+        
+13. `@AgenteM_UXDesigner` **(UX Designer):**
+    
+    - **Foco:** Design de Experiência do Usuário.
+        
+    - **Tarefas:** Conduzir pesquisa de usuário, criar personas, mapas de jornada do usuário, fluxos de usuário, protótipos interativos, testes de usabilidade.
+        
+14. `@AgenteM_Performance` **(Analista de Performance):**
+    
+    - **Foco:** Análise e Otimização de Performance.
+        
+    - **Tarefas:** Identificar gargalos de performance, sugerir otimizações de código e arquitetura, definir métricas de performance, gerar relatórios de análise.
         
 ## 4. Arquitetura Técnica e Tecnologias
 
@@ -417,7 +441,7 @@ Conforme definido na [[docs/02_Requisitos/ERS.md]] (v0.5, Seção 2.4) e refinam
     
 - **Controle de Versão:** **Git** (com repositório remoto no **GitHub** ou GitLab)
     
-- **Gestão de Tarefas e Fluxo de Trabalho:** **Obsidian Kanban Plugin** ([[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]])
+- **Gestão de Tarefas e Fluxo de Trabalho:** **Obsidian Kanban Plugin** ([[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]])
     
 - **Automação de Fluxos de Trabalho (CI/CD, Gatilhos):** **Pipedream**
     
@@ -489,7 +513,7 @@ Todo o conhecimento do projeto será mantido e interligado no **Obsidian**.
 
 O fluxo de trabalho será iterativo e incremental, seguindo os princípios ágeis.
 
-1. **Planejamento da Iteração (Obsidian Kanban):** Maestro prioriza tarefas no [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]].
+1. **Planejamento da Iteração (Obsidian Kanban):** Maestro prioriza tarefas no [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]].
     
 2. **Refinamento Estratégico e de Requisitos (Colaborativo):** Maestro e `@AgenteOrquestrador` validam a estratégia. Maestro e `@AgenteMentorPO` (com input do `@AgenteOrquestrador`) refinam HUs/ACs.
     
@@ -524,7 +548,7 @@ _(Um diagrama Mermaid.js será mantido no arquivo [[docs/03_Arquitetura_e_Design
 
 ### 7.1. Configuração e Uso do Obsidian Kanban
 
-O gerenciamento de tarefas será centralizado no **Obsidian** utilizando o plugin **"Kanban"**, conforme arquivo [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]].
+O gerenciamento de tarefas será centralizado no **Obsidian** utilizando o plugin **"Kanban"**, conforme arquivo [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]].
 
 - **Estrutura de Colunas:** `🧊 Backlog Geral`, `🎯 A Fazer - Próxima Iteração`, `✍️ Preparação/Revisão - Maestro`, `🤖 Em Processamento - Agente IA`, `⚙️ Em Processamento - Maestro`, `🧐 Validação - Maestro (HITL)`, `✅ Concluído na Iteração`, `🚀 Deployado/Arquivado`.
     
@@ -580,7 +604,30 @@ Após o alinhamento deste Plano Mestre (v1.5) e do [[docs/01_Guias_Centrais/GUIA
     
 
 Estes passos são cruciais para mitigar riscos e validar premissas antes do desenvolvimento intensivo do MVP.
-## 9. Apêndices
+## 9. Governança de IA e Conformidade Regulatória
+
+### 9.1. Princípios de IA Responsável
+
+O Recoloca.ai se compromete com o desenvolvimento e uso de Inteligência Artificial de forma ética, transparente e responsável. Nossos princípios incluem:
+
+-   **Transparência e Explicabilidade (XAI):** As decisões e sugestões da IA, especialmente na otimização de currículos e análise de vagas, serão apresentadas de forma compreensível ao usuário, explicando os critérios e a lógica por trás das recomendações. O módulo de otimização de currículo incluirá um "Por que esta sugestão?" para cada recomendação.
+-   **Mitigação de Vieses:** Serão implementados processos contínuos de auditoria e validação dos modelos de IA para identificar e mitigar vieses algorítmicos relacionados a gênero, raça, idade, origem ou qualquer outra característica discriminatória. O objetivo é garantir que as recomendações da IA sejam justas e equitativas para todos os usuários.
+-   **Privacidade e Segurança de Dados:** Rigorosa aderência à LGPD e às melhores práticas de segurança da informação para proteger os dados sensíveis dos usuários, especialmente currículos e informações pessoais.
+-   **Controle Humano:** O "Human-in-the-Loop" (HITL) é um componente central da nossa metodologia, garantindo que o Maestro e, em última instância, o usuário, tenham controle e capacidade de revisão sobre as saídas da IA.
+-   **Módulo Educativo:** Será desenvolvido um módulo educativo dentro da plataforma para conscientizar os usuários sobre o funcionamento da IA, seus benefícios e limitações, promovendo o uso informado e responsável.
+
+### 9.2. Conformidade Regulatória
+
+O Recoloca.ai acompanhará ativamente e se adaptará às regulamentações emergentes sobre Inteligência Artificial no Brasil e globalmente. Em particular, haverá um foco proativo na conformidade com:
+
+-   **Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018):** Todas as operações de coleta, tratamento, armazenamento e compartilhamento de dados pessoais estarão em conformidade com a LGPD.
+-   **Projeto de Lei nº 2.338/2023 (Marco Legal da IA no Brasil):** Embora ainda em tramitação, o Recoloca.ai buscará antecipar e incorporar as diretrizes e requisitos propostos por este PL, especialmente no que tange a sistemas de IA de "alto risco", transparência, explicabilidade e responsabilidade.
+
+### 9.3. Auditoria e Monitoramento Contínuo
+
+Serão estabelecidos mecanismos de auditoria e monitoramento contínuo do desempenho dos modelos de IA, da qualidade dos dados e da aderência aos princípios de IA responsável e conformidade regulatória. Relatórios periódicos serão gerados para avaliar a equidade, a precisão e a segurança dos sistemas de IA.
+
+## 10. Apêndices
 
 ### 9.1. Glossário de Termos Específicos do Projeto e Metodologia
 

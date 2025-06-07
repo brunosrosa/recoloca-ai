@@ -33,7 +33,7 @@
 - **Consulta à Base de Conhecimento (RAG) e Ferramentas de Contexto:**
     - **SEMPRE** consulte a base de conhecimento RAG (via ferramenta configurada ou `#Context` aprofundado) antes de gerar código, design ou documentação complexa para garantir alinhamento com [[docs/02_Requisitos/ERS.md]], [[docs/03_Arquitetura_e_Design/HLD.md]], LLDs e ADRs.
     - O `@AgenteOrquestrador` DEVE utilizar o RAG para acessar materiais de Product Management (em [[rag_infra/source_documents/PM_Knowledge/]]) para embasar suas perguntas estratégicas ao Maestro.
-    - **Agentes de Desenvolvimento (Builders):** Ao gerar ou verificar código que utilize bibliotecas, frameworks ou SDKs externos, DEVEM utilizar ativamente funcionalidades como MCP/Context7 (se disponíveis no Trae IDE) em conjunto com o RAG. O RAG fornecerá o contexto específico do projeto e da "Documentação Viva", enquanto o MCP/Context7 (ou consulta direta à documentação oficial da ferramenta) fornecerá a sintaxe mais atualizada e melhores práticas da ferramenta externa. Em caso de conflito ou dúvida, priorize a documentação oficial da ferramenta externa e sinalize ao `@AgenteOrquestrador`/Maestro.
+    - **Agentes Mentores de IA (Builders):** Ao gerar ou verificar código que utilize bibliotecas, frameworks ou SDKs externos, DEVEM utilizar ativamente os **MCPs configurados** (Model Context Protocol servers como Context7, filesystem, Puppeteer, WebContentFetcher, deepview) em conjunto com o RAG. O RAG fornecerá o contexto específico do projeto e da "Documentação Viva", enquanto os MCPs fornecerão a sintaxe mais atualizada e melhores práticas da ferramenta externa. Em caso de conflito ou dúvida, priorize a documentação oficial da ferramenta externa e sinalize ao `@AgenteOrquestrador`/Maestro.
 - **Documentação Viva:**
     - Gere docstrings (Google Style para Python, Dartdoc para Dart) e comentários em Português do Brasil para todo código produzido.
     - Gere diagramas UML e de fluxo em **Mermaid.js**.
@@ -67,8 +67,32 @@
 
 - O `@AgenteOrquestrador` é o **ponto de partida** para a maioria das novas tarefas ou features que envolvam estratégia de produto ou refinamento de requisitos.
     
-- Agentes especializados (Dev, QA, etc.) devem esperar prompts que foram co-criados ou validados pelo Maestro em conjunto com o `@AgenteOrquestrador`, garantindo que o contexto estratégico e os requisitos de Product Management tenham sido considerados.
+- Agentes Mentores de IA especializados (Dev, QA, etc.) devem esperar prompts que foram co-criados ou validados pelo Maestro em conjunto com o `@AgenteOrquestrador`, garantindo que o contexto estratégico e os requisitos de Product Management tenham sido considerados.
     
-- Se um Agente especializado receber um prompt diretamente do Maestro que pareça carecer de clareza estratégica ou desalinhado com os objetivos do produto (conforme RAG), ele PODE sugerir uma consulta prévia ao `@AgenteOrquestrador`.
+- Se um Agente Mentor de IA especializado receber um prompt diretamente do Maestro que pareça carecer de clareza estratégica ou desalinhado com os objetivos do produto (conforme RAG), ele PODE sugerir uma consulta prévia ao `@AgenteOrquestrador`.
 
---- FIM DO DOCUMENTO project_rules.md (v1.3) ---
+## 6. Gestão de Conflitos entre Regras
+
+**Hierarquia de Resolução de Conflitos:**
+1. **project_rules.md** (específicas do projeto) - **PRIORIDADE MÁXIMA**
+2. **user_rules.md** (preferências globais do Maestro)
+3. **Documentação Viva** do projeto (ERS, HLD, ADRs, etc.)
+4. **Padrões da indústria** e melhores práticas
+
+**Processo de Resolução:**
+- **Identificação:** Agente identifica conflito entre diretrizes
+- **Escalação:** Sinaliza ao `@AgenteOrquestrador`/Maestro com contexto claro
+- **Documentação:** Registra a decisão tomada para referência futura
+- **Atualização:** Sugere atualização das regras se necessário
+
+## 7. Feedback Loop Formalizado
+
+**Para Agentes Mentores de IA:**
+- **Autoavaliação:** Ao final de tarefas complexas, questione: "Esta solução atende completamente aos requisitos? Há pontos que poderiam ser melhorados?"
+- **Solicitação Proativa:** Peça feedback específico: "Maestro, esta abordagem está alinhada com suas expectativas? Há aspectos que gostaria de ajustar?"
+
+**Para o Maestro:**
+- **Feedback Estruturado:** Forneça feedback específico sobre: clareza, alinhamento estratégico, qualidade técnica, completude
+- **Atualização de Regras:** Quando padrões se repetem, considere atualizar estas regras para orientação futura
+
+--- FIM DO DOCUMENTO project_rules.md (v1.4) ---
