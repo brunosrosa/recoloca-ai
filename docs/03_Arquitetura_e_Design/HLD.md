@@ -3,7 +3,7 @@ sticker: lucide//heart-crack
 ---
 # High-Level Design (HLD) do Projeto Recoloca.ai
 
-**Versão**: 1.0
+**Versão**: 0.9 (Pré-Revisão Interativa)
 
 **Data de Criação**: 03 de junho de 2025
 

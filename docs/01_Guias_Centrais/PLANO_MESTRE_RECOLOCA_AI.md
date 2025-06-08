@@ -7,7 +7,7 @@ sticker: lucide//check
 
 **Data de Última Atualização**: 03 de junho de 2025
 
-**Versão**: 1.5
+**Versão**: 0.9 (Pré-Revisão Interativa)
 
 **Autor Principal (Maestro)**: Bruno S. Rosa
 

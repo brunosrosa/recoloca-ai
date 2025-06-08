@@ -1,17 +1,17 @@
 ---
 
 kanban-plugin: board
-sticker: emoji//2b55
+sticker: lucide//grid
 
 ---
 
 ## 🧊 Backlog Geral
 
-- [ ] **[TST-VAL-001]** Validação Técnica: Protótipo RLS FastAPI/Supabase (ERS Seção 6.1) \ #tecnico \ #validacao \ #prioridade_alta \ #risco_alto \ #Fase1 `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorSeguranca`
+- [ ] **[TST-VAL-001]** Validação Técnica: Protótipo RLS FastAPI/Supabase (ERS Seção 6.1) ⏫ \ #tecnico \ #validacao \ #risco_alto \ #Fase1 `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorSeguranca`
 	- [ ] Configurar tabelas e políticas RLS no Supabase para um cenário de teste.
 	- [ ] Desenvolver endpoints FastAPI mínimos para testar o acesso RLS.
 	- [ ] Validar a segurança e funcionalidade do RLS.
-- [ ] **[PES-NEG-001]** Validação de Negócio: Estimativa Detalhada de Custos Iniciais (ERS Seção 6.2) \ #negocio \ #pesquisa \ #prioridade_alta \ #Fase1 `@Maestro`
+- [ ] **[PES-NEG-001]** Validação de Negócio: Estimativa Detalhada de Custos Iniciais (ERS Seção 6.2) ⏫ \ #negocio \ #pesquisa \ #Fase1 `@Maestro`
 	- [ ] Estimar custos de APIs de LLMs (Gemini, OpenRouter).
 	- [ ] Estimar custos de infraestrutura (Supabase, Vercel, Render, Pipedream).
 	- [ ] Estimar outros custos operacionais iniciais.
@@ -52,14 +52,14 @@ sticker: emoji//2b55
 	- [ ] Implementar lógica de atuação proativa (`RF-COACH-002`, `RF-COACH-003`).
 	- [ ] Implementar backend para orientações (`RF-COACH-004`).
 	- [ ] Implementar frontend para interação com Coach IA.
-- [ ] **[PES-UXD-001]** Validação de UX/Valor: Elaborar Roteiro de Entrevista com Usuários-Alvo & Realizar a Pesquisa (Base para ERS Seção 6.3) \ #ux \ #pesquisa \ #validacao \ #prioridade_alta \ #Fase1 `@AgenteMentorPO` `@Maestro`
+- [ ] **[PES-UXD-001]** Validação de UX/Valor: Elaborar Roteiro de Entrevista com Usuários-Alvo & Realizar a Pesquisa (Base para ERS Seção 6.3) ⏫ \ #ux \ #pesquisa \ #validacao \ #Fase1 `@AgenteMentorPO` `@Maestro`
 	- [ ] Definir objetivos da entrevista.
 	- [ ] Listar perguntas chave abertas e fechadas.
 	- [ ] Preparar material de apoio (se houver mockups iniciais).
-- [ ] **[TST-UXD-001]** Validação de UX/Valor: Conduzir Entrevistas com Usuários-Alvo (3-5 profissionais de TI - ERS Seção 6.3) \ #ux \ #pesquisa \ #validacao \ #prioridade_alta \ #Fase1 `@Maestro`
+- [ ] **[TST-UXD-001]** Validação de UX/Valor: Conduzir Entrevistas com Usuários-Alvo (3-5 profissionais de TI - ERS Seção 6.3) ⏫ \ #ux \ #pesquisa \ #validacao \ #Fase1 `@Maestro`
 	- [ ] Agendar e realizar as entrevistas.
 	- [ ] Gravar (com permissão) e tomar notas detalhadas.
-- [ ] **[DOC-UXD-001]** Validação de UX/Valor: Criar Mockups/Protótipos Baixa Fidelidade para Validação (Base para ERS Seção 6.3) \ #ux \ #design \ #validacao \ #prioridade_alta \ #Fase1 `@AgenteM_UIDesigner` `@Maestro`
+- [ ] **[DOC-UXD-001]** Validação de UX/Valor: Criar Mockups/Protótipos Baixa Fidelidade para Validação (Base para ERS Seção 6.3) ⏫ \ #ux \ #design \ #validacao \ #Fase1 `@AgenteM_UIDesigner` `@Maestro`
 	- [ ] Esboçar wireframes das telas principais do MVP.
 	- [ ] Considerar uso de Stitch/FlutterFlow para protótipo navegável simples.
 - [ ] **[DOC-UXD-002]** Design: Criação do Style Guide Detalhado (`STYLE_GUIDE.md`) \ #ux \ #ui \ #documentacao \ #Fase1 `@AgenteM_UIDesigner` `@Maestro`
@@ -80,7 +80,7 @@ sticker: emoji//2b55
 	- [ ] Implementar backend para download PDF otimizado (`RF-CV-006`).
 	- [ ] Implementar backend para gerenciamento de versões de CV (`RF-CV-007`).
 	- [ ] Implementar frontend correspondente.
-- [ ] **[DOC-REQ-002]** Análise Pós-Validação: Consolidar Feedback e Refinar Documentos \ #ux \ #requisitos \ #validacao \ #prioridade_media \ #Fase1 `@Maestro` `@AgenteMentorPO`
+- [ ] **[DOC-REQ-002]** Análise Pós-Validação: Consolidar Feedback e Refinar Documentos 🔽 \ #ux \ #requisitos \ #validacao \ #Fase1 `@Maestro` `@AgenteMentorPO`
 	- [ ] Transcrever/Resumir principais pontos das entrevistas.
 	- [ ] Identificar padrões e insights chave.
 	- [ ] Atualizar [[docs/02_Requisitos/ERS.md]] e prioridades do backlog com base no feedback.
@@ -128,7 +128,7 @@ sticker: emoji//2b55
 	- [ ] Definir o roadmap de funcionalidades para o Recoloca.AI para os próximos 6-12 meses pós-MVP.
 	- [ ] Identificar e priorizar quais novos agentes ou capacidades de agentes serão necessários para suportar o roadmap.
 	- [ ] Planear a evolução da infraestrutura RAG/MCP com base nas necessidades futuras.
-- [ ] **[DOC-LEG-001]** Legal: Documentação Jurídica (Pré-Lançamento Público) \ #legal \ #prioridade_media \ #Fase3 `@Maestro` `@AgenteMentorLegal`
+- [ ] **[DOC-LEG-001]** Legal: Documentação Jurídica (Pré-Lançamento Público) 🔽 \ #legal \ #Fase3 `@Maestro` `@AgenteMentorLegal`
 	- [ ] Elaborar primeira versão dos Termos de Uso.
 	- [ ] Elaborar primeira versão da Política de Privacidade.
 	- [ ] Submeter para validação jurídica especializada.
@@ -154,20 +154,21 @@ sticker: emoji//2b55
 
 ## 🔄 Próximas Fases da Estratégia Refinada (MVP)
 
-- [ ] **[MVP-EST-REF-002]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 2] - Protótipo da Base Sólida \ #mvp \ #desenvolvimento \ #base_solida \ #prioridade_alta \ #fluxo_core `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorDevFlutter`
+- [ ] **[MVP-EST-REF-002]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 2] - Protótipo da Base Sólida ⏫ \ #mvp \ #desenvolvimento \ #base_solida \ #fluxo_core `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorDevFlutter`
 	- [ ] Configurar autenticação com Supabase
 	- [ ] Criar API FastAPI básica com endpoints essenciais
 	- [ ] Implementar upload de arquivo (sem parsing avançado)
 	- [ ] Desenvolver Kanban básico (3 colunas: Interessante, Aplicado, Resposta)
 	- [ ] Criar interface Flutter PWA responsiva
 	- [ ] Integrar frontend com backend via API
-- [ ] **[MVP-EST-REF-003]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 3] - Aprendizado sobre Limitações \ #mvp \ #desenvolvimento \ #limitacoes \ #aprendizado \ #prioridade_media_alta \ #fluxo_core `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorDevFlutter`
+- [ ] 
+- [ ] **[MVP-EST-REF-003]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 3] - Aprendizado sobre Limitações 🔼 \ #mvp \ #desenvolvimento \ #limitacoes \ #aprendizado \ #fluxo_core `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorDevFlutter`
 	- [ ] Implementar parsing de CV (PDF → dados estruturados)
 	- [ ] Desenvolver integração básica com LinkedIn (scraping/API)
 	- [ ] Criar formulário inteligente de vaga (LinkedIn-focused)
 	- [ ] Implementar validações e tratamento de erros robusto
 	- [ ] Documentar limitações descobertas e soluções propostas
-- [ ] **[MVP-EST-REF-004]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 4] - Refinamento do "Momento AHA!" \ #mvp \ #desenvolvimento \ #ia \ #coach \ #momento_aha \ #prioridade_alta \ #fluxo_core `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorDevFlutter`
+- [ ] **[MVP-EST-REF-004]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 4] - Refinamento do "Momento AHA!" ⏫ \ #mvp \ #desenvolvimento \ #ia \ #coach \ #momento_aha \ #fluxo_core `@Maestro` `@AgenteMentorDevFastAPI` `@AgenteMentorDevFlutter`
 	- [ ] Configurar pipeline RAG para análise de CVs
 	- [ ] Implementar Coach AI para otimização de CV
 	- [ ] Desenvolver sistema de sugestões personalizadas
@@ -178,33 +179,87 @@ sticker: emoji//2b55
 
 ## 📋 Documentação Paralela (MVP)
 
-- [ ] **[DOC-MVP-001]** Criação de LLDs para Componentes Core do MVP \ #documentacao \ #lld \ #mvp \ #prioridade_media \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+- [ ] **[DOC-MVP-001]** Criação de LLDs para Componentes Core do MVP 🔽 \ #documentacao \ #lld \ #mvp \ #Fase1 `@Maestro` `@AgenteOrquestrador`
 	- [ ] Criar LLD_Autenticacao_Supabase.md
 	- [ ] Criar LLD_CV_Parsing_Pipeline.md
 	- [ ] Criar LLD_Kanban_Vagas.md
 	- [ ] Criar LLD_Otimizacao_CV_IA.md
-- [ ] **[DOC-MVP-002]** Especificação OpenAPI para Backend MVP \ #documentacao \ #api \ #openapi \ #prioridade_media \ #Fase1 `@Maestro` `@AgenteMentorDevFastAPI`
+- [ ] **[DOC-MVP-002]** Especificação OpenAPI para Backend MVP 🔽 \ #documentacao \ #api \ #openapi \ #Fase1 `@Maestro` `@AgenteMentorDevFastAPI`
 	- [ ] Definir endpoints para autenticação
 	- [ ] Definir endpoints para gestão de CVs
 	- [ ] Definir endpoints para gestão de vagas
 	- [ ] Definir endpoints para otimização com IA
+- [ ] 
 
 
 ## 🤖 Infraestrutura de Agentes (Suporte ao MVP)
 
-- [ ] **[EST-REQ-001]** Análise Estratégica: Consistência da Documentação Core \ #estrategia \ #documentacao \ #validacao \ #prioridade_alta \ #Fase1 `@AgenteOrquestrador` `@Maestro`
+- [ ] **[IMP-RAG-003]** Operacionalização Completa do Sistema RAG - Criação e Indexação 🔺 \ #ia_agente \ #rag \ #indexacao \ #Fase1 `@Maestro` `@AgenteM_DevFastAPI`
+	- [ ] Configurar ambiente Python para RAG (FAISS, LangChain, sentence-transformers)
+	- [ ] Implementar script de indexação dos documentos da "Documentação Viva"
+	- [ ] Indexar documentos prioritários: ERS, PLANO_MESTRE, HLD, GUIA_AVANCADO, perfis de agentes
+	- [ ] Testar retrieval com queries de exemplo
+	- [ ] Validar qualidade dos chunks recuperados
+- [ ] **[IMP-RAG-004]** Desenvolvimento e Deploy do Servidor MCP para RAG 🔺 \ #ia_agente \ #rag \ #mcp \ #desenvolvimento \ #Fase1 `@Maestro` `@AgenteM_DevFastAPI`
+	- [ ] Implementar servidor MCP seguindo protocolo Model Context Protocol
+	- [ ] Expor endpoints para consulta ao RAG via MCP
+	- [ ] Configurar autenticação e segurança do servidor MCP
+	- [ ] Realizar testes de integração MCP ↔ RAG
+	- [ ] Documentar API do servidor MCP
+- [ ] **[CFG-RAG-001]** Configuração do RAG como Ferramenta no Trae IDE 🔺 \ #ia_agente \ #rag \ #configuracao \ #Fase1 `@Maestro`
+	- [ ] Configurar servidor MCP como ferramenta disponível no Trae IDE
+	- [ ] Testar acesso ao RAG via interface do Trae
+	- [ ] Validar funcionamento com agentes configurados
+	- [ ] Documentar processo de configuração
+- [ ] **[DOC-AGT-011]** Padronização de Entregáveis YAML e Refinamento de Perfis ⏫ \ #ia_agente \ #perfis \ #entregaveis \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Template atualizado TEMPLATE_PERFIL_AGENTE.md (v2.0)
+		- Incorporar melhorias do @AgenteOrquestrador v2.0
+		- Adicionar seção de "Entregáveis Estruturados" em formato YAML
+		- Definir critérios de ativação e gatilhos de fluxo
+	- [ ] **Entregável:** Especificação de Entregáveis YAML padronizada
+		- Schema de validação para entregáveis estruturados
+		- Templates de gatilhos automáticos por contexto
+		- Documentação de boas práticas para entregáveis
+	- [ ] Atualizar perfil do @AgenteM_UXDesigner com nuances capturadas
+	- [ ] Atualizar perfil do @AgenteM_DevFastAPI com especificidades técnicas
+	- [ ] Atualizar perfil do @AgenteM_PO com frameworks de Product Management
+	- [ ] Atualizar perfil do @AgenteM_DevFlutter com padrões de UI/UX
+	- [ ] Validar consistência entre todos os perfis
+- [ ] **[CFG-AGT-006]** Configuração Sequencial dos Agentes no Trae IDE ⏫ \ #ia_agente \ #configuracao \ #Fase1 `@Maestro`
+	- [ ] Configurar @AgenteM_UXDesigner com acesso ao RAG e base UX_Knowledge
+	- [ ] Configurar @AgenteM_DevFastAPI com acesso ao RAG e ferramentas de desenvolvimento
+	- [ ] Configurar @AgenteM_PO com acesso ao RAG e base PM_Knowledge
+	- [ ] Configurar @AgenteM_DevFlutter com acesso ao RAG
+	- [ ] Testar cada agente individualmente após configuração
+- [ ] **[DOC-RAG-003]** Criação de Bases de Conhecimento Especializadas 🔽 \ #ia_agente \ #rag \ #conhecimento \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] Expandir base UX_Knowledge com pesquisas adicionais
+	- [ ] Criar base Analytics_Knowledge para @AgenteM_Performance
+	- [ ] Criar base DevOps_Knowledge para @AgenteM_DevOps
+	- [ ] Criar base Security_Knowledge para @AgenteM_Seguranca
+	- [ ] Indexar todas as novas bases no sistema RAG
+- [ ] **[TST-AGT-001]** Testes de Integração do Ecossistema de Agentes ⏫ \ #ia_agente \ #testes \ #integracao \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] Testar fluxo: Maestro → @AgenteOrquestrador → Agente Especializado
+	- [ ] Validar acesso ao RAG por todos os agentes configurados
+	- [ ] Testar co-criação de prompts entre @AgenteOrquestrador e agentes
+	- [ ] Documentar limitações e pontos de melhoria identificados
+	- [ ] Criar playbook de troubleshooting para problemas comuns
+- [ ] **[EST-REQ-001]** Análise Estratégica: Consistência da Documentação Core ⏫ \ #estrategia \ #documentacao \ #validacao \ #Fase1 `@AgenteOrquestrador` `@Maestro`
 	- [ ] Verificar alinhamento e sinergia entre [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]], [[docs/02_Requisitos/ERS.md]], e [[docs/03_Arquitetura_Solucao/HLD.md]].
 	- [ ] Identificar e listar potenciais desalinhamentos, lacunas ou pontos que necessitem de esclarecimento/refinamento.
 	- [ ] Propor atualizações nos documentos, se necessário, para garantir coesão estratégica.
-- [ ] **[CFG-AGT-001]** Finalização e Operacionalização Inicial do `@AgenteOrquestrador` (v 1.0) \ #ia_agente \ #orquestracao \ #configuracao \ #prioridade_alta \ #Fase1 `@Maestro` `@AgenteOrquestrador`
-	- [ ] **(Revisão/Consolidação):** Refinar e validar o perfil completo do `@AgenteOrquestrador` em [[docs/04_Agentes_IA/Perfis/@AgenteOrquestrador.md]], com foco especial no "Prompt Base Inicial" e nas "Instruções Fundamentais", garantindo que os valores e pesos para sua atuação como assistente principal estejam claros.
-	- [ ] **(Revisão/Consolidação):** Configurar o `@AgenteOrquestrador` no Trae IDE, inserindo o Prompt Base refinado e definindo as ferramentas iniciais que ele poderá acessar.
-	- [ ] **(Nova):** Realizar testes de interação com o `@AgenteOrquestrador` (aqui com Gemini) utilizando a "Documentação Viva" como base de referência, focando em:
-		- Capacidade de seguir o tom de voz e persona.
-		- Compreensão e aplicação das `project_rules.md` e `user_rules.md`.
-		- Habilidade de decompor problemas e sugerir próximos passos.
-	- [ ] **(Nova):** Definir e documentar um fluxo de trabalho inicial de como você (Maestro) e o `@AgenteOrquestrador` colaborarão para avançar as próximas tarefas do projeto (ex: refinar ERS, planear sprints, co-criar prompts para outros agentes).
-- [ ] **[IMP-RAG-001]** Operacionalização do Sistema RAG (v 1.0) para Consumo pelo `@AgenteOrquestrador` \ #ia_agente \ #rag \ #mcp \ #desenvolvimento \ #prioridade_alta \ #Fase1 `@Maestro` `@AgenteM_DevFastAPI` `@AgenteM_DevOps`
+- [ ] **[CFG-AGT-001]** Evolução do `@AgenteOrquestrador` para Supervisor Estratégico (v 2.0) 🔺 \ #ia_agente \ #orquestracao \ #configuracao \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Perfil atualizado do `@AgenteOrquestrador` (v2.0) com nova persona de "Supervisor Estratégico"
+		- Implementar critérios de ativação automática (exceções, validação estratégica, otimização)
+		- Atualizar responsabilidades (Supervisor de Fluxo, Mentor Estratégico, Analista de Performance)
+		- Integrar templates de prompts evolutivos para supervisão e mentoria
+	- [ ] **Entregável:** Configuração do `@AgenteOrquestrador` v2.0 no Trae IDE
+		- Aplicar novo prompt base com foco em ativação sob demanda
+		- Configurar ferramentas RAG e MCPs para supervisão estratégica
+	- [ ] **Entregável:** Validação operacional do novo modelo de supervisão
+		- Testes de ativação automática por exceções
+		- Validação de mentoria estratégica sob demanda
+		- Verificação de redução de overhead de orquestração
+- [ ] **[IMP-RAG-001]** Operacionalização do Sistema RAG (v 1.0) para Consumo pelo `@AgenteOrquestrador` 🔺 \ #ia_agente \ #rag \ #mcp \ #desenvolvimento \ #Fase1 `@Maestro` `@AgenteM_DevFastAPI` `@AgenteM_DevOps`
 	- [ ] **(Revisão/Consolidação):** Concluir o desenvolvimento e testes unitários/integração do servidor MCP para o RAG (conforme a tarefa "RAG - Design e Implementação do Servidor MCP" já existente, focando em torná-lo funcional).
 	- [ ] **(Revisão/Consolidação):** Realizar a indexação inicial dos documentos chave da "Documentação Viva" (ex: ERS, Plano Mestre, Perfis de Agentes, Guias Centrais) para o RAG.
 	- [ ] **(Nova):** Configurar a ferramenta RAG-MCP no Trae IDE e associá-la como uma ferramenta disponível para o `@AgenteOrquestrador`.
@@ -217,11 +272,11 @@ sticker: emoji//2b55
 	- [ ] Criar Dockerfile para o servidor MCP (se aplicável).
 	- [ ] Realizar testes unitários e de integração do servidor MCP.
 	- [ ] Configurar este servidor como uma ferramenta no Trae IDE e testar com um agente.
-- [ ] **[CFG-AGT-002]** IA Agentes - Prompts Base e Ferramentas para Squad Principal \ #ia \ #agente \ #prompt_engineering \ #configuracao \ #prioridade_media \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+- [ ] **[CFG-AGT-002]** IA Agentes - Prompts Base e Ferramentas para Squad Principal 🔽 \ #ia \ #agente \ #prompt_engineering \ #configuracao \ #Fase1 `@Maestro` `@AgenteOrquestrador`
 	- [ ] Para cada agente do squad principal, revisar e refinar seu "Prompt Base Inicial" (nos perfis individuais em [[docs/04_Agentes_IA/Perfis/]]).
 	- [ ] Para cada agente, listar explicitamente as ferramentas MCP que ele precisaria (ex: RAG, APIs específicas, outros agentes).
 	- [ ] Estabelecer e documentar o processo de co-criação de prompts para agentes especializados, com base no [[01_Guias_Centrais/GUIA_AVANCADO.md]] e nas capacidades definidas no [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]].
-- [ ] **[CFG-AGT-003]** IA Agentes - Setup Trae IDE (Configuração Detalhada Agentes) \ #ia \ #agente \ #configuracao \ #prioridade_media \ #Fase1 `@Maestro`
+- [ ] **[CFG-AGT-003]** IA Agentes - Setup Trae IDE (Configuração Detalhada Agentes) 🔽 \ #ia \ #agente \ #configuracao \ #Fase1 `@Maestro`
 	- [ ] Configurar o Agente `@AgenteMentorPO` no Trae IDE.
 	- [ ] Configurar os demais agentes do Squad Principal no Trae IDE progressivamente, conforme forem sendo detalhados e necessitarem de operacionalização.
 - [ ] **[DOC-AGT-004]** IA Agentes - Orquestração (`@AgenteOrquestrador`) - Projeto Detalhado \ #ia \ #agente \ #orquestracao \ #arquitetura \ #Fase1 `@Maestro` `@AgenteOrquestrador`
@@ -232,7 +287,94 @@ sticker: emoji//2b55
 	- [ ] Popular `project_rules.md` com padrões de codificação, segurança, documentação, etc.
 	- [ ] Popular `user_rules.md` com preferências do Maestro.
 	- [ ] Definir como os agentes serão instruídos a consultar e seguir estas regras.
+- [ ] **[SIS-ENT-001]** Implementação do Sistema de Entregáveis como Gatilhos 🔽 \ #sistema \ #entregaveis \ #automacao \ #Fase2 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Especificação completa do sistema de gatilhos inteligentes
+		- Definir estrutura YAML para entregáveis com validação automática
+		- Mapear trilhas adaptativas (Express, Padrão, Exploratória, Arquitetural)
+		- Criar mecanismo de ativação automática de agentes
+	- [ ] **Entregável:** Protótipo funcional do sistema de gatilhos
+		- Implementar validação de entregáveis YAML
+		- Criar dashboard de supervisão para @AgenteOrquestrador
+		- Testar fluxos automatizados por contexto
+- [ ] **[OTM-FLX-001]** Otimização do Fluxo de Trabalho Geral 🔽 \ #fluxo \ #otimizacao \ #adaptativo \ #Fase2 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** FLUXO_TRABALHO_GERAL.md v2.0 atualizado
+		- Implementar "Desenvolvimento Adaptativo por Contexto"
+		- Integrar sistema de entregáveis como gatilhos
+		- Documentar trilhas otimizadas (Express: 15-30min, Padrão: 45-90min)
+	- [ ] **Entregável:** Métricas e KPIs de supervisão implementados
+		- Dashboard operacional (Tempo por Trilha, Taxa de Sucesso, Utilização)
+		- Dashboard estratégico (Time to Market, ROI de Automação, Inovação)
+		- Sistema de alertas para exceções e otimizações
 
+
+## 🎯 Governança e Loop de Atualização
+
+- [ ] **[GOV-UPD-001]** Loop de Atualização Automática do Kanban 🔺 \ #governanca \ #kanban \ #atualizacao \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Sistema de monitoramento de progresso do projeto
+		- Definir gatilhos para revisão automática (marcos, prazos, mudanças de escopo)
+		- Criar checklist de validação para atualização do Kanban
+		- Estabelecer frequência de revisões (semanal, por sprint, por milestone)
+	- [ ] **Entregável:** Processo de identificação proativa de necessidades de atualização
+		- Monitorar conclusão de tarefas e dependências
+		- Identificar novas tarefas emergentes durante execução
+		- Detectar mudanças de prioridade ou escopo
+	- [ ] **Entregável:** Automação de lembretes e alertas
+		- Configurar alertas para tarefas em atraso ou bloqueadas
+		- Criar lembretes para revisões periódicas do Kanban
+		- Implementar notificações para marcos importantes
+	- [ ] **Entregável:** Dashboard de governança do projeto
+		- Métricas de progresso por fase e categoria
+		- Indicadores de saúde do projeto (velocity, blockers, riscos)
+		- Relatórios automáticos de status para stakeholders
+- [ ] **[GOV-REV-001]** Revisão Interativa dos Documentos Core (v0.9 → v1.0) 🔺 \ #governanca \ #documentacao \ #revisao \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Processo estruturado de revisão interativa
+		- Definir metodologia de revisão colaborativa com agentes
+		- Criar templates de feedback e validação
+		- Estabelecer critérios de aprovação para v1.0
+	- [ ] **Entregável:** Cronograma de revisões dos documentos core
+		- PLANO_MESTRE_RECOLOCA_AI.md (30-45 min)
+		- ERS.md - Especificação de Requisitos (45 min)
+		- GUIA_AVANCADO.md (30 min)
+		- Documentos de gerenciamento (TAP, PGR, PCom, etc.) (60 min total)
+		- HLD.md - Arquitetura de Alto Nível (30 min)
+	- [ ] **Entregável:** Atualização de versionamento para v0.9
+		- Marcar todos os documentos core como v0.9 (pré-revisão)
+		- Criar log de mudanças para rastreamento
+		- Preparar estrutura para v1.0 pós-revisão
+	- [ ] **Entregável:** Relatório de inconsistências e melhorias identificadas
+		- Documentar gaps e desalinhamentos encontrados
+		- Priorizar correções por impacto no MVP
+		- Criar plano de ação para implementação das melhorias
+- [ ] **[GOV-SPR-001]** Criação da Primeira Sprint Baseada na EAP 🔺 \ #governanca \ #sprint \ #eap \ #planejamento \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Sprint Planning baseado na Estrutura Analítica do Projeto
+		- Utilizar EAP do PGP.md para definir pacotes de trabalho
+		- Quebrar entregáveis em tarefas executáveis (2-8 horas cada)
+		- Definir Definition of Done para cada item
+	- [ ] **Entregável:** Sprint Backlog priorizado
+		- Selecionar itens de maior valor para o MVP
+		- Estimar esforço e complexidade
+		- Identificar dependências e riscos
+	- [ ] **Entregável:** Configuração do ambiente de Sprint
+		- Definir duração da sprint (1-2 semanas)
+		- Estabelecer cerimônias (daily, review, retrospective)
+		- Configurar ferramentas de acompanhamento
+	- [ ] **Entregável:** Métricas e KPIs da Sprint
+		- Velocity inicial estimada
+		- Burndown chart configurado
+		- Critérios de sucesso da sprint
+- [ ] **[GOV-KAN-001]** Atualização Pós-Revisões do Kanban Interno 🔽 \ #governanca \ #kanban \ #pos_revisao \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+	- [ ] **Entregável:** Kanban atualizado com insights das revisões
+		- Incorporar novas tarefas identificadas nas revisões
+		- Ajustar prioridades com base nos achados
+		- Remover ou consolidar tarefas redundantes
+	- [ ] **Entregável:** Rebalanceamento de carga de trabalho
+		- Redistribuir tarefas entre fases conforme capacidade
+		- Identificar gargalos e dependências críticas
+		- Otimizar sequenciamento para máxima eficiência
+	- [ ] **Entregável:** Atualização de estimativas e prazos
+		- Revisar estimativas com base em complexidade real
+		- Ajustar cronograma do projeto
+		- Comunicar mudanças aos stakeholders
 
 ## 🔧 Tarefas de Suporte e Infraestrutura
 
@@ -255,7 +397,7 @@ sticker: emoji//2b55
 
 ## ⚡ Em Andamento
 
-- [ ] **[MVP-EST-REF-001]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 1] - Configuração dos Agentes Essenciais \ #mvp \ #estrategia \ #agentes \ #configuracao \ #prioridade_critica \ #fluxo_core `@Maestro` `@AgenteOrquestrador`
+- [ ] **[MVP-EST-REF-001]** MVP - Estratégia Refinada: Base Sólida + Aprendizado Iterativo [FASE 1] - Configuração dos Agentes Essenciais 🔺 \ #mvp \ #estrategia \ #agentes \ #configuracao \ #fluxo_core `@Maestro` `@AgenteOrquestrador`
 	- [ ] Configurar @AgenteM_UXDesigner no Trae AI
 	- [ ] Configurar @AgenteMentorDevFastAPI no Trae AI
 	- [ ] Configurar @AgenteMentorPO no Trae AI
@@ -269,7 +411,7 @@ sticker: emoji//2b55
 
 ## ✅ Concluído
 
-- [x] **[EST-DEV-001]** Estratégia de Produto: Definição de Prioridades e Sequenciamento de Features para o MVP \ #estrategia \ #produto \ #mvp \ #prioridade_alta \ #Fase1 `@Maestro` `@AgenteOrquestrador`
+- [x] **[EST-DEV-001]** Estratégia de Produto: Definição de Prioridades e Sequenciamento de Features para o MVP ⏫ \ #estrategia \ #produto \ #mvp \ #Fase1 `@Maestro` `@AgenteOrquestrador`
 	- [x] Revisar e validar as funcionalidades core definidas no [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]].
 	- [x] Aplicar frameworks de priorização (ex: RICE, MoSCoW) para sequenciar o desenvolvimento.
 	- [x] Definir critérios claros para o que constitui um MVP viável.

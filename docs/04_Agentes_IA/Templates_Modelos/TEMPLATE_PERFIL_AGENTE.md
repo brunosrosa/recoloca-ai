@@ -110,4 +110,4 @@ sticker: lucide//check
     - [[docs/05_Prompts/02_Prompts_Especificos/PRPT_IDAgente_FuncionalidadeEspecifica1.md]]
     - [[docs/05_Prompts/02_Prompts_Especificos/PRPT_IDAgente_FuncionalidadeEspecifica2.md]]
 
---- FIM DO DOCUMENTO @NomeDoAgenteID.md (v X.X) ---
+--- FIM DO DOCUMENTO @AgenteM_XXX.md (v X.X) ---

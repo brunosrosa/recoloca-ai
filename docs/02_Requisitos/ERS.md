@@ -3,7 +3,7 @@ sticker: lucide//heart-crack
 ---
 # Especificação de Requisitos de Software (ERS): Recoloca. Ai
 
-**Versão**: 0.6
+**Versão**: 0.9 (Pré-Revisão Interativa)
 
 **Data de Criação**: 26 de maio de 2025
 

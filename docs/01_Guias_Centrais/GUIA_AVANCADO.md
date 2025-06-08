@@ -3,7 +3,7 @@ sticker: lucide//check
 ---
 # GUIA AVANÇADO PARA DESENVOLVIMENTO SOLO COM AGENTES DE IA MENTORES (Aplicado ao Projeto Recoloca.ai)
 
-**Versão:** 2.3
+**Versão:** 0.9 (Pré-Revisão Interativa)
 **Data de Criação:** 28 de maio de 2025
 **Data de Última Atualização:** 03 de junho de 2025
 **Baseado em:**
@@ -57,7 +57,34 @@ Conforme detalhado no [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1
 -   **Aprender e evoluir continuamente** na colaboração com a IA.
 -   Manter o foco no **valor para o usuário** e nos objetivos de negócio.
 -   Gerenciar o próprio **fluxo de trabalho e energia**.
-### 2.3. O SDLC Ágil Adaptado
+### 2.3. Estratégia de Evolução Gradual do Sistema
+
+O projeto Recoloca.AI adota uma **abordagem de evolução gradual** que prioriza o aprendizado prático sobre a automação prematura. Esta estratégia reconhece que:
+
+- **Aprender enquanto constrói** é mais valioso que automatizar processos ainda não compreendidos
+- A **documentação detalhada** é fundamental para fornecer contexto adequado aos agentes
+- O **refinamento iterativo** dos agentes e processos é essencial para o sucesso
+- A **validação prática** de cada componente deve preceder a integração completa
+
+#### Fases de Evolução:
+
+**Fase 1 - Estruturação e Validação (Atual):**
+- `@AgenteOrquestrador` como "segundo cérebro" estratégico
+- Operacionalização do sistema RAG
+- Criação e teste dos agentes especializados
+- Refinamento da documentação e entregáveis
+
+**Fase 2 - Especialização e Automação:**
+- Agentes especializados totalmente operacionais
+- Fluxos de trabalho automatizados
+- Sistema RAG otimizado e integrado
+
+**Fase 3 - Supervisão Avançada (Futuro):**
+- Introdução do `@AgenteSupervisor` para orquestração automática
+- Automação completa de fluxos de desenvolvimento
+- Sistema de aprendizado contínuo
+
+### 2.4. O SDLC Ágil Adaptado
 
 O Ciclo de Vida de Desenvolvimento de Software (SDLC) Ágil é adaptado para integrar intensivamente os Agentes de IA Mentores, conforme descrito no [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5, Seção 2.3). A interação inicial com o `@AgenteOrquestrador` para refinar a estratégia e o escopo da tarefa é um passo fundamental antes da delegação aos agentes especializados. O fluxo geral é:
 
@@ -95,8 +122,10 @@ Para o "Maestro" que gerencia uma equipe de Agentes de IA e, simultaneamente, at
 
 1.  **Refinar o pensamento estratégico de Product Management:** Antes de formular prompts para outros agentes, o `@AgenteOrquestrador` ajuda o Maestro a validar a estratégia da feature, o alinhamento com os objetivos do produto, a proposta de valor para o usuário e a consideração de métricas de sucesso.
 2.  **Formular instruções otimizadas para os demais agentes:** Garante que os prompts sejam claros, contextualmente ricos e alinhados com a visão estratégica co-criada.
+3.  **Atuar como "segundo cérebro" estratégico:** Funciona como um parceiro de reflexão que questiona premissas, explora alternativas e ajuda a manter o foco nos objetivos centrais do projeto.
+4.  **Facilitar a orquestração do ecossistema de agentes:** Coordena a interação entre diferentes agentes especializados, garantindo consistência e alinhamento.
 
-Ele é a ponte entre a "Documentação Viva" (acessada via RAG), as ideias e a visão estratégica do Maestro, e as capacidades dos outros Agentes Mentores.
+Ele é a ponte entre a "Documentação Viva" (acessada via RAG), as ideias e a visão estratégica do Maestro, e as capacidades dos outros Agentes Mentores. **Importante:** Na fase atual do projeto, o `@AgenteOrquestrador` atua como "segundo cérebro" do Maestro, adiando a criação de um `@AgenteSupervisor` específico para após a estruturação completa do RAG e validação dos agentes especializados.
 ### 3.2. Funcionalidades e Persona do `@AgenteOrquestrador` como PM Mentor
 
 Conforme delineado no [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5, Seção 3.1) e expandido aqui:

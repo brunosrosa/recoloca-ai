@@ -3,9 +3,9 @@ sticker: lucide//rotate-ccw
 ---
 # AGENTES DE IA MENTORES DO PROJETO RECOLOCA.AI (VISÃO GERAL)
 
-**Versão**: 1.6 
+**Versão**: 2.0 
 **Data de Criação Original**: 03 de junho de 2025
-**Data de Última Atualização**: 04 de junho de 2025
+**Data de Última Atualização**: 05 de junho de 2025
 **Autor**: @AgenteOrquestrador (com supervisão do Maestro Bruno S. Rosa)
 **Baseado em**:
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5)
@@ -71,15 +71,15 @@ A seguir, apresentamos os Agentes de IA Mentores essenciais para o desenvolvimen
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_API.md|Perfil Detalhado]]
         
-- **`@AgenteM_DevFastAPI`** (Desenvolvedor Python/FastAPI Mentor Sênior)
+- **`@AgenteM_DevFastAPI`** (Desenvolvedor Backend Python Sênior e Mentor Especialista em FastAPI)
     
-    - **Foco:** Desenvolvedor Python/FastAPI Mentor Sênior
+    - **Foco:** Desenvolvedor Backend Python Sênior e Mentor Especialista em FastAPI
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevFastAPI.md|Perfil Detalhado]]
         
-- **`@AgenteM_DevFlutter`** (Desenvolvedor Flutter/Dart Mentor Sênior)
+- **`@AgenteM_DevFlutter`** (Desenvolvedor Flutter/Dart Mentor Sênior - Especialista em PWA)
     
-    - **Foco:** Desenvolvedor Flutter/Dart Mentor Sênior
+    - **Foco:** Desenvolvedor Flutter/Dart Mentor Sênior - Especialista em PWA
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevFlutter.md|Perfil Detalhado]]
         
@@ -101,31 +101,37 @@ A seguir, apresentamos os Agentes de IA Mentores essenciais para o desenvolvimen
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Documentacao.md|Perfil Detalhado]]
         
-- **`@AgenteM_DevOps`** (Especialista em CI/CD e Automação de Operações Mentor)
+- **`@AgenteM_DevOps`** (Especialista em CI/CD e Automação de Operações Mentor Sênior)
     
-    - **Foco:** Especialista em CI/CD e Automação de Operações Mentor
+    - **Foco:** Especialista em CI/CD e Automação de Operações Mentor Sênior
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevOps.md|Perfil Detalhado]]
         
-- **`@AgenteM_DevJS`** (Desenvolvedor de Extensão Chrome Mentor Sênior - Pós-MVP)
+- **`@AgenteM_DevJS`** (Desenvolvedor de Extensão Chrome Mentor Sênior (JavaScript))
     
-    - **Foco:** Desenvolvedor de Extensão Chrome Mentor Sênior - Pós-MVP
+    - **Foco:** Desenvolvedor de Extensão Chrome Mentor Sênior (JavaScript)
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevJS.md|Perfil Detalhado]]
         
-- **`@AgenteM_Performance`** (APO - Analista de Performance e Otimização Mentor)
+- **`@AgenteM_Performance`** (APO - Mentor em Análise de Performance e Otimização Contínua)
     
-    - **Foco:** Analista de Performance e Otimização Mentor (Perfil a ser detalhado)
+    - **Foco:** APO - Mentor em Análise de Performance e Otimização Contínua
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Performance.md|Criar/Ver Perfil]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Performance.md|Perfil Detalhado]]
+        
+- **`@AgenteM_Dados`** (Analista de Dados e BI Mentor Sênior)
+    
+    - **Foco:** Analista de Dados e BI Mentor Sênior
+        
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_Dados.md|Perfil Detalhado]]
         
 ## 3. Visão de Evolução do Squad (Agentes Futuros)
 
 À medida que o Recoloca.ai evolui e novas necessidades surgem, o squad de Agentes de IA Mentores poderá ser expandido. Alguns papéis futuros potenciais incluem (perfis a serem criados em `[[docs/04_Agentes_IA/Perfis/FuturosPerfis/]]`):
 
-- **`@AgenteM_Dados`** (Analista de Dados e BI Mentor):
+- **`@AgenteM_ML`** (Especialista em Machine Learning e IA Mentor):
     
-    - **Foco:** Auxiliar na coleta, análise e visualização de dados de uso da plataforma, métricas de produto e KPIs. Poderia ajudar a projetar dashboards (ex: com Metabase ou similar, conceitualmente) e a extrair insights para a tomada de decisão estratégica.
+    - **Foco:** Auxiliar no desenvolvimento e otimização de modelos de IA para análise de CVs, matching de vagas, e outras funcionalidades de ML do Recoloca.ai.
         
 - **`@AgenteM_MarketingDigital`** (Especialista em Marketing Digital Mentor):
     
