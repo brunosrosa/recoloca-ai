@@ -81,7 +81,7 @@ metricas:
 
 ## 3. Especificação por Agente
 
-### 3.1. @AgenteM_PO - Product Owner
+### 3.1. @AgenteOrquestrador - Product Manager + Product Owner
 
 **Entregáveis Principais:**
 - Histórias de Usuário (HUs)
@@ -92,7 +92,7 @@ metricas:
 **Template Específico:**
 ```yaml
 metadata:
-  agente_origem: "@AgenteM_PO"
+  agente_origem: "@AgenteOrquestrador"
   proximos_gatilhos: ["@AgenteM_ArquitetoHLD", "@AgenteM_UXDesigner"]
   
 conteudo:
@@ -486,7 +486,7 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     participant M as Maestro
-    participant PO as @AgenteM_PO
+    participant PO as @AgenteOrquestrador
     participant A as @AgenteM_Arquiteto
     participant D as @AgenteM_Dev
     participant Q as @AgenteM_QA
@@ -504,7 +504,7 @@ sequenceDiagram
 sequenceDiagram
     participant M as Maestro
     participant O as @AgenteOrquestrador
-    participant PO as @AgenteM_PO
+    participant PO as @AgenteOrquestrador
     participant UX as @AgenteM_UX
     participant A as @AgenteM_Arquiteto
     participant D as @AgenteM_Dev

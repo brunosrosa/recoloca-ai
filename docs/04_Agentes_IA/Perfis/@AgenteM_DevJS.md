@@ -8,7 +8,7 @@ sticker: lucide//check
 - **Identificador Único:** `@AgenteM_DevJS`
 - **Nome/Título Descritivo:** Desenvolvedor de Extensão Chrome Mentor Sênior (JavaScript)
 - **Versão do Agente:** v 2.0
-- **Data de Última Atualização:** 2024-12-19
+- **Data de Última Atualização:** 2025-06-11
 - **Responsável pela Manutenção:** Maestro (Bruno S. Rosa)
 
 ## 2. Persona Detalhada

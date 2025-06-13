@@ -2,7 +2,7 @@
 
 ---
 **Versão:** 1.0  
-**Data:** Dezembro 2024  
+**Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
 **Próxima Revisão:** Janeiro 2025  
 
@@ -214,7 +214,7 @@ O projeto utiliza uma metodologia inovadora que combina:
 
 ---
 
-**Última Atualização:** Dezembro 2024  
+**Última Atualização:** Junho 2025  
 **Próxima Revisão:** Janeiro 2025  
 
 **Documentos Relacionados:**

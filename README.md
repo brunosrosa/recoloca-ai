@@ -77,7 +77,7 @@ Este projeto é desenvolvido usando uma metodologia inovadora onde um desenvolve
 - **@AgenteMentorDevFastAPI** - Especialista em Backend Python/FastAPI
 - **@AgenteMentorDevFlutter** - Especialista em Frontend Flutter
 - **@AgenteMentorArquitetoLLD** - Arquiteto de Software (Low Level Design)
-- **@AgenteMentorPO** - Product Owner e UX Strategy
+- **@AgenteOrquestrador** - Product Manager, Product Owner e Orquestração
 - **@AgenteM_UIDesigner** - UI/UX Designer
 - **@AgenteMentorAPI** - Especialista em Design de APIs
 - **@AgenteMentorQA** - Quality Assurance e Testes

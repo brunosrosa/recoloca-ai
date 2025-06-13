@@ -3,15 +3,15 @@ sticker: lucide//rotate-ccw
 ---
 # FLUXO DE TRABALHO GERAL DO PROJETO RECOLOCA.AI
 
-**Versão**: 2.0
+**Versão:** 0.9 (Pré-Revisão Interativa)  
 
 **Data de Criação**: 30 de maio de 2025
 
 **Data de Última Atualização**: 06 de junho de 2025 (Fluxo Adaptativo por Contexto)
 
-Baseado em: [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.4) e [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.2)
+Baseado em: [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v0.9) e [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v0.29)
 
-**Principais Mudanças v2.0:**
+**Principais Mudanças v0.9:**
 - Introdução do **Desenvolvimento Adaptativo por Contexto**
 - Sistema de **Entregáveis como Gatilhos de Fluxo**
 - Evolução do papel do `@AgenteOrquestrador` para **Supervisor Estratégico**
@@ -65,7 +65,7 @@ flowchart TD
     E1 --> F1["✅ Deploy Express"]
     
     %% TRILHA PADRÃO
-    C2 --> D2A["@AgenteM_PO"]
+    C2 --> D2A["@AgenteOrquestrador"]
     D2A -->|"HUs/ACs prontas"| D2B["Design (se necessário)"]
     D2B -->|"Specs prontas"| D2C["@AgenteDev"]
     D2C -->|"Código pronto"| D2D["@AgenteM_QA"]
@@ -73,7 +73,7 @@ flowchart TD
     
     %% TRILHA EXPLORATÓRIA
     C3 --> D3A["@AgenteOrquestrador<br>(Supervisor Estratégico)"]
-    D3A --> D3B["@AgenteM_PO + @AgenteM_UX"]
+    D3A --> D3B["@AgenteOrquestrador + @AgenteM_UX"]
     D3B -->|"Pesquisa + HUs"| D3C["@AgenteArquiteto"]
     D3C -->|"Design validado"| D3D["@AgenteDev"]
     D3D -->|"Implementação"| D3E["@AgenteM_QA"]
@@ -119,9 +119,9 @@ flowchart TD
 Cada agente produz **entregáveis estruturados** que servem como **gatilhos automáticos** para o próximo agente:
 
 ```yaml
-# Exemplo: Entregável do @AgenteM_PO
+# Exemplo: Entregável do @AgenteOrquestrador
 metadata:
-  agente_origem: "@AgenteM_PO"
+  agente_origem: "@AgenteOrquestrador"
   timestamp: "2025-06-06T10:30:00Z"
   versao: "1.0"
   status: "COMPLETO"
@@ -146,7 +146,7 @@ gatilhos_automaticos:
 
 | **Agente** | **Entregáveis Principais** | **Gatilhos para** |
 |------------|---------------------------|-------------------|
-| `@AgenteM_PO` | HUs, ACs, DoR/DoD | Arquiteto HLD, UX Designer |
+| `@AgenteOrquestrador` | HUs, ACs, DoR/DoD | Arquiteto HLD, UX Designer |
 | `@AgenteM_ArquitetoHLD` | HLD, Diagramas, ADRs | Arquiteto LLD, API Designer |
 | `@AgenteM_UXDesigner` | User Flows, Wireframes | UI Designer |
 | `@AgenteM_ArquitetoLLD` | LLDs, Componentes | Dev FastAPI, Dev Flutter |
@@ -160,7 +160,7 @@ gatilhos_automaticos:
 
 #### 🔄 **Fluxo 1: Feature Completa**
 ```
-@AgenteM_PO → @AgenteM_ArquitetoHLD → @AgenteM_ArquitetoLLD → @AgenteM_DevFastAPI
+@AgenteOrquestrador → @AgenteM_ArquitetoHLD → @AgenteM_ArquitetoLLD → @AgenteM_DevFastAPI
                 ↓                                              ↓
             @AgenteM_UXDesigner → @AgenteM_UIDesigner → @AgenteM_DevFlutter
                                                               ↓
@@ -174,7 +174,7 @@ gatilhos_automaticos:
 
 #### 🏗️ **Fluxo 3: Componente de Núcleo**
 ```
-@AgenteOrquestrador → @AgenteM_PO → @AgenteM_ArquitetoHLD → Todos os Agentes → Validação Rigorosa
+@AgenteOrquestrador → @AgenteM_ArquitetoHLD → Todos os Agentes → Validação Rigorosa
 ```
 
 ## 5. Evolução do Papel do @AgenteOrquestrador
@@ -229,7 +229,7 @@ gatilhos_automaticos:
 - Não afeta componentes de núcleo
 
 **Fluxo Estruturado:**
-1. **@AgenteM_PO** → HUs e ACs estruturadas
+1. **@AgenteOrquestrador** → HUs e ACs estruturadas
 2. **Design condicional** (se necessário)
 3. **Desenvolvimento** seguindo padrões
 4. **QA padrão** com casos de teste
@@ -247,7 +247,7 @@ gatilhos_automaticos:
 
 **Fluxo Investigativo:**
 1. **@AgenteOrquestrador** → Validação estratégica
-2. **@AgenteM_PO + @AgenteM_UX** → Pesquisa e definição
+2. **@AgenteOrquestrador + @AgenteM_UX** → Pesquisa e definição
 3. **@AgenteM_Arquiteto** → Design técnico
 4. **Prototipação** e validação
 5. **Desenvolvimento** iterativo
@@ -336,7 +336,7 @@ gatilhos_automaticos:
 
 1. **Identificação da Ideia/Necessidade (Maestro)**
 2. **Validação Estratégica (Maestro + @AgenteOrquestrador)**
-3. **Geração/Refinamento de HUs e ACs (Maestro + @AgenteOrquestrador + @AgenteM_PO)**
+3. **Geração/Refinamento de HUs e ACs (Maestro + @AgenteOrquestrador)**
 4. **Design (Maestro + @AgenteOrquestrador + Agentes de Design)**
 5. **Desenvolvimento (Maestro + @AgenteOrquestrador + Agentes Dev)**
 6. **Revisão HITL e Implementação Manual (Maestro)**
@@ -345,7 +345,7 @@ gatilhos_automaticos:
 9. **Deploy (Maestro + @AgenteM_DevOps / Pipedream)**
 10. **Monitoramento e Iteração (Maestro + @AgenteOrquestrador)**
 
-### 10.2. Limitações Identificadas (v1.0)
+### 10.2. Limitações Identificadas (v0.8)
 
 - **Sequencialidade excessiva** causando gargalos
 - **Overhead de orquestração** em tarefas simples
@@ -353,7 +353,7 @@ gatilhos_automaticos:
 - **Ausência de feedback loops** rápidos
 - **Rigidez na classificação** de tarefas
 
-### 10.3. Evolução para v2.0
+### 10.3. Evolução para v0.9
 
 O fluxo v2.0 mantém a **robustez** do processo original enquanto adiciona:
 - **Adaptabilidade** baseada em contexto
@@ -383,6 +383,6 @@ O fluxo v2.0 mantém a **robustez** do processo original enquanto adiciona:
 
 ---
 
-**FIM DO DOCUMENTO FLUXO_TRABALHO_GERAL.md (v2.0)**
+**FIM DO DOCUMENTO FLUXO_TRABALHO_GERAL.md (v0.9)**
 
 *"A eficiência não está em fazer as coisas mais rápido, mas em fazer as coisas certas da forma mais inteligente."*

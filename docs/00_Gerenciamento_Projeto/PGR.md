@@ -2,7 +2,7 @@
 
 ---
 **Versão:** 0.9 (Pré-Revisão Interativa)  
-**Data:** Dezembro 2024  
+**Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
 **Próxima Revisão:** Janeiro 2025  
 
@@ -125,7 +125,7 @@ O plano abrange todos os riscos que podem impactar:
   - Desenvolvimento de MVP enxuto
   - Testes beta com feedback contínuo
   - Pivotagem rápida baseada em dados
-- **Responsável:** @AgenteMentorPO
+- **Responsável:** @AgenteOrquestrador
 - **Status:** Ativo
 
 #### RISCO-NEG-002: Custos Operacionais Excessivos
@@ -278,11 +278,11 @@ O plano abrange todos os riscos que podem impactar:
 ## 7. Aprovação e Controle de Versões
 
 **Aprovado por:** Bruno S. Rosa (Maestro)  
-**Data de Aprovação:** Dezembro 2024  
+**Data de Aprovação:** Junho 2025  
 **Próxima Revisão:** Janeiro 2025  
 
 **Histórico de Versões:**
-- v1.0 (Dez 2024): Versão inicial
+- v1.0 (Jun 2025): Versão inicial
 
 **Documentos Relacionados:**
 - [[TAP.md]] - Termo de Abertura do Projeto

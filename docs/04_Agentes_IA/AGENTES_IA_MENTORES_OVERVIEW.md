@@ -1,11 +1,11 @@
 ---
-sticker: lucide//rotate-ccw
+sticker: lucide//check
 ---
 # AGENTES DE IA MENTORES DO PROJETO RECOLOCA.AI (VISÃO GERAL)
 
-**Versão**: 2.0 
+**Versão**: 3.0 
 **Data de Criação Original**: 03 de junho de 2025
-**Data de Última Atualização**: 05 de junho de 2025
+**Data de Última Atualização**: 06 de junho de 2025
 **Autor**: @AgenteOrquestrador (com supervisão do Maestro Bruno S. Rosa)
 **Baseado em**:
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5)
@@ -27,7 +27,9 @@ Este documento serve como um **ponto de entrada e resumo** do ecossistema de **A
 A visão é construir um "super squad" de IA, onde cada agente atua como um especialista em sua respectiva área, colaborando sinergicamente sob a liderança do Maestro para acelerar o desenvolvimento, aumentar a qualidade e fomentar a inovação no Recoloca.ai. Este documento é uma peça fundamental da "Documentação Viva" do projeto. Para detalhes específicos sobre cada agente, consulte seu perfil individual linkado abaixo.
 ## 2. Squad Principal de Agentes IA Mentores
 
-A seguir, apresentamos os Agentes de IA Mentores essenciais para o desenvolvimento do MVP e as fases iniciais do Recoloca.ai.
+### 2.1. Agentes Tier 1 (Essenciais para MVP)
+
+Estrutura simplificada de 5 agentes essenciais para o desenvolvimento eficiente do MVP:
 
 - **`@AgenteOrquestrador`** (PM Mentor e Engenheiro de Prompt Especialista)
     
@@ -35,41 +37,17 @@ A seguir, apresentamos os Agentes de IA Mentores essenciais para o desenvolvimen
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteOrquestrador.md|Perfil Detalhado]]
         
-- **`@AgenteM_PO`** (Product Owner Mentor Especialista em Requisitos Ágeis)
+- **`@AgenteM_ArquitetoTI`** (Arquiteto de TI Mentor Sênior - Especialista em Arquitetura Completa)
     
-    - **Foco:** Product Owner Mentor Especialista em Requisitos Ágeis
+    - **Foco:** Arquiteto de TI Mentor Sênior - HLD + LLD Unificado
         
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_PO.md|Perfil Detalhado]]
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_ArquitetoTI.md|Perfil Detalhado]]
         
 - **`@AgenteM_UXDesigner`** (UX Designer e Pesquisador Mentor Sênior)
     
     - **Foco:** UX Designer e Pesquisador Mentor Sênior
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_UXDesigner.md|Perfil Detalhado]]
-        
-- **`@AgenteM_UIDesigner`** (UI Designer e Visual Mentor Sênior)
-    
-    - **Foco:** UI Designer e Visual Mentor Sênior
-        
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_UIDesigner.md|Perfil Detalhado]]
-        
-- **`@AgenteM_ArquitetoHLD`** (Arquiteto de Software Mentor - Foco em High-Level Design)
-    
-    - **Foco:** Arquiteto de Software Mentor - Foco em High-Level Design
-        
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_ArquitetoHLD.md|Perfil Detalhado]]
-        
-- **`@AgenteM_ArquitetoLLD`** (Arquiteto/Designer de Software Mentor - Foco em Low-Level Design)
-    
-    - **Foco:** Arquiteto/Designer de Software Mentor - Foco em Low-Level Design
-        
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_ArquitetoLLD.md|Perfil Detalhado]]
-        
-- **`@AgenteM_API`** (Arquiteto de APIs Mentor - Especialista em OpenAPI)
-    
-    - **Foco:** Arquiteto de APIs Mentor - Especialista em OpenAPI
-        
-    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_API.md|Perfil Detalhado]]
         
 - **`@AgenteM_DevFastAPI`** (Desenvolvedor Backend Python Sênior e Mentor Especialista em FastAPI)
     
@@ -82,6 +60,28 @@ A seguir, apresentamos os Agentes de IA Mentores essenciais para o desenvolvimen
     - **Foco:** Desenvolvedor Flutter/Dart Mentor Sênior - Especialista em PWA
         
     - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_DevFlutter.md|Perfil Detalhado]]
+
+### 2.2. Agentes Tier 2 (Pós-MVP)
+
+Agentes que serão ativados após a validação do MVP:
+
+- **`@AgenteOrquestrador`** (Product Manager Mentor, Engenheiro de Prompt e Product Owner)
+    
+    - **Foco:** Product Manager Mentor, Engenheiro de Prompt e Product Owner
+        
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteOrquestrador.md|Perfil Detalhado]]
+        
+- **`@AgenteM_UIDesigner`** (UI Designer e Visual Mentor Sênior)
+    
+    - **Foco:** UI Designer e Visual Mentor Sênior
+        
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_UIDesigner.md|Perfil Detalhado]]
+        
+- **`@AgenteM_API`** (Arquiteto de APIs Mentor - Especialista em OpenAPI)
+    
+    - **Foco:** Arquiteto de APIs Mentor - Especialista em OpenAPI
+        
+    - **Link:** [[docs/04_Agentes_IA/Perfis/@AgenteM_API.md|Perfil Detalhado]]
         
 - **`@AgenteM_QA`** (Analista de QA e Testes Mentor Sênior)
     
@@ -170,7 +170,7 @@ Este diagrama em Mermaid.js ilustra um fluxo de trabalho idealizado, enfatizando
 ```mermaid
 graph LR
     A["🏁 Início da Feature/Correção (Ideia/Bug Report)"] --> B{{"❓ Validação Estratégica e de Requisitos<br>(Maestro + @AgenteOrquestrador)"}};
-    B -- "Estratégia Aprovada" --> C["📝 Definição de HUs/ACs<br>(Maestro + @AgenteM_PO)"];
+    B -- "Estratégia Aprovada" --> C["📝 Definição de HUs/ACs<br>(Maestro + @AgenteOrquestrador)"];
     C --> C_Doc["📄 Criação/Atualização: [[docs/02_Requisitos/HU_AC/...]]<br>(@AgenteM_Documentacao assiste)"];
     
     subgraph "Ciclo de Documentação Contínua"
@@ -218,7 +218,7 @@ graph LR
 
 1. O fluxo começa com uma ideia ou necessidade, que passa por validação estratégica com o `@AgenteOrquestrador`.
     
-2. Requisitos são detalhados pelo `@AgenteM_PO`, e a documentação correspondente é criada/atualizada.
+2. Requisitos são detalhados pelo `@AgenteOrquestrador` (função PO), e a documentação correspondente é criada/atualizada.
     
 3. O design (UX, UI, Arquitetura) é elaborado pelos agentes especializados, e seus artefatos são documentados.
     

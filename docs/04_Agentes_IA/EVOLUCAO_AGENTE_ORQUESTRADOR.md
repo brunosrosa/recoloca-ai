@@ -26,7 +26,7 @@ Com a implementação do **Sistema de Entregáveis como Gatilhos de Fluxo**, o `
 ```mermaid
 graph TD
     A["🎯 Maestro"] --> B["🧠 @AgenteOrquestrador"]
-    B --> C["👤 @AgenteM_PO"]
+    B --> C["👤 @AgenteOrquestrador (função PO)"]
     B --> D["🏗️ @AgenteM_Arquiteto"]
     B --> E["🎨 @AgenteM_UX"]
     B --> F["💻 @AgenteM_Dev"]
@@ -56,7 +56,7 @@ graph TD
     A["🎯 Maestro"] --> B["🧠 @AgenteOrquestrador"]
     
     subgraph "Fluxos Automatizados"
-        C["👤 @AgenteM_PO"] -->|Gatilho Auto| D["🏗️ @AgenteM_Arquiteto"]
+        C["👤 @AgenteOrquestrador (função PO)"] -->|Gatilho Auto| D["🏗️ @AgenteM_Arquiteto"]
         D -->|Gatilho Auto| E["💻 @AgenteM_Dev"]
         E -->|Gatilho Auto| F["🔍 @AgenteM_QA"]
         

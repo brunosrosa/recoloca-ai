@@ -2,7 +2,7 @@
 
 ---
 **Versão:** 0.9 (Pré-Revisão Interativa)  
-**Data:** Dezembro 2024  
+**Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
 **Próxima Revisão:** Janeiro 2025  
 
@@ -115,7 +115,7 @@ A comunicação segue os princípios da metodologia do projeto:
 #### 4.2.1 Pesquisa com Usuários-Alvo
 - **Objetivo:** Validação de necessidades e feedback sobre o produto
 - **Frequência:** Fases específicas do projeto
-- **Responsável:** Maestro + @AgenteMentorPO
+- **Responsável:** Maestro + @AgenteOrquestrador
 - **Método:** Entrevistas qualitativas, formulários, testes de usabilidade
 - **Cronograma:**
   - **Fase 1 (Jan 2025):** Entrevistas de descoberta (3-5 usuários)
@@ -247,11 +247,11 @@ docs/
 ## 11. Aprovação e Controle de Versões
 
 **Aprovado por:** Bruno S. Rosa (Maestro)  
-**Data de Aprovação:** Dezembro 2024  
+**Data de Aprovação:** Junho 2025  
 **Próxima Revisão:** Janeiro 2025  
 
 **Histórico de Versões:**
-- v1.0 (Dez 2024): Versão inicial
+- v1.0 (Jun 2025): Versão inicial
 
 **Documentos Relacionados:**
 - [[TAP.md]] - Termo de Abertura do Projeto
