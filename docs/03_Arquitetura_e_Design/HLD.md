@@ -3,22 +3,22 @@ sticker: lucide//heart-crack
 ---
 # High-Level Design (HLD) do Projeto Recoloca.ai
 
-**Versão**: 1.0
+**Versão**: 1.1 (Orquestração Inteligente e Specialized Intelligence)
 
 **Data de Criação**: 03 de junho de 2025
 
-**Data de Última Atualização**: 06 de junho de 2025
+**Data de Última Atualização**: Junho de 2025
 
 **Autor**: @AgenteM_ArquitetoHLD (com supervisão do Maestro Bruno S. Rosa)
 
 **Baseado em**:
-- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v0.9)
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1)
     
-- [[docs/02_Requisitos/ERS.md]] (v0.5)
+- [[docs/02_Requisitos/ERS.md]] (v1.1)
     
-- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v0.9)
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1)
     
-- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.0)
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1)
     
 ## 1. Introdução
 
@@ -545,6 +545,45 @@ graph TD
 -   **LLMs:** Escolher modelos apropriados (Flash vs. Pro) com base na complexidade da tarefa e latência aceitável. Otimizar prompts.
 -   **RAG:** Otimizar a recuperação de vetores e o tamanho dos chunks para balancear relevância e latência.
 -   **Métricas Detalhadas:** Consultar [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] para métricas de negócio, performance e monitoramento completo.
+
+#### 6.3.1. Métricas de "Specialized Intelligence"
+
+**Eficiência de Orquestração:**
+- Tempo médio de resposta dos agentes especializados
+- Taxa de sucesso na primeira tentativa
+- Número de iterações necessárias para completar tarefas
+- Redução de tempo vs. desenvolvimento manual
+
+**Qualidade do Sistema RAG:**
+- Precisão da recuperação de contexto relevante
+- Cobertura da base de conhecimento
+- Tempo de resposta das consultas vetoriais
+- Taxa de chunks úteis vs. ruído
+
+**Satisfação e Produtividade:**
+- Net Promoter Score (NPS) do Maestro com os agentes
+- Redução de tempo em tarefas repetitivas
+- Qualidade dos artefatos gerados
+- Aderência às especificações e padrões do projeto
+
+#### 6.3.2. Critérios Objetivos para Agentes "Production-Ready"
+
+**Tier 1 - Básico (MVP):**
+- Precisão ≥ 80% em tarefas específicas
+- Tempo de resposta ≤ 30 segundos
+- Contextualização adequada via RAG
+
+**Tier 2 - Avançado:**
+- Precisão ≥ 90% em tarefas específicas
+- Tempo de resposta ≤ 15 segundos
+- Integração completa com RAG e documentação viva
+- Capacidade de auto-correção baseada em feedback
+
+**Tier 3 - Expert:**
+- Precisão ≥ 95% em tarefas específicas
+- Tempo de resposta ≤ 10 segundos
+- Autonomia operacional com supervisão mínima
+- Capacidade de aprendizado e melhoria contínua
     
 - **Backend:** FastAPI é altamente performático. Otimização de consultas ao banco de dados.
     
@@ -635,4 +674,45 @@ As decisões neste HLD implicam a necessidade de detalhar no LLD:
     - _Mitigação:_ Implementar limites de uso (tiers), otimizar prompts, usar modelos mais baratos quando apropriado, monitorar custos de perto.
         
 
---- FIM DO DOCUMENTO HLD_Recoloca.ai (v1.0) ---
+## 9. Histórico de Versões
+
+### v1.1 (Janeiro 2025) - Orquestração Inteligente e "Specialized Intelligence"
+
+**Melhorias Implementadas:**
+- ✅ **Métricas de "Specialized Intelligence":** Inclusão de métricas específicas para eficiência de orquestração, qualidade do sistema RAG e satisfação/produtividade
+- ✅ **Critérios Objetivos Expandidos:** Definição de três tiers (Básico, Avançado, Expert) para agentes "Production-Ready" com métricas quantificáveis
+- ✅ **Framework de Medição:** Estabelecimento de indicadores de performance para tempo de resposta, precisão e autonomia operacional
+- ✅ **Indicadores de Produtividade:** Métricas para redução de tempo, qualidade de artefatos e aderência a especificações
+- ✅ **Alinhamento Metodológico:** Integração completa com a metodologia de "Orquestração Inteligente" definida no GUIA_AVANCADO.md
+- ✅ **Consolidação da Metodologia:** Harmonização com TAP.md, PLANO_MESTRE_RECOLOCA_AI.md e ERS.md para consistência total
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Arquitetura base do sistema Recoloca.ai
+- Definição de componentes principais e fluxos de dados
+- Integração com Supabase, Stripe e Google Gemini
+- Sistema RAG local com FAISS-GPU
+- Considerações de segurança, performance e escalabilidade
+
+## 10. Documentos Relacionados
+
+### Gestão e Metodologia
+- <mcfile name="TAP.md" path="docs/01_Guias_Centrais/TAP.md"></mcfile> (v1.1) - Termo de Abertura do Projeto
+- <mcfile name="PLANO_MESTRE_RECOLOCA_AI.md" path="docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md"></mcfile> (v1.1) - Plano Mestre
+- <mcfile name="GUIA_AVANCADO.md" path="docs/01_Guias_Centrais/GUIA_AVANCADO.md"></mcfile> (v1.1) - Metodologia de Orquestração Inteligente
+- <mcfile name="KANBAN_Recoloca_AI.md" path="docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md"></mcfile> - Gestão de Tarefas
+
+### Documentos Técnicos
+- <mcfile name="ERS.md" path="docs/02_Requisitos/ERS.md"></mcfile> (v1.1) - Especificação de Requisitos
+- <mcfolder name="ADR" path="docs/03_Arquitetura_e_Design/ADR"></mcfolder> - Architectural Decision Records
+- <mcfolder name="LLD" path="docs/03_Arquitetura_e_Design/LLD"></mcfolder> - Low-Level Design (futuro)
+- <mcfile name="METRICAS_SUCESSO_BASE_MERCADO.md" path="docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md"></mcfile> - Métricas de Negócio
+
+### Perfis de Agentes
+- <mcfolder name="Perfis" path="docs/04_Agentes_IA/Perfis"></mcfolder> - Perfis detalhados dos Agentes de IA Mentores
+- <mcfile name="AGENTES_IA_MENTORES_OVERVIEW.md" path="docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md"></mcfile> - Visão geral dos agentes
+
+---
+
+**Nota:** Este HLD (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no <mcfile name="GUIA_AVANCADO.md" path="docs/01_Guias_Centrais/GUIA_AVANCADO.md"></mcfile> (v1.1), incorporando métricas específicas, critérios objetivos para agentes "Production-Ready" e framework de medição de produtividade. A arquitetura suporta tanto o desenvolvimento do produto Recoloca.ai quanto a metodologia de desenvolvimento aumentado por IA.
+
+--- FIM DO DOCUMENTO HLD_Recoloca.ai (v1.1) ---

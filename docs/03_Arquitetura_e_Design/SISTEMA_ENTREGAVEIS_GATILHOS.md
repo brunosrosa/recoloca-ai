@@ -3,13 +3,13 @@ sticker: lucide//workflow
 ---
 # SISTEMA DE ENTREGÁVEIS COMO GATILHOS DE FLUXO
 
-**Versão**: 1.0
+**Versão**: 1.1 (Orquestração Inteligente e Specialized Intelligence)
 
 **Data de Criação**: 06 de junho de 2025
 
-**Data de Última Atualização**: 06 de junho de 2025
+**Data de Última Atualização**: Junho de 2025
 
-Baseado em: [[FLUXO_TRABALHO_GERAL.md]] (v2.0) e análise de otimização de fluxos multiagente
+Baseado em: [[FLUXO_TRABALHO_GERAL.md]] (v1.1), [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) e análise de otimização de fluxos multiagente
 
 ## 1. Introdução
 
@@ -668,8 +668,53 @@ class FlowMetrics:
 | Perda de contexto entre agentes | Alto | Metadados ricos nos entregáveis |
 | Complexidade de manutenção | Médio | Documentação e testes abrangentes |
 
+## 9. Considerações de Orquestração Inteligente
+
+### 9.1. Integração com Metodologia v1.1
+- **Agentes Production-Ready**: Sistema suporta agentes Tier 2 e Tier 3 com gatilhos automáticos
+- **Métricas Contínuas**: Coleta automática de dados de produtividade e qualidade
+- **RAG Operacional**: Contextualização contínua via base de conhecimento nos entregáveis
+- **Specialized Intelligence**: Delegação eficiente baseada em competências específicas
+
+### 9.2. Critérios de Validação Metodológica
+- ✅ **Eficiência**: Redução de 70-85% no overhead de orquestração
+- ✅ **Qualidade**: Padronização de 100% dos entregáveis
+- ✅ **Rastreabilidade**: Histórico completo de decisões e gatilhos
+- ✅ **Escalabilidade**: Suporte ao crescimento da equipe de agentes
+
+### 9.3. Alinhamento com Documentação Viva
+- **Sincronização**: Entregáveis automaticamente sincronizados com base RAG
+- **Versionamento**: Controle de versão integrado com Git
+- **Referências**: Links automáticos para documentos relacionados
+- **Métricas**: Dashboards em tempo real de performance dos fluxos
+
+## 10. Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de referências para documentos v1.1
+- Alinhamento com metodologia de Orquestração Inteligente
+- Adição de considerações específicas para agentes Production-Ready
+- Integração com métricas de produtividade e qualidade
+- Sincronização com base RAG operacional
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Definição do sistema base de entregáveis como gatilhos
+- Estabelecimento de templates YAML padronizados
+- Implementação de fluxos automatizados
+- Métricas iniciais de eficiência
+
+## 11. Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia base
+- [[docs/03_Arquitetura_e_Design/FLUXO_TRABALHO_GERAL.md]] (v1.1) - Fluxo de trabalho geral
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - High-Level Design
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão geral dos agentes
+
+**Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando automação avançada de fluxos e medição contínua de produtividade.
+
 ---
 
-**FIM DO DOCUMENTO SISTEMA_ENTREGAVEIS_GATILHOS.md (v1.0)**
+**FIM DO DOCUMENTO SISTEMA_ENTREGAVEIS_GATILHOS.md (v1.1)**
 
 *"A automação inteligente não substitui o julgamento humano, mas libera tempo para decisões que realmente importam."*

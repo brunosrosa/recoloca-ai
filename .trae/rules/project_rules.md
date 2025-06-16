@@ -1,19 +1,19 @@
 # Project Rules for Recoloca.ai
 
-**Versão**: 1.3
-**Data de Última Atualização**: 03 de junho de 2025
-**Baseado em**: [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5), [[docs/02_Requisitos/ERS.md]] (v0.5), [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.3), [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.0)
+**Versão**: 1.4
+**Data de Última Atualização**: Junho de 2025
+**Baseado em**: [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1), [[docs/02_Requisitos/ERS.md]] (v1.1), [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.0)
 
 ## 1. Diretrizes Gerais do Projeto
 
-- **Objetivo Principal do Projeto:** Desenvolver o Recoloca.ai, um Micro-SaaS para auxiliar profissionais brasileiros na recolocação profissional, com um foco inicial no MVP para validar a proposta de valor e evoluir continuamente com base no feedback e na visão de longo prazo. Conforme definido em [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5, Seção 1.1 e 1.3) e [[docs/02_Requisitos/ERS.md]] (v0.5).
-- **Metodologia:** Aplicar o "Desenvolvimento Solo Ágil Aumentado por IA", com o "Maestro" orquestrando "Agentes Mentores de IA", conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.3). O `@AgenteOrquestrador` atua como um PM Mentor chave, auxiliando o Maestro na validação estratégica antes da delegação de tarefas.
-- **Público-Alvo:** Focar nas necessidades de profissionais de tecnologia brasileiros em busca de recolocação, conforme detalhado na [[docs/02_Requisitos/ERS.md]] (v0.5).
+- **Objetivo Principal do Projeto:** Desenvolver o Recoloca.ai, um Micro-SaaS para auxiliar profissionais brasileiros na recolocação profissional, com um foco inicial no MVP para validar a proposta de valor e evoluir continuamente com base no feedback e na visão de longo prazo. Conforme definido em [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1, Seção 1.1 e 1.3) e [[docs/02_Requisitos/ERS.md]] (v1.1).
+- **Metodologia:** Aplicar o "Desenvolvimento Solo Ágil Aumentado por IA", com o "Maestro" orquestrando "Agentes Mentores de IA", conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1). O `@AgenteOrquestrador` atua como um PM Mentor chave, auxiliando o Maestro na validação estratégica antes da delegação de tarefas.
+- **Público-Alvo:** Focar nas necessidades de profissionais de tecnologia brasileiros em busca de recolocação, conforme detalhado na [[docs/02_Requisitos/ERS.md]] (v1.1).
 - **Fonte da Verdade:** A "Documentação Viva" mantida no Obsidian e versionada com Git é a fonte primária da verdade. Agentes DEVEM priorizar informações de documentos linkados e do RAG. Todos os links para documentos internos DEVEM usar o caminho relativo a partir da raiz do vault (ex: [[docs/02_Requisitos/ERS.md]]).
     
 ## 2. Padrões Técnicos Mandatórios
 
-- **Stack Tecnológica (Conforme [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] v1.5, Seção 4.1 e [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] v1.0):**
+- **Stack Tecnológica (Conforme [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] v1.1, Seção 4.1 e [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] v1.0):**
     - **Frontend (PWA):** Flutter (Dart).
     - **Backend:** Python com FastAPI.
     - **Banco de Dados & Autenticação:** Supabase (PostgreSQL).

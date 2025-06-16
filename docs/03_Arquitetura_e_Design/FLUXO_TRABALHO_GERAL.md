@@ -1,388 +1,435 @@
 ---
-sticker: lucide//rotate-ccw
+sticker: lucide//workflow
 ---
-# FLUXO DE TRABALHO GERAL DO PROJETO RECOLOCA.AI
+# Fluxo de Trabalho Geral - Recoloca.ai
 
-**Versão:** 0.9 (Pré-Revisão Interativa)  
+**Versão**: 1.1 (Orquestração Inteligente e Specialized Intelligence)
+
+**Status**: Aprovado
 
 **Data de Criação**: 30 de maio de 2025
 
-**Data de Última Atualização**: 06 de junho de 2025 (Fluxo Adaptativo por Contexto)
+**Data de Última Atualização**: Junho de 2025 (Alinhamento com metodologia v1.1)
 
-Baseado em: [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v0.9) e [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v0.29)
-
-**Principais Mudanças v0.9:**
-- Introdução do **Desenvolvimento Adaptativo por Contexto**
-- Sistema de **Entregáveis como Gatilhos de Fluxo**
-- Evolução do papel do `@AgenteOrquestrador` para **Supervisor Estratégico**
-- **Paralelização inteligente** e **feedback loops** contínuos
-## 1. Introdução
-
-Este documento descreve o **fluxo de trabalho adaptativo** para o desenvolvimento de funcionalidades e iterações no projeto Recoloca.ai. A versão 2.0 introduz o conceito de **"Desenvolvimento Adaptativo por Contexto"**, que supera as limitações do fluxo sequencial tradicional através de:
-
-- **Classificação dinâmica** por complexidade e risco
-- **Paralelização inteligente** de tarefas independentes
-- **Entregáveis como gatilhos** para ativação automática de agentes
-- **Feedback loops contínuos** para otimização
-- **Orquestração sob demanda** com o `@AgenteOrquestrador` atuando como Supervisor Estratégico
-
-O objetivo é maximizar a **eficiência**, **qualidade** e **velocidade de entrega**, adaptando o processo dinamicamente ao contexto de cada tarefa.
-## 2. Visão Geral: Trilhas Adaptativas por Contexto
-
-### 2.1. Classificação Automática de Tarefas
-
-Cada tarefa é automaticamente classificada em uma das **quatro trilhas adaptativas**:
-
-| **Trilha** | **Critérios** | **Tempo Estimado** | **Agentes Principais** |
-|------------|---------------|-------------------|------------------------|
-| **🚀 Express** | Bugs simples, ajustes menores, correções de texto/estilo | 30min - 2h | Dev direto + QA rápido |
-| **⚡ Padrão** | Features conhecidas, padrões estabelecidos, baixo risco | 2h - 1 dia | PO → Design → Dev → QA |
-| **🔍 Exploratória** | Features complexas, alta incerteza, necessita pesquisa | 1-3 dias | PO → UX → Arq → Dev → QA |
-| **🏗️ Arquitetural** | Componentes de núcleo, mudanças estruturais, alto impacto | 3-7 dias | Todos os agentes + validação rigorosa |
-
-### 2.2. Princípios do Fluxo Adaptativo
-
-1. **Paralelização Inteligente**: Agentes trabalham em paralelo quando possível
-2. **Entregáveis como Gatilhos**: Outputs estruturados ativam automaticamente o próximo agente
-3. **Feedback Loops Rápidos**: Validação contínua em cada etapa
-4. **Orquestração Sob Demanda**: `@AgenteOrquestrador` atua apenas quando necessário
-5. **Aprendizado Contínuo**: Sistema se otimiza baseado em resultados
-
-## 3. Diagrama do Fluxo Adaptativo (Mermaid.js)
-
-```mermaid
-flowchart TD
-    A["💡 Maestro: Nova Tarefa/Necessidade"] --> B{"🎯 Classificação Automática"}
-    
-    B -->|"Bugs simples, ajustes"| C1["🚀 TRILHA EXPRESS"]
-    B -->|"Features conhecidas"| C2["⚡ TRILHA PADRÃO"]
-    B -->|"Features complexas"| C3["🔍 TRILHA EXPLORATÓRIA"]
-    B -->|"Componentes núcleo"| C4["🏗️ TRILHA ARQUITETURAL"]
-    
-    %% TRILHA EXPRESS
-    C1 --> D1["Dev Direto"]
-    D1 --> E1["QA Rápido"]
-    E1 --> F1["✅ Deploy Express"]
-    
-    %% TRILHA PADRÃO
-    C2 --> D2A["@AgenteOrquestrador"]
-    D2A -->|"HUs/ACs prontas"| D2B["Design (se necessário)"]
-    D2B -->|"Specs prontas"| D2C["@AgenteDev"]
-    D2C -->|"Código pronto"| D2D["@AgenteM_QA"]
-    D2D --> F2["✅ Deploy Padrão"]
-    
-    %% TRILHA EXPLORATÓRIA
-    C3 --> D3A["@AgenteOrquestrador<br>(Supervisor Estratégico)"]
-    D3A --> D3B["@AgenteOrquestrador + @AgenteM_UX"]
-    D3B -->|"Pesquisa + HUs"| D3C["@AgenteArquiteto"]
-    D3C -->|"Design validado"| D3D["@AgenteDev"]
-    D3D -->|"Implementação"| D3E["@AgenteM_QA"]
-    D3E --> F3["✅ Deploy Exploratório"]
-    
-    %% TRILHA ARQUITETURAL
-    C4 --> D4A["@AgenteOrquestrador<br>(Validação Estratégica)"]
-    D4A --> D4B["Todos os Agentes<br>(Paralelo quando possível)"]
-    D4B --> D4C["Validação Rigorosa<br>+ Testes Extensivos"]
-    D4C --> F4["✅ Deploy Arquitetural"]
-    
-    %% FEEDBACK E MONITORAMENTO
-    F1 --> G["📊 Monitoramento Contínuo"]
-    F2 --> G
-    F3 --> G
-    F4 --> G
-    
-    G --> H["@AgenteOrquestrador<br>Análise de Métricas"]
-    H --> I{"Otimizações Necessárias?"}
-    I -->|"Sim"| J["Ajustar Classificação<br>e Fluxos"]
-    I -->|"Não"| K["✅ Ciclo Completo"]
-    J --> A
-    K --> A
-    
-    %% ESTILOS
-    classDef express fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef padrao fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef exploratoria fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    classDef arquitetural fill:#ffebee,stroke:#b71c1c,stroke-width:2px
-    classDef supervisor fill:#e8f5e8,stroke:#2e7d32,stroke-width:3px
-    
-    class C1,D1,E1,F1 express
-    class C2,D2A,D2B,D2C,D2D,F2 padrao
-    class C3,D3B,D3C,D3D,D3E,F3 exploratoria
-    class C4,D4B,D4C,F4 arquitetural
-    class D3A,D4A,H supervisor
-```
-
-## 4. Sistema de Entregáveis como Gatilhos
-
-### 4.1. Estrutura Padronizada de Entregáveis
-
-Cada agente produz **entregáveis estruturados** que servem como **gatilhos automáticos** para o próximo agente:
-
-```yaml
-# Exemplo: Entregável do @AgenteOrquestrador
-metadata:
-  agente_origem: "@AgenteOrquestrador"
-  timestamp: "2025-06-06T10:30:00Z"
-  versao: "1.0"
-  status: "COMPLETO"
-  proximos_gatilhos: ["@AgenteM_ArquitetoHLD", "@AgenteM_UXDesigner"]
-  
-conteudo:
-  historias_usuario: [...]
-  criterios_aceite: [...]
-  definicao_pronto: [...]
-  
-criterios_completude:
-  - todas_hus_validadas: true
-  - criterios_mensuráveis: true
-  - alinhamento_ers: true
-  
-gatilhos_automaticos:
-  - condicao: "status == COMPLETO AND criterios_completude.all()"
-    acao: "ativar_agentes(proximos_gatilhos)"
-```
-
-### 4.2. Mapeamento de Entregáveis por Agente
-
-| **Agente** | **Entregáveis Principais** | **Gatilhos para** |
-|------------|---------------------------|-------------------|
-| `@AgenteOrquestrador` | HUs, ACs, DoR/DoD | Arquiteto HLD, UX Designer |
-| `@AgenteM_ArquitetoHLD` | HLD, Diagramas, ADRs | Arquiteto LLD, API Designer |
-| `@AgenteM_UXDesigner` | User Flows, Wireframes | UI Designer |
-| `@AgenteM_ArquitetoLLD` | LLDs, Componentes | Dev FastAPI, Dev Flutter |
-| `@AgenteM_APIDesigner` | OpenAPI Specs | Dev FastAPI |
-| `@AgenteM_UIDesigner` | Mockups, Style Guide | Dev Flutter |
-| `@AgenteM_DevFastAPI` | Código Backend, Testes | QA |
-| `@AgenteM_DevFlutter` | Código Frontend, Widgets | QA |
-| `@AgenteM_QA` | Casos de Teste, Relatórios | Documentação |
-
-### 4.3. Fluxos Automatizados Principais
-
-#### 🔄 **Fluxo 1: Feature Completa**
-```
-@AgenteOrquestrador → @AgenteM_ArquitetoHLD → @AgenteM_ArquitetoLLD → @AgenteM_DevFastAPI
-                ↓                                              ↓
-            @AgenteM_UXDesigner → @AgenteM_UIDesigner → @AgenteM_DevFlutter
-                                                              ↓
-                                                        @AgenteM_QA
-```
-
-#### ⚡ **Fluxo 2: Ajuste de UI**
-```
-@AgenteM_UIDesigner → @AgenteM_DevFlutter → @AgenteM_QA
-```
-
-#### 🏗️ **Fluxo 3: Componente de Núcleo**
-```
-@AgenteOrquestrador → @AgenteM_ArquitetoHLD → Todos os Agentes → Validação Rigorosa
-```
-
-## 5. Evolução do Papel do @AgenteOrquestrador
-
-### 5.1. De "PM Mentor" para "Supervisor Estratégico"
-
-**Antes (v1.0):**
-- Participação em **todas** as etapas
-- Orquestração **manual** constante
-- Overhead significativo em tarefas simples
-
-**Agora (v2.0):**
-- Atuação **sob demanda** baseada em contexto
-- Foco em **exceções** e **decisões estratégicas**
-- **Monitoramento** contínuo de métricas
-- **Otimização** de fluxos baseada em dados
-
-### 5.2. Critérios de Ativação do @AgenteOrquestrador
-
-| **Situação** | **Ativação** | **Papel** |
-|--------------|--------------|----------|
-| Trilha Express/Padrão | ❌ Não | Monitoramento passivo |
-| Trilha Exploratória | ⚠️ Condicional | Validação estratégica inicial |
-| Trilha Arquitetural | ✅ Sempre | Supervisão completa |
-| Exceções/Bloqueios | ✅ Automática | Resolução de problemas |
-| Métricas fora do padrão | ✅ Automática | Análise e otimização |
-
-## 6. Descrição Detalhada das Trilhas
-
-### 6.1. 🚀 Trilha Express (30min - 2h)
-
-**Critérios de Classificação:**
-- Bugs simples com causa conhecida
-- Ajustes de texto, estilo ou configuração
-- Correções de documentação
-- Mudanças cosméticas de UI
-
-**Fluxo Otimizado:**
-1. **Maestro** identifica e classifica automaticamente
-2. **Implementação direta** sem design prévio
-3. **QA rápido** com testes básicos
-4. **Deploy imediato** em ambiente de teste
-
-**Agentes Envolvidos:** Mínimo necessário (geralmente só Dev + QA)
-
-### 6.2. ⚡ Trilha Padrão (2h - 1 dia)
-
-**Critérios de Classificação:**
-- Features com padrões estabelecidos
-- Baixo risco técnico e de negócio
-- Requisitos claros e bem definidos
-- Não afeta componentes de núcleo
-
-**Fluxo Estruturado:**
-1. **@AgenteOrquestrador** → HUs e ACs estruturadas
-2. **Design condicional** (se necessário)
-3. **Desenvolvimento** seguindo padrões
-4. **QA padrão** com casos de teste
-5. **Deploy automatizado**
-
-**Paralelização:** Design e desenvolvimento podem ocorrer em paralelo quando aplicável
-
-### 6.3. 🔍 Trilha Exploratória (1-3 dias)
-
-**Critérios de Classificação:**
-- Features complexas ou inovadoras
-- Alta incerteza técnica ou de UX
-- Necessita pesquisa ou prototipação
-- Impacto significativo na experiência do usuário
-
-**Fluxo Investigativo:**
-1. **@AgenteOrquestrador** → Validação estratégica
-2. **@AgenteOrquestrador + @AgenteM_UX** → Pesquisa e definição
-3. **@AgenteM_Arquiteto** → Design técnico
-4. **Prototipação** e validação
-5. **Desenvolvimento** iterativo
-6. **QA extensivo** com múltiplos cenários
-
-**Feedback Loops:** Validação contínua em cada etapa
-
-### 6.4. 🏗️ Trilha Arquitetural (3-7 dias)
-
-**Critérios de Classificação:**
-- Componentes de núcleo do sistema
-- Mudanças estruturais significativas
-- Alto impacto em múltiplos módulos
-- Decisões arquiteturais críticas
-
-**Fluxo Rigoroso:**
-1. **@AgenteOrquestrador** → Supervisão estratégica completa
-2. **Todos os agentes** envolvidos conforme necessário
-3. **Validação rigorosa** em cada etapa
-4. **Testes extensivos** incluindo integração
-5. **Deploy gradual** com monitoramento intensivo
-
-**Governança:** ADRs obrigatórias, revisão de código rigorosa
-
-## 7. Métricas e Otimização Contínua
-
-### 7.1. KPIs por Trilha
-
-| **Trilha** | **Métricas Principais** | **Targets** |
-|------------|------------------------|-------------|
-| Express | Tempo de resolução, Taxa de regressão | <2h, <5% |
-| Padrão | Velocidade, Qualidade, Satisfação | <1 dia, >95%, >4.0 |
-| Exploratória | Inovação, Aprendizado, Valor entregue | Qualitativo |
-| Arquitetural | Robustez, Escalabilidade, Manutenibilidade | Longo prazo |
-
-### 7.2. Feedback Loops de Otimização
-
-1. **Coleta automática** de métricas de cada trilha
-2. **Análise semanal** pelo @AgenteOrquestrador
-3. **Ajustes nos critérios** de classificação
-4. **Otimização dos fluxos** baseada em dados
-5. **Evolução contínua** do sistema
-
-## 8. Implementação Gradual
-
-### Fase 1: Padronização de Entregáveis (Semana 1-2)
-- Definir templates estruturados para cada agente
-- Implementar metadados e critérios de completude
-- Testar com trilha Express
-
-### Fase 2: Fluxos Simples (Semana 3-4)
-- Implementar trilhas Express e Padrão
-- Automatizar gatilhos básicos
-- Monitorar métricas iniciais
-
-### Fase 3: Fluxos Complexos (Semana 5-6)
-- Implementar trilhas Exploratória e Arquitetural
-- Refinar papel do @AgenteOrquestrador
-- Otimizar paralelização
-
-### Fase 4: Otimização e IA (Semana 7+)
-- Machine learning para classificação automática
-- Predição de gargalos
-- Otimização contínua baseada em dados
-
-## 9. Benefícios Estratégicos Esperados
-
-### 9.1. Eficiência Operacional
-- **Redução de 40-60%** no tempo de tarefas simples
-- **Paralelização** de até 70% das atividades independentes
-- **Eliminação** de overhead desnecessário
-
-### 9.2. Qualidade e Consistência
-- **Padronização** de entregáveis e processos
-- **Rastreabilidade** completa de decisões
-- **Feedback loops** para melhoria contínua
-
-### 9.3. Escalabilidade
-- **Adaptação automática** à complexidade
-- **Aprendizado** baseado em histórico
-- **Evolução** contínua do sistema
-
-## 10. Fluxo Legado (v1.0) - Mantido para Referência
-    
-### 10.1. Fluxo Sequencial Original
-
-1. **Identificação da Ideia/Necessidade (Maestro)**
-2. **Validação Estratégica (Maestro + @AgenteOrquestrador)**
-3. **Geração/Refinamento de HUs e ACs (Maestro + @AgenteOrquestrador)**
-4. **Design (Maestro + @AgenteOrquestrador + Agentes de Design)**
-5. **Desenvolvimento (Maestro + @AgenteOrquestrador + Agentes Dev)**
-6. **Revisão HITL e Implementação Manual (Maestro)**
-7. **Garantia de Qualidade (Maestro + @AgenteM_QA)**
-8. **Documentação Contínua (Maestro + @AgenteM_Documentacao)**
-9. **Deploy (Maestro + @AgenteM_DevOps / Pipedream)**
-10. **Monitoramento e Iteração (Maestro + @AgenteOrquestrador)**
-
-### 10.2. Limitações Identificadas (v0.8)
-
-- **Sequencialidade excessiva** causando gargalos
-- **Overhead de orquestração** em tarefas simples
-- **Falta de paralelização** de atividades independentes
-- **Ausência de feedback loops** rápidos
-- **Rigidez na classificação** de tarefas
-
-### 10.3. Evolução para v0.9
-
-O fluxo v2.0 mantém a **robustez** do processo original enquanto adiciona:
-- **Adaptabilidade** baseada em contexto
-- **Eficiência** através de paralelização
-- **Automação** de gatilhos entre agentes
-- **Otimização** contínua baseada em dados
-
-## 11. Próximos Passos
-
-### 11.1. Ações Imediatas
-1. **Validar** a proposta com o Maestro
-2. **Definir** templates de entregáveis estruturados
-3. **Implementar** classificação automática de tarefas
-4. **Testar** trilha Express com tarefas simples
-
-### 11.2. Questões para Reflexão
-1. Quais **métricas específicas** devemos priorizar para cada trilha?
-2. Como **balancear automação** com controle humano?
-3. Que **ferramentas adicionais** podem apoiar a implementação?
-4. Como **treinar o sistema** para classificação mais precisa?
-
-### 11.3. Documentos Relacionados
-- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Objetivos estratégicos
-- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Capacidades dos agentes
-- [[docs/05_Prompts/01_Templates_Base/]] - Templates de prompts
-- [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]] - Priorização atual
+**Baseado em**: [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[docs/02_Requisitos/ERS.md]] (v1.1), [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1)
 
 ---
 
-**FIM DO DOCUMENTO FLUXO_TRABALHO_GERAL.md (v0.9)**
+## 1. Introdução
 
-*"A eficiência não está em fazer as coisas mais rápido, mas em fazer as coisas certas da forma mais inteligente."*
+Este documento define o **Fluxo de Trabalho Geral** para o desenvolvimento do projeto Recoloca.ai, aplicando a metodologia "Desenvolvimento Solo Ágil Aumentado por IA" conforme estabelecida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]].
+
+### 1.1. Paradigma: Orquestração Inteligente com Especialização de Domínio
+
+O fluxo de trabalho é baseado na **orquestração centralizada** pelo `@AgenteM_Orquestrador` (PM Mentor e Engenheiro de Prompt), que atua como principal parceiro estratégico do Maestro, permitindo:
+
+- **Validação Estratégica Prévia**: Toda tarefa passa por análise de Product Management antes da execução
+- **Especialização de Domínio**: Agentes Mentores especializados em áreas técnicas específicas
+- **Documentação Viva**: Integração contínua com RAG e base de conhecimento
+- **HITL Evolutivo**: Human-in-the-Loop com crescente autonomia dos agentes
+- **Iteração Contínua**: Ciclos rápidos de feedback e refinamento
+
+### 1.2. Princípios Fundamentais
+
+Conforme o [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]], o fluxo segue os princípios:
+
+1. **Orquestração Inteligente**: `@AgenteM_Orquestrador` como hub central de coordenação
+2. **Especialização de Domínio**: Cada agente possui expertise específica
+3. **Documentação Viva**: RAG integrado para contexto contínuo
+4. **HITL Evolutivo**: Autonomia crescente com supervisão estratégica
+5. **Iteração Contínua**: Feedback loops para melhoria constante
+
+## 2. Fluxo de Trabalho Baseado no SDLC Ágil Adaptado
+
+### 2.1. Fases do Desenvolvimento com Agentes Mentores
+
+Conforme estabelecido no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]], o fluxo segue as fases do SDLC Ágil com integração de Agentes Mentores de IA:
+
+| **Fase** | **Agentes Principais** | **Entregáveis** | **Critérios de Conclusão** |
+|----------|------------------------|-----------------|----------------------------|
+| **Concepção** | `@AgenteM_Orquestrador` | Análise estratégica, Prompts otimizados | Validação de valor e alinhamento |
+| **Análise** | `@AgenteM_ArquitetoTI`, `@AgenteM_Orquestrador` | HLD, LLD, ADRs | Arquitetura aprovada |
+| **Design** | `@AgenteM_UXUI`, `@AgenteM_ArquitetoTI` | Wireframes, Protótipos, Style Guide | Design validado |
+| **Implementação** | `@AgenteM_DevFastAPI`, `@AgenteM_DevFlutter` | Código, Testes, Documentação | Funcionalidade operacional |
+| **Testes** | `@AgenteM_QA` | Casos de teste, Relatórios | Qualidade assegurada |
+| **Deploy** | `@AgenteM_DevOps` | Pipeline CI/CD, Monitoramento | Sistema em produção |
+
+### 2.2. Fluxo Principal de Desenvolvimento
+
+```mermaid
+graph TD
+    A["Maestro: Nova Tarefa/Feature"] --> B["@AgenteM_Orquestrador\n(PM Mentor)"]
+    
+    B --> B1["Análise Estratégica\n(RAG + PM Frameworks)"]
+    B1 --> B2["Perguntas Esclarecedoras"]
+    B2 --> B3["Validação de Valor"]
+    B3 --> B4{"Tarefa Aprovada?"}
+    
+    B4 -->|"Não"| B5["Refinamento\ncom Maestro"]
+    B5 --> B1
+    
+    B4 -->|"Sim"| C["Co-criação de Prompts\ncom Maestro"]
+    C --> D["Delegação para\nAgentes Especializados"]
+    
+    D --> E{"Tipo de Tarefa"}
+    
+    E -->|"Arquitetura"| F["@AgenteM_ArquitetoTI"]
+    E -->|"Backend"| G["@AgenteM_DevFastAPI"]
+    E -->|"Frontend"| H["@AgenteM_DevFlutter"]
+    E -->|"UX/UI"| I["@AgenteM_UXUI"]
+    E -->|"QA"| J["@AgenteM_QA"]
+    E -->|"DevOps"| K["@AgenteM_DevOps"]
+    
+    F --> L["Entregável Técnico"]
+    G --> L
+    H --> L
+    I --> L
+    J --> L
+    K --> L
+    
+    L --> M["Revisão do Maestro"]
+    M --> N{"Aprovado?"}
+    
+    N -->|"Não"| O["Feedback e\nRefinamento"]
+    O --> D
+    
+    N -->|"Sim"| P["Integração e\nDocumentação"]
+    P --> Q["Próxima Iteração"]
+    Q --> A
+    
+    classDef orchestrator fill:#e8f5e8,stroke:#2e7d32,stroke-width:3px
+    classDef specialist fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    classDef process fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    
+    class B,B1,B2,B3,C orchestrator
+    class F,G,H,I,J,K specialist
+    class L,M,P process
+```
+
+## 3. Papel Central do @AgenteM_Orquestrador
+
+### 3.1. Função de PM Mentor e Engenheiro de Prompt
+
+O `@AgenteM_Orquestrador` atua como **principal parceiro estratégico** do Maestro, com duas funções essenciais:
+
+#### 3.1.1. Mentoria em Product Management
+- **Validação Estratégica**: Análise de valor, alinhamento com objetivos, frameworks de priorização
+- **Questionamento Construtivo**: Atua como 'advogado do diabo' para fortalecer soluções
+- **Análise via RAG**: Consulta ativa à documentação viva e base de conhecimento PM
+- **Identificação de Componentes de Núcleo**: Auxilia na classificação de features críticas
+
+#### 3.1.2. Engenharia de Prompt Especializada
+- **Co-criação de Prompts**: Colabora com o Maestro na criação de prompts otimizados
+- **Contextualização Rica**: Utiliza RAG e documentação para prompts contextualizados
+- **Aplicação de Best Practices**: Segue diretrizes do [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]
+- **Templates Adaptados**: Utiliza [[docs/05_Prompts/01_Templates_Base/]] como base
+
+### 3.2. Processo de Orquestração
+
+```yaml
+# Estrutura de Atuação do @AgenteM_Orquestrador
+process:
+  1_strategic_analysis:
+    - rag_consultation: "Consulta documentação viva"
+    - value_assessment: "Análise de valor para usuário"
+    - alignment_check: "Verificação com objetivos do produto"
+    - framework_application: "RICE, ICE, MoSCoW conforme contexto"
+    
+  2_clarifying_questions:
+    - assumption_challenge: "Questiona premissas do Maestro"
+    - scope_definition: "Define escopo e critérios de sucesso"
+    - dependency_analysis: "Identifica dependências e riscos"
+    
+  3_prompt_engineering:
+    - context_gathering: "Coleta contexto via RAG e MCPs"
+    - template_selection: "Escolhe template apropriado"
+    - customization: "Adapta para agente específico"
+    - validation: "Valida com Maestro antes da delegação"
+```
+
+### 3.3. Critérios de Ativação
+
+O `@AgenteM_Orquestrador` é ativado em:
+- **Todas as novas tarefas/features** (validação estratégica obrigatória)
+- **Decisões arquiteturais** (componentes de núcleo)
+- **Mudanças de escopo** (reavaliação de prioridades)
+- **Problemas complexos** (necessidade de análise aprofundada)
+- **Preparação de prompts** (para outros agentes especializados)
+
+## 4. Estratégia de Evolução dos Agentes
+
+### 4.1. Critérios Objetivos de Maturidade
+
+Conforme estabelecido no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]], os agentes evoluem através de três níveis:
+
+#### 4.1.1. Nível Básico (Atual)
+- **Precisão Técnica**: 70-80% de acertos em primeira tentativa
+- **Consistência Documental**: Segue 80% das diretrizes estabelecidas
+- **Autonomia Operacional**: Executa tarefas simples com supervisão mínima
+- **Integração RAG**: Consulta básica à documentação
+- **Alinhamento Estratégico**: Compreende objetivos principais do projeto
+
+#### 4.1.2. Nível Intermediário (Meta 6 meses)
+- **Precisão Técnica**: 85-90% de acertos em primeira tentativa
+- **Consistência Documental**: Segue 90% das diretrizes, sugere melhorias
+- **Autonomia Operacional**: Executa tarefas complexas, escalona exceções
+- **Integração RAG**: Consulta avançada, correlaciona informações
+- **Alinhamento Estratégico**: Propõe otimizações alinhadas aos objetivos
+
+#### 4.1.3. Nível Avançado (Meta 12 meses)
+- **Precisão Técnica**: 95%+ de acertos, antecipa problemas
+- **Consistência Documental**: Mantém e evolui padrões automaticamente
+- **Autonomia Operacional**: Opera independentemente, reporta resultados
+- **Integração RAG**: Síntese inteligente, insights proativos
+- **Alinhamento Estratégico**: Contribui para evolução da estratégia
+
+### 4.2. Processo de Evolução HITL
+
+```mermaid
+graph TD
+    A["Agente Nível Básico"] --> B["Execução com\nSupervisão Constante"]
+    B --> C["Coleta de Feedback\ndo Maestro"]
+    C --> D["Análise de Padrões\nde Erro"]
+    D --> E["Refinamento de\nPrompts e Contexto"]
+    E --> F{"Critérios Nível\nIntermediário?"}
+    
+    F -->|"Não"| B
+    F -->|"Sim"| G["Agente Nível\nIntermediário"]
+    
+    G --> H["Execução com\nSupervisão Seletiva"]
+    H --> I["Validação de\nAutonomia"]
+    I --> J["Otimização de\nProcessos"]
+    J --> K{"Critérios Nível\nAvançado?"}
+    
+    K -->|"Não"| H
+    K -->|"Sim"| L["Agente Nível\nAvançado"]
+    
+    L --> M["Operação\nAutônoma"]
+    M --> N["Contribuição\nEstratégica"]
+    
+    classDef basic fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef intermediate fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef advanced fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    
+    class A,B,C,D,E basic
+    class G,H,I,J intermediate
+    class L,M,N advanced
+```
+
+## 5. Integração com Documentação Viva e RAG
+
+### 5.1. Estratégia RAG para Fluxo de Trabalho
+
+Conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]], a integração RAG é fundamental:
+
+#### 5.1.1. Consulta Ativa pelos Agentes
+- **@AgenteM_Orquestrador**: Acessa [[rag_infra/source_documents/PM_Knowledge/]] para frameworks de PM
+- **Agentes Técnicos**: Consultam documentação técnica via RAG antes de implementar
+- **Todos os Agentes**: Verificam consistência com [[docs/02_Requisitos/ERS.md]] e [[docs/03_Arquitetura_e_Design/HLD.md]]
+
+#### 5.1.2. Tecnologias RAG Utilizadas
+- **Vector Store**: FAISS-GPU (local)
+- **Embedding Model**: BAAI/bge-m3
+- **Framework**: LangChain
+- **Ambiente**: Conda com Python 3.10
+
+### 5.2. Considerações para Perfis Neurodivergentes
+
+O fluxo de trabalho considera as necessidades específicas do Maestro:
+- **Estrutura Clara**: Processos bem definidos e previsíveis
+- **Feedback Imediato**: Validação rápida em cada etapa
+- **Flexibilidade Cognitiva**: Adaptação a diferentes estilos de processamento
+- **Redução de Sobrecarga**: Automação de tarefas repetitivas
+
+## 6. Métricas e Monitoramento
+
+### 6.1. KPIs do Fluxo de Trabalho
+
+| **Métrica** | **Objetivo** | **Frequência** |
+|-------------|--------------|----------------|
+| **Tempo Médio por Tarefa** | < 2h para tarefas standard | Semanal |
+| **Taxa de Retrabalho** | < 15% | Semanal |
+| **Satisfação do Maestro** | > 8/10 | Após cada entrega |
+| **Precisão dos Agentes** | > 80% (Nível Básico) | Mensal |
+| **Cobertura RAG** | > 90% consultas bem-sucedidas | Mensal |
+
+### 6.2. Processo de Melhoria Contínua
+
+```mermaid
+graph LR
+    A["Coleta de\nMétricas"] --> B["Análise de\nPadrões"]
+    B --> C["Identificação de\nGargalos"]
+    C --> D["Refinamento\nde Processos"]
+    D --> E["Atualização\nDocumentação"]
+    E --> A
+    
+    classDef process fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    class A,B,C,D,E process
+```
+
+## 7. Fluxos Específicos por Tipo de Tarefa
+
+### 7.1. Desenvolvimento de Feature Completa
+
+```mermaid
+sequenceDiagram
+    participant M as Maestro
+    participant O as @AgenteM_Orquestrador
+    participant A as @AgenteM_ArquitetoTI
+    participant U as @AgenteM_UXUI
+    participant D as @AgenteM_DevFastAPI
+    participant F as @AgenteM_DevFlutter
+    participant Q as @AgenteM_QA
+    
+    M->>O: Nova feature request
+    O->>O: Análise estratégica (RAG)
+    O->>M: Perguntas esclarecedoras
+    M->>O: Validação e aprovação
+    O->>A: Prompt para arquitetura
+    O->>U: Prompt para UX/UI
+    
+    par Desenvolvimento Paralelo
+        A->>A: Criar HLD/LLD
+        U->>U: Design UX/UI
+    end
+    
+    A->>D: Especificações backend
+    U->>F: Especificações frontend
+    
+    par Implementação
+        D->>D: Desenvolver API
+        F->>F: Desenvolver UI
+    end
+    
+    D->>Q: Código backend pronto
+    F->>Q: Código frontend pronto
+    Q->>Q: Testes integrados
+    Q->>M: Entrega para revisão
+```
+
+### 7.2. Correção de Bug
+
+```mermaid
+sequenceDiagram
+    participant M as Maestro
+    participant O as @AgenteM_Orquestrador
+    participant D as Dev Especializado
+    participant Q as @AgenteM_QA
+    
+    M->>O: Relatório de bug
+    O->>O: Análise de impacto
+    
+    alt Bug Simples
+        O->>D: Correção direta
+        D->>Q: Fix implementado
+    else Bug Complexo
+        O->>M: Análise aprofundada necessária
+        M->>O: Aprovação para investigação
+        O->>D: Investigação e correção
+        D->>Q: Fix implementado
+    end
+    
+    Q->>M: Validação final
+```
+
+### 7.3. Componente de Núcleo
+
+```mermaid
+sequenceDiagram
+    participant M as Maestro
+    participant O as @AgenteM_Orquestrador
+    participant A as @AgenteM_ArquitetoTI
+    participant S as @AgenteM_Seguranca
+    participant D as @AgenteM_DevFastAPI
+    participant Q as @AgenteM_QA
+    participant DevOps as @AgenteM_DevOps
+    
+    M->>O: Componente crítico
+    O->>O: Validação estratégica rigorosa
+    O->>A: Análise arquitetural
+    A->>S: Revisão de segurança
+    S->>O: Aprovação de segurança
+    O->>D: Implementação segura
+    D->>Q: Testes extensivos
+    Q->>DevOps: Deploy gradual
+    DevOps->>M: Monitoramento ativo
+```
+
+## 8. Próximos Passos e Evolução
+
+### 8.1. Implementação Imediata
+1. **Validação com Maestro**: Aprovação do fluxo alinhado
+2. **Treinamento dos Agentes**: Aplicação dos critérios de maturidade
+3. **Integração RAG**: Configuração completa da base de conhecimento
+4. **Métricas Baseline**: Estabelecimento de indicadores iniciais
+
+### 8.2. Evolução Planejada (6-12 meses)
+1. **Automação Progressiva**: Redução gradual da supervisão manual
+2. **Especialização Avançada**: Desenvolvimento de expertise específica por agente
+3. **Integração de Ferramentas**: MCPs adicionais conforme necessidade
+4. **Otimização de Performance**: Melhoria contínua baseada em dados
+
+### 8.3. Considerações Estratégicas
+
+#### 8.3.1. Questões para Reflexão
+1. **Balanceamento**: Como equilibrar autonomia dos agentes com controle estratégico?
+2. **Escalabilidade**: Como o fluxo se adapta ao crescimento do projeto?
+3. **Qualidade**: Como manter consistência com autonomia crescente?
+4. **Inovação**: Como incorporar aprendizados e melhorias contínuas?
+
+#### 8.3.2. Riscos e Mitigações
+- **Risco**: Perda de controle com automação excessiva
+  - **Mitigação**: Critérios objetivos de maturidade e escalação
+- **Risco**: Inconsistência entre agentes
+  - **Mitigação**: RAG centralizado e documentação viva
+- **Risco**: Sobrecarga do @AgenteM_Orquestrador
+  - **Mitigação**: Evolução gradual e delegação inteligente
+
+---
+
+## 9. Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] - Metodologia base (v1.1)
+- [[docs/01_Guias_Centrais/METODOLOGIA_MVP.md]] - MVP da metodologia
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de Requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - High-Level Design
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Ferramentas Core
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão geral dos agentes
+- [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]] - Gestão de tarefas
+- [[docs/05_Prompts/01_Templates_Base/]] - Templates de prompts
+- [[rag_infra/source_documents/PM_Knowledge/]] - Base de conhecimento PM
+
+## Considerações de Orquestração Inteligente
+
+### Integração com Metodologia v1.1
+- **Agentes Production-Ready**: Fluxo suporta agentes Tier 2 e Tier 3
+- **Métricas Contínuas**: Coleta automática de dados de produtividade
+- **RAG Operacional**: Contextualização contínua via base de conhecimento
+- **Specialized Intelligence**: Delegação eficiente para agentes especializados
+
+### Critérios de Validação
+- ✅ **Eficiência**: Redução de tempo de desenvolvimento
+- ✅ **Qualidade**: Melhoria na qualidade dos entregáveis
+- ✅ **Consistência**: Padronização de processos
+- ✅ **Escalabilidade**: Suporte ao crescimento da equipe de agentes
+
+## Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de referências para documentos v1.1
+- Alinhamento com metodologia de Orquestração Inteligente
+- Adição de considerações específicas para agentes Production-Ready
+- Integração com métricas de produtividade
+
+### v1.0 (Maio 2025) - Versão Inicial
+- Definição do fluxo de trabalho base
+- Estabelecimento de processos ágeis adaptados
+- Integração inicial com agentes de IA
+
+**Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando fluxos otimizados para agentes Production-Ready e medição contínua de produtividade.
+
+---
+
+**FIM DO DOCUMENTO FLUXO_TRABALHO_GERAL.md (v1.1)**
+
+*"A verdadeira eficiência não está em fazer as coisas mais rápido, mas em fazer as coisas certas com a estratégia adequada."*

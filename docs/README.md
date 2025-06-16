@@ -1,16 +1,18 @@
 # Documentação do Projeto Recoloca.AI
 
 ---
-**Versão:** 1.0  
-**Data:** Junho 2025  
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)
+**Data de Criação:** Junho 2025
+**Data de Última Atualização:** Junho 2025
 **Responsável:** Bruno S. Rosa (Maestro)  
-**Próxima Revisão:** Janeiro 2025  
+**Baseado em:** [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1), [[02_Requisitos/ERS.md]] (v1.1), [[01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[03_Arquitetura_e_Design/HLD.md]] (v1.1)
+**Próxima Revisão:** Janeiro 2026  
 
 ---
 
 ## Visão Geral
 
-Este diretório contém toda a documentação técnica e de gestão do projeto **Recoloca.AI**, um Micro-SaaS inovador para auxiliar profissionais brasileiros na recolocação profissional, desenvolvido utilizando a metodologia "Solo Ágil Aumentado por IA".
+Este diretório contém toda a documentação técnica e de gestão do projeto **Recoloca.AI**, um Micro-SaaS inovador para auxiliar profissionais brasileiros na recolocação profissional, desenvolvido utilizando a metodologia "Orquestração Inteligente e Specialized Intelligence" (v1.1).
 
 ## Estrutura da Documentação
 
@@ -67,11 +69,20 @@ Estratégias de qualidade e testes:
 - **[[PGQ.md]]** - Plano de Gerenciamento da Qualidade
 - **Casos_de_Teste/** - Casos de teste detalhados
 
+### 📊 07_Metricas_e_Analytics
+Métricas e análise de performance:
+- **[[METRICAS_SUCESSO_BASE_MERCADO.md]]** - Métricas baseadas em benchmarks de mercado
+
 ### 🚀 07_Operacoes_e_Deploy
 Infraestrutura e deployment:
+- **[[ESTRATEGIA_DEVOPS.md]]** - Estratégia DevOps e CI/CD
 - **[[GUIA_DEPLOY_BACKEND.md]]** - Deploy do backend FastAPI
 - **[[GUIA_DEPLOY_FRONTEND.md]]** - Deploy do frontend Flutter
 - **[[GUIA_DEPLOY_EXTENSAO.md]]** - Deploy da extensão Chrome
+
+### 📈 08_Marketing_e_Vendas
+Estratégias de mercado e crescimento:
+- **[[ESTRATEGIA_GO_TO_MARKET.md]]** - Estratégia de lançamento e crescimento
 
 ### 🔍 09_Pesquisa_e_Insights
 Pesquisas de mercado e insights:
@@ -81,29 +92,32 @@ Pesquisas de mercado e insights:
 
 ## Metodologia de Desenvolvimento
 
-### "Solo Ágil Aumentado por IA"
+### "Orquestração Inteligente e Specialized Intelligence" (v1.1)
 O projeto utiliza uma metodologia inovadora que combina:
-- **Maestro (Bruno S. Rosa):** Desenvolvedor principal e orquestrador
-- **@AgenteOrquestrador:** PM Mentor e "segundo cérebro" estratégico
-- **Agentes Mentores Especializados:** Para desenvolvimento, design, QA, etc.
-- **Sistema RAG:** Gestão centralizada do conhecimento
-- **Documentação Viva:** Atualização contínua da base de conhecimento
+- **Maestro (Bruno S. Rosa):** Desenvolvedor principal e orquestrador estratégico
+- **@AgenteOrquestrador:** PM Mentor Sênior e Engenheiro de Prompt Especialista
+- **Agentes Mentores Especializados:** Desenvolvimento, UX/UI, Arquitetura, QA, Documentação
+- **Sistema RAG Avançado:** Gestão inteligente do conhecimento com MCPs
+- **Documentação Viva:** Base de conhecimento auto-evolutiva
+- **Validação Metodológica:** Critérios rigorosos de qualidade e alinhamento estratégico
 
 ### Fases do Projeto
-1. **Fase 1 - Estruturação e Validação (Atual):**
-   - Operacionalização do sistema RAG
-   - Refinamento do @AgenteOrquestrador
-   - Validação inicial com usuários-alvo
+1. **Fase 1 - Orquestração Inteligente (Atual):**
+   - Sistema RAG operacional com MCPs integrados
+   - @AgenteOrquestrador como PM Mentor Sênior
+   - Agentes Mentores especializados ativos
+   - Validação metodológica contínua
 
-2. **Fase 2 - Especialização e Automação:**
-   - Criação de agentes especializados
-   - Automação de processos de desenvolvimento
-   - Expansão das funcionalidades
+2. **Fase 2 - Specialized Intelligence:**
+   - Refinamento da especialização dos agentes
+   - Automação inteligente de processos
+   - Expansão baseada em feedback e métricas
+   - Otimização da orquestração
 
-3. **Fase 3 - Supervisão Avançada:**
+3. **Fase 3 - Supervisão Avançada (Futuro):**
    - Implementação do @AgenteSupervisor
-   - Orquestração automática de agentes
-   - Otimização contínua
+   - Orquestração automática multi-agente
+   - Aprendizado contínuo e auto-otimização
 
 ## Stack Tecnológica
 
@@ -214,17 +228,61 @@ O projeto utiliza uma metodologia inovadora que combina:
 
 ---
 
-**Última Atualização:** Junho 2025  
-**Próxima Revisão:** Janeiro 2025  
+---
 
-**Documentos Relacionados:**
-- [[../README.md]] - README principal do projeto
-- [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Visão estratégica
-- [[00_Gerenciamento_Projeto/TAP.md]] - Termo de abertura
-- [[03_Arquitetura_e_Design/HLD.md]] - Arquitetura geral
+## 🔄 Considerações de Orquestração Inteligente
+
+### Metodologia v1.1
+- **Validação Estratégica:** Toda tarefa passa por análise de PM com @AgenteOrquestrador
+- **Specialized Intelligence:** Cada agente possui expertise específica e profunda
+- **Integração RAG-MCP:** Conhecimento interno (RAG) + contexto externo (MCPs)
+- **Feedback Loop:** Aprendizado contínuo baseado em resultados e métricas
+
+### Critérios de Validação Metodológica
+- **Alinhamento Estratégico:** Conformidade com [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]
+- **Qualidade Técnica:** Aderência aos padrões definidos em [[03_Arquitetura_e_Design/STYLE_GUIDE.md]]
+- **Rastreabilidade:** Versionamento e documentação de decisões
+- **Métricas de Sucesso:** Acompanhamento via [[07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]]
+
+### Alinhamento com Documentação Viva
+Este documento está sincronizado com:
+- **Visão Estratégica:** [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1)
+- **Metodologia:** [[01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1)
+- **Requisitos:** [[02_Requisitos/ERS.md]] (v1.1)
+- **Arquitetura:** [[03_Arquitetura_e_Design/HLD.md]] (v1.1)
+- **Agentes:** [[04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v1.1)
 
 ---
 
-*Esta documentação é mantida como "Documentação Viva", sendo atualizada continuamente conforme a evolução do projeto Recoloca.AI.*
+## 📚 Histórico de Versões
 
---- FIM DO DOCUMENTO README.md (v1.0) ---
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização para metodologia v1.1
+- Adição de seções 07_Metricas_e_Analytics e 08_Marketing_e_Vendas
+- Refinamento das fases do projeto
+- Inclusão de considerações de orquestração inteligente
+- Alinhamento com documentação viva atualizada
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Estrutura inicial da documentação
+- Definição da metodologia "Solo Ágil Aumentado por IA"
+- Estabelecimento da base de conhecimento
+
+---
+
+**Última Atualização:** Junho 2025  
+**Próxima Revisão:** Janeiro 2026  
+
+**Documentos Relacionados:**
+- [[../README.md]] - README principal do projeto
+- [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão estratégica
+- [[00_Gerenciamento_Projeto/TAP.md]] - Termo de abertura
+- [[03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura geral
+- [[01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia completa
+- [[04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v1.1) - Visão geral dos agentes
+
+---
+
+*Esta documentação é mantida como "Documentação Viva", sendo atualizada continuamente conforme a evolução do projeto Recoloca.AI através da metodologia de Orquestração Inteligente.*
+
+--- FIM DO DOCUMENTO README.md (v1.1) ---

@@ -1,10 +1,10 @@
 # Plano de Gerenciamento de Riscos (PGR) - Recoloca.AI
 
 ---
-**Versão:** 0.9 (Pré-Revisão Interativa)  
+**Versão:** 1.0  
 **Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 ---
 
@@ -125,7 +125,7 @@ O plano abrange todos os riscos que podem impactar:
   - Desenvolvimento de MVP enxuto
   - Testes beta com feedback contínuo
   - Pivotagem rápida baseada em dados
-- **Responsável:** @AgenteOrquestrador
+- **Responsável:** @AgenteM_Orquestrador
 - **Status:** Ativo
 
 #### RISCO-NEG-002: Custos Operacionais Excessivos
@@ -279,10 +279,11 @@ O plano abrange todos os riscos que podem impactar:
 
 **Aprovado por:** Bruno S. Rosa (Maestro)  
 **Data de Aprovação:** Junho 2025  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 **Histórico de Versões:**
-- v1.0 (Jun 2025): Versão inicial
+- v0.9 (Mai 2025): Versão inicial com metodologia "Solo Ágil Aumentado por IA"
+- v1.0 (Jun 2025): Versão consolidada com metodologia "Intelligent Orchestration with Domain Specialization"
 
 **Documentos Relacionados:**
 - [[TAP.md]] - Termo de Abertura do Projeto

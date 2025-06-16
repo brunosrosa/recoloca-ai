@@ -1,10 +1,10 @@
 # Plano de Gerenciamento do Escopo (PGE) - Recoloca.AI
 
 ---
-**Versão:** 0.9 (Pré-Revisão Interativa)  
+**Versão:** 1.0 (Aprovado - Versão Final)  
 **Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 ---
 
@@ -23,19 +23,74 @@ O plano abrange:
 
 ## 2. Metodologia de Gerenciamento do Escopo
 
-### 2.1 Abordagem "Solo Ágil Aumentado por IA"
+### 2.1 Abordagem "Intelligent Orchestration with Domain Specialization"
 O gerenciamento do escopo segue a metodologia do projeto:
 - **Iterativo e Incremental:** Desenvolvimento em fases com validação contínua
-- **Orientado por Valor:** Priorização baseada no valor para o usuário
+- **Orientado por Valor:** Priorização baseada no valor para o usuário e "AHA! Moments"
 - **Flexível:** Adaptação baseada em feedback e aprendizados
-- **Aumentado por IA:** Uso de agentes IA para análise e refinamento de requisitos
+- **Intelligent Orchestration:** Uso de agentes IA especializados para análise e refinamento de requisitos
+- **Specialized Intelligence:** Cada agente mentor contribui com expertise específica no controle de escopo
 
 ### 2.2 Processo de Definição do Escopo
 1. **Coleta de Requisitos:** Via pesquisa com usuários e análise de mercado
-2. **Análise com @AgenteOrquestrador:** Refinamento e priorização de requisitos
-3. **Validação com Maestro:** Aprovação final e alinhamento estratégico
-4. **Documentação:** Registro na [[ERS.md]] e atualização do backlog
-5. **Comunicação:** Divulgação via [[PCom.md]]
+2. **Análise com @AgenteM_Orquestrador:** Refinamento e priorização de requisitos
+3. **Orquestração de Agentes IA:** Coordenação de análises especializadas (ver [[docs/04_Agentes_IA/FLUXO_ORQUESTRACAO_AGENTES.md]])
+4. **Integração RAG:** Consulta à documentação viva para contexto e consistência
+5. **Validação com Maestro:** Aprovação final e alinhamento estratégico
+6. **Documentação:** Registro na [[ERS.md]] e atualização do backlog
+7. **Comunicação:** Divulgação via [[PCom.md]]
+
+### 2.3 Orquestração de Agentes IA na Gestão de Escopo
+
+A gestão de escopo é potencializada pelo ecossistema de Agentes de IA Mentores:
+
+#### 2.3.1 Fluxo de Análise de Requisitos
+- **@AgenteOrquestrador:** Análise estratégica e coordenação
+- **Agentes Especializados:** Validação técnica por domínio
+- **Sistema RAG:** Contexto da documentação viva
+- **Validação Cruzada:** Consistência entre perspectivas
+
+#### 2.3.2 Tipos de Orquestração
+- **Consulta Direta:** Questões específicas de domínio
+- **Orquestração Complexa:** Coordenação multi-agente
+- **Validação Cruzada:** Análise por múltiplos especialistas
+
+*Detalhes completos em: [[docs/04_Agentes_IA/FLUXO_ORQUESTRACAO_AGENTES.md]]*
+
+### 2.5 Sistema RAG na Gestão de Escopo
+
+O Sistema de Retrieval Augmented Generation (RAG) é fundamental para manter consistência e contexto na gestão de escopo:
+
+#### 2.5.1 Funcionalidades do RAG para Gestão de Escopo
+- **Consulta Contextual:** Recuperação automática de requisitos relacionados
+- **Validação de Consistência:** Verificação de alinhamento com decisões anteriores
+- **Rastreabilidade:** Histórico de mudanças e justificativas
+- **Detecção de Conflitos:** Identificação de requisitos contraditórios
+- **Sugestões Inteligentes:** Recomendações baseadas em padrões históricos
+
+#### 2.5.2 Integração com Documentação Viva
+- **Sincronização Automática:** Atualização contínua da base de conhecimento
+- **Versionamento Inteligente:** Controle de versões com contexto semântico
+- **Indexação Semântica:** Busca por conceitos, não apenas palavras-chave
+- **Feedback Loop:** Melhoria contínua baseada em uso e resultados
+
+#### 2.5.3 Fluxo RAG para Análise de Mudanças de Escopo
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│ Solicitação de  │───▶│ Consulta RAG    │───▶│ Análise de      │
+│ Mudança         │    │ (Contexto +     │    │ Impacto         │
+│                 │    │ Histórico)      │    │ Contextualizada │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                │
+                                ▼
+                       ┌─────────────────┐
+                       │ Recomendações   │
+                       │ Inteligentes    │
+                       │ + Precedentes   │
+                       └─────────────────┘
+```
+
+*Base técnica em: [[rag_infra/README.md]]*
 
 ## 3. Escopo do Projeto
 
@@ -61,6 +116,19 @@ Desenvolver o **Recoloca.AI**, um Micro-SaaS para auxiliar profissionais brasile
   - Taxa de conversão ≥ 15%
   - 100+ usuários beta registrados
   - Validação da proposta de valor
+  - **"AHA! Moments" identificados:** Momentos de descoberta de valor pelos usuários
+
+- **Specialized Intelligence:**
+  - Eficácia da orquestração entre agentes ≥ 90%
+  - Qualidade das análises especializadas ≥ 85%
+  - Tempo de resposta da inteligência distribuída ≤ 45 segundos
+  - Tempo de Resposta para consultas < 2h, entregas complexas < 1 dia
+  - Taxa de Retrabalho < 15% das entregas
+  - Satisfação do Maestro ≥ 4.5/5
+  - Consistência com Padrões ≥ 95%
+  - Cobertura de Contexto RAG ≥ 80%
+  - Relevância das Consultas RAG ≥ 90%
+  - Cobertura Documental 100% dos documentos core
 
 ### 3.4 Principais Entregas
 
@@ -178,19 +246,19 @@ Recoloca.AI
 - 2.4 Design de interface
 - 2.5 Modelagem de dados
 
-#### 3. Desenvolvimento
-- 3.1 Setup do ambiente
-- 3.2 Backend (FastAPI)
+#### 3. Desenvolvimento (Junho - Dezembro 2025: 16 semanas MVP)
+- 3.1 Setup do ambiente e RAG operacional (Junho 2025)
+- 3.2 Backend (FastAPI) - @AgenteM_DevFastAPI
   - 3.2.1 APIs de autenticação
-  - 3.2.2 APIs de upload
-  - 3.2.3 Sistema RAG
-  - 3.2.4 Análise com IA
-- 3.3 Frontend (Flutter PWA)
-  - 3.3.1 Autenticação
-  - 3.3.2 Upload de CV
-  - 3.3.3 Dashboard
-  - 3.3.4 Visualizações
-- 3.4 Integração de sistemas
+  - 3.2.2 APIs de upload e processamento
+  - 3.2.3 Sistema RAG e análise inteligente
+  - 3.2.4 Coach IA proativo e "AHA! Moments"
+- 3.3 Frontend (Flutter PWA) - @AgenteM_DevFlutter
+  - 3.3.1 Autenticação e onboarding
+  - 3.3.2 Kanban de candidaturas
+  - 3.3.3 Dashboard com "AHA! Moments" e métricas
+  - 3.3.4 Otimização de CV e visualizações inteligentes
+- 3.4 Integração de sistemas e Specialized Intelligence (Dezembro 2025)
 
 #### 4. Testes e Qualidade
 - 4.1 Testes unitários
@@ -238,7 +306,7 @@ Recoloca.AI
 
 1. **Identificação:** Detecção da necessidade de mudança
 2. **Documentação:** Registro formal da solicitação
-3. **Análise de Impacto:** Avaliação com @AgenteOrquestrador
+3. **Análise de Impacto:** Avaliação com @AgenteM_Orquestrador
    - Impacto no cronograma
    - Impacto no orçamento
    - Impacto técnico
@@ -250,8 +318,11 @@ Recoloca.AI
 
 ### 6.3 Comitê de Controle de Mudanças
 - **Maestro (Bruno S. Rosa):** Decisor final
-- **@AgenteOrquestrador:** Análise de impacto e recomendações
-- **Agentes Especializados:** Consulta técnica conforme necessário
+- **@AgenteM_Orquestrador:** Análise de impacto e recomendações
+- **Agentes Mentores Especializados:** Consulta técnica conforme necessário
+  - @AgenteM_ArquitetoTI: Impactos arquiteturais
+  - @AgenteM_UXDesigner: Impactos na experiência do usuário
+  - @AgenteM_DevFastAPI/@AgenteM_DevFlutter: Impactos técnicos
 
 ## 7. Validação e Aceitação de Entregas
 
@@ -331,37 +402,104 @@ Recoloca.AI
 
 ## 9. Métricas de Controle do Escopo
 
-### 9.1 Indicadores de Performance
+### 9.1 Indicadores de Performance (KPIs)
 
-#### 9.1.1 Métricas de Escopo
-- **Estabilidade do Escopo:** % de mudanças aprovadas vs solicitadas
+#### 9.1.1 Métricas Tradicionais de Escopo
+- **Índice de Estabilidade do Escopo:** (Requisitos aprovados / Total de requisitos) × 100
+- **Taxa de Mudanças:** Número de mudanças por sprint
+- **Impacto das Mudanças:** Horas de retrabalho por mudança
+- **Aderência ao Cronograma:** % de entregas no prazo
 - **Completude:** % de requisitos implementados vs planejados
 - **Qualidade:** % de entregas aceitas na primeira tentativa
 - **Satisfação:** Feedback dos usuários beta
 
-#### 9.1.2 Métricas de Processo
+#### 9.1.2 Métricas de Orquestração de Agentes IA
+- **Eficiência de Orquestração:**
+  - Tempo de resposta para consultas: < 2h
+  - Tempo de entrega para tarefas complexas: < 1 dia
+  - Taxa de retrabalho: < 15%
+- **Qualidade das Análises:**
+  - Satisfação do Maestro: ≥ 4.5/5
+  - Consistência com padrões: ≥ 95%
+  - Precisão técnica: Validação por especialistas
+- **Cobertura e Utilização:**
+  - Cobertura de contexto RAG: ≥ 80%
+  - Utilização de agentes especializados: % por domínio
+  - Taxa de escalação manual: < 10%
+- **"AHA! Moments" Delivery:** % de momentos de descoberta entregues conforme planejado
+- **Specialized Intelligence Effectiveness:** Qualidade das contribuições especializadas dos agentes
+
+#### 9.1.3 Métricas do Sistema RAG
+- **Performance de Recuperação:**
+  - Relevância das consultas: ≥ 90%
+  - Tempo de resposta: < 3 segundos
+  - Cobertura documental: 100% documentos core
+- **Qualidade da Base:**
+  - Atualização da base: Sincronização semanal
+  - Índice de fragmentação: < 5%
+  - Taxa de conflitos detectados: Monitoramento contínuo
+- **Utilização e Feedback:**
+  - Consultas por agente/dia: Baseline estabelecido
+  - Taxa de feedback positivo: ≥ 85%
+  - Melhoria contínua: Ciclos mensais
+
+#### 9.1.4 Métricas de Processo
 - **Tempo de Análise:** Tempo médio para avaliar mudanças
 - **Taxa de Aprovação:** % de mudanças aprovadas
 - **Impacto Médio:** Impacto médio das mudanças no cronograma
 - **Eficiência:** Velocidade de implementação de requisitos
+- **Velocity Aumentada por IA:** Aceleração devido aos agentes
+- **Eficiência Híbrida:** (Horas produtivas + Contribuição IA) / Horas totais
 
 ### 9.2 Relatórios de Acompanhamento
 
-#### 9.2.1 Relatório Semanal
-- Status dos requisitos em desenvolvimento
-- Mudanças solicitadas e aprovadas
-- Riscos identificados relacionados ao escopo
-- Próximas entregas planejadas
+#### 9.2.1 Relatório Semanal Integrado
+- **Status Tradicional:**
+  - Status dos requisitos em desenvolvimento
+  - Mudanças solicitadas e aprovadas
+  - Riscos identificados relacionados ao escopo
+  - Próximas entregas planejadas
+- **Status de IA:**
+  - Performance dos agentes
+  - Qualidade das orquestrações
+  - Utilização do RAG
+  - Alertas de degradação
 
-#### 9.2.2 Relatório Mensal
-- Análise de tendências de mudanças
-- Avaliação da estabilidade do escopo
-- Impacto cumulativo das mudanças
-- Recomendações de ajustes
+#### 9.2.2 Relatório Mensal de Inteligência
+- **Análise de Tendências:**
+  - Análise de tendências de mudanças
+  - Avaliação da estabilidade do escopo
+  - Impacto cumulativo das mudanças
+  - Evolução das métricas de IA
+  - Padrões de utilização
+  - Eficácia comparativa
+- **Otimização Contínua:**
+  - Recomendações de ajustes
+  - Ajustes de prompts
+  - Refinamento de agentes
+  - Melhoria do RAG
+- **ROI de IA:**
+  - Tempo economizado
+  - Qualidade melhorada
+  - Redução de erros
+
+#### 9.2.3 Dashboard em Tempo Real Aumentado
+- **Métricas Principais:**
+  - KPIs tradicionais + métricas de IA
+  - Status de saúde dos agentes
+  - Performance do RAG
+- **Alertas Inteligentes:**
+  - Desvios automáticos
+  - Predições de problemas
+  - Sugestões de otimização
+- **Visualizações Avançadas:**
+  - Mapas de calor de utilização
+  - Fluxos de orquestração
+  - Análise de sentimento das interações
 
 ## 10. Riscos Relacionados ao Escopo
 
-### 10.1 Principais Riscos
+### 10.1 Riscos Tradicionais de Gestão de Escopo
 
 #### 10.1.1 Scope Creep
 - **Descrição:** Expansão não controlada do escopo
@@ -373,7 +511,7 @@ Recoloca.AI
 - **Descrição:** Ambiguidade ou incompletude nos requisitos
 - **Probabilidade:** Média
 - **Impacto:** Alto
-- **Mitigação:** Validação contínua com usuários e @AgenteOrquestrador
+- **Mitigação:** Validação contínua com usuários e @AgenteM_Orquestrador
 
 #### 10.1.3 Mudanças de Prioridade
 - **Descrição:** Alterações frequentes nas prioridades
@@ -381,10 +519,55 @@ Recoloca.AI
 - **Impacto:** Médio
 - **Mitigação:** Framework claro de priorização (MoSCoW)
 
-### 10.2 Plano de Contingência
+### 10.2 Riscos Específicos de IA e Orquestração de Agentes
+
+#### 10.2.1 Riscos de Orquestração
+- **Desalinhamento de Agentes:** Inconsistência entre análises de diferentes agentes
+- **Sobrecarga de Coordenação:** Complexidade excessiva na orquestração
+- **Dependência de Contexto RAG:** Falhas na recuperação de informações relevantes
+- **Qualidade de Prompts:** Prompts inadequados gerando outputs incorretos
+
+#### 10.2.2 Riscos do Sistema RAG
+- **Desatualização da Base:** Documentação viva não sincronizada
+- **Viés de Recuperação:** Preferência por informações mais recentes ou frequentes
+- **Fragmentação de Contexto:** Perda de contexto em consultas complexas
+- **Dependência Técnica:** Falhas na infraestrutura de embedding/indexação
+
+#### 10.2.3 Riscos de Qualidade de IA
+- **Alucinações:** Geração de informações incorretas pelos agentes
+- **Inconsistência Temporal:** Variação na qualidade das respostas
+- **Limitações de Domínio:** Agentes operando fora de sua especialização
+- **Feedback Loop Negativo:** Erros se propagando através do sistema
+
+### 10.3 Estratégias de Mitigação Específicas para IA
+
+#### 10.3.1 Controles de Qualidade
+- **Validação Cruzada:** Múltiplos agentes analisando decisões críticas
+- **Human-in-the-Loop:** Maestro como ponto de validação final
+- **Métricas de Qualidade:** Monitoramento contínuo da eficácia dos agentes
+- **Auditoria de Prompts:** Revisão regular dos templates e instruções
+
+#### 10.3.2 Redundância e Backup
+- **Agentes de Backup:** Capacidade de substituição entre agentes similares
+- **Documentação Manual:** Processos alternativos sem dependência de IA
+- **Versionamento de Contexto:** Backup da base de conhecimento RAG
+- **Escalação Manual:** Processo de decisão tradicional como fallback
+
+#### 10.3.3 Monitoramento Proativo
+- **Dashboard de Métricas:** Acompanhamento em tempo real da performance
+- **Alertas Automáticos:** Notificações de desvios de qualidade
+- **Análise de Tendências:** Identificação precoce de degradação
+- **Feedback Estruturado:** Coleta sistemática de avaliações do Maestro
+
+### 10.4 Plano de Contingência Integrado
 - **Scope Creep:** Congelamento temporário de mudanças
 - **Requisitos Mal Definidos:** Sessões de refinamento com stakeholders
 - **Mudanças de Prioridade:** Revisão do business case
+- **Monitoramento Contínuo:** Acompanhamento semanal via Kanban + métricas de IA
+- **Comunicação Proativa:** Alertas antecipados de desvios técnicos e de escopo
+- **Flexibilidade Controlada:** Margem de 15% para ajustes + capacidade de degradação graceful
+- **Escalação Rápida:** Processo de decisão ágil com fallback manual
+- **Recuperação Inteligente:** Protocolos específicos para falhas de IA
 
 ## 11. Lições Aprendidas e Melhoria Contínua
 
@@ -406,10 +589,12 @@ Recoloca.AI
 
 **Aprovado por:** Bruno S. Rosa (Maestro)  
 **Data de Aprovação:** Junho 2025  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 **Histórico de Versões:**
-- v1.0 (Jun 2025): Versão inicial
+- v0.9 (Maio 2025): Versão inicial
+- v1.0 (Junho 2025): Alinhamento com metodologia "Intelligent Orchestration", timeline 16 semanas (Junho-Dezembro 2025), nomenclatura padronizada de agentes, incorporação de "AHA! Moments" e "Specialized Intelligence", correção de cronograma e escopo do MVP
+- v1.1 (Junho 2025): **Ampliação Estratégica de IA:** Integração do fluxo de orquestração de agentes IA, Sistema RAG aplicado à gestão de escopo, Métricas específicas de "Specialized Intelligence", Gestão de riscos específicos de IA, Controles de qualidade e monitoramento proativo, Dashboard integrado com métricas de IA
 
 **Documentos Relacionados:**
 - [[TAP.md]] - Termo de Abertura do Projeto

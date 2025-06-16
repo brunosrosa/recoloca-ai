@@ -1,8 +1,10 @@
 # Estratégia de DevOps para o Recoloca.ai (MVP)
 
-**Versão:** 0.1
-**Data:** 2025-06-07
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)
+**Data de Criação:** 2025-06-07
+**Data de Última Atualização:** Junho de 2025
 **Autores:** `@AgenteOrquestrador`, `@Maestro`
+**Baseado em:** [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] v1.1, [[docs/03_Arquitetura_e_Design/HLD.md]] v1.1, [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v1.1
 
 ## 1. Visão Geral e Objetivos
 
@@ -107,7 +109,7 @@ Serão configurados pipelines separados para o backend e o frontend.
 ## 6. Monitoramento e Alertas (Pós-MVP Inicial)
 
 *   Inicialmente, o monitoramento será focado nas saídas dos workflows do GitHub Actions para identificar falhas de build, teste ou deploy.
-*   A integração com ferramentas de monitoramento de aplicação (ex: Sentry, Google Analytics para o frontend, logs da plataforma de hospedagem para o backend) será planejada para fases posteriores, alinhada com o documento [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]].
+*   A integração com ferramentas de monitoramento de aplicação (ex: Sentry, Google Analytics para o frontend, logs da plataforma de hospedagem para o backend) será planejada para fases posteriores, alinhada com o documento [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] (v1.1).
 
 ## 7. Próximos Passos e Evolução
 
@@ -132,5 +134,55 @@ Serão configurados pipelines separados para o backend e o frontend.
 *   Manter as actions utilizadas nos workflows atualizadas.
 
 ---
-FIM DO DOCUMENTO ESTRATEGIA_DEVOPS.md (v0.1)
+
+## 🔄 Considerações de Orquestração Inteligente
+
+### Integração com Metodologia v1.1
+- **Agentes Especializados**: Utilização de @AgenteOrquestrador para análise estratégica de DevOps e @AgenteMentorDevBackend/@AgenteMentorDevFrontend para implementação de pipelines específicos
+- **RAG Operacional**: Contextualização contínua via base de conhecimento técnico para otimização de pipelines
+- **Métricas Contínuas**: Coleta automática de dados de performance de CI/CD integrada com sistema de entregáveis
+- **Specialized Intelligence**: Delegação eficiente de configuração e manutenção de pipelines para agentes especializados
+
+### Critérios de Validação Metodológica
+- ✅ **Eficiência de Deploy**: Redução de 70-90% no tempo de deploy manual
+- ✅ **Qualidade de Pipeline**: Padronização de 100% dos workflows de CI/CD
+- ✅ **Rastreabilidade**: Histórico completo de deploys e decisões de infraestrutura
+- ✅ **Escalabilidade**: Suporte ao crescimento da base de código e infraestrutura
+
+### Alinhamento com Documentação Viva
+- **Sincronização**: Configurações de pipeline automaticamente sincronizadas com base RAG
+- **Versionamento**: Controle de versão integrado das estratégias de DevOps
+- **Referências**: Links automáticos para documentos de arquitetura e requisitos
+- **Dashboards**: Métricas em tempo real de performance de CI/CD
+
+## 📊 Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de referências para documentos v1.1
+- Alinhamento com metodologia de Orquestração Inteligente
+- Integração com agentes especializados para DevOps
+- Adição de métricas de eficiência de deploy
+- Sincronização com base RAG operacional
+
+### v0.1 (Junho 2025) - Versão Inicial
+- Definição da estratégia básica de CI/CD com GitHub Actions
+- Estrutura de pipelines para backend (FastAPI) e frontend (Flutter PWA)
+- Estratégia de branching e gestão de segredos
+- Plano de evolução pós-MVP
+
+## 📚 Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia base
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão e objetivos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de alto nível
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Decisões arquiteturais
+- [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] (v1.1) - Métricas de negócio
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
+- [[docs/07_Operacoes_e_Deploy/GUIA_DEPLOY_BACKEND.md]] - Guia específico de deploy backend
+- [[docs/07_Operacoes_e_Deploy/GUIA_DEPLOY_FRONTEND.md]] - Guia específico de deploy frontend
+
+**Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando automação de processos de DevOps e medição contínua de eficácia.
+
+---
+FIM DO DOCUMENTO ESTRATEGIA_DEVOPS.md (v1.1)
 ---

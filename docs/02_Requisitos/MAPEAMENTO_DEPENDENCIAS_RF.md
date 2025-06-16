@@ -8,9 +8,10 @@ sticker: lucide//git-branch
 ---
 # Mapeamento de Dependências dos Requisitos Funcionais - Recoloca.ai
 
-**Versão**: 0.9 (Pré Revisão Interativa)
+**Versão**: 1.1 (Orquestração Inteligente e Specialized Intelligence)
 **Data de Criação**: 06 de junho de 2025
-**Baseado em**: [[docs/02_Requisitos/ERS.md]] (v0.9)
+**Data de Última Atualização**: Junho de 2025
+**Baseado em**: [[docs/02_Requisitos/ERS.md]] (v1.1), [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1)
 **Criado por**: @AgenteOrquestrador em colaboração com Maestro
 
 ## 1. Objetivo e Metodologia
@@ -314,12 +315,72 @@ graph TD
 2. **MVP Incremental**: Cada fase entrega valor utilizável
 3. **Validação Precoce**: Fase 2 já permite validação com usuários
 
+## 7. Considerações de Orquestração Inteligente
+
+### 7.1 Impacto na Specialized Intelligence
+
+**Métricas de Eficiência de Orquestração**:
+- **Tempo de Resolução de Dependências**: Medição do tempo para resolver bloqueios entre módulos
+- **Taxa de Paralelização**: Percentual de desenvolvimento que pode ocorrer em paralelo
+- **Índice de Retrabalho**: Frequência de mudanças devido a dependências mal mapeadas
+
+**Integração com Sistema RAG**:
+- Documentação automática de decisões de dependência
+- Histórico de mudanças e justificativas
+- Base de conhecimento para futuras decisões similares
+
+### 7.2 Agentes de IA Envolvidos
+
+**Tier 1 (MVP)**:
+- `@AgenteM_Backend`: Implementação das dependências técnicas críticas
+- `@AgenteM_Frontend`: Coordenação de fluxos UX dependentes
+- `@AgenteM_Testes`: Validação de integração entre módulos dependentes
+
+**Tier 2 (Pós-MVP)**:
+- `@AgenteM_DevOps`: Automação de deploy considerando dependências
+- `@AgenteM_Performance`: Otimização baseada no grafo de dependências
+
 ## 8. Próximos Passos Recomendados
 
 1. **Aplicar RICE com Dependências**: Usar este mapeamento para calcular RICE ajustado
 2. **Validar Sequência**: Revisar com Maestro a sequência proposta
 3. **Protótipos de Risco**: Validar tecnicamente AUTH+Supabase e parsing CV
 4. **Definir Critérios de Aceitação**: Para cada componente de núcleo identificado
+5. **Configurar Métricas**: Implementar dashboard de specialized intelligence
+6. **Integrar RAG**: Documentar decisões na base de conhecimento
+
+## 9. Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- **Adição**: Considerações de orquestração inteligente e métricas de specialized intelligence
+- **Melhoria**: Integração com sistema RAG para documentação automática de decisões
+- **Expansão**: Mapeamento de agentes de IA por tier para implementação das dependências
+- **Alinhamento**: Sincronização com documentos centrais atualizados (GUIA_AVANCADO v1.1, HLD v1.1, ERS v1.1)
+- **Framework**: Inclusão de métricas de eficiência de orquestração e índices de qualidade
+- **Correção**: Atualização de versões e datas para refletir o estado atual (Junho 2025)
+
+### v1.0 (Maio 2025) - Versão Inicial
+- **Criação**: Mapeamento inicial de dependências baseado no ERS v0.9
+- **Estrutura**: Definição de critérios, grafo de dependências e componentes de núcleo
+- **Metodologia**: Aplicação de framework RICE ajustado
+- **Sequenciamento**: Proposta de fases de desenvolvimento otimizadas
+
+## 10. Documentos Relacionados
+
+### Documentos de Gestão
+- [[docs/01_Guias_Centrais/TAP.md]] - Termo de Abertura do Projeto
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Plano Mestre e Roadmap
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] - Metodologia de Orquestração Inteligente
+- [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]] - Prioridades e Status
+
+### Documentos Técnicos
+- [[docs/02_Requisitos/ERS.md]] - Especificação de Requisitos de Software
+- [[docs/03_Arquitetura_e_Design/HLD.md]] - Arquitetura de Alto Nível
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão Geral dos Agentes
+- [[docs/01_Guias_Centrais/GLOSSARIO_Recoloca_AI.md]] - Glossário do Projeto
+
+### Perfis de Agentes
+- [[docs/04_Agentes_IA/Perfis/]] - Perfis detalhados dos Agentes de IA Mentores
 
 ---
 
@@ -330,4 +391,6 @@ graph TD
 - ✅ Impactos para RICE documentados
 - ✅ Riscos e oportunidades analisados
 
---- FIM DO DOCUMENTO MAPEAMENTO_DEPENDENCIAS_RF.md (v1.0) ---
+**Nota**: Este documento é parte da "Documentação Viva" do projeto Recoloca.ai, integrado à metodologia de "Orquestração Inteligente" e "Specialized Intelligence". É atualizado automaticamente conforme o desenvolvimento progride e novas dependências são identificadas, com todas as decisões documentadas no sistema RAG para aprendizado contínuo.
+
+--- FIM DO DOCUMENTO MAPEAMENTO_DEPENDENCIAS_RF.md (v1.1) ---

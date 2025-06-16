@@ -1,10 +1,10 @@
 # Plano de Gerenciamento de Custos (PGC) - Recoloca.AI
 
 ---
-**Versão:** 0.9 (Pré-Revisão Interativa)  
+**Versão:** 1.0  
 **Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 ---
 
@@ -24,13 +24,14 @@ O plano abrange:
 
 ## 2. Metodologia de Gerenciamento de Custos
 
-### 2.1 Abordagem "Solo Ágil Aumentado por IA"
+### 2.1 Abordagem "Orquestração Inteligente com Especialização de Domínio"
 O gerenciamento de custos segue a metodologia do projeto:
 - **Lean Startup:** Foco em MVP com investimento mínimo
 - **Bootstrapping:** Autofinanciamento e uso de recursos próprios
 - **Freemium First:** Priorização de ferramentas gratuitas/freemium
 - **ROI-Driven:** Decisões baseadas em retorno sobre investimento
 - **Escalabilidade Gradual:** Investimentos crescentes conforme validação
+- **Orquestração Inteligente:** Coordenação eficiente de recursos e agentes especializados
 
 ### 2.2 Princípios de Gestão Financeira
 1. **Transparência:** Todos os custos devem ser documentados e rastreáveis
@@ -61,6 +62,14 @@ O gerenciamento de custos segue a metodologia do projeto:
   - Serviços de IA/LLM (Google Gemini)
   - Ferramentas de análise e monitoramento
   - Serviços de autenticação (Supabase)
+
+- **Specialized Intelligence**
+  - Agentes de IA especializados
+  - Modelos de embedding customizados (BAAI/bge-m3)
+  - Orquestração inteligente de tarefas
+  - Sistemas de RAG avançados (LangChain)
+  - Vector stores e infraestrutura FAISS-GPU
+  - Processamento semântico especializado
 
 #### 3.1.2 Custos Operacionais (OPEX)
 - **Hospedagem e Infraestrutura**
@@ -104,34 +113,40 @@ O gerenciamento de custos segue a metodologia do projeto:
 
 ## 4. Orçamento Detalhado
 
-### 4.1 Orçamento MVP (Fase 1 - 3 meses)
+### 4.1 Orçamento MVP (Fase 1 - 16 semanas)
 
 #### 4.1.1 Custos de Desenvolvimento
-| Item | Descrição | Custo Mensal | Total 3 meses |
+| Item | Descrição | Custo Mensal | Total 4 meses |
 |------|-----------|--------------|---------------|
 | **Ferramentas de Desenvolvimento** |
-| Trae AI Pro | IDE avançada | R$ 50 | R$ 150 |
-| GitHub Pro | Repositórios privados | R$ 20 | R$ 60 |
-| Figma Pro | Design e prototipação | R$ 60 | R$ 180 |
-| **Subtotal Ferramentas** | | **R$ 130** | **R$ 390** |
+| Trae AI Pro | IDE avançada | R$ 50 | R$ 200 |
+| GitHub Pro | Repositórios privados | R$ 20 | R$ 80 |
+| Figma Pro | Design e prototipação | R$ 60 | R$ 240 |
+| **Subtotal Ferramentas** | | **R$ 130** | **R$ 520** |
 
 | **Serviços de IA e APIs** |
-| Google Gemini Pro | LLM para análise | R$ 100 | R$ 300 |
-| Supabase Pro | Backend e DB | R$ 100 | R$ 300 |
-| **Subtotal Serviços** | | **R$ 200** | **R$ 600** |
+| Google Gemini Pro | LLM para análise | R$ 100 | R$ 400 |
+| Supabase Pro | Backend e DB | R$ 100 | R$ 400 |
+| **Subtotal Serviços** | | **R$ 200** | **R$ 800** |
+
+| **Specialized Intelligence** |
+| Embedding Models | BAAI/bge-m3 e similares | R$ 50 | R$ 200 |
+| Vector Store | FAISS-GPU e infraestrutura | R$ 30 | R$ 120 |
+| RAG Orchestration | LangChain e ferramentas | R$ 20 | R$ 80 |
+| **Subtotal Specialized Intelligence** | | **R$ 100** | **R$ 400** |
 
 #### 4.1.2 Custos Operacionais
-| Item | Descrição | Custo Mensal | Total 3 meses |
+| Item | Descrição | Custo Mensal | Total 4 meses |
 |------|-----------|--------------|---------------|
 | **Hospedagem e Infraestrutura** |
-| Vercel Pro | Frontend hosting | R$ 80 | R$ 240 |
-| Railway Pro | Backend hosting | R$ 60 | R$ 180 |
-| **Subtotal Hospedagem** | | **R$ 140** | **R$ 420** |
+| Vercel Pro | Frontend hosting | R$ 80 | R$ 320 |
+| Railway Pro | Backend hosting | R$ 60 | R$ 240 |
+| **Subtotal Hospedagem** | | **R$ 140** | **R$ 560** |
 
 | **Domínio e Certificados** |
 | Domínio .ai | Registro anual | R$ 300 | R$ 300 |
-| Email profissional | Google Workspace | R$ 30 | R$ 90 |
-| **Subtotal Domínio** | | **R$ 330** | **R$ 390** |
+| Email profissional | Google Workspace | R$ 30 | R$ 120 |
+| **Subtotal Domínio** | | **R$ 330** | **R$ 420** |
 
 #### 4.1.3 Custos de Marketing e Validação
 | Item | Descrição | Custo Total |
@@ -144,13 +159,14 @@ O gerenciamento de custos segue a metodologia do projeto:
 #### 4.1.4 Resumo Orçamento MVP
 | Categoria | Custo Total |
 |-----------|-------------|
-| Ferramentas de Desenvolvimento | R$ 390 |
-| Serviços de IA e APIs | R$ 600 |
-| Hospedagem e Infraestrutura | R$ 420 |
-| Domínio e Certificados | R$ 390 |
+| Ferramentas de Desenvolvimento | R$ 520 |
+| Serviços de IA e APIs | R$ 800 |
+| Specialized Intelligence | R$ 400 |
+| Hospedagem e Infraestrutura | R$ 560 |
+| Domínio e Certificados | R$ 420 |
 | Marketing e Validação | R$ 650 |
-| **TOTAL MVP (3 meses)** | **R$ 2.450** |
-| **Custo Mensal Médio** | **R$ 817** |
+| **TOTAL MVP (16 semanas/4 meses)** | **R$ 3.350** |
+| **Custo Mensal Médio** | **R$ 838** |
 
 ### 4.2 Orçamento Pós-MVP (Fase 2 - 6 meses)
 
@@ -163,12 +179,12 @@ O gerenciamento de custos segue a metodologia do projeto:
 | Consultoria especializada | R$ 500 | R$ 3.000 |
 | **TOTAL Pós-MVP** | **R$ 1.100** | **R$ 6.600** |
 
-### 4.3 Orçamento Total do Projeto (9 meses)
+### 4.3 Orçamento Total do Projeto (10 meses)
 | Fase | Duração | Custo Total |
 |------|---------|-------------|
-| MVP | 3 meses | R$ 2.450 |
+| MVP | 4 meses | R$ 3.350 |
 | Pós-MVP | 6 meses | R$ 6.600 |
-| **TOTAL PROJETO** | **9 meses** | **R$ 9.050** |
+| **TOTAL PROJETO** | **10 meses** | **R$ 9.950** |
 
 ## 5. Fontes de Financiamento
 
@@ -211,7 +227,7 @@ O gerenciamento de custos segue a metodologia do projeto:
 
 #### 6.2.1 Categorias de Aprovação
 - **Gastos < R$ 50:** Aprovação automática
-- **Gastos R$ 50-200:** Análise com @AgenteOrquestrador
+- **Gastos R$ 50-200:** Análise com @AgenteM_Orquestrador
 - **Gastos > R$ 200:** Aprovação formal do Maestro
 - **Mudanças de categoria:** Análise de impacto completa
 
@@ -239,13 +255,13 @@ O gerenciamento de custos segue a metodologia do projeto:
 
 ### 7.1 Reserva de Contingência
 - **Percentual:** 20% do orçamento total
-- **Valor MVP:** R$ 490 (20% de R$ 2.450)
-- **Valor Total:** R$ 1.810 (20% de R$ 9.050)
+- **Valor MVP:** R$ 670 (20% de R$ 3.350)
+- **Valor Total:** R$ 1.990 (20% de R$ 9.950)
 
 ### 7.2 Reserva Gerencial
 - **Percentual:** 10% adicional para riscos desconhecidos
-- **Valor MVP:** R$ 245
-- **Valor Total:** R$ 905
+- **Valor MVP:** R$ 335
+- **Valor Total:** R$ 995
 
 ### 7.3 Gatilhos para Uso de Reservas
 
@@ -437,7 +453,8 @@ O gerenciamento de custos segue a metodologia do projeto:
 **Próxima Revisão:** Janeiro 2025  
 
 **Histórico de Versões:**
-- v1.0 (Jun 2025): Versão inicial
+- v0.9 (Mai 2025): Versão inicial para revisão
+- v1.0 (Jun 2025): Versão consolidada com metodologia "Orquestração Inteligente" e timeline de 16 semanas
 
 **Documentos Relacionados:**
 - [[TAP.md]] - Termo de Abertura do Projeto

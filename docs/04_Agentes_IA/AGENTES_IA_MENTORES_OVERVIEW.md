@@ -3,9 +3,9 @@ sticker: lucide//check
 ---
 # AGENTES DE IA MENTORES DO PROJETO RECOLOCA.AI (VISÃO GERAL)
 
-**Versão**: 3.0 
+**Versão**: 3.1 (Orquestração Inteligente e Specialized Intelligence)
 **Data de Criação Original**: 03 de junho de 2025
-**Data de Última Atualização**: 06 de junho de 2025
+**Data de Última Atualização**: Janeiro de 2025
 **Autor**: @AgenteOrquestrador (com supervisão do Maestro Bruno S. Rosa)
 **Baseado em**:
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5)
@@ -25,6 +25,33 @@ sticker: lucide//check
 Este documento serve como um **ponto de entrada e resumo** do ecossistema de **Agentes de IA** *Mentores* que compõem o "**squad**" de **desenvolvimento** do projeto Recoloca.ai. Seu propósito é fornecer uma visão geral e direcionar para os perfis detalhados de cada agente, facilitando o entendimento e a orquestração eficaz pelo Maestro (Bruno S. Rosa) e pelos próprios agentes.
 
 A visão é construir um "super squad" de IA, onde cada agente atua como um especialista em sua respectiva área, colaborando sinergicamente sob a liderança do Maestro para acelerar o desenvolvimento, aumentar a qualidade e fomentar a inovação no Recoloca.ai. Este documento é uma peça fundamental da "Documentação Viva" do projeto. Para detalhes específicos sobre cada agente, consulte seu perfil individual linkado abaixo.
+
+### 1.1. Métricas de "Specialized Intelligence"
+
+Para garantir a eficácia do squad de agentes, monitoramos as seguintes métricas:
+
+- **Eficiência de Orquestração**: Tempo médio de resolução de tarefas complexas com múltiplos agentes
+- **Qualidade do Sistema RAG**: Precisão e relevância das consultas à "Documentação Viva"
+- **Satisfação/Produtividade**: Feedback do Maestro sobre a utilidade e eficiência dos agentes
+
+### 1.2. Critérios para Agentes "Production-Ready"
+
+Cada agente deve atender aos seguintes critérios objetivos:
+
+**Tier 1 (Essencial)**:
+- Precisão ≥ 90% em tarefas de sua especialidade
+- Tempo de resposta ≤ 30 segundos para consultas simples
+- Contextualização adequada baseada na "Documentação Viva"
+
+**Tier 2 (Avançado)**:
+- Precisão ≥ 95% em tarefas complexas
+- Integração eficaz com sistema RAG (≥ 85% de consultas relevantes)
+- Capacidade de colaboração multi-agente
+
+**Tier 3 (Expert)**:
+- Autonomia operacional ≥ 80% (mínima supervisão)
+- Contribuição proativa para melhoria da "Documentação Viva"
+- Mentoria eficaz ao Maestro com sugestões estratégicas
 ## 2. Squad Principal de Agentes IA Mentores
 
 ### 2.1. Agentes Tier 1 (Essenciais para MVP)
@@ -237,4 +264,41 @@ graph LR
 
 Este ciclo reforça a importância da documentação não como uma tarefa posterior, mas como parte integral e contínua do desenvolvimento, potencializando a eficácia dos Agentes de IA.
 
---- FIM DO DOCUMENTO XXX.Md (v X.X) ---
+## 5. Histórico de Versões
+
+### v3.1 (Janeiro 2025) - Orquestração Inteligente e Specialized Intelligence
+- **Métricas de "Specialized Intelligence"**: Inclusão de métricas de eficiência de orquestração, qualidade do sistema RAG e satisfação/produtividade
+- **Critérios Objetivos Expandidos**: Definição de critérios "Production-Ready" em três tiers (Essencial, Avançado, Expert)
+- **Framework de Medição**: Estabelecimento de benchmarks quantitativos para avaliação de agentes
+- **Indicadores de Produtividade**: Métricas de tempo de resposta, precisão e autonomia operacional
+- **Alinhamento Metodológico**: Integração com a metodologia de "Orquestração Inteligente" dos documentos centrais
+- **Consolidação da Metodologia**: Harmonização com TAP.md, GUIA_AVANCADO.md, PLANO_MESTRE_RECOLOCA_AI.md, ERS.md e HLD.md
+
+### v3.0 (Junho 2025)
+- Estruturação do squad em Tier 1 (MVP) e Tier 2 (Pós-MVP)
+- Definição de agentes essenciais e especializados
+- Criação do diagrama de processo de desenvolvimento otimizado
+- Integração com a "Documentação Viva" e sistema RAG
+
+## 6. Documentos Relacionados
+
+### Documentos de Gestão
+- [[docs/01_Guias_Centrais/TAP.md]] - Termo de Abertura do Projeto
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Plano Mestre
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] - Guia Metodológico
+- [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]] - Gestão de Tarefas
+
+### Documentos Técnicos
+- [[docs/02_Requisitos/ERS.md]] - Especificação de Requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] - Arquitetura de Alto Nível
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] - Decisões Arquiteturais
+- [[.trae/rules/project_rules.md]] - Regras do Projeto
+
+### Perfis de Agentes
+- [[docs/04_Agentes_IA/Perfis/]] - Perfis detalhados de todos os agentes especializados
+
+---
+
+**Nota**: Este documento integra a metodologia de "Orquestração Inteligente" e "Specialized Intelligence", estabelecendo métricas objetivas e critérios de qualidade para o squad de Agentes de IA Mentores do Recoloca.ai.
+
+--- FIM DO DOCUMENTO AGENTES_IA_MENTORES_OVERVIEW.md (v3.1) ---

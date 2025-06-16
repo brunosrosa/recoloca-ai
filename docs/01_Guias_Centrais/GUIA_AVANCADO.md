@@ -3,9 +3,9 @@ sticker: lucide//check
 ---
 # GUIA AVANÇADO PARA DESENVOLVIMENTO SOLO COM AGENTES DE IA MENTORES (Aplicado ao Projeto Recoloca.ai)
 
-**Versão:** 1.0
+**Versão:** 1.1
 **Data de Criação:** 28 de maio de 2025
-**Data de Última Atualização:** 19 de dezembro de 2024
+**Data de Última Atualização:** Janeiro de 2025
 **Status:** Aprovado
 **Baseado em:**
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.0)
@@ -144,9 +144,9 @@ O **`@AgenteOrquestrador`** possui papel central e expandido:
 - Análise de valor para usuário e alinhamento estratégico
 - Identificação de "componentes de núcleo" do projeto
 
-## Critérios Objetivos para Agentes "Production-Ready"
+## Critérios Objetivos para Agentes "Production-Ready" e Métricas de "Specialized Intelligence"
 
-Para definir quando um Agente Mentor de IA está pronto para produção, estabelecemos critérios objetivos organizados em três tiers:
+Para definir quando um Agente Mentor de IA está pronto para produção, estabelecemos critérios objetivos organizados em três tiers, complementados por métricas específicas de "Specialized Intelligence":
 
 ### Tier 1 - Agentes Básicos (Supervisão Intensa)
 - **Precisão Técnica**: 70-80% de outputs corretos sem revisão
@@ -168,6 +168,23 @@ Para definir quando um Agente Mentor de IA está pronto para produção, estabel
 - **Autonomia Operacional**: Executa tarefas complexas com auto-correção
 - **Integração RAG**: Utiliza contexto de forma criativa e inovadora
 - **Alinhamento Estratégico**: Contribui proativamente para estratégia
+
+### Métricas de "Specialized Intelligence" para Orquestração
+
+#### Eficiência de Orquestração
+- **Tempo de Resposta dos Agentes**: < 30 segundos para consultas simples, < 2 minutos para análises complexas
+- **Taxa de Automação**: % de tarefas executadas sem intervenção manual (Meta: 70% Tier 1, 85% Tier 2, 95% Tier 3)
+- **Precisão de Handoffs**: % de transferências bem-sucedidas entre agentes (Meta: >90%)
+
+#### Qualidade do Sistema RAG
+- **Precisão de Retrieval**: % de documentos relevantes recuperados (Meta: >85%)
+- **Cobertura da Base RAG**: % da documentação indexada e atualizada (Meta: >95%)
+- **Tempo de Indexação**: Tempo para processar novos documentos (Meta: < 5 minutos)
+
+#### Satisfação e Produtividade
+- **Satisfação do Maestro**: Escala 1-10 com feedback sobre utilidade dos agentes (Meta: >8)
+- **Redução de Context Switching**: % de redução em mudanças de ferramenta (Meta: >60%)
+- **Aceleração de Desenvolvimento**: Fator de multiplicação da produtividade (Meta: 2-3x)
 
 ## Estratégia RAG (Retrieval-Augmented Generation)
 
@@ -523,4 +540,46 @@ A estrutura geral de um template de prompt (conforme [[docs/01_Guias_Centrais/PL
 4.  Pensando em MVP para este dashboard, quais são as 2-3 métricas absolutamente essenciais que precisamos exibir para validar a hipótese de valor, versus métricas 'nice-to-have' que podem vir depois? (Podemos usar MoSCoW aqui).
     Após alinharmos esses pontos estratégicos, posso criar as HUs e ACs detalhadas para o MVP deste dashboard, garantindo rastreabilidade e testabilidade."
 
---- FIM DO DOCUMENTO GUIA_AVANCADO.md (v1.0) ---
+## Histórico de Versões
+
+### v1.1 - Janeiro 2025 (Orquestração Inteligente e Specialized Intelligence)
+**Melhorias Implementadas:**
+- **Métricas de "Specialized Intelligence"**: Adicionadas métricas específicas para orquestração de agentes IA, qualidade do sistema RAG e produtividade
+- **Critérios Objetivos Expandidos**: Complementados os tiers de agentes com métricas quantificáveis de eficiência e qualidade
+- **Framework de Medição**: Estabelecidas metas específicas para tempo de resposta, taxa de automação e precisão de handoffs
+- **Indicadores de Produtividade**: Definidas métricas para satisfação do Maestro, redução de context switching e aceleração de desenvolvimento
+- **Alinhamento Metodológico**: Sincronização com outros documentos chave do projeto (KANBAN_INTERNO_PROJETO.md, TAP.md, PStakeholders.md)
+- **Consolidação da Metodologia**: Reforço dos conceitos de "Orquestração Inteligente" e "Specialized Intelligence" como pilares centrais
+
+### v1.0 - Dezembro 2024 (Versão Base)
+**Características Principais:**
+- Framework "Desenvolvimento Solo Ágil Aumentado por IA"
+- Definição de papéis dos Agentes Mentores de IA
+- Estratégia RAG e "Documentação Viva"
+- Processo HITL (Human-in-the-Loop) Evolutivo
+- Considerações para desenvolvedores neurodivergentes
+- Estrutura de pastas e convenções do projeto
+
+## Documentos Relacionados
+
+### Documentos de Gestão
+- [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]] - Kanban principal com metodologia de orquestração
+- [[docs/00_Gerenciamento_Projeto/TAP.md]] - Termo de Abertura com agentes IA integrados
+- [[docs/00_Gerenciamento_Projeto/PStakeholders.md]] - Gestão de stakeholders com IA
+- [[docs/00_Gerenciamento_Projeto/Maestro_Tasks.md]] - Tarefas específicas do Maestro
+
+### Documentos Técnicos
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Visão estratégica e objetivos
+- [[docs/02_Requisitos/ERS.md]] - Especificação de requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] - Arquitetura de alto nível
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão geral dos agentes
+
+### Perfis de Agentes
+- [[docs/04_Agentes_IA/Perfis/]] - Perfis individuais dos agentes especializados
+- [[docs/05_Prompts/01_Templates_Base/]] - Templates de prompts para agentes
+
+---
+
+**Nota de Atualização:** Este documento foi atualizado para integrar completamente a metodologia de "Orquestração Inteligente" e "Specialized Intelligence", estabelecendo métricas quantificáveis para avaliar a eficácia dos agentes IA e do sistema RAG no contexto do projeto Recoloca.ai.
+
+--- FIM DO DOCUMENTO GUIA_AVANCADO.md (v1.1) ---

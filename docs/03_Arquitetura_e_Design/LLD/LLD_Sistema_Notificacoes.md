@@ -1,10 +1,11 @@
 # LLD - Sistema de Notificações
 
-**Versão:** 1.0  
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)  
 **Data de Criação:** 06 de junho de 2025  
-**Última Atualização:** 06 de junho de 2025  
+**Última Atualização:** Junho de 2025  
 **Autor:** Maestro (Bruno S. Rosa)  
-**Status:** Draft  
+**Status:** Em Desenvolvimento  
+**Baseado em:** [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1), [[docs/02_Requisitos/ERS.md]] (v1.1), [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1)  
 
 ## 1. Visão Geral
 
@@ -1413,4 +1414,43 @@ A implementação seguirá uma abordagem incremental, começando com as funciona
 7. Configurar monitoramento e analytics
 8. Testes e validação com usuários beta
 
---- FIM DO DOCUMENTO LLD_Sistema_Notificacoes.md (v1.0) ---
+## Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Plano mestre do projeto
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de alto nível
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão geral dos agentes
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Ferramentas Core
+
+## Considerações de Orquestração Inteligente
+
+### Integração com Metodologia v1.1
+- **Agentes Production-Ready**: Sistema de notificações inteligentes via agentes especializados
+- **Métricas Contínuas**: Tracking de engajamento e eficácia das notificações
+- **RAG Operacional**: Personalização de conteúdo baseada em perfil do usuário
+- **Specialized Intelligence**: Otimização de timing e conteúdo via agentes de comunicação
+
+### Critérios de Validação
+- ✅ **Entrega**: Taxa de entrega > 95%
+- ✅ **Engajamento**: Taxa de abertura > 25%
+- ✅ **Performance**: Latência < 500ms
+- ✅ **Personalização**: Relevância > 80% (feedback usuário)
+
+## Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de referências para documentos v1.1
+- Alinhamento com metodologia de Orquestração Inteligente
+- Adição de considerações específicas para agentes Production-Ready
+- Integração com métricas de engajamento e personalização
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Definição da arquitetura base do sistema de notificações
+- Estabelecimento de componentes principais
+- Integração inicial com agentes de IA
+
+**Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando notificações inteligentes e personalizadas via agentes especializados.
+
+---
+
+**FIM DO DOCUMENTO LLD_Sistema_Notificacoes.md (v1.1)**

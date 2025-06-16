@@ -1,10 +1,10 @@
 # Plano de Gerenciamento do Escopo (PGP) - Recoloca.AI
 
 ---
-**Versão:** 0.9 (Pré-Revisão Interativa)  
+**Versão:** 1.0  
 **Data:** Junho 2025  
 **Responsável:** Bruno S. Rosa (Maestro)  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 ---
 
@@ -27,7 +27,7 @@ O plano abrange:
 Utilizamos a metodologia **"Solo Ágil Aumentado por IA"** adaptada para gerenciamento de escopo, com:
 - **Iterações curtas** com validação contínua
 - **Agentes IA Mentores** para suporte especializado
-- **@AgenteOrquestrador** como mentor estratégico
+- **@AgenteM_Orquestrador** como mentor estratégico
 - **Documentação Viva** para rastreabilidade
 - **Feedback loops** constantes com stakeholders
 
@@ -170,7 +170,7 @@ Recoloca.AI
 │   ├── 1.2.3 Infraestrutura Supabase
 │   └── 1.2.4 Configuração RAG/IA
 └── 1.3 Setup de Agentes IA
-    ├── 1.3.1 Configuração @AgenteOrquestrador
+    ├── 1.3.1 Configuração @AgenteM_Orquestrador
     ├── 1.3.2 Agentes Mentores Especializados
     └── 1.3.3 Templates e Prompts
 ```
@@ -240,17 +240,17 @@ Cada componente da EAP é detalhado em:
 - **Processo:** Documentação no commit Git + atualização da documentação
 - **Responsável:** Maestro
 
-#### 5.1.2 Mudanças Médias (Aprovação do @AgenteOrquestrador)
+#### 5.1.2 Mudanças Médias (Aprovação do @AgenteM_Orquestrador)
 - **Critérios:** Impacto 4-16 horas, pode afetar múltiplos componentes
 - **Exemplos:** Novos endpoints, mudanças de fluxo, integrações adicionais
 - **Processo:** Discussão estratégica + análise de impacto + aprovação
-- **Responsável:** Maestro + @AgenteOrquestrador
+- **Responsável:** Maestro + @AgenteM_Orquestrador
 
 #### 5.1.3 Mudanças Maiores (Revisão Completa)
 - **Critérios:** Impacto > 16 horas, afeta arquitetura ou escopo core
 - **Exemplos:** Mudança de stack, novos requisitos funcionais, pivots
 - **Processo:** Análise completa + atualização de documentação + validação
-- **Responsável:** Maestro + @AgenteOrquestrador + Stakeholders
+- **Responsável:** Maestro + @AgenteM_Orquestrador + Stakeholders
 
 ### 5.2 Processo de Solicitação de Mudança
 
@@ -302,7 +302,7 @@ Todas as mudanças são registradas em:
 #### 6.2.1 Validação Interna
 1. **Auto-validação:** Maestro verifica critérios básicos
 2. **Validação por Agente:** Agente Mentor especializado revisa
-3. **Validação Cruzada:** @AgenteOrquestrador valida alinhamento estratégico
+3. **Validação Cruzada:** @AgenteM_Orquestrador valida alinhamento estratégico
 4. **Testes Automatizados:** Execução de suíte de testes
 5. **Testes Manuais:** Validação de fluxos críticos
 
@@ -463,7 +463,7 @@ Todas as mudanças são registradas em:
 - **Gatilho:** > 20% de aumento no escopo original
 - **Resposta:** Revisão completa de prioridades e cronograma
 - **Ações:** Renegociação de marcos, possível descarte de funcionalidades
-- **Responsável:** Maestro + @AgenteOrquestrador
+- **Responsável:** Maestro + @AgenteM_Orquestrador
 
 #### 9.3.2 Cenário: Atraso Crítico em Entrega
 - **Gatilho:** > 2 semanas de atraso em marco crítico
@@ -509,10 +509,11 @@ Todas as mudanças são registradas em:
 
 **Aprovado por:** Bruno S. Rosa (Maestro)  
 **Data de Aprovação:** Junho 2025  
-**Próxima Revisão:** Janeiro 2025  
+**Próxima Revisão:** Setembro 2025  
 
 **Histórico de Versões:**
-- v1.0 (Jun 2025): Versão inicial
+- v0.9 (Mai 2025): Versão inicial com metodologia Solo Ágil Aumentado por IA
+- v1.0 (Jun 2025): Revisão interativa com correções de nomenclatura e estrutura
 
 **Documentos Relacionados:**
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Visão estratégica

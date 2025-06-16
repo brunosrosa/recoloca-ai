@@ -5,9 +5,9 @@ sticker: lucide//check
 
 **Data de Criação**: 26 de maio de 2025
 
-**Data de Última Atualização**: 07 de junho de 2025
+**Data de Última Atualização**: Janeiro de 2025
 
-**Versão**: 1.0
+**Versão**: 1.1
 
 **Autor Principal (Maestro)**: Bruno S. Rosa
 
@@ -208,6 +208,10 @@ A metodologia de desenvolvimento adotada para o Recoloca.ai é o **"Desenvolvime
 - Ênfase na **Documentação Viva** como fonte da verdade, gerenciada via RAG e acessível tanto ao Maestro quanto aos Agentes.
     
 - Implementação de um ciclo de **Human-in-the-Loop (HITL)** evolutivo, que se adapta à confiança e ao desempenho dos agentes, equilibrando supervisão e autonomia.
+    
+- **Métricas de "Specialized Intelligence"** para avaliar a eficácia da orquestração: eficiência de orquestração (tempo de resposta dos agentes, taxa de automação, precisão de handoffs), qualidade do sistema RAG (precisão de retrieval, cobertura da base RAG, tempo de indexação) e satisfação/produtividade (satisfação do Maestro, redução de context switching, aceleração de desenvolvimento).
+    
+- **Critérios objetivos para agentes "Production-Ready"** em três tiers (Básicos, Intermediários, Avançados) que incluem precisão de output, tempo de resposta, capacidade de contextualização, integração com RAG e autonomia operacional.
     
 ### 2.2. Papel do Desenvolvedor como "Maestro"
 
@@ -676,4 +680,43 @@ Será mantido e atualizado no arquivo [[docs/01_Guias_Centrais/GLOSSARIO_Recoloc
     
 - Repositório do Modelo `BAAI/bge-m3` no Hugging Face.
     
---- FIM DO DOCUMENTO PLANO_MESTRE_RECOLOCA_AI.md (v1.0) ---
+## 11. Histórico de Versões
+
+### v1.1 (Janeiro 2025)
+- **Integração da Metodologia de "Orquestração Inteligente" e "Specialized Intelligence"**
+- Adição de métricas específicas para avaliar eficácia da orquestração de agentes
+- Inclusão de critérios objetivos para agentes "Production-Ready" em três tiers
+- Estabelecimento de framework de medição para eficiência, qualidade RAG e produtividade
+- Expansão dos indicadores de sucesso da metodologia de desenvolvimento
+- Alinhamento metodológico com TAP.md v1.1 e GUIA_AVANCADO.md v1.1
+- Consolidação da metodologia como diferencial competitivo do projeto
+
+### v1.0 (Junho 2025)
+- Versão inicial do Plano Mestre
+- Definição da visão estratégica e objetivos do MVP
+- Estabelecimento da metodologia "Desenvolvimento Solo Ágil Aumentado por IA"
+- Especificação da arquitetura de Agentes de IA Mentores
+- Definição da stack tecnológica e ferramentas
+- Criação do roadmap de desenvolvimento
+
+## 12. Documentos Relacionados
+
+### Documentos de Gestão
+- [[docs/00_Gerenciamento_Projeto/TAP.md]] - Termo de Abertura do Projeto (v1.1)
+- [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]] - Gestão de Tarefas
+- [[docs/01_Guias_Centrais/STYLE_GUIDE.md]] - Guia de Estilo
+
+### Documentos Técnicos
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] - Guia Metodológico (v1.1)
+- [[docs/02_Requisitos/ERS.md]] - Especificação de Requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] - Arquitetura de Alto Nível
+
+### Perfis de Agentes
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão Geral dos Agentes
+- [[docs/04_Agentes_IA/Perfis/]] - Perfis Individuais dos Agentes Mentores
+
+---
+
+**Nota:** Este documento integra a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" como pilares fundamentais do projeto Recoloca.ai, estabelecendo métricas objetivas e critérios de qualidade para maximizar a eficácia da colaboração entre o Maestro e os Agentes de IA Mentores.
+
+--- FIM DO DOCUMENTO PLANO_MESTRE_RECOLOCA_AI.md (v1.1) ---

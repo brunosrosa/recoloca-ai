@@ -2,10 +2,11 @@
 
 **Projeto:** Recoloca.ai  
 **Módulo:** Landing Page e Marketing  
-**Versão:** 1.0
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)
 **Data de Criação:** 06 de junho de 2025  
-**Última Atualização:** 06 de junho de 2025  
-**Autor:** Bruno S. Rosa (Maestro) + @AgenteOrquestrador  
+**Última Atualização:** Junho de 2025  
+**Autor:** Bruno S. Rosa (Maestro) + @AgenteOrquestrador
+**Baseado em:** [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1), [[docs/02_Requisitos/ERS.md]] (v1.1), [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1)  
 
 ---
 
@@ -384,7 +385,50 @@ A estratégia "Build → Measure → Learn" está incorporada desde o design, pe
 
 ---
 
+## 14. Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Plano mestre do projeto
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de alto nível
+- [[docs/08_Marketing_e_Vendas/ESTRATEGIA_GO_TO_MARKET.md]] (v1.0) - Estratégia de marketing
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Ferramentas Core
+
+## 15. Considerações de Orquestração Inteligente
+
+### Integração com Metodologia v1.1
+- **Agentes Production-Ready**: Landing page otimizada para conversão via agentes especializados
+- **Métricas Contínuas**: Tracking automático de conversões e engajamento
+- **RAG Operacional**: Personalização de conteúdo baseada em dados de usuário
+- **Specialized Intelligence**: Otimização de UX via agentes de marketing e design
+
+### Critérios de Validação
+- ✅ **Performance**: Tempo de carregamento < 3s
+- ✅ **Conversão**: Taxa de conversão > 5%
+- ✅ **Acessibilidade**: Conformidade WCAG 2.1 AA
+- ✅ **SEO**: Score > 90 no PageSpeed Insights
+
+## 16. Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de referências para documentos v1.1
+- Alinhamento com metodologia de Orquestração Inteligente
+- Adição de considerações específicas para agentes Production-Ready
+- Integração com métricas de conversão e performance
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Definição da arquitetura base do módulo Landing
+- Estabelecimento de componentes principais
+- Integração inicial com estratégia de marketing
+
+**Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando otimizações específicas para conversão e engajamento via agentes especializados.
+
+---
+
 **Aprovação:**
 - [ ] Maestro (Bruno S. Rosa)
 - [ ] @AgenteOrquestrador
 - [ ] Revisão Técnica Final
+
+---
+
+**FIM DO DOCUMENTO LLD_Modulo_Landing.md (v1.1)**

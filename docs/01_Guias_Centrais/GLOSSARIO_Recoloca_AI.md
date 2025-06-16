@@ -3,9 +3,9 @@ sticker: lucide//check
 ---
 # GLOSSÁRIO DO PROJETO RECOLOCA. AI
 
-**Versão:** 1.1
+**Versão:** 1.2 (Orquestração Inteligente e Specialized Intelligence)
 **Data de Criação:** 30 de maio de 2025
-**Data de Última Atualização:** 03 de junho de 2025
+**Data de Última Atualização:** Janeiro de 2025
 **Baseado em:** [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v 1.5), [[docs/02_Requisitos/ERS.md]] (v 0.5), [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v 2.3)
 ## 1. Introdução
 
@@ -70,6 +70,22 @@ Este é um documento vivo e será atualizado continuamente à medida que o proje
 -   **PM Mentor:**
     -   **Definição:** Um papel estratégico assumido pelo `@AgenteOrquestrador`, focado em auxiliar o Maestro a aplicar consistentemente os princípios de Product Management, validar a estratégia de features e garantir o alinhamento com os objetivos do produto.
     -   **Referência Principal:** [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v 2.3, Seção 3)
+
+-   **Orquestração Inteligente:**
+    -   **Definição:** Metodologia avançada de coordenação e gestão de múltiplos Agentes de IA Mentores, onde o `@AgenteOrquestrador` atua como maestro estratégico, otimizando a colaboração entre agentes especializados para maximizar a eficiência e qualidade das entregas do projeto.
+    -   **Referência Principal:** [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v 2.4), [[docs/01_Guias_Centrais/TAP.md]] (v 1.1)
+
+-   **Specialized Intelligence:**
+    -   **Definição:** Conceito que define a capacidade de cada Agente de IA Mentor de atuar como um especialista de alto nível em sua área específica (UX, Arquitetura, Desenvolvimento, etc.), combinando conhecimento técnico profundo com contexto específico do projeto através do sistema RAG.
+    -   **Referência Principal:** [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v 2.4), [[docs/03_Arquitetura_e_Design/HLD.md]] (v 1.1)
+
+-   **Agente Production-Ready:**
+    -   **Definição:** Um Agente de IA Mentor que atende aos critérios objetivos de qualidade e performance estabelecidos, incluindo precisão ≥85%, tempo de resposta ≤30s, contextualização adequada via RAG, e autonomia operacional para tarefas de sua especialidade.
+    -   **Referência Principal:** [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v 3.1), [[docs/03_Arquitetura_e_Design/HLD.md]] (v 1.1)
+
+-   **Métricas de Specialized Intelligence:**
+    -   **Definição:** Conjunto de indicadores quantitativos e qualitativos para medir a eficácia da orquestração de agentes, incluindo: Eficiência de Orquestração (tempo de resolução, taxa de sucesso), Qualidade do Sistema RAG (precisão de recuperação, relevância contextual), e Satisfação/Produtividade (qualidade percebida, redução de retrabalho).
+    -   **Referência Principal:** [[docs/03_Arquitetura_e_Design/HLD.md]] (v 1.1), [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v 3.1)
 ## 4. Termos Técnicos Gerais e Acrônimos
 
 -   **ADR (Architecture Decision Record):**
@@ -185,4 +201,37 @@ Este é um documento vivo e será atualizado continuamente à medida que o proje
 -   **Vector Store (Banco de Dados Vetorial):**
     -   **Definição:** Um tipo de banco de dados otimizado para armazenar e buscar vetores de embeddings. No Recoloca. Ai, o FAISS-GPU é a implementação inicial do Vector Store.
 
---- FIM DO DOCUMENTO GLOSSARIO_Recoloca_AI. Md (v 1.1) ---
+## 5. Histórico de Versões
+
+### v1.2 (Janeiro 2025) - Orquestração Inteligente e Specialized Intelligence
+- **Adição de Novos Termos:** Orquestração Inteligente, Specialized Intelligence, Agente Production-Ready, Métricas de Specialized Intelligence
+- **Atualização de Referências:** Alinhamento com versões atualizadas dos documentos centrais (TAP v1.1, GUIA_AVANCADO v2.4, HLD v1.1, AGENTES_IA_MENTORES_OVERVIEW v3.1)
+- **Consolidação Metodológica:** Integração dos conceitos avançados de orquestração de agentes e métricas de qualidade
+- **Expansão Conceitual:** Definições detalhadas dos critérios objetivos para agentes "Production-Ready"
+
+### v1.1 (Junho 2025)
+- Versão inicial do glossário
+- Definições básicas dos termos da metodologia e do projeto
+- Estruturação das seções principais
+
+## 6. Documentos Relacionados
+
+### Documentos de Gestão
+- [[docs/01_Guias_Centrais/TAP.md]] (v1.1) - Termo de Abertura do Projeto
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5) - Plano Mestre
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v2.4) - Metodologia Avançada
+- [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]] - Gestão de Tarefas
+
+### Documentos Técnicos
+- [[docs/02_Requisitos/ERS.md]] (v0.5) - Especificação de Requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de Alto Nível
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v3.1) - Visão Geral dos Agentes
+
+### Perfis de Agentes
+- [[docs/04_Agentes_IA/Perfis/]] - Perfis detalhados de cada Agente de IA Mentor
+
+---
+
+**Nota:** Este glossário é um documento vivo que evolui continuamente com o projeto. A metodologia de "Orquestração Inteligente" e "Specialized Intelligence" representa um marco na maturidade do projeto, estabelecendo critérios objetivos para qualidade e performance dos agentes de IA.
+
+--- FIM DO DOCUMENTO GLOSSARIO_Recoloca_AI.md (v 1.2) ---

@@ -3,10 +3,11 @@ sticker: lucide//lightbulb
 ---
 # METODOLOGIA MVP: DESENVOLVIMENTO SOLO AUMENTADO POR IA
 
-**Versão:** 1.0  
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)  
 **Data de Criação:** 19 de dezembro de 2024  
+**Data de Última Atualização:** Junho de 2025  
 **Status:** MVP - Essenciais  
-**Baseado em:** [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.0)
+**Baseado em:** [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1)
 
 ## Visão Geral
 
@@ -47,19 +48,22 @@ Criar um **framework replicável** de trabalho com multi-agentes de IA especiali
 
 ## Estratégia de Evolução (3 Fases)
 
-### Fase 1: Estruturação & Validação
+### Fase 1: Estruturação & Validação (Concluída)
 - ✅ Documentação Viva como fonte da verdade
 - ✅ Agentes com personas básicas
 - ✅ Sistema RAG para contexto
 - ✅ MVP com supervisão intensa
+- ✅ Framework RICE implementado
+- ✅ Mapeamento de dependências completo
 
-### Fase 2: Especialização & Automação
-- 🔄 Refinamento de personas e capacidades
+### Fase 2: Especialização & Automação (Em Andamento)
+- ✅ Refinamento de personas e capacidades
 - 🔄 Workflows automatizados
 - 🔄 Redução gradual de supervisão
 - 🔄 Expansão além do MVP
+- 🔄 Integração com MCPs (Context7, filesystem, etc.)
 
-### Fase 3: Supervisão Avançada
+### Fase 3: Supervisão Avançada (Planejada)
 - ⏳ Auto-correção e aprendizado
 - ⏳ Supervisão focada em estratégia
 - ⏳ Otimização contínua
@@ -101,13 +105,14 @@ Criar um **framework replicável** de trabalho com multi-agentes de IA especiali
 
 ## Stack Tecnológico RAG
 
-**Status**: Planejado para pós-MVP
+**Status**: Implementado e Operacional (Junho 2025)
 
 - **Framework**: LangChain (Python)
 - **Vector Store**: FAISS-GPU (local, CUDA)
 - **Embedding**: `BAAI/bge-m3`
 - **Ambiente**: Conda + Python 3.10
 - **Documentação**: Obsidian + Git + Markdown
+- **Integração**: Sistema RAG ativo com documentação viva
 
 ## Ferramentas de Apoio
 
@@ -170,12 +175,14 @@ Projeto/
 
 ## Próximos Passos
 
-### Para Implementação
-1. **Definir personas** dos agentes principais
-2. **Criar templates** de prompts básicos
-3. **Estruturar documentação** viva inicial
-4. **Configurar RAG** básico (pós-MVP)
-5. **Estabelecer métricas** de qualidade
+### Para Implementação (Atualizado - Junho 2025)
+1. ✅ **Definir personas** dos agentes principais
+2. ✅ **Criar templates** de prompts básicos
+3. ✅ **Estruturar documentação** viva inicial
+4. ✅ **Configurar RAG** básico
+5. 🔄 **Estabelecer métricas** de qualidade
+6. 🔄 **Implementar desenvolvimento** baseado em priorização RICE
+7. ⏳ **Validar MVP** com usuários reais
 
 ### Para Replicação
 1. **Adaptar stack** tecnológico ao contexto
@@ -183,9 +190,62 @@ Projeto/
 3. **Ajustar critérios** de maturidade
 4. **Definir workflows** específicos
 5. **Estabelecer governança** de IA
+6. **Documentar lições aprendidas** do Recoloca.ai
 
 ---
 
 **Nota**: Este é um documento vivo que evolui com a experiência prática. A verdadeira inovação vem da aplicação, experimentação e refinamento baseado em resultados reais.
 
---- FIM DO DOCUMENTO METODOLOGIA_MVP.md (v1.0) ---
+## Considerações de Orquestração Inteligente
+
+### Métricas de Eficiência Metodológica
+- **Taxa de Acerto dos Agentes**: Monitoramento por tier de maturidade
+- **Tempo de Ciclo**: Medição de eficiência por fase do SDLC
+- **Qualidade de Output**: Avaliação contínua da documentação e código
+- **Redução de Supervisão**: Tracking da evolução da autonomia
+
+### Integração com Sistema RAG
+- **Contexto Dinâmico**: Agentes acessam documentação viva em tempo real
+- **Aprendizado Contínuo**: Feedback incorporado na base de conhecimento
+- **Consistência**: Garantia de alinhamento com metodologia central
+
+### Framework de Medição Contínua
+- **Validação de Metodologia**: Ajustes baseados em resultados práticos
+- **Feedback Loop**: Refinamento contínuo de processos e agentes
+- **Documentação de Evolução**: Registro de mudanças e melhorias
+
+## Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- **Atualização**: Alinhamento com metodologia atual e estado do projeto
+- **Correção**: Versões de documentos base atualizadas (GUIA_AVANCADO v1.1, PLANO_MESTRE v1.1)
+- **Expansão**: Adição de considerações de orquestração inteligente
+- **Status**: Atualização do progresso das fases de evolução
+- **RAG**: Atualização do status para "Implementado e Operacional"
+
+### v1.0 (Dezembro 2024) - Versão Base
+- **Criação**: Metodologia inicial de desenvolvimento solo aumentado por IA
+- **Fundação**: Estabelecimento dos princípios fundamentais
+- **Framework**: Definição da estrutura de 3 fases de evolução
+
+## Documentos Relacionados
+
+### Gestão e Estratégia
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Plano Mestre
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Guia Metodológico
+- [[docs/02_Requisitos/PRIORIZACAO_RICE_RF.md]] (v1.1) - Priorização RICE
+
+### Técnicos
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de Requisitos
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de Alto Nível
+- [[docs/02_Requisitos/MAPEAMENTO_DEPENDENCIAS_RF.md]] (v1.1) - Mapeamento de Dependências
+
+### Agentes e Prompts
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão Geral dos Agentes
+- [[docs/05_Prompts/01_Templates_Base/]] - Templates de Prompts
+
+---
+
+**Nota**: Este é um documento vivo que evolui com a experiência prática. A verdadeira inovação vem da aplicação, experimentação e refinamento baseado em resultados reais.
+
+--- FIM DO DOCUMENTO METODOLOGIA_MVP.md (v1.1) ---

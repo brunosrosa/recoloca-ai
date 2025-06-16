@@ -3,9 +3,13 @@ sticker: lucide//check
 ---
 # ADR 001: Escolha das Ferramentas e Tecnologias Core do Projeto Recoloca.ai
 
-**Status**: Proposto
+**Status**: Aprovado
 
 **Data**: 03 de junho de 2025
+
+**Data de Última Atualização**: Junho de 2025
+
+**Versão**: 1.1 (Orquestração Inteligente e Specialized Intelligence)
 
 **Decisor**: Bruno S. Rosa (Maestro)
 
@@ -223,7 +227,42 @@ Foram consideradas diversas alternativas para cada componente da stack. As decis
     
 - Começar a desenvolver o script de indexação RAG (`scripts/rag_indexer.py`).
     
-- Refletir estas decisões nos documentos relevantes, como `HLD.md` e `PLANO_MESTRE_RECOLOCA_AI.md`.
-    
+- Refletir estas decisões nos documentos relevantes, como [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) e [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1).
 
---- FIM DO DOCUMENTO ADR_001_Ferramentas_Core_Recoloca.ai (v1.0) ---
+## Considerações de Orquestração Inteligente
+
+### Integração com Metodologia
+- **Agentes de IA Mentores**: As ferramentas escolhidas suportam a orquestração de agentes especializados via Trae IDE
+- **RAG Operacional**: Stack tecnológica RAG implementada e operacional para contextualização dos agentes
+- **Documentação Viva**: Ferramentas integradas (Obsidian + Git) para manutenção da base de conhecimento
+- **Medição Contínua**: Ferramentas permitem coleta de métricas de produtividade e qualidade
+
+### Critérios de Validação
+- ✅ **Produtividade**: Ferramentas aceleram desenvolvimento solo
+- ✅ **IA-First**: Stack nativa para integração com LLMs e RAG
+- ✅ **Escalabilidade**: Arquitetura suporta crescimento do produto
+- ✅ **Metodologia**: Suporte completo à Orquestração Inteligente
+
+## Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de status para "Aprovado"
+- Adição de considerações de Orquestração Inteligente
+- Alinhamento com metodologia v1.1
+- Correção de referências para documentos atualizados
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Definição inicial da stack tecnológica
+- Análise de alternativas e justificativas
+- Estabelecimento dos próximos passos
+
+## Documentos Relacionados
+
+- [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - High-Level Design
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Plano Mestre
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia de Orquestração Inteligente
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de Requisitos
+
+**Nota:** Este ADR (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), garantindo que as ferramentas escolhidas suportem efetivamente o desenvolvimento aumentado por IA.
+
+--- FIM DO DOCUMENTO ADR_001_Ferramentas_Core_Recoloca.ai (v1.1) ---

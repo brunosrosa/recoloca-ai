@@ -9,7 +9,7 @@ sticker: lucide//brain-circuit
 
 **Data de Última Atualização**: 06 de junho de 2025
 
-Baseado em: [[FLUXO_TRABALHO_GERAL.md]] (v2.0) e [[SISTEMA_ENTREGAVEIS_GATILHOS.md]] (v1.0)
+Baseado em: [[FLUXO_TRABALHO_GERAL.md]] (v0.9) e [[SISTEMA_ENTREGAVEIS_GATILHOS.md]] (v1.0)
 
 ## 1. Introdução
 
@@ -17,7 +17,7 @@ Este documento detalha a **evolução estratégica** do papel do `@AgenteOrquest
 
 ### 1.1. Contexto da Evolução
 
-Com a implementação do **Sistema de Entregáveis como Gatilhos de Fluxo**, o `@AgenteOrquestrador` evolui de um **"Coordenador Constante"** para um **"Supervisor Estratégico"**, atuando de forma mais inteligente e sob demanda.
+Com a implementação do **Sistema de Entregáveis como Gatilhos de Fluxo**, o `@AgenteOrquestrador` pode evoluir de um **"Parceiro Estratégico Constante"** para um **"Supervisor Estratégico"**, atuando de forma mais inteligente, autônomo e sob demanda.
 
 ## 2. Comparativo: Antes vs. Depois
 

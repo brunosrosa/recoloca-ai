@@ -3,173 +3,204 @@ sticker: lucide//calendar
 ---
 # 🗓️ Roadmap Temporal - Recoloca.ai
 
-> **Versão:** 2.0 | **Última Atualização:** 2025-06-11
-> **Objetivo:** Cronograma refinado de 8 semanas para MVP com 5 agentes essenciais
-> **Realidade:** Projeto solo com foco em validação rápida e lançamento ágil
+**Versão**: 1.0
+**Data de Criação**: 09 de junho de 2025
+**Data de Última Atualização**: 09 de junho de 2025
+**Status**: 🟢 Aprovado - Versão Final
+**Alinhado com**: [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v1.0, [[docs/00_Gerenciamento_Projeto/CAMINHO_CRITICO_MVP.md]] v1.0
+
+> **Realidade:** Projeto solo com foco em validação estratégica e lançamento sustentável
+> **Estratégia:** MVP funcional em 16 semanas com metodologia "Intelligent Orchestration with Domain Specialization"
+> **Objetivo:** Validar proposta de valor com "Specialized Intelligence" como vantagem competitiva
 
 ---
 
-## 📊 **VISÃO GERAL DO CRONOGRAMA REFINADO**
+## 📊 **VISÃO GERAL DO CRONOGRAMA ESTRATÉGICO ALINHADO**
 
-### 🎯 **Marcos Principais - TIMELINE CORRIGIDO**
-- **MVP Funcional:** Semana 8 (2 meses)
-- **Beta Limitado:** Semana 6-7 (1.5 meses)
-- **Validação Técnica:** Semana 2 (2 semanas)
-- **Validação UX:** Semana 3 (3 semanas)
+### 🎯 **Marcos Principais com Validação Estratégica**
+- **MVP Funcional**: 16 semanas (até 31 de outubro de 2025)
+- **Beta Limitado**: Semanas 12-14 (15 set - 05 out)
+- **Lançamento Público**: Novembro de 2025
 
-### 📈 **Fases de Desenvolvimento - 8 SEMANAS**
-1. **Semanas 1-2 - Fundação Técnica**: RAG + Agentes + HLD + Validação Técnica
-2. **Semanas 3-4 - Validação UX + Backend Core**: Entrevistas + Desenvolvimento Backend
-3. **Semanas 5-6 - Frontend + Momento AHA!**: Interface + Features de Engajamento
-4. **Semanas 7-8 - Testes + Lançamento**: Validação Final + Go-to-Market
+### 📈 **Fases de Desenvolvimento com Metodologia "Intelligent Orchestration"**
+- **Fase 0**: Semanas 1-3 (Foundation RAG + Agents)
+- **Fase 1**: Semanas 4-5 (Technical + Strategic Validation)
+- **Fase 2**: Semanas 6-11 (MVP Kanban + AHA! Moment)
+- **Fase 3**: Semanas 12-16 (Testing + Launch Prep)
 
-### 🤖 **Estrutura de Agentes Simplificada**
-**Tier 1 (Essenciais - 5 Agentes):**
-- @AgenteOrquestrador (PM + PO + Engenheiro Prompt)
-- @AgenteM_ArquitetoTI (Promovido - Crítico antes do desenvolvimento)
-- @AgenteM_UXDesigner
-- @AgenteM_DevFastAPI
-- @AgenteM_DevFlutter
+### 🤖 **Agentes Tier 1 (Essenciais) - Nomenclatura Padronizada**
+1. **@AgenteM_Orquestrador** - PM Mentor + Strategic Validation
+2. **@AgenteM_ArquitetoTI** - Arquitetura e Infraestrutura
+3. **@AgenteM_UXDesigner** - Design e Experiência
+4. **@AgenteM_DevFastAPI** - Backend Python
+5. **@AgenteM_DevFlutter** - Frontend PWA
 
-**Diferidos para Pós-MVP:** 11 agentes (incluindo especializações)
+### 🤖 **Agentes Tier 2 (Diferidos Pós-MVP)**
+11 agentes especializados serão ativados após validação do MVP core, conforme [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]].
 
 ---
 
-## 🎯 FASE 1: FUNDAÇÃO E INFRAESTRUTURA
-**Período**: 09 Jun - 30 Jun 2025 (3 semanas)
-**Objetivo**: Estabelecer base técnica sólida e validar arquitetura
+## 🎯 FASE 0: FOUNDATION RAG AND AGENTS
+**Período**: 10 Jun - 30 Jun 2025 (3 semanas)
+**Objetivo**: Estabelecer base técnica sólida com validação estratégica pelo @AgenteM_Orquestrador
 
-### Semana 1 (09-15 Jun 2025)
-- **[CRÍTICO]** Operacionalização do RAG
-  - Setup ambiente Conda (`Agents_RAG_Env`)
-  - Implementação `rag_indexer.py`
-  - Testes iniciais com documentação existente
-  - **Entregável**: RAG funcional com documentos core indexados
+### Junho 2025 (Semanas 1-3)
 
-- **[CRÍTICO]** Evolução Agente Orquestrador v2.0
-  - Refinamento de prompts baseado em feedback
+#### Semana 1 (10-16 Jun 2025)
+- **[CRÍTICO]** Operacionalização RAG
+  - Configuração FAISS-GPU + BGE-M3
+  - Indexação da documentação viva
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida alinhamento com "Specialized Intelligence"
+  - **Entregável**: RAG funcional no Trae IDE
+
+- **[CRÍTICO]** Evolução @AgenteM_Orquestrador v2.0
   - Integração com RAG operacional
-  - **Entregável**: @AgenteOrquestrador v2.0 configurado
+  - Refinamento de prompts estratégicos conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]
+  - **Entregável**: Agente PM Mentor otimizado
 
-### Semana 2 (16-22 Jun 2025)
-- **[ALTA]** Desenvolvimento Servidor MCP
-  - Implementação servidor RAG para Trae IDE
-  - Testes de integração com agentes
+#### Semana 2 (17-23 Jun 2025)
+- **[ALTA]** Desenvolvimento MCP Server
+  - Server customizado para Recoloca.ai
+  - Integração com documentação técnica
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida impacto na produtividade
   - **Entregável**: MCP Server funcional
 
-- **[ALTA]** Validação Técnica RLS (FastAPI/Supabase)
-  - Protótipo de autenticação
-  - Testes de Row Level Security
-  - **Entregável**: Prova de conceito validada
+- **[ALTA]** Validação RLS (Row Level Security)
+  - Testes de segurança no Supabase
+  - Configuração de políticas conforme [[docs/02_Requisitos/ERS.md]]
+  - **Entregável**: Modelo de segurança validado
 
-### Semana 3 (23-30 Jun 2025)
-- **[ALTA]** Análise Competitiva (usando prompt criado)
-  - Execução da pesquisa com Gemini Pro
-  - Documentação de insights estratégicos
-  - **Entregável**: Relatório competitivo completo
+#### Semana 3 (24-30 Jun 2025)
+- **[MÉDIA]** Análise Competitiva Aprofundada
+  - Benchmarking baseado em [[docs/01_Guias_Centrais/VANTAGENS_COMPETITIVAS_SUSTENTAVEIS.md]]
+  - Identificação de gaps de "Specialized Intelligence"
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida posicionamento
+  - **Entregável**: Relatório de posicionamento estratégico
 
-- **[MÉDIA]** Configuração RAG no Trae IDE
-  - Integração final com ambiente de desenvolvimento
-  - **Entregável**: RAG totalmente operacional
+- **[ALTA]** Configuração RAG no Trae IDE
+  - Otimização de performance
+  - Testes de recuperação semântica
+  - **Entregável**: RAG otimizado para desenvolvimento
 
-**Marco da Fase 1**: ✅ Infraestrutura técnica estabelecida e estratégia competitiva definida
+**Marco da Fase 0**: ✅ Infraestrutura técnica e agentes core operacionais com validação estratégica
 
 ---
 
-## 🏗️ FASE 2: DESENVOLVIMENTO DO MVP CORE
-**Período**: 01 Jul - 31 Ago 2025 (9 semanas)
-**Objetivo**: Desenvolver funcionalidades core do MVP
+## 🔍 FASE 1: TECHNICAL AND STRATEGIC VALIDATION
+**Período**: 01 Jul - 13 Jul 2025 (2 semanas)
+**Objetivo**: Validar premissas técnicas e estratégicas antes do desenvolvimento core
 
-### Julho 2025 (Semanas 4-7)
+### Julho 2025 (Semanas 4-5)
 
 #### Semana 4 (01-06 Jul 2025)
-- **[CRÍTICO]** Landing Page (Início)
-  - Setup técnico (Flutter Web + Vercel)
-  - Desenvolvimento componentes base
-  - **Entregável**: Estrutura inicial da Landing Page
+- **[CRÍTICO]** Definição Arquitetura API
+  - Especificação OpenAPI 3.0 detalhada
+  - Validação com @AgenteM_ArquitetoTI
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida escalabilidade
+  - **Entregável**: API Specs v1.0 aprovada
 
 #### Semana 5 (07-13 Jul 2025)
-- **[CRÍTICO]** Landing Page (Continuação)
-  - Implementação seções principais
-  - Integração com design system
-  - **Entregável**: Landing Page funcional (v1)
+- **[CRÍTICO]** Validação Premissas de Negócio
+  - Execução do [[docs/01_Guias_Centrais/PLANO_VALIDACAO_PREMISSAS_NEGOCIO.md]]
+  - Testes de conceito com usuários-alvo
+  - **Validação Estratégica**: @AgenteM_Orquestrador analisa viabilidade do MVP
+  - **Entregável**: Relatório de validação de premissas
+
+**Marco da Fase 1**: ✅ Premissas técnicas e estratégicas validadas
+
+---
+
+## 🚀 FASE 2: MVP KANBAN + AHA! MOMENT
+**Período**: 14 Jul - 24 Ago 2025 (6 semanas)
+**Objetivo**: Desenvolver funcionalidades principais com foco nos "AHA! Moments" definidos
+
+### Julho-Agosto 2025 (Semanas 6-11)
 
 #### Semana 6 (14-20 Jul 2025)
-- **[ALTA]** Backend Core (FastAPI)
-  - Setup projeto FastAPI
-  - Implementação autenticação básica
-  - **Entregável**: API base com auth
+- **[CRÍTICO]** Setup Landing Page + Auth
+  - Design responsivo em Flutter conforme [[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]]
+  - Integração com Supabase Auth
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida alinhamento com brand
+  - **Entregável**: Landing page funcional
 
 #### Semana 7 (21-27 Jul 2025)
-- **[ALTA]** Módulo Kanban (Backend)
-  - Modelos de dados (Vaga, Status)
-  - APIs CRUD para candidaturas
-  - **Entregável**: Backend Kanban funcional
-
-### Agosto 2025 (Semanas 8-12)
+- **[CRÍTICO]** Backend Core + Perfil
+  - APIs de autenticação e perfil
+  - Estrutura base FastAPI
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida arquitetura
+  - **Entregável**: Backend base + gestão de perfil
 
 #### Semana 8 (28 Jul - 03 Ago 2025)
+- **[ALTA]** Módulo Kanban (Backend)
+  - Modelos de dados (Vaga, Status) conforme [[docs/02_Requisitos/ERS.md]]
+  - APIs CRUD para candidaturas
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida UX do fluxo
+  - **Entregável**: Backend Kanban funcional
+
+#### Semana 9 (04-10 Ago 2025)
 - **[ALTA]** Módulo Kanban (Frontend)
   - Interface Flutter para gestão de vagas
   - Drag-and-drop entre colunas
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida usabilidade
   - **Entregável**: Kanban UI funcional
 
-#### Semana 9 (04-10 Ago 2025)
-- **[ALTA]** Módulo Importação de Vagas
-  - Parser de URLs com IA
+#### Semana 10 (11-17 Ago 2025)
+- **[CRÍTICO]** Módulo Importação Inteligente de Vagas (AHA! Moment #1)
+  - Parser de URLs com IA (Gemini)
   - Interface de revisão/edição
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida "AHA! Moment"
   - **Entregável**: Importação inteligente funcionando
 
-#### Semana 10 (11-17 Ago 2025)
-- **[ALTA]** Módulo CV - Parte 1
-  - Upload e parsing de PDFs
-  - Extração com pymupdf + Tesseract
-  - **Entregável**: Sistema de upload e extração
-
 #### Semana 11 (18-24 Ago 2025)
-- **[ALTA]** Módulo CV - Parte 2
-  - Análise de adequação com IA
-  - Geração de sugestões
-  - **Entregável**: Otimização de CV com IA
+- **[CRÍTICO]** Módulo CV Analysis (AHA! Moment #2) - Parte 1
+  - Upload e parsing de PDFs (pymupdf + Tesseract)
+  - Extração estruturada conforme RF-CV-001
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida qualidade da extração
+  - **Entregável**: Sistema de upload e extração robusto
 
-#### Semana 12 (25-31 Ago 2025)
-- **[MÉDIA]** Assistente IA Coach (Básico)
-  - Interface de chat
-  - Integração com Gemini
-  - **Entregável**: Coach básico funcional
-
-**Marco da Fase 2**: ✅ MVP Core desenvolvido com funcionalidades principais
+**Marco da Fase 2**: ✅ MVP Core com "AHA! Moments" principais implementados
 
 ---
 
-## 🧪 FASE 3: TESTES, VALIDAÇÃO E REFINAMENTO
-**Período**: 01 Set - 31 Out 2025 (9 semanas)
-**Objetivo**: Validar produto com usuários e refinar baseado em feedback
+## 🧪 FASE 3: TESTING, VALIDATION AND LAUNCH PREPARATION
+**Período**: 25 Ago - 31 Out 2025 (10 semanas)
+**Objetivo**: Completar MVP, validar com usuários e preparar lançamento estratégico
 
-### Setembro 2025 (Semanas 13-16)
+### Agosto-Setembro 2025 (Semanas 12-16)
+
+#### Semana 12 (25-31 Ago 2025)
+- **[CRÍTICO]** Módulo CV Analysis (AHA! Moment #2) - Parte 2
+  - Análise de adequação com IA (Gemini)
+  - Geração de sugestões de otimização
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida "AHA! Moment" completo
+  - **Entregável**: CV Analysis com IA funcional
 
 #### Semana 13 (01-07 Set 2025)
 - **[CRÍTICO]** Testes Internos Completos
-  - QA de todas as funcionalidades
+  - QA de todas as funcionalidades core
   - Correção de bugs críticos
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida readiness para usuários
   - **Entregável**: MVP estável para testes externos
 
 #### Semana 14 (08-14 Set 2025)
 - **[CRÍTICO]** Validação com Usuários (Fase 1)
   - Recrutamento de 10-15 profissionais de TI
-  - Testes de usabilidade da Landing Page
+  - Testes de usabilidade focados nos "AHA! Moments"
+  - **Validação Estratégica**: @AgenteM_Orquestrador analisa feedback estratégico
   - **Entregável**: Feedback inicial de usuários
 
 #### Semana 15 (15-21 Set 2025)
 - **[ALTA]** Implementação de Melhorias Críticas
   - Correções baseadas no feedback
   - Otimizações de UX prioritárias
+  - **Validação Estratégica**: @AgenteM_Orquestrador prioriza melhorias
   - **Entregável**: MVP refinado v1.1
 
 #### Semana 16 (22-28 Set 2025)
 - **[ALTA]** Validação com Usuários (Fase 2)
-  - Testes das funcionalidades core
-  - Coleta de métricas de engajamento
+  - Testes das funcionalidades core refinadas
+  - Coleta de métricas de engajamento e "AHA! Moments"
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida product-market fit inicial
   - **Entregável**: Dados de validação do produto
 
 ### Outubro 2025 (Semanas 17-21)
@@ -177,81 +208,86 @@ sticker: lucide//calendar
 #### Semana 17 (29 Set - 05 Out 2025)
 - **[ALTA]** Análise de Dados e Insights
   - Processamento do feedback coletado
-  - Identificação de padrões de uso
-  - **Entregável**: Relatório de validação
+  - Identificação de padrões de uso e "AHA! Moments"
+  - **Validação Estratégica**: @AgenteM_Orquestrador analisa métricas estratégicas
+  - **Entregável**: Relatório de validação estratégica
 
 #### Semana 18 (06-12 Out 2025)
 - **[MÉDIA]** Implementação de Melhorias Finais
-  - Ajustes baseados na análise
-  - Polimento da experiência
+  - Ajustes baseados na análise estratégica
+  - Polimento da experiência dos "AHA! Moments"
   - **Entregável**: MVP refinado v1.2
 
 #### Semana 19 (13-19 Out 2025)
 - **[MÉDIA]** Preparação para Lançamento
-  - Setup de analytics (PostHog)
+  - Setup de analytics (PostHog) com métricas de "Specialized Intelligence"
   - Configuração de monitoramento
   - **Entregável**: Infraestrutura de produção pronta
 
 #### Semana 20 (20-26 Out 2025)
 - **[ALTA]** Estratégia de Go-to-Market
-  - Definição de canais de aquisição
-  - Criação de conteúdo de marketing
+  - Definição de canais baseada em [[docs/08_Marketing_e_Vendas/ESTRATEGIA_GO_TO_MARKET.md]]
+  - Criação de conteúdo focado em "Specialized Intelligence"
+  - **Validação Estratégica**: @AgenteM_Orquestrador valida estratégia de lançamento
   - **Entregável**: Plano de lançamento detalhado
 
 #### Semana 21 (27-31 Out 2025)
 - **[CRÍTICO]** Preparação Final
   - Testes de carga e performance
-  - Documentação de usuário
+  - Documentação de usuário focada nos "AHA! Moments"
+  - **Validação Estratégica**: @AgenteM_Orquestrador aprova lançamento
   - **Entregável**: Produto pronto para lançamento
 
-**Marco da Fase 3**: ✅ Produto validado e pronto para lançamento público
+**Marco da Fase 3**: ✅ Produto validado com "Specialized Intelligence" e pronto para lançamento público
 
 ---
 
 ## 🚀 FASE 4: LANÇAMENTO E CRESCIMENTO INICIAL
 **Período**: 01 Nov 2025 - 31 Mar 2026 (21 semanas)
-**Objetivo**: Lançar produto e estabelecer base de usuários
+**Objetivo**: Lançar produto e estabelecer base de usuários com foco em "Specialized Intelligence"
 
 ### Novembro 2025 (Semanas 22-25)
 
 #### Semana 22 (01-07 Nov 2025)
 - **[CRÍTICO]** Lançamento Soft (Beta Fechado)
   - Convite para 50-100 usuários selecionados
-  - Monitoramento intensivo
+  - Monitoramento intensivo de "AHA! Moments"
+  - **Validação Estratégica**: @AgenteM_Orquestrador monitora métricas estratégicas
   - **Entregável**: Beta funcionando com usuários reais
 
 #### Semana 23 (08-14 Nov 2025)
 - **[ALTA]** Coleta de Feedback Beta
-  - Análise de métricas de uso
-  - Identificação de problemas
-  - **Entregável**: Relatório de beta testing
+  - Análise de métricas de uso e "Specialized Intelligence"
+  - Identificação de problemas e oportunidades
+  - **Entregável**: Relatório de beta testing estratégico
 
 #### Semana 24 (15-21 Nov 2025)
 - **[ALTA]** Correções Pós-Beta
   - Implementação de melhorias críticas
-  - Otimizações de performance
+  - Otimizações de performance dos "AHA! Moments"
   - **Entregável**: Versão estável para lançamento público
 
 #### Semana 25 (22-28 Nov 2025)
 - **[CRÍTICO]** Lançamento Público
   - Abertura para registro geral
-  - Ativação de campanhas de marketing
+  - Ativação de campanhas focadas em "Specialized Intelligence"
+  - **Validação Estratégica**: @AgenteM_Orquestrador monitora lançamento
   - **Entregável**: Recoloca.ai disponível publicamente
 
 ### Dezembro 2025 - Março 2026 (Semanas 26-43)
 
 #### Dezembro 2025 (Semanas 26-29)
-- **Foco**: Aquisição inicial de usuários
-- **Métricas-alvo**: 500 registros, 100 usuários ativos
+- **Foco**: Aquisição inicial de usuários com "Specialized Intelligence"
+- **Métricas-alvo**: 500 registros, 100 usuários ativos, 60% experimentam "AHA! Moments"
 - **Atividades**: Marketing de conteúdo, SEO, parcerias
 
 #### Janeiro 2026 (Semanas 30-33)
-- **Foco**: Otimização de conversão e retenção
-- **Métricas-alvo**: 1000 registros, 200 usuários ativos
+- **Foco**: Otimização de conversão e retenção via "AHA! Moments"
+- **Métricas-alvo**: 1000 registros, 200 usuários ativos, 70% engagement com IA
 - **Atividades**: A/B testing, melhorias de UX
 
 #### Fevereiro 2026 (Semanas 34-37)
-- **Foco**: Desenvolvimento de funcionalidades premium
+- **Foco**: Desenvolvimento de funcionalidades premium baseadas em "Specialized Intelligence"
 - **Métricas-alvo**: 1500 registros, 300 usuários ativos, primeiros pagantes
 - **Atividades**: Implementação de features pagas
 
@@ -260,22 +296,30 @@ sticker: lucide//calendar
 - **Métricas-alvo**: 2000 registros, 500 usuários ativos, 50 assinantes
 - **Atividades**: Análise de product-market fit, roadmap v2
 
-**Marco da Fase 4**: ✅ Produto estabelecido no mercado com base de usuários crescente
+**Marco da Fase 4**: ✅ Produto estabelecido no mercado com "Specialized Intelligence" como diferencial
 
 ---
 
-## 📊 MÉTRICAS DE ACOMPANHAMENTO
+## 📊 MÉTRICAS DE ACOMPANHAMENTO ESTRATÉGICO
 
 ### Métricas Técnicas
 - **Uptime**: >99.5%
 - **Tempo de resposta**: <2s para 95% das requisições
 - **Taxa de erro**: <1%
+- **Qualidade IA**: >85% de satisfação com análises de CV
+
+### Métricas de "Specialized Intelligence" (Vantagem Competitiva)
+- **Precisão de Matching**: >80% de adequação vaga-perfil
+- **Tempo de Análise CV**: <30 segundos
+- **Taxa de "AHA! Moments"**: >60% dos usuários experimentam pelo menos 1
+- **Qualidade de Sugestões IA**: >4.0/5.0 rating médio
 
 ### Métricas de Produto
 - **Registros mensais**: Meta crescimento 50% m/m
 - **Usuários ativos mensais (MAU)**: Meta 20% dos registros
 - **Taxa de conversão freemium→premium**: Meta 5-10%
 - **Net Promoter Score (NPS)**: Meta >50
+- **Engagement com "AHA! Moments"**: Meta >70% dos usuários ativos
 
 ### Métricas de Negócio
 - **Customer Acquisition Cost (CAC)**: Meta <R$50
@@ -285,63 +329,93 @@ sticker: lucide//calendar
 
 ---
 
-## 🚨 RISCOS E CONTINGÊNCIAS
+## 🚨 RISCOS E CONTINGÊNCIAS ESTRATÉGICAS
 
 ### Riscos Técnicos
 - **Risco**: Problemas de performance com IA
-  - **Contingência**: Otimização de prompts, cache inteligente
+  - **Contingência**: Otimização de prompts, cache inteligente, fallback para modelos menores
+  - **Responsável**: @AgenteM_ArquitetoTI + @AgenteM_Orquestrador
 - **Risco**: Limitações de API do Gemini
-  - **Contingência**: Implementar fallbacks, considerar outros LLMs
+  - **Contingência**: Implementar fallbacks (OpenAI, Anthropic), arquitetura multi-LLM
+  - **Responsável**: @AgenteM_DevFastAPI + @AgenteM_Orquestrador
+
+### Riscos Estratégicos
+- **Risco**: "AHA! Moments" não geram engajamento esperado
+  - **Contingência**: Refinamento baseado em feedback, pivô de funcionalidades
+  - **Responsável**: @AgenteM_Orquestrador + @AgenteM_UXDesigner
+- **Risco**: Concorrente lança "Specialized Intelligence" similar
+  - **Contingência**: Acelerar diferenciação, focar em UX superior e learning contínuo
+  - **Responsável**: @AgenteM_Orquestrador
 
 ### Riscos de Mercado
-- **Risco**: Concorrente lança produto similar
-  - **Contingência**: Acelerar diferenciação, focar em UX superior
 - **Risco**: Baixa adoção inicial
-  - **Contingência**: Pivotar estratégia de marketing, ajustar produto
+  - **Contingência**: Pivotar estratégia de marketing, ajustar produto baseado em feedback
+  - **Responsável**: @AgenteM_Orquestrador
+- **Risco**: Validação de premissas negativa
+  - **Contingência**: Pivô estratégico, redefinição de MVP
+  - **Responsável**: @AgenteM_Orquestrador
 
 ### Riscos de Recursos
 - **Risco**: Sobrecarga do desenvolvedor solo
-  - **Contingência**: Priorizar ruthlessly, considerar terceirização pontual
+  - **Contingência**: Priorização ruthless via @AgenteM_Orquestrador, terceirização pontual
+  - **Responsável**: @AgenteM_Orquestrador
 - **Risco**: Custos de IA acima do esperado
-  - **Contingência**: Otimizar uso, implementar limites mais restritivos
+  - **Contingência**: Otimizar uso, implementar limites, modelo freemium mais restritivo
+  - **Responsável**: @AgenteM_Orquestrador + @AgenteM_DevFastAPI
 
 ---
 
-## 🔄 PROCESSO DE REVISÃO
+## 🔄 PROCESSO DE REVISÃO COM VALIDAÇÃO ESTRATÉGICA
 
-### Revisões Semanais
+### Revisões Semanais (com @AgenteM_Orquestrador)
 - **Quando**: Toda sexta-feira
-- **Foco**: Progresso vs planejado, blockers, próximos passos
+- **Foco**: Progresso vs planejado, blockers, validação estratégica de próximos passos
+- **Participantes**: Maestro + @AgenteM_Orquestrador
 - **Duração**: 30 minutos
+- **Entregável**: Relatório semanal de progresso e decisões estratégicas
 
-### Revisões Mensais
+### Revisões Mensais (Validação de Fase)
 - **Quando**: Última sexta do mês
-- **Foco**: Métricas, learnings, ajustes de roadmap
+- **Foco**: Métricas de "Specialized Intelligence", learnings, ajustes de roadmap
+- **Participantes**: Maestro + @AgenteM_Orquestrador + Agentes Tier 1 relevantes
 - **Duração**: 2 horas
+- **Entregável**: Relatório mensal de métricas e ajustes estratégicos
 
-### Revisões Trimestrais
-- **Quando**: Final de cada fase
-- **Foco**: Retrospectiva completa, planejamento próxima fase
+### Revisões de Marco (Final de Fase)
+- **Quando**: Final de cada fase (0, 1, 2, 3)
+- **Foco**: Retrospectiva completa, validação de "AHA! Moments", planejamento próxima fase
+- **Participantes**: Maestro + @AgenteM_Orquestrador + todos Agentes Tier 1
 - **Duração**: 1 dia
+- **Entregável**: Relatório de marco com decisões estratégicas para próxima fase
 
 ---
 
-## 📝 NOTAS IMPORTANTES
+## 📝 NOTAS IMPORTANTES E METODOLOGIA
 
-1. **Flexibilidade**: Este roadmap é um guia, não uma camisa de força. Ajustes baseados em aprendizados são esperados e encorajados.
+### Princípios Estratégicos
+1. **"Intelligent Orchestration with Domain Specialization"**: Aplicar metodologia conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]
+2. **Validação Estratégica Contínua**: @AgenteM_Orquestrador valida todas as decisões críticas
+3. **Foco em "Specialized Intelligence"**: Priorizar funcionalidades que constroem vantagem competitiva sustentável
+4. **"AHA! Moments" como Norte**: Todas as funcionalidades devem contribuir para momentos de valor claros
 
-2. **Priorização**: Em caso de atrasos, priorizar funcionalidades core sobre nice-to-have.
+### Diretrizes Operacionais
+1. **Flexibilidade Estratégica**: Roadmap é guia, ajustes baseados em aprendizados são esperados
+2. **Priorização via @AgenteM_Orquestrador**: Em caso de atrasos, validação estratégica define prioridades
+3. **Qualidade sobre Velocidade**: Nunca comprometer qualidade por velocidade, especialmente em "componentes de núcleo"
+4. **Feedback Contínuo**: Incorporar feedback de usuários continuamente, com análise estratégica
+5. **Sustentabilidade**: Manter equilíbrio work-life, especialmente importante para desenvolvedor solo
 
-3. **Qualidade**: Nunca comprometer qualidade por velocidade. Melhor entregar menos funcionalidades bem feitas.
-
-4. **Feedback**: Incorporar feedback de usuários continuamente, não apenas em fases específicas.
-
-5. **Saúde**: Manter equilíbrio work-life, especialmente importante para desenvolvedor solo.
+### Alinhamento com Documentação Viva
+- **Baseado em**: [[docs/00_Gerenciamento_Projeto/CAMINHO_CRITICO_MVP.md]] v1.0
+- **Metodologia**: [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v1.0
+- **Vantagens Competitivas**: [[docs/01_Guias_Centrais/VANTAGENS_COMPETITIVAS_SUSTENTAVEIS.md]] v1.0
+- **Agentes**: [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]
 
 ---
 
 **Última Atualização**: 09 de junho de 2025
 **Próxima Revisão**: 16 de junho de 2025
-**Status**: 🟢 No prazo
+**Status**: 🟢 Aprovado e Alinhado
+**Metodologia**: Intelligent Orchestration with Domain Specialization
 
 --- FIM DO DOCUMENTO ROADMAP_TEMPORAL_RECOLOCA_AI.md (v1.0) ---

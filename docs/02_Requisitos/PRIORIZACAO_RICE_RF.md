@@ -1,10 +1,11 @@
 ---
 title: "Priorização RICE dos Requisitos Funcionais - Recoloca.ai"
-version: "1.0"
+version: "1.1 (Orquestração Inteligente e Specialized Intelligence)"
 date: "2025-06-11"
+data_atualizacao: "Junho de 2025"
 author: "@AgenteOrquestrador + Maestro"
-baseado_em: "[[docs/02_Requisitos/MAPEAMENTO_DEPENDENCIAS_RF.md]] v1.0, [[docs/02_Requisitos/ERS.md]] v0.5"
-status: "Em Validação"
+baseado_em: "[[docs/02_Requisitos/MAPEAMENTO_DEPENDENCIAS_RF.md]] v1.1, [[docs/02_Requisitos/ERS.md]] v1.1, [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] v1.1"
+status: "Validado e Alinhado"
 ---
 
 # Priorização RICE dos Requisitos Funcionais - Recoloca.ai
@@ -282,31 +283,120 @@ Baseado nos critérios detalhados do mapeamento de dependências:
 - **Métrica:** Diferenciação clara entre tiers free/paid
 - **Validação:** Modelo de monetização validado + SEO ativo
 
-## 6. Próximos Passos
+## 6. Considerações de Orquestração Inteligente
 
-### 6.1 Validação Imediata
+### 6.1 Impacto na Specialized Intelligence
+
+**Métricas de Eficiência de Priorização**:
+- **Taxa de Acerto RICE**: Comparação entre scores previstos vs. resultados reais
+- **Velocidade de Entrega por Fase**: Tempo real vs. estimado para cada fase
+- **Índice de Retrabalho**: Frequência de mudanças na priorização
+- **Satisfação do Usuário por Feature**: Validação do impacto real vs. previsto
+
+**Integração com Sistema RAG**:
+- Documentação automática de decisões de priorização
+- Histórico de ajustes e justificativas
+- Base de conhecimento para futuras priorizações
+- Aprendizado contínuo sobre precisão dos scores RICE
+
+### 6.2 Agentes de IA por Fase de Desenvolvimento
+
+**Fase 0-1 (Aquisição e Fundação)**:
+- `@AgenteM_Frontend`: Landing page e componentes de conversão
+- `@AgenteM_Backend`: APIs de autenticação e infraestrutura base
+- `@AgenteM_Testes`: Validação de fluxos críticos de aquisição
+
+**Fase 2-3 (Fluxo Principal e Momento AHA!)**:
+- `@AgenteM_Backend`: Kanban, upload CV e integração IA
+- `@AgenteM_Frontend`: Interface Kanban e componentes de IA
+- `@AgenteM_Testes`: Testes de integração e validação de IA
+
+**Fase 4+ (Pós-MVP)**:
+- `@AgenteM_DevOps`: Otimização de deploy e monitoramento
+- `@AgenteM_Performance`: Análise de métricas e otimizações
+- `@AgenteM_Dados`: Analytics avançados e insights de uso
+
+### 6.3 Framework de Medição Contínua
+
+**Validação de Scores RICE**:
+- Coleta de métricas reais após implementação
+- Ajuste de fórmulas baseado em aprendizados
+- Refinamento de critérios de Confidence
+- Calibração de estimativas de Effort
+
+**Feedback Loop Automatizado**:
+- Dashboard de acompanhamento por fase
+- Alertas para desvios significativos
+- Sugestões automáticas de repriorização
+- Documentação de lições aprendidas no RAG
+
+## 7. Próximos Passos
+
+### 7.1 Validação Imediata
 1. **Revisar scores RICE** com Maestro para ajustes finais
 2. **Validar sequência** com base em capacidade de desenvolvimento
 3. **Definir critérios de aceitação** para cada requisito priorizado
+4. **Configurar métricas** de specialized intelligence
 
-### 6.2 Preparação para Desenvolvimento
+### 7.2 Preparação para Desenvolvimento
 1. **Criar User Stories detalhadas** para Fase 1
 2. **Definir APIs** para requisitos críticos
 3. **Preparar ambiente de desenvolvimento** e CI/CD
 4. **Estruturar testes de validação** para cada fase
+5. **Setup do sistema RAG** para documentação automática
 
-### 6.3 Documentação de Apoio
+### 7.3 Documentação de Apoio
 1. **Atualizar HLD** com base na priorização
 2. **Criar LLDs** para componentes críticos
 3. **Documentar decisões** em ADRs
 4. **Preparar guias** para agentes de desenvolvimento
+5. **Implementar dashboard** de métricas de priorização
+
+---
+
+## 8. Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- **Adição**: Considerações de orquestração inteligente e métricas de specialized intelligence
+- **Melhoria**: Framework de medição contínua e validação de scores RICE
+- **Expansão**: Mapeamento de agentes de IA por fase de desenvolvimento
+- **Alinhamento**: Sincronização com documentos centrais atualizados (GUIA_AVANCADO v1.1, ERS v1.1, MAPEAMENTO_DEPENDENCIAS v1.1)
+- **Framework**: Inclusão de feedback loop automatizado e dashboard de métricas
+- **Status**: Mudança de "Em Validação" para "Validado e Alinhado"
+- **Correção**: Atualização de versões e datas para refletir o estado atual (Junho 2025)
+
+### v1.0 (Maio 2025) - Versão Inicial
+- **Criação**: Priorização RICE inicial baseada no MAPEAMENTO_DEPENDENCIAS v1.0
+- **Estrutura**: Aplicação do framework RICE adaptado para o projeto
+- **Metodologia**: Definição de critérios e fórmulas de cálculo
+- **Sequenciamento**: Proposta de 5 fases de desenvolvimento otimizadas
+- **Análise**: Identificação de riscos e métricas de sucesso por fase
+
+## 9. Documentos Relacionados
+
+### Documentos de Gestão
+- [[docs/01_Guias_Centrais/TAP.md]] - Termo de Abertura do Projeto
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] - Plano Mestre e Roadmap
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] - Metodologia de Orquestração Inteligente
+- [[docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md]] - Prioridades e Status
+
+### Documentos Técnicos
+- [[docs/02_Requisitos/ERS.md]] - Especificação de Requisitos de Software
+- [[docs/02_Requisitos/MAPEAMENTO_DEPENDENCIAS_RF.md]] - Mapeamento de Dependências
+- [[docs/03_Arquitetura_e_Design/HLD.md]] - Arquitetura de Alto Nível
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão Geral dos Agentes
+- [[docs/01_Guias_Centrais/GLOSSARIO_Recoloca_AI.md]] - Glossário do Projeto
+
+### Perfis de Agentes
+- [[docs/04_Agentes_IA/Perfis/]] - Perfis detalhados dos Agentes de IA Mentores
 
 ---
 
 **Observações Finais:**
-- Esta priorização é **dinâmica** e deve ser revisada conforme feedback e aprendizados
-- Scores RICE podem ser **ajustados** com base em validações técnicas
-- **Dependências** devem ser monitoradas continuamente para evitar bloqueios
-- **Métricas de sucesso** devem ser coletadas em cada fase para validar premissas
+- Esta priorização é **dinâmica** e integrada à metodologia de "Orquestração Inteligente"
+- Scores RICE são **continuamente calibrados** com base em métricas reais e aprendizado do sistema RAG
+- **Dependências** são monitoradas automaticamente através do dashboard de specialized intelligence
+- **Métricas de sucesso** são coletadas e analisadas em tempo real para validação e ajuste contínuo das premissas
+- Todas as decisões de priorização são **documentadas automaticamente** no sistema RAG para aprendizado futuro
 
---- FIM DO DOCUMENTO PRIORIZACAO_RICE_RF.md (v1.0) ---
+--- FIM DO DOCUMENTO PRIORIZACAO_RICE_RF.md (v1.1) ---

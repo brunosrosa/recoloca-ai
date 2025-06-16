@@ -6,9 +6,11 @@ sticker: lucide//lightbulb
 # ESTRATÉGIA "MOMENTO AHA!" - RECOLOCA.AI
 
 **Data:** 11 de junho de 2025  
-**Versão:** 1.0  
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)  
+**Data de Última Atualização:** Junho de 2025  
 **Autor:** @AgenteOrquestrador  
-**Contexto:** Preservação e detalhamento da Opção C conforme solicitado pelo Maestro
+**Contexto:** Preservação e detalhamento da Opção C conforme solicitado pelo Maestro  
+**Baseado em:** [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1)
 
 ---
 
@@ -267,6 +269,52 @@ Semana 5-8: Padrões e insights
 - **Longo Prazo**: Evolução para experiência híbrida completa
 
 **Esta estratégia garante que o Recoloca.ai não seja apenas mais uma ferramenta de busca de emprego, mas sim uma plataforma transformadora que melhora continuamente a vida profissional dos usuários.**
+
+## 🔄 Considerações de Orquestração Inteligente
+
+### Integração com Metodologia v1.1
+- **Agentes Especializados**: Delegação de análise de CV para @AgenteTecnico e @AgenteUX
+- **RAG Contextual**: Utilização da base de conhecimento para personalização do "Momento AHA!"
+- **Métricas Contínuas**: Monitoramento em tempo real da eficácia da estratégia
+- **Specialized Intelligence**: Otimização baseada em padrões de comportamento do usuário
+
+### Critérios de Validação Metodológica
+- ✅ **Taxa de Conversão**: Meta de 25-35% de visitantes para usuários ativos
+- ✅ **Tempo para AHA!**: Máximo 30 segundos para primeira percepção de valor
+- ✅ **Retenção D7**: 60% dos usuários retornam em 7 dias
+- ✅ **NPS**: Score acima de 50 baseado no "Momento AHA!"
+
+### Alinhamento com Documentação Viva
+- **Sincronização**: Estratégia automaticamente atualizada via base RAG
+- **Feedback Loop**: Dados de usuário alimentam refinamento contínuo
+- **A/B Testing**: Testes automatizados de variações da experiência
+- **Personalização**: Adaptação do "Momento AHA!" por perfil de usuário
+
+## 📊 Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Alinhamento com metodologia de Orquestração Inteligente
+- Integração com agentes especializados para execução
+- Adição de métricas de validação metodológica
+- Sincronização com base RAG operacional
+- Critérios de personalização baseados em IA
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Definição da estratégia híbrida B+C
+- Estabelecimento do conceito "Momento AHA!"
+- Detalhamento de opções de implementação
+- Métricas iniciais de sucesso
+
+## 📚 Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia base
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão e objetivos
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Requisitos funcionais
+- [[docs/03_Arquitetura_e_Design/LLD/LLD_Modulo_Landing.md]] (v1.1) - Landing page
+- [[docs/08_Marketing_e_Vendas/ESTRATEGIA_GO_TO_MARKET.md]] (v1.1) - Estratégia de marketing
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
+
+**Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando automação de experiência do usuário e medição contínua de impacto.
 
 ---
 

@@ -5,12 +5,14 @@ sticker: lucide//route
 
 **Data de Criação**: 10 de junho de 2025
 **Versão**: 1.0
-**Autor**: @AgenteOrquestrador
+**Status**: Aprovado - Versão Final
+**Autor**: @AgenteM_Orquestrador
 **Baseado em**: 
-- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.5)
-- [[docs/00_Gerenciamento_Projeto/ROADMAP_TEMPORAL_RECOLOCA_AI.md]] (v1.0)
-- [[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]
-- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v2.0)
+- [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.0)
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.0)
+- [[docs/03_Arquitetura_e_Design/FLUXO_TRABALHO_GERAL.md]] (v1.0)
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v1.0)
+- Metodologia "Intelligent Orchestration with Domain Specialization"
 - Feedback do Maestro sobre foco em aprendizado e experimentação
 
 ---
@@ -30,7 +32,7 @@ sticker: lucide//route
 Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], os agentes críticos para o MVP são:
 
 **TIER 1 - Essenciais para MVP:**
-- `@AgenteOrquestrador` - PM Mentor e Engenheiro de Prompt
+- `@AgenteM_Orquestrador` - PM Mentor e Engenheiro de Prompt (Validação Estratégica Central)
 - `@AgenteM_UXDesigner` - UX Designer e Pesquisador Mentor Sênior
 - `@AgenteM_UIDesigner` - UI Designer e Visual Mentor Sênior
 - `@AgenteM_DevFastAPI` - Desenvolvedor Backend Python Sênior
@@ -65,7 +67,8 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
    - 🔄 Setup `@AgenteM_UIDesigner` no Trae IDE
    - 🔄 Validação integração RAG com agentes
    - **Entregável**: Agentes UX/UI operacionais
-   - **Agentes**: `@AgenteOrquestrador`
+   - **Validação Estratégica**: `@AgenteM_Orquestrador`
+   - **Execução**: `@AgenteM_UXDesigner`, `@AgenteM_UIDesigner`
 
 #### Semana 2 (17-23 Jun 2025)
 **Consolidação da Base:**
@@ -81,7 +84,8 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
    - 🔄 Style Guide base com `@AgenteM_UIDesigner`
    - 🔄 Wireframes principais telas MVP
    - **Entregável**: Fundações de design definidas
-   - **Agentes**: `@AgenteM_UXDesigner`, `@AgenteM_UIDesigner`
+   - **Validação Estratégica**: `@AgenteM_Orquestrador` (alinhamento com visão do produto)
+   - **Execução**: `@AgenteM_UXDesigner`, `@AgenteM_UIDesigner`
 
 **Marco Fase 0**: ✅ RAG operacional + Agentes UX/UI configurados + Fundações de design
 
@@ -106,7 +110,8 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
    - 🔄 Mapeamento de gaps e oportunidades
    - 🔄 Refinamento posicionamento como "integrador"
    - **Entregável**: Relatório competitivo completo
-   - **Agentes**: `@Maestro`, `@AgenteOrquestrador`
+   - **Validação Estratégica**: `@AgenteM_Orquestrador` (frameworks de análise competitiva)
+   - **Execução**: `@Maestro` + ferramentas de pesquisa
 
 #### Semana 4-5 (01-14 Jul 2025)
 **Definições Arquiteturais:**
@@ -123,7 +128,8 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
    - 🔄 Validação disposição para pagar
    - 🔄 Teste conceito "cockpit de recolocação"
    - **Entregável**: Insights de validação documentados
-   - **Agentes**: `@Maestro`, `@AgenteOrquestrador`
+   - **Validação Estratégica**: `@AgenteM_Orquestrador` (frameworks de validação de premissas)
+   - **Execução**: `@Maestro` + metodologias de pesquisa
 
 **Marco Fase 1**: ✅ Viabilidade técnica comprovada + Estratégia refinada + API definida
 
@@ -176,7 +182,8 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
     - 🔄 Insights sobre gaps de competências
     - 🔄 **Vídeo explicativo** do processo de análise
     - **Entregável**: Feature que gera o "WOW!" no usuário
-    - **Agentes**: `@AgenteM_DevFastAPI`, `@AgenteM_UXDesigner`
+   - **Validação Estratégica**: `@AgenteM_Orquestrador` (alinhamento com "Momento AHA!")
+   - **Execução**: `@AgenteM_DevFastAPI`, `@AgenteM_UXDesigner`
 
 **Marco Fase 2**: ✅ MVP funcional com Kanban + Importação IA + Análise CV (Momento AHA!)
 
@@ -212,14 +219,16 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
     - 🔄 Coleta de feedback sobre valor percebido
     - 🔄 Métricas de engajamento e retenção
     - **Entregável**: Dados de validação do produto
-    - **Agentes**: `@Maestro`, `@AgenteM_UXDesigner`
+   - **Validação Estratégica**: `@AgenteM_Orquestrador` (métricas e KPIs de validação)
+   - **Execução**: `@Maestro`, `@AgenteM_UXDesigner`
 
 17. **[ALTA]** Implementação de Melhorias Críticas
     - 🔄 Ajustes baseados no feedback
     - 🔄 Otimizações de UX prioritárias
     - 🔄 Refinamento do "Momento AHA!"
     - **Entregável**: MVP refinado v1.1
-    - **Agentes**: Todos os agentes conforme necessário
+   - **Validação Estratégica**: `@AgenteM_Orquestrador` (priorização de melhorias)
+   - **Execução**: Agentes especializados conforme necessário
 
 **Marco Fase 3**: ✅ Produto validado com usuários + Melhorias implementadas
 
@@ -320,12 +329,12 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
 
 ## 🎯 PRÓXIMOS PASSOS IMEDIATOS
 
-### Esta Semana (10-16 Jun 2025)
-1. **[HOJE]** Finalizar configuração RAG operacional
-2. **[AMANHÃ]** Setup `@AgenteM_UXDesigner` e `@AgenteM_UIDesigner`
-3. **[48h]** Primeira sessão de UX research com agentes
-4. **[72h]** Wireframes iniciais das telas principais
-5. **[SEMANA]** Style Guide base definido
+### Esta Semana (Atualizar Datas Conforme Cronograma Atual)
+1. **[PRIORIDADE 1]** Finalizar configuração RAG operacional
+2. **[PRIORIDADE 2]** Setup `@AgenteM_UXDesigner` e `@AgenteM_UIDesigner` com validação estratégica do `@AgenteM_Orquestrador`
+3. **[PRIORIDADE 3]** Primeira sessão de UX research (validada estrategicamente)
+4. **[PRIORIDADE 4]** Wireframes iniciais das telas principais
+5. **[PRIORIDADE 5]** Style Guide base definido
 
 ### Próxima Semana (17-23 Jun 2025)
 1. Implementar servidor MCP RAG
@@ -341,8 +350,25 @@ Baseado na análise do [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]], o
 
 ---
 
-**Próxima Revisão**: 17 de junho de 2025
-**Responsável**: @AgenteOrquestrador + Maestro
-**Critério de Sucesso**: RAG operacional + Agentes UX/UI configurados + Primeiros wireframes
+**Próxima Revisão**: A ser definida pelo Maestro
+**Responsável**: @AgenteM_Orquestrador + Maestro
+**Critério de Sucesso**: RAG operacional + Agentes UX/UI configurados + Primeiros wireframes validados estrategicamente
 
---- FIM DO DOCUMENTO CAMINHO_CRITICO_MVP.md (v1.0) ---
+## 🔄 METODOLOGIA APLICADA
+
+### Intelligent Orchestration with Domain Specialization
+Conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] e [[docs/03_Arquitetura_e_Design/FLUXO_TRABALHO_GERAL.md]], este caminho crítico segue os princípios:
+
+1. **Validação Estratégica Central**: `@AgenteM_Orquestrador` valida TODAS as tarefas antes da execução
+2. **Especialização por Domínio**: Cada agente atua em sua área de expertise
+3. **RAG como Fundação**: Decisões baseadas na "Documentação Viva"
+4. **Agile SDLC Adaptado**: Fases alinhadas com Discovery → Design → Development → Testing → Deployment
+
+### Processo de Validação Estratégica
+Antes de cada tarefa crítica:
+1. `@AgenteM_Orquestrador` analisa alinhamento com objetivos do produto
+2. Questiona premissas e explora alternativas
+3. Define critérios de sucesso mensuráveis
+4. Aprova execução ou sugere refinamentos
+
+--- FIM DO DOCUMENTO CAMINHO_CRITICO_MVP.md (v0.9.1) ---

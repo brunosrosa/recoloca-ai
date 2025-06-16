@@ -2,8 +2,10 @@
 
 ## Status
 
-**Status:** Proposto
+**Status:** Aprovado
 **Data:** 03 de junho de 2025
+**Data de Última Atualização:** Junho de 2025
+**Versão:** 1.1 (Orquestração Inteligente e Specialized Intelligence)
 **Autor:** Bruno S. Rosa (Maestro)
 **Assistência IA:** @AgenteOrquestrador (PM Mentor)
 
@@ -207,8 +209,51 @@ No entanto, estes custos são justificados pelos benefícios:
 - Redução de riscos éticos e legais
 - Qualidade e confiabilidade do produto
 
+## Considerações de Orquestração Inteligente
+
+### Integração com Agentes de IA Mentores
+- **Transparência de Agentes**: Todos os agentes devem explicar suas decisões e limitações
+- **Auditoria de Prompts**: Prompts dos agentes devem seguir princípios éticos estabelecidos
+- **Supervisão Humana**: Maestro mantém controle final sobre todas as decisões de IA
+- **Bias Detection**: Monitoramento contínuo de vieses nos outputs dos agentes
+
+### Métricas de Conformidade Ética
+- **Taxa de Explicabilidade**: % de decisões de IA com explicações adequadas
+- **Índice de Transparência**: Clareza das comunicações sobre uso de IA
+- **Score de Equidade**: Medição de vieses em recomendações
+- **Compliance Rate**: Aderência às diretrizes éticas estabelecidas
+
+### Critérios de Validação
+- ✅ **Transparência**: Usuários sabem quando IA está sendo usada
+- ✅ **Explicabilidade**: Decisões de IA são compreensíveis
+- ✅ **Equidade**: Sistema trata todos os usuários de forma justa
+- ✅ **Conformidade**: Aderência à LGPD e regulamentações
+
+## Histórico de Versões
+
+### v1.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
+- Atualização de status para "Aprovado"
+- Adição de considerações específicas para Agentes de IA Mentores
+- Integração com métricas de conformidade ética
+- Alinhamento com metodologia de Orquestração Inteligente
+
+### v1.0 (Junho 2025) - Versão Inicial
+- Estabelecimento dos princípios fundamentais de IA ética
+- Definição de diretrizes XAI e conformidade
+- Estruturação do framework de monitoramento
+
+## Documentos Relacionados
+
+- [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia de Orquestração Inteligente
+- [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] (v3.1) - Overview dos Agentes
+- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Ferramentas Core
+- [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de Requisitos
+
 ## Notas
 
 - Este documento deve ser revisado e atualizado regularmente
 - Serve como referência para todos os stakeholders do projeto
 - Deve ser incorporado ao processo de desenvolvimento desde o início
+- **Integração Metodológica**: Este ADR (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence", garantindo que os princípios éticos sejam aplicados tanto ao produto quanto aos agentes de desenvolvimento
+
+--- FIM DO DOCUMENTO ADR_002_Principios_IA_Etica_XAI_Conformidade.md (v1.1) ---

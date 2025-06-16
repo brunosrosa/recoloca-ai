@@ -3,11 +3,11 @@ sticker: lucide//heart-crack
 ---
 # Especificação de Requisitos de Software (ERS): Recoloca. Ai
 
-**Versão**: 1.0 (Alinhamento Estratégico e Métricas Refinadas)
+**Versão**: 1.1 (Orquestração Inteligente e Specialized Intelligence)
 
 **Data de Criação**: 26 de maio de 2025
 
-**Data de atualização**: Junho de 2025
+**Data de atualização**: Janeiro de 2025
 
 **Baseado em**:
 - [[PLANO_MESTRE_RECOLOCA_AI]] (v1.0+)
@@ -44,6 +44,18 @@ O escopo do MVP do Recoloca.AI visa entregar valor central através das seguinte
 **Momento AHA! Definido:** Otimização automática do currículo com score de adequação e sugestões específicas para a vaga.
 
 **Abordagem de Desenvolvimento:** "Solo Ágil Aumentado por IA" com foco na jornada completa do usuário e entrega de valor incremental.
+
+**Metodologia de Orquestração Inteligente:** Implementação de "Specialized Intelligence" com métricas objetivas para agentes Production-Ready:
+
+**Métricas de "Specialized Intelligence":**
+- **Eficiência de Orquestração:** Tempo médio de resolução de tarefas complexas (< 2h para tarefas padrão)
+- **Qualidade do Sistema RAG:** Precisão de recuperação de informações relevantes (> 85%)
+- **Satisfação e Produtividade:** Redução de retrabalho e aumento da qualidade das entregas
+
+**Critérios Objetivos para Agentes "Production-Ready":**
+- **Tier 1 (Básico):** Precisão > 80%, Tempo de resposta < 30s, Contextualização adequada
+- **Tier 2 (Avançado):** Precisão > 90%, Tempo de resposta < 15s, Integração completa com RAG
+- **Tier 3 (Expert):** Precisão > 95%, Tempo de resposta < 10s, Autonomia operacional completa
 
 **Cronograma MVP:** Junho - Dezembro 2025 (7 meses)
 
@@ -635,11 +647,18 @@ A classificação MoSCoW abaixo prioriza os requisitos para o desenvolvimento do
 
 ---
 
-**FIM DO DOCUMENTO ERS.md (v1.0) - RECOLOCA.AI**
+## Histórico de Versões
 
----
+### v1.1 (Janeiro 2025) - Orquestração Inteligente e Specialized Intelligence
+**Melhorias relacionadas à metodologia de orquestração inteligente:**
+- ✅ **Métricas de "Specialized Intelligence"** adicionadas (eficiência de orquestração, qualidade do sistema RAG, satisfação/produtividade)
+- ✅ **Critérios objetivos expandidos** para agentes "Production-Ready" em três tiers
+- ✅ **Framework de medição** estabelecido para validação da qualidade dos agentes
+- ✅ **Indicadores de produtividade** definidos para o desenvolvimento assistido por IA
+- ✅ **Alinhamento metodológico** com TAP v1.1 e GUIA_AVANCADO v1.1
+- ✅ **Consolidação da metodologia** de "Orquestração Inteligente" e "Specialized Intelligence"
 
-**Documento atualizado para versão 1.0 com:**
+### v1.0 (Junho 2025) - Alinhamento Estratégico e Métricas Refinadas
 - Alinhamento com TAP v1.0 e cronograma Junho-Dezembro 2025
 - Incorporação de métricas baseadas em benchmarks de mercado SaaS B2C
 - Refinamento da visão "integrador e cockpit"
@@ -647,14 +666,34 @@ A classificação MoSCoW abaixo prioriza os requisitos para o desenvolvimento do
 - Atualização de requisitos não funcionais com foco em escalabilidade
 - Integração com [[METRICAS_SUCESSO_BASE_MERCADO]] v1.0
 
+---
+
+## Documentos Relacionados
+
+### Gestão e Estratégia
+- <mcfile name="TAP.md" path="docs/00_Gerenciamento_Projeto/TAP.md"></mcfile> - Termo de Abertura do Projeto
+- <mcfile name="PLANO_MESTRE_RECOLOCA_AI.md" path="docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md"></mcfile> - Plano Mestre e Metodologia
+- <mcfile name="GUIA_AVANCADO.md" path="docs/01_Guias_Centrais/GUIA_AVANCADO.md"></mcfile> - Metodologia de Orquestração Inteligente
+- <mcfile name="KANBAN_Recoloca_AI.md" path="docs/00_Gerenciamento_Projeto/KANBAN_Recoloca_AI.md"></mcfile> - Gestão de Tarefas
+
+### Documentos Técnicos
+- <mcfile name="HLD.md" path="docs/03_Arquitetura_e_Design/HLD.md"></mcfile> - Arquitetura de Alto Nível
+- <mcfile name="AGENTES_IA_MENTORES_OVERVIEW.md" path="docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md"></mcfile> - Visão Geral dos Agentes
+
+### Perfis de Agentes
+- <mcfolder name="Perfis" path="docs/04_Agentes_IA/Perfis"></mcfolder> - Perfis detalhados dos Agentes Mentores
+
+---
+
+**FIM DO DOCUMENTO ERS.md (v1.1) - RECOLOCA.AI**
+
+---
+
 **Próximas atualizações previstas:**
 - Detalhamento de Histórias de Usuário (HU) e Critérios de Aceitação (AC)
 - Especificação técnica detalhada da arquitetura (HLD/LLD)
 - Refinamento de prompts para IA baseado em testes iniciais
 - Validação de métricas com early adopters
+- Implementação do dashboard de métricas de "Specialized Intelligence"
 
-**Referências principais:**
-- [[TAP]] v1.0
-- [[PLANO_MESTRE_RECOLOCA_AI]] v1.0+
-- [[METRICAS_SUCESSO_BASE_MERCADO]] v1.0
-- [[GUIA_AVANCADO]] v1.0+
+**Nota:** Este documento integra a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" estabelecida no <mcfile name="GUIA_AVANCADO.md" path="docs/01_Guias_Centrais/GUIA_AVANCADO.md"></mcfile>, servindo como especificação técnica detalhada para o desenvolvimento assistido por Agentes de IA Mentores.
