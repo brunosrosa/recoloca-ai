@@ -5,7 +5,7 @@ sticker: lucide//search
 
 **Data de Criação**: 09 de junho de 2025
 **Versão**: 1.0
-**Autor**: @AgenteOrquestrador
+**Autor**: @AgenteM_Orquestrador
 **Destinado para**: Gemini Pro (Pesquisa Estratégica)
 **Contexto**: Revisão Interativa do PLANO_MESTRE_RECOLOCA_AI.md
 
