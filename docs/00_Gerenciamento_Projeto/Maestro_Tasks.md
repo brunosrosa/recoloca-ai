@@ -13,69 +13,100 @@ sticker: lucide//codesandbox
 
 ---
 
-## 🔥 **FASE 0: FUNDAÇÃO TÉCNICA** (Semanas 1-2)
+## 🔥 **FASE 0: FUNDAÇÃO RAG + AGENTES** (Semana Atual - CRÍTICO)
 
-### 🚨 **TAREFAS CRÍTICAS IMEDIATAS**
+### 🚨 **TAREFAS CRÍTICAS IMEDIATAS - FASE 0 INCOMPLETA**
 
-1. **[IMP-RAG-003] Operacionalização Completa do Sistema RAG** 🔺
-   - **Objetivo:** Tornar o sistema RAG funcional para todos os agentes
-   - **Entregável:** Ambiente Conda + `rag_indexer.py` + Indexação completa
-   - **Risco:** CRÍTICO - Bloqueia eficácia dos agentes
-   - **Prazo:** Semana 1-2
-   - **Status:** ⏳ Pendente
-   - **Próximos Passos:**
-     - [ ] Setup ambiente Conda (`Agents_RAG_Env`)
-     - [ ] Implementar `rag_indexer.py` funcional
-     - [ ] Indexar todos os documentos core
-     - [ ] Testar retrieval com queries reais
+> **⚠️ ATENÇÃO:** A Fase 0 ainda não foi concluída. Prioridade absoluta nas tarefas abaixo.
 
-2. **[CFG-AGT-001] Configuração dos 5 Agentes Essenciais Tier 1** 🔺
-   - **Objetivo:** Configurar apenas os agentes críticos para o MVP
-   - **Entregável:** 5 agentes funcionais com prompts otimizados
-   - **Risco:** ALTO - Determina eficiência do desenvolvimento
-   - **Prazo:** Semana 1-2
+1. **[CFG-AGT-001] Configuração dos 5 Agentes Essenciais Tier 1 no Trae IDE** 🔺
+   - **Objetivo:** Configurar todos os agentes críticos no Trae IDE com base nos perfis atualizados
+   - **Entregável:** 5 agentes funcionais e testados no Trae IDE
+   - **Risco:** CRÍTICO - Bloqueia orquestração eficaz do projeto
+   - **Prazo:** Semana Atual (Imediato)
    - **Status:** ⏳ Pendente
    - **Agentes Tier 1:**
-     - [ ] @AgenteM_Orquestrador v2.0 (PM + PO + Engenheiro Prompt)
-     - [ ] @AgenteM_ArquitetoTI (promovido para Tier 1)
+     - [ ] @AgenteOrquestrador v2.0 (PM + PO + Engenheiro Prompt)
+     - [ ] @AgenteM_ArquitetoTI (HLD + LLD unificado)
      - [ ] @AgenteM_UXDesigner
      - [ ] @AgenteM_DevFastAPI
      - [ ] @AgenteM_DevFlutter
+   - [ ] Testar funcionalidade básica de cada agente
 
-3. **[CFG-INF-001] Ambiente Dev/Deploy - Configuração Inicial** 🔺
-   - **Objetivo:** Preparar infraestrutura básica para desenvolvimento
-   - **Entregável:** Repositórios + Linters + Deploy inicial
-   - **Risco:** MÉDIO - Impacta velocidade de desenvolvimento
-   - **Prazo:** Semana 1-2
+2. **[IMP-RAG-003] Operacionalização Completa do Sistema RAG** 🔺
+   - **Objetivo:** Tornar o sistema RAG funcional para consulta pelos agentes
+   - **Entregável:** RAG estruturado + indexado + testado
+   - **Risco:** CRÍTICO - Agentes precisam de contexto para serem eficazes
+   - **Prazo:** Semana Atual (Paralelo à configuração dos agentes)
    - **Status:** ⏳ Pendente
-   - **Validação Estratégica:** Checkpoint Fase 0 - RAG operacional e agentes configurados
+   - **Próximos Passos:**
+     - [ ] Setup e validação ambiente Conda (`Agents_RAG_Env`)
+     - [ ] Implementar e testar `rag_indexer.py` funcional
+     - [ ] Indexação completa de todos os documentos core
+     - [ ] Testes de retrieval com queries reais dos agentes
+     - [ ] Validação de qualidade das respostas contextualizadas
 
-## 🚨 Tarefas Críticas (Prioridade Máxima)
+3. **[IMP-RAG-004] Desenvolvimento do MCP Server para Integração RAG** 🔺
+   - **Objetivo:** Criar servidor MCP para integrar RAG com Trae IDE
+   - **Entregável:** MCP Server funcional + documentação
+   - **Risco:** ALTO - Necessário para acesso ao RAG pelos agentes
+   - **Prazo:** Semana Atual
+   - **Status:** ⏳ Pendente
+   - **Próximos Passos:**
+     - [ ] Desenvolvimento do servidor MCP funcional
+     - [ ] Integração com sistema RAG existente
+     - [ ] Testes de conectividade e performance
+     - [ ] Documentação de configuração e uso
 
-> [!danger] Críticas - Requerem Ação Imediata
-> Foco na **Fase 1: Estruturação e Validação** - Estabelecer fundações sólidas antes da automação
-> ```tasks
-> not done
-> description includes 🔺
-> sort by priority
-> ```
+4. **[CFG-RAG-001] Configuração e Integração RAG via MCP no Trae IDE** 🔺
+   - **Objetivo:** Integrar RAG ao Trae IDE via MCP para uso pelos agentes
+   - **Entregável:** RAG acessível pelos agentes + rotina de indexação
+   - **Risco:** ALTO - Finaliza a operacionalização do RAG
+   - **Prazo:** Semana Atual
+   - **Status:** ⏳ Pendente
+   - **Próximos Passos:**
+     - [ ] Configuração do MCP Server no Trae IDE
+     - [ ] Testes de consulta à documentação Recoloca.AI
+     - [ ] Validação de respostas contextualizadas para agentes
+     - [ ] Estabelecimento de rotina de indexação automática
+     - [ ] Guia de uso do RAG para outros agentes
 
-- [ ] **[IMP-RAG-004]** Desenvolvimento e Deploy do Servidor MCP para RAG 🔺 📅 Semana 2 `@AgenteM_DevFastAPI` `@Maestro`
-  - Servidor MCP funcional com endpoints RAG
-  - Integração com base de conhecimento Recoloca.AI
-  - Testes de conectividade e performance
-  - Documentação de configuração
-  - Implementação de cache para otimização de consultas
-  - Sistema de logging para debugging
-- [ ] **[CFG-RAG-001]** Configuração do RAG como Ferramenta no Trae IDE 🔺 📅 Semana 2 `@Maestro`
-  - RAG configurado e funcional no Trae IDE
-  - Testes de consulta à documentação Recoloca.AI
-  - Validação de respostas contextualizadas
-  - Guia de uso para outros agentes
-  - Configuração de índices otimizados
-  - Testes de performance com diferentes tipos de consulta
-- [ ] **[CFG-AGT-001]** Evolução do @AgenteM_Orquestrador para Supervisor Estratégico (v2.0) 🔺 📅 Semana 2 `@AgenteM_Orquestrador` `@Maestro`
-- [ ] **[IMP-DEV-010]** Desenvolvimento Feature - Landing Page (Core) 🔺 📅 Semana 4-5 `@AgenteM_DevFastAPI` `@AgenteM_DevFlutter` `@Maestro`
+**Validação Estratégica Fase 0:** ✅ RAG operacional + ✅ Agentes configurados + ✅ MCP integrado = **Fase 0 Completa**
+
+## 🔄 **TRANSIÇÃO FASE 0 → FASE 1** (Próximas 1-2 Semanas)
+
+### 📋 **TAREFAS DE TRANSIÇÃO E VALIDAÇÃO TÉCNICA**
+
+> **📌 NOTA:** Estas tarefas iniciam após conclusão da Fase 0 ou em paralelo quando possível.
+
+- [ ] **[CFG-INF-001] Ambiente Dev/Deploy - Configuração Inicial** 🔺 📅 Próximas 1-2 Semanas `@Maestro`
+  - **Objetivo:** Preparar infraestrutura básica para desenvolvimento
+  - **Entregável:** Repositórios + Linters + Deploy inicial
+  - **Risco:** MÉDIO - Impacta velocidade de desenvolvimento
+  - **Próximos Passos:**
+    - [ ] Criar repositórios Git para frontend, backend
+    - [ ] Configurar linters, formatters e hooks de pré-commit
+    - [ ] Setup inicial Vercel/Render para deploy
+
+- [ ] **[DOC-ARQ-001] HLD Detalhado - Evolução para v1.2** 🔺 📅 Próximas 1-2 Semanas `@AgenteM_ArquitetoTI` `@AgenteM_Orquestrador` `@Maestro`
+  - **Objetivo:** Detalhar arquitetura com base no RAG operacional
+  - **Entregável:** HLD v1.2 completo e validado
+  - **Risco:** ALTO - Base para todo desenvolvimento
+  - **Próximos Passos:**
+    - [ ] Detalhamento completo da arquitetura de segurança (RLS)
+    - [ ] Especificação de APIs e integrações com LLMs
+    - [ ] Definição de modelos de dados e fluxos
+    - [ ] Validação de viabilidade técnica de todas as funcionalidades core
+
+- [ ] **[TST-VAL-001] Validação Técnica: Protótipo RLS FastAPI/Supabase** 🔺 📅 Próximas 1-2 Semanas `@Maestro` `@AgenteM_DevFastAPI`
+  - **Objetivo:** Validar viabilidade técnica da arquitetura de segurança
+  - **Entregável:** Protótipo funcional + relatório de validação
+  - **Risco:** ALTO - Valida premissas técnicas críticas
+  - **Próximos Passos:**
+    - [ ] Configurar tabelas e políticas RLS no Supabase para cenário de teste
+    - [ ] Desenvolver endpoints FastAPI mínimos para testar o acesso RLS
+    - [ ] Testes de segurança e performance
+    - [ ] Documentação de resultados e recomendações
 
 ## ⏫ Tarefas de Alta Prioridade
 

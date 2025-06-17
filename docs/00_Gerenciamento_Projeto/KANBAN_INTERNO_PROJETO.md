@@ -75,29 +75,18 @@ sticker: lucide//align-start-horizontal
 	- [ ] Adicionar seções de tom de voz e UX Writing.
 
 
-## 🎯 A Fazer (Priorizado)
+## 🔄 **TRANSIÇÃO FASE 0 → FASE 1**
 
-- [ ] **[IMP-RAG-003] [MVP]** Operacionalização Completa do Sistema RAG - Criação e Indexação 🔺 \ #tecnico \ #rag \ #critico \ #Semana1-2 \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] Setup ambiente Conda (`Agents_RAG_Env`)
-	- [ ] Implementação `rag_indexer.py` funcional
-	- [ ] Indexação de todos os documentos core
-	- [ ] Testes de retrieval com queries reais
-- [ ] **[CFG-AGT-001] [MVP]** Configuração dos 5 Agentes Essenciais Tier 1 🔺 \ #agentes \ #configuracao \ #critico \ #Semana1-2 \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] @AgenteM_Orquestrador v2.0 (PM + PO + Engenheiro Prompt)
-	- [ ] @AgenteM_ArquitetoTI (HLD + LLD unificado)
-	- [ ] @AgenteM_UXDesigner
-	- [ ] @AgenteM_DevFastAPI
-	- [ ] @AgenteM_DevFlutter
 - [ ] **[CFG-INF-001] [MVP]** Ambiente Dev/Deploy - Configuração Inicial 🔺 \ #devops \ #infra \ #Semana1-2 \ #Fase0_RAG_Agentes `@Maestro`
 	- [ ] Criar repositórios Git para frontend, backend
 	- [ ] Configurar linters, formatters e hooks de pré-commit
 	- [ ] Setup inicial Vercel/Render para deploy
-- [ ] **[DOC-ARQ-001] [MVP]** HLD Detalhado - PRIORIDADE ANTECIPADA 🔺 \ #arquitetura \ #hld \ #critico \ #Semana3-4 \ #Fase1_Validacao_Tec_Estrategica `@AgenteM_ArquitetoTI` `@AgenteM_Orquestrador` `@Maestro`
+- [ ] **[DOC-ARQ-001] [MVP]** HLD Detalhado - Evolução para v1.2 🔺 \ #arquitetura \ #hld \ #critico \ #Semana1-2 \ #Fase1_Validacao_Tec_Estrategica `@AgenteM_ArquitetoTI` `@AgenteM_Orquestrador` `@Maestro`
 	- [ ] Detalhamento completo da arquitetura de segurança (RLS)
 	- [ ] Especificação de APIs e integrações com LLMs
 	- [ ] Definição de modelos de dados e fluxos
 	- [ ] Validação de viabilidade técnica de todas as funcionalidades core
-- [ ] **[TST-VAL-001] [MVP]** Validação Técnica: Protótipo RLS FastAPI/Supabase 🔺 \ #tecnico \ #validacao \ #risco_alto \ #Semana3-4 \ #Fase1_Validacao_Tec_Estrategica `@Maestro` `@AgenteM_DevFastAPI`
+- [ ] **[TST-VAL-001] [MVP]** Validação Técnica: Protótipo RLS FastAPI/Supabase 🔺 \ #tecnico \ #validacao \ #risco_alto \ #Semana1-2 \ #Fase1_Validacao_Tec_Estrategica `@Maestro` `@AgenteM_DevFastAPI`
 	- [ ] Configurar tabelas e políticas RLS no Supabase para cenário de teste
 	- [ ] Desenvolver endpoints FastAPI mínimos para testar o acesso RLS
 	- [ ] Validar a segurança e funcionalidade do RLS
@@ -262,7 +251,43 @@ sticker: lucide//align-start-horizontal
 - [ ] **Fase 4 (Semana 16):** Lançamento MVP
 
 
+## 🚨 **FASE 0: FUNDAÇÃO RAG + AGENTES** (Crítico)
+
+- [ ] **[CFG-AGT-001] [MVP]** Configuração dos 5 Agentes Essenciais Tier 1 no Trae IDE 🔺 \ #agentes \ #configuracao \ #critico \ #Semana_Atual \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
+	- [ ] Configurar @AgenteOrquestrador v2.0 no Trae IDE (PM + PO + Engenheiro Prompt)
+	- [ ] Configurar @AgenteM_ArquitetoTI no Trae IDE (HLD + LLD unificado)
+	- [ ] Configurar @AgenteM_UXDesigner no Trae IDE
+	- [ ] Configurar @AgenteM_DevFastAPI no Trae IDE
+	- [ ] Configurar @AgenteM_DevFlutter no Trae IDE
+	- [ ] Testar funcionalidade básica de cada agente
+- [ ] **[IMP-RAG-003] [MVP]** Operacionalização Completa do Sistema RAG - Estruturação Funcional 🔺 \ #tecnico \ #rag \ #critico \ #Semana_Atual \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
+	- [ ] Setup e validação ambiente Conda (`Agents_RAG_Env`)
+	- [ ] Implementação e teste `rag_indexer.py` funcional
+	- [ ] Indexação completa de todos os documentos core do projeto
+	- [ ] Testes de retrieval com queries reais dos agentes
+	- [ ] Validação de qualidade das respostas contextualizadas
+- [ ] **[IMP-RAG-004] [MVP]** Desenvolvimento do MCP Server para Integração RAG 🔺 \ #tecnico \ #mcp \ #rag \ #critico \ #Semana_Atual \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
+	- [ ] Desenvolvimento do servidor MCP funcional
+	- [ ] Integração com sistema RAG existente
+	- [ ] Testes de conectividade e performance
+	- [ ] Documentação de configuração e uso
+- [ ] **[CFG-RAG-001] [MVP]** Configuração e Integração RAG via MCP no Trae IDE 🔺 \ #rag \ #mcp \ #configuracao \ #critico \ #Semana_Atual \ #Fase0_RAG_Agentes `@Maestro`
+	- [ ] Configuração do MCP Server no Trae IDE
+	- [ ] Testes de consulta à documentação Recoloca.AI
+	- [ ] Validação de respostas contextualizadas para agentes
+	- [ ] Estabelecimento de rotina de indexação automática
+	- [ ] Guia de uso do RAG para outros agentes
+
+
 ## 🚀 Em Progresso
+
+
+
+## 🔍 Em Revisão
+
+
+
+## ✅ Concluído
 
 - [ ] **[DOC-REV-001] [MVP]** Revisão Interativa dos Documentos Core (v1.0) 🔺 \ #documentacao \ #core \ #critico \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
 	- [x] Revisar e aprovar [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] para v1.0 (Estratégico) ✅ 2025-06-11
@@ -279,18 +304,10 @@ sticker: lucide//align-start-horizontal
 	- [x] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/PGC.md]] para v 1.0 (Plano de Gerenciamento de Custos) ✅ 2025-06-16
 	- [x] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/PGR.md]] para v1.0 (Plano de Gerenciamento de Riscos) ✅ 2025-06-16
 	- [x] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/PGP.md]] para v 1.0 (Plano de Gerenciamento de Prazos) ✅ 2025-06-16
-	- [ ] Revisar e aprovar [[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]] para v 1.0 (Design)
-	- [ ] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/PStakeholders.md]] para v1.0 (Plano de Gerenciamento das Partes Interessadas)
+	- [x] Revisar e aprovar [[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]] para v 1.0 (Design) ✅ 2025-06-16
+	- [x] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/PStakeholders.md]] para v1.0 (Plano de Gerenciamento das Partes Interessadas) ✅ 2025-06-16
 	- [x] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/PCom.md]] para v 1.0 (Plano de Comunicações) ✅ 2025-06-16
 	- [x] Revisar e aprovar [[docs/00_Gerenciamento_Projeto/Maestro_Tasks.md]] para v 1.0 (Tarefas do Maestro) ✅ 2025-06-16
-
-
-## 🔍 Em Revisão
-
-
-
-## ✅ Concluído
-
 - [x] **PLANO_MESTRE_RECOLOCA_AI.md** - Estratégia e Visão ✅ 2025-01-11
 - [x] **ERS.md** - Especificação de Requisitos ✅ 2025-01-13
 - [x] **TAP.md** - Termo de Abertura do Projeto ✅ 2025-01-13
@@ -307,6 +324,6 @@ sticker: lucide//align-start-horizontal
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","lane-width":350,"list-collapse":[null,null,null,null]}
+{"kanban-plugin":"board","lane-width":400,"list-collapse":[null,null,null,null,null,true]}
 ```
 %%

@@ -41,43 +41,61 @@ sticker: lucide//calendar
 ---
 
 ## 🎯 FASE 0: FOUNDATION RAG AND AGENTS
-**Período**: 10 Jun - 30 Jun 2025 (3 semanas)
-**Objetivo**: Estabelecer base técnica sólida com validação estratégica pelo @AgenteM_Orquestrador
+**Período**: 10 Jun - 07 Jul 2025 (4 semanas) - **⚠️ ESTENDIDA**
+**Status Atual**: 🔄 **EM ANDAMENTO** - Tarefas críticas pendentes
+**Objetivo**: Estabelecer base técnica sólida com validação estratégica pelo @AgenteOrquestrador
 
-### Junho 2025 (Semanas 1-3)
+> **📌 ATUALIZAÇÃO CRÍTICA**: A Fase 0 foi estendida devido às tarefas de configuração dos agentes e operacionalização completa do RAG ainda estarem pendentes.
 
-#### Semana 1 (10-16 Jun 2025)
-- **[CRÍTICO]** Operacionalização RAG
-  - Configuração FAISS-GPU + BGE-M3
-  - Indexação da documentação viva
-  - **Validação Estratégica**: @AgenteM_Orquestrador valida alinhamento com "Specialized Intelligence"
-  - **Entregável**: RAG funcional no Trae IDE
+### Junho 2025 (Semanas 1-4) - **REVISADO**
 
-- **[CRÍTICO]** Evolução @AgenteM_Orquestrador v2.0
-  - Integração com RAG operacional
-  - Refinamento de prompts estratégicos conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]]
-  - **Entregável**: Agente PM Mentor otimizado
+#### ⏳ **Semana Atual (17-23 Jun 2025) - PRIORIDADE ABSOLUTA**
+- **[CRÍTICO - PENDENTE]** Configuração dos 5 Agentes Tier 1 no Trae IDE
+  - Configurar @AgenteOrquestrador v2.0 (PM + PO + Engenheiro Prompt)
+  - Configurar @AgenteM_ArquitetoTI (HLD + LLD unificado)
+  - Configurar @AgenteM_UXDesigner, @AgenteM_DevFastAPI, @AgenteM_DevFlutter
+  - Testar funcionalidade básica de cada agente
+  - **Entregável**: 5 agentes funcionais no Trae IDE
 
-#### Semana 2 (17-23 Jun 2025)
-- **[ALTA]** Desenvolvimento MCP Server
-  - Server customizado para Recoloca.ai
-  - Integração com documentação técnica
-  - **Validação Estratégica**: @AgenteM_Orquestrador valida impacto na produtividade
-  - **Entregável**: MCP Server funcional
+- **[CRÍTICO - PENDENTE]** Operacionalização Completa do Sistema RAG
+  - Setup e validação ambiente Conda (`Agents_RAG_Env`)
+  - Implementação e teste `rag_indexer.py` funcional
+  - Indexação completa de todos os documentos core
+  - Testes de retrieval com queries reais dos agentes
+  - **Entregável**: RAG estruturado + indexado + testado
+
+- **[CRÍTICO - PENDENTE]** Desenvolvimento do MCP Server para Integração RAG
+  - Desenvolvimento do servidor MCP funcional
+  - Integração com sistema RAG existente
+  - Testes de conectividade e performance
+  - **Entregável**: MCP Server funcional + documentação
+
+- **[CRÍTICO - PENDENTE]** Configuração e Integração RAG via MCP no Trae IDE
+  - Configuração do MCP Server no Trae IDE
+  - Testes de consulta à documentação Recoloca.AI
+  - Estabelecimento de rotina de indexação automática
+  - **Entregável**: RAG acessível pelos agentes + rotina de indexação
+
+#### Semana 4 (24-30 Jun 2025) - **TRANSIÇÃO FASE 0 → FASE 1**
+- **[ALTA]** Ambiente Dev/Deploy - Configuração Inicial
+  - Criar repositórios Git para frontend, backend
+  - Configurar linters, formatters e hooks de pré-commit
+  - Setup inicial Vercel/Render para deploy
+  - **Entregável**: Infraestrutura básica para desenvolvimento
 
 - **[ALTA]** Validação RLS (Row Level Security)
   - Testes de segurança no Supabase
   - Configuração de políticas conforme [[docs/02_Requisitos/ERS.md]]
   - **Entregável**: Modelo de segurança validado
 
-#### Semana 3 (24-30 Jun 2025)
+#### Semana 5 (01-07 Jul 2025) - **FINALIZAÇÃO FASE 0**
 - **[MÉDIA]** Análise Competitiva Aprofundada
   - Benchmarking baseado em [[docs/01_Guias_Centrais/VANTAGENS_COMPETITIVAS_SUSTENTAVEIS.md]]
   - Identificação de gaps de "Specialized Intelligence"
-  - **Validação Estratégica**: @AgenteM_Orquestrador valida posicionamento
+  - **Validação Estratégica**: @AgenteOrquestrador valida posicionamento
   - **Entregável**: Relatório de posicionamento estratégico
 
-- **[ALTA]** Configuração RAG no Trae IDE
+**✅ Critério de Conclusão Fase 0**: RAG operacional + 5 Agentes configurados + MCP integrado + Infraestrutura básica
   - Otimização de performance
   - Testes de recuperação semântica
   - **Entregável**: RAG otimizado para desenvolvimento
