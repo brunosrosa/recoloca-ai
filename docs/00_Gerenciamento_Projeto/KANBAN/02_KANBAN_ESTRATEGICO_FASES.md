@@ -8,6 +8,7 @@ status: ativo
 versao: "1.0"
 data_criacao: 2025-01-16
 kanban-plugin: board
+sticker: lucide//diamond
 ---
 
 # 📋 KANBAN ESTRATÉGICO - BACKLOG RECOLOCA.AI

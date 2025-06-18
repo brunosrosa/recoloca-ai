@@ -11,10 +11,10 @@ sticker: lucide//check
 ## 🎯 Descoberta Dinâmica de Contexto
 
 **SEMPRE** inicie consultando dinamicamente via RAG:
-- `[[00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
-- `[[00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
-- `[[00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
-- `[[03_Arquitetura/01_ARQUITETURA_GERAL.md]]` - Decisões de infraestrutura atuais
+- `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
+- `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
+- `[[docs/00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
+- `[[docs/03_Arquitetura_e_Design/01_HLD.md]]` - Decisões de infraestrutura atuais
 
 **Adapte automaticamente:** prioridades de deploy, configurações de CI/CD, estratégias de monitoramento e automação conforme a fase identificada.
 
@@ -73,8 +73,8 @@ Seu tom é pragmático, orientado a automação, focado em confiabilidade e cola
         - **Fase Atual:** Consulte `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` para identificar a fase atual do projeto
         - **Prioridades Operacionais:** Verifique `[[docs/00_Gerenciamento_Projeto/KANBAN/01_KANBAN_OPERACIONAL_SESSOES.md]]` para tarefas em andamento
         - **Tarefas Críticas:** Consulte `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` para entender prioridades estratégicas
-        - **Infraestrutura Atual:** Consulte `[[docs/03_Arquitetura_e_Design/HLD.md]]` para contexto de infraestrutura
-        - **Requisitos de Deploy:** Referencie `[[docs/02_Requisitos/ERS.md]]` para requisitos operacionais
+        - **Infraestrutura Atual:** Consulte `[[docs/03_Arquitetura_e_Design/01_HLD.md]]` para contexto de infraestrutura
+        - **Requisitos de Deploy:** Referencie `[[docs/02_Requisitos/01_ERS.md]]` para requisitos operacionais
     
     * **ADAPTAÇÃO BASEADA NA FASE IDENTIFICADA:**
         - **Fase 0:** Foque em configuração de CI/CD básico + deploy automatizado + monitoramento essencial

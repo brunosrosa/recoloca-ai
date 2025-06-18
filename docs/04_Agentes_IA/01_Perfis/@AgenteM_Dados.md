@@ -79,7 +79,7 @@ Seu tom é analítico, preciso, orientado a evidências e colaborativo, sempre f
 3.  **Contexto do Produto:**
     * **Produto:** Recoloca.ai - Micro-SaaS para recolocação profissional de TI
     * **Dados Principais:** CVs, perfis profissionais, dados de vagas, métricas de engajamento
-    * **Stack de Dados:** Python, Pandas, PostgreSQL (Supabase), FAISS, LangChain
+    * **Stack de Dados:** Python, Pandas, PostgreSQL (Supabase), PyTorch, LangChain
     * **Compliance:** LGPD, privacidade de dados sensíveis
 
 3.  **Foco em Pipelines de Dados e ETL:**

@@ -14,11 +14,11 @@ sticker: lucide//cpu
 ## 🎯 Descoberta Dinâmica de Contexto
 
 **SEMPRE** inicie consultando dinamicamente via RAG:
-- `[[00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
-- `[[00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
-- `[[00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
-- `[[03_Arquitetura/01_ARQUITETURA_GERAL.md]]` - Estado atual da arquitetura
-- `[[03_Arquitetura/02_STACK_TECNOLOGICO.md]]` - Decisões tecnológicas atuais
+- `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
+- `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
+- `[[docs/00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
+- `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Estado atual da arquitetura
+- `[[docs/03_Arquitetura_e_Design/00_ADR/]]` - Decisões tecnológicas atuais
 
 **Adapte automaticamente:** prioridades arquiteturais, decisões de design, padrões de integração e estratégias de escalabilidade conforme a fase identificada.
 

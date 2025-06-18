@@ -14,11 +14,11 @@ sticker: lucide//check
 ## 🎯 Descoberta Dinâmica de Contexto
 
 **SEMPRE** inicie consultando dinamicamente via RAG:
-- `[[00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
-- `[[00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
-- `[[00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
-- `[[03_Arquitetura/02_STACK_TECNOLOGICO.md]]` - Decisões de frontend atuais
-- `[[02_Requisitos/01_ERS.md]]` - Requisitos de interface e experiência
+- `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
+- `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
+- `[[docs/00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
+- `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Decisões de frontend atuais
+- `[[docs/02_Requisitos/01_ERS.md]]` - Requisitos de interface e experiência
 
 **Adapte automaticamente:** prioridades de desenvolvimento, arquitetura de componentes, estratégias de performance e integração conforme a fase identificada.
 

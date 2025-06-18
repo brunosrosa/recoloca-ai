@@ -186,21 +186,6 @@ sticker: lucide//align-start-horizontal
 
 ## 🚨 FASE 0: FUNDAÇÃO RAG + AGENTES
 
-- [ ] **[IMP-RAG-003]** Operacionalização Completa do Sistema RAG 🔺 \ #tecnico \ #rag \ #critico \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
-	- [ ] Setup e validação ambiente Conda (`Agents_RAG_Env`)
-	- [ ] Implementação e teste `rag_indexer.py` funcional
-	- [ ] Indexação completa de todos os documentos core do projeto
-	- [ ] Testes de retrieval com queries reais dos agentes
-	- [ ] Validação de qualidade das respostas contextualizadas
-	- **Dependências:** Nenhuma
-	- **Definition of Done:** RAG operacional com respostas contextualizadas de qualidade
-- [ ] **[IMP-RAG-004]** Desenvolvimento do MCP Server para Integração RAG 🔺 \ #tecnico \ #mcp \ #rag \ #critico \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
-	- [ ] Desenvolvimento do servidor MCP funcional
-	- [ ] Integração com sistema RAG existente
-	- [ ] Testes de conectividade e performance
-	- [ ] Documentação de configuração e uso
-	- **Dependências:** [IMP-RAG-003] concluído
-	- **Definition of Done:** MCP Server funcional e documentado
 - [ ] **[CFG-RAG-001]** Configuração e Integração RAG via MCP no Trae IDE 🔺 \ #rag \ #mcp \ #configuracao \ #critico \ #Fase0_RAG_Agentes `@Maestro`
 	- [ ] Configuração do MCP Server no Trae IDE
 	- [ ] Testes de consulta à documentação Recoloca.AI
@@ -227,6 +212,29 @@ sticker: lucide//align-start-horizontal
 
 ## ♻️ SESSÃO ATUAL (Em Progresso)
 
+- [ ] **[IMP-RAG-003]** Operacionalização Completa do Sistema RAG 🔺 \ #tecnico \ #rag \ #critico \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
+	- [x] Setup e validação ambiente Conda (`Agents_RAG_Env`) ✅ 2025-06-17
+	- [x] Implementação e teste `rag_indexer.py` funcional ✅ 2025-06-17
+	- [x] Indexação completa de todos os documentos core do projeto ✅ 2025-06-17
+	- [x] **[RAG-INFRA]** Correção da infraestrutura RAG (dependências, embedding model, retrieval system) ✅ 2025-06-18
+	- [ ] **[RAG-REINDEX]** Re-indexação completa e otimizada com validação de qualidade
+	- [ ] **[RAG-MCP]** Integração robusta do servidor MCP com testes de conectividade
+	- [ ] **[RAG-CONTEXT]** Validação contextual específica para @AgenteM_DevFastAPI
+	- [ ] **[RAG-SYNC]** Implementação de rotina automática de sincronização
+	- [ ] **[RAG-DOCS]** Documentação técnica e handoff para outros agentes
+	- **Dependências:** Nenhuma
+	- **Definition of Done:** RAG operacional com respostas contextualizadas de qualidade, infraestrutura corrigida e sistema de sincronização automática
+- [ ] **[IMP-RAG-004]** Desenvolvimento do MCP Server para Integração RAG 🔺 \ #tecnico \ #mcp \ #rag \ #critico \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
+	- [ ] Desenvolvimento do servidor MCP funcional
+	- [ ] Integração com sistema RAG existente
+	- [ ] Testes de conectividade e performance
+	- [ ] Documentação de configuração e uso
+	- **Dependências:** [IMP-RAG-003] concluído
+	- **Definition of Done:** MCP Server funcional e documentado
+
+
+## ✅ CONCLUÍDO
+
 - [ ] **[KAN-REO-001]** Reorganização Completa do Kanban Interno do Projeto 🔺 \ #kanban \ #organizacao \ #gestao \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
 	- [x] Consolidar tarefas duplicadas mantendo todos os detalhes já mapeados
 	- [x] Reorganizar por fases claras (Fase 0, Fase 1, Fase 2, Concluído, Backlog)
@@ -235,10 +243,6 @@ sticker: lucide//align-start-horizontal
 	- [x] Estabelecer "Definition of Done" para cada tipo de tarefa
 	- [x] Criar seções de dependências explícitas
 	- [x] Validar estrutura final com Maestro
-
-
-## ✅ CONCLUÍDO
-
 - [x] **[CFG-RAG-001]** Setup Inicial RAG - Configuração Base ✅ \ #rag \ #setup \ #Fase0_Fundacao `@Maestro`
 	- [x] Configuração inicial do sistema RAG
 	- [x] Estrutura de documentos base
@@ -279,6 +283,6 @@ sticker: lucide//align-start-horizontal
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","lane-width":400,"list-collapse":[null,null,null,null,null,true]}
+{"kanban-plugin":"board","lane-width":400,"list-collapse":[null,null,null,null,null,false]}
 ```
 %%

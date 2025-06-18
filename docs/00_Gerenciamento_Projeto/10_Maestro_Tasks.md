@@ -40,16 +40,20 @@ sticker: lucide//codesandbox
 
 1. **[IMP-RAG-003] Operacionalização Completa do Sistema RAG** 🔺
    - **Objetivo:** Tornar o sistema RAG funcional para consulta pelos agentes
-   - **Entregável:** RAG estruturado + indexado + testado
+   - **Entregável:** RAG estruturado + indexado + testado + infraestrutura corrigida
    - **Risco:** CRÍTICO - Agentes precisam de contexto para serem eficazes
    - **Prazo:** Semana Atual (Imediato)
    - **Status:** ⏳ Pendente
    - **Próximos Passos:**
-     - [ ] Setup e validação ambiente Conda (`Agents_RAG_Env`)
-     - [ ] Implementar e testar `rag_indexer.py` funcional
-     - [ ] Indexação completa de todos os documentos core
-     - [ ] Testes de retrieval com queries reais dos agentes
-     - [ ] Validação de qualidade das respostas contextualizadas
+     - [x] Setup e validação ambiente Conda (`Agents_RAG_Env`) ✅ 2025-06-17
+     - [x] Implementar e testar `rag_indexer.py` funcional ✅ 2025-06-17
+     - [x] Indexação completa de todos os documentos core ✅ 2025-06-17
+     - [x] **[RAG-INFRA]** Correção da infraestrutura RAG (dependências, embedding model, retrieval system) ✅ 2025-06-18
+     - [ ] **[RAG-REINDEX]** Re-indexação completa e otimizada com validação de qualidade
+     - [ ] **[RAG-MCP]** Integração robusta do servidor MCP com testes de conectividade
+     - [ ] **[RAG-CONTEXT]** Validação contextual específica para @AgenteM_DevFastAPI
+     - [ ] **[RAG-SYNC]** Implementação de rotina automática de sincronização
+     - [ ] **[RAG-DOCS]** Documentação técnica e handoff para outros agentes
 
 2. **[IMP-RAG-004] Desenvolvimento do MCP Server para Integração RAG** 🔺
    - **Objetivo:** Criar servidor MCP para integrar RAG com Trae IDE

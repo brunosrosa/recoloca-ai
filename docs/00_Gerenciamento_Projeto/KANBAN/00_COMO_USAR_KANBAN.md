@@ -1,3 +1,6 @@
+---
+sticker: lucide//shield-question
+---
 # 📋 COMO USAR O KANBAN NO OBSIDIAN (RECOLOCA.AI)
 
 Este documento visa esclarecer o uso e os padrões do Kanban no Obsidian para o projeto Recoloca.ai, com foco na compatibilidade e nas melhores práticas para os plugins Obsidian Kanban e Obsidian Tasks.
