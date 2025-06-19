@@ -3,15 +3,15 @@
 📊 RELATÓRIO DE SETUP DO SISTEMA RAG
 ============================================================
 
-🎯 Status Geral: 6/9 verificações passaram (66.7%)
+🎯 Status Geral: 8/9 verificações passaram (88.9%)
 
 📋 Detalhes das Verificações:
   ✅ Python 3.8+
   ✅ GPU (NVIDIA GeForce RTX 2060 (6.0GB))
-  ❌ Dependências
+  ✅ Dependências
   ✅ Estrutura de diretórios
-  ✅ Documentos fonte (44)
-  ❌ Modelo de embedding
+  ✅ Documentos fonte (30)
+  ✅ Modelo de embedding
   ✅ Indexação
   ❌ Sistema de recuperação
   ✅ Servidor MCP
@@ -24,6 +24,6 @@
   • Reindexar: python rag_indexer.py
   • Testar consulta: python rag_retriever.py
   • Iniciar MCP Server: python mcp_server.py
-  • Executar testes: python test_rag_system.py
+  • Executar testes: python tests/test_rag_system.py
 
 ============================================================

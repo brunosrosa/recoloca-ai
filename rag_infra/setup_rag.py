@@ -96,21 +96,29 @@ class RAGSetup:
         """Verifica se todas as dependências estão instaladas."""
         self.logger.info("📦 Verificando dependências...")
         
-        required_packages = [
-            'torch', 'transformers', 'sentence-transformers',
-            'langchain', 'faiss-cpu', 'numpy', 'pandas',
-            'pymupdf', 'python-dotenv', 'unstructured'
-        ]
+        # Mapeamento de pacotes pip para nomes de importação
+        required_packages = {
+            'torch': 'torch',
+            'transformers': 'transformers', 
+            'sentence-transformers': 'sentence_transformers',
+            'langchain': 'langchain',
+            'faiss-cpu': 'faiss',
+            'numpy': 'numpy',
+            'pandas': 'pandas',
+            'pymupdf': 'fitz',
+            'python-dotenv': 'dotenv',
+            'unstructured': 'unstructured'
+        }
         
         missing_packages = []
         
-        for package in required_packages:
+        for package_name, import_name in required_packages.items():
             try:
-                __import__(package.replace('-', '_'))
-                self.logger.debug(f"✅ {package} instalado")
+                __import__(import_name)
+                self.logger.debug(f"✅ {package_name} instalado")
             except ImportError:
-                missing_packages.append(package)
-                self.logger.warning(f"❌ {package} não encontrado")
+                missing_packages.append(package_name)
+                self.logger.warning(f"❌ {package_name} não encontrado")
                 
         if missing_packages:
             self.logger.error(f"❌ Pacotes faltando: {', '.join(missing_packages)}")
@@ -172,7 +180,8 @@ class RAGSetup:
             
             # Teste simples de embedding
             test_text = "Este é um teste do sistema de embedding."
-            embedding = embedding_manager.get_query_embedding(test_text)
+            embedding_manager.load_model()
+            embedding = embedding_manager.embed_query(test_text)
             
             if embedding is not None and len(embedding) > 0:
                 self.logger.info(f"✅ Modelo carregado: {EMBEDDING_MODEL_NAME}")
@@ -211,6 +220,9 @@ class RAGSetup:
         
         try:
             retriever = RAGRetriever(force_cpu=self.force_cpu)
+            
+            # Carregar o índice primeiro
+            retriever.load_index()
             
             # Teste de consulta
             test_query = "arquitetura do sistema"
@@ -284,7 +296,7 @@ class RAGSetup:
         
         if all(results.values()):
             report.append("  ✅ Sistema RAG está pronto para uso!")
-            report.append("  📝 Configure o Trae IDE usando: trae_mcp_config.json")
+            report.append("  📝 Configure o Trae IDE usando: config/trae_mcp_config.json")
             report.append("  🔄 Execute consultas usando o MCP Server")
         else:
             report.append("  ⚠️ Corrija os problemas identificados acima")
@@ -295,7 +307,7 @@ class RAGSetup:
         report.append("  • Reindexar: python rag_indexer.py")
         report.append("  • Testar consulta: python rag_retriever.py")
         report.append("  • Iniciar MCP Server: python mcp_server.py")
-        report.append("  • Executar testes: python test_rag_system.py")
+        report.append("  • Executar testes: python tests/test_rag_system.py")
         
         report.append("\n" + "="*60)
         

@@ -24,21 +24,34 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core_logic.constants import (
+from constants import (
     FAISS_INDEX_DIR,
     FAISS_INDEX_FILE,
     FAISS_DOCUMENTS_FILE,
     FAISS_METADATA_FILE,
+    FAISS_EMBEDDINGS_FILE,
+    FAISS_MAPPING_FILE,
+    EMBEDDING_MODEL_NAME,
+    USE_GPU,
     DEFAULT_TOP_K,
     MIN_SIMILARITY_SCORE,
-    EMBEDDING_MODEL_NAME,
-    STATUS_MESSAGES,
-    RESULT_TEMPLATE,
     LOGS_DIR
 )
-from core_logic.embedding_model import initialize_embedding_model, get_embedding_manager
-from core_logic.pytorch_gpu_retriever import PyTorchGPURetriever
-from core_logic.pytorch_optimizations import OptimizedPyTorchRetriever
+from embedding_model import initialize_embedding_model, get_embedding_manager
+from pytorch_gpu_retriever import PyTorchGPURetriever
+from pytorch_optimizations import OptimizedPyTorchRetriever
+
+# Importar sistema de métricas
+try:
+    from rag_metrics_integration import track_query, track_batch_query, metrics_integration
+    METRICS_AVAILABLE = True
+except ImportError:
+    METRICS_AVAILABLE = False
+    # Decoradores vazios se métricas não disponíveis
+    def track_query(func):
+        return func
+    def track_batch_query(func):
+        return func
 
 # Configurar logging
 logging.basicConfig(
@@ -340,8 +353,10 @@ class RAGRetriever:
             logger.error(f"Erro ao carregar índice FAISS: {str(e)}")
             return False
     
-    def search(self, query: str, top_k: int = DEFAULT_TOP_K, min_score: float = MIN_SIMILARITY_SCORE, 
-               category_filter: Optional[str] = None) -> List[SearchResult]:
+    @track_query
+    def search(self, query: str, top_k: int = DEFAULT_TOP_K, 
+                min_score: float = MIN_SIMILARITY_SCORE, 
+                category_filter: Optional[str] = None) -> List[SearchResult]:
         """
         Realiza busca semântica no índice.
         
@@ -364,9 +379,16 @@ class RAGRetriever:
         
         # Verificar cache
         cache_key = f"{query}_{top_k}_{min_score}_{category_filter}"
+        cache_hit = False
         if cache_key in self._query_cache:
+            cache_hit = True
             logger.debug(f"Resultado encontrado no cache para: {query[:50]}...")
-            return self._query_cache[cache_key]
+            cached_results = self._query_cache[cache_key]
+            # Adicionar informação de cache hit aos metadados
+            for result in cached_results:
+                if hasattr(result, 'metadata') and isinstance(result.metadata, dict):
+                    result.metadata['cache_hit'] = True
+            return cached_results
         
         try:
             logger.info(STATUS_MESSAGES["query_start"].format(query=query[:100]))
@@ -407,6 +429,11 @@ class RAGRetriever:
             logger.info(STATUS_MESSAGES["query_complete"].format(count=len(results)))
             logger.info(f"Busca realizada em {elapsed_time:.3f}s")
             
+            # Adicionar informação de cache miss aos metadados
+            for result in results:
+                if hasattr(result, 'metadata') and isinstance(result.metadata, dict):
+                    result.metadata['cache_hit'] = False
+            
             # Cache do resultado
             self._cache_result(cache_key, results)
             
@@ -415,6 +442,61 @@ class RAGRetriever:
         except Exception as e:
             logger.error(STATUS_MESSAGES["query_error"].format(error=str(e)))
             return []
+    
+    @track_batch_query
+    def search_batch(self, queries: List[str], top_k: int = DEFAULT_TOP_K, 
+                    min_score: float = MIN_SIMILARITY_SCORE, 
+                    category_filter: Optional[str] = None) -> List[List[SearchResult]]:
+        """
+        Realiza busca semântica em lote para múltiplas consultas.
+        
+        Args:
+            queries: Lista de consultas de busca
+            top_k: Número de resultados a retornar por consulta
+            min_score: Score mínimo de similaridade
+            category_filter: Filtro por categoria (opcional)
+            
+        Returns:
+            List[List[SearchResult]]: Lista de listas de resultados para cada consulta
+        """
+        if not queries:
+            return []
+        
+        logger.info(f"Iniciando busca em lote para {len(queries)} consultas")
+        start_time = time.time()
+        
+        results = []
+        cache_hits = 0
+        
+        try:
+            # Processar cada consulta
+            for i, query in enumerate(queries):
+                query_results = self.search(query, top_k, min_score, category_filter)
+                
+                # Contar cache hits
+                for result in query_results:
+                    if hasattr(result, 'metadata') and isinstance(result.metadata, dict):
+                        if result.metadata.get('cache_hit', False):
+                            cache_hits += 1
+                        # Adicionar informação de lote
+                        result.metadata['batch_index'] = i
+                        result.metadata['batch_size'] = len(queries)
+                
+                results.append(query_results)
+            
+            elapsed_time = time.time() - start_time
+            total_results = sum(len(r) for r in results)
+            cache_hit_rate = cache_hits / total_results if total_results > 0 else 0
+            
+            logger.info(f"Busca em lote concluída: {len(queries)} consultas, "
+                       f"{total_results} resultados, {elapsed_time:.3f}s, "
+                       f"cache hit rate: {cache_hit_rate:.2%}")
+            
+            return results
+            
+        except Exception as e:
+            logger.error(f"Erro durante busca em lote: {e}")
+            return [[] for _ in queries]
             
     def _search_faiss(self, query: str, top_k: int, min_score: float, 
                      category_filter: Optional[str] = None) -> List[SearchResult]:

@@ -71,7 +71,7 @@ Estratégias de qualidade e testes:
 
 ### 📊 07_Metricas_e_Analytics
 Métricas e análise de performance:
-- **[[METRICAS_SUCESSO_BASE_MERCADO.md]]** - Métricas baseadas em benchmarks de mercado
+- **[[METRICAS_SUCESSO_BASE_MERCADO]]** - Métricas baseadas em benchmarks de mercado
 
 ### 🚀 07_Operacoes_e_Deploy
 Infraestrutura e deployment:
@@ -82,7 +82,7 @@ Infraestrutura e deployment:
 
 ### 📈 08_Marketing_e_Vendas
 Estratégias de mercado e crescimento:
-- **[[ESTRATEGIA_GO_TO_MARKET.md]]** - Estratégia de lançamento e crescimento
+- **[[ESTRATEGIA_GO_TO_MARKET]]** - Estratégia de lançamento e crescimento
 
 ### 🔍 09_Pesquisa_e_Insights
 Pesquisas de mercado e insights:
@@ -242,7 +242,7 @@ O projeto utiliza uma metodologia inovadora que combina:
 - **Alinhamento Estratégico:** Conformidade com [[01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]
 - **Qualidade Técnica:** Aderência aos padrões definidos em [[03_Arquitetura_e_Design/STYLE_GUIDE.md]]
 - **Rastreabilidade:** Versionamento e documentação de decisões
-- **Métricas de Sucesso:** Acompanhamento via [[07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]]
+- **Métricas de Sucesso:** Acompanhamento via [[METRICAS_SUCESSO_BASE_MERCADO]]
 
 ### Alinhamento com Documentação Viva
 Este documento está sincronizado com:

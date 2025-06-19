@@ -1,12 +1,21 @@
 {
-  "conversion_date": "2025-06-18 00:06:21",
+  "conversion_date": "2025-06-18 23:54:16",
   "original_faiss_index": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\🧑🏻‍💼 Recoloca.AI\\rag_infra\\data_index\\faiss_index_bge_m3\\faiss_index.bin",
   "embeddings_shape": [
-    281,
+    754,
     1024
   ],
   "embeddings_dtype": "float32",
   "documents_count": 281,
   "metadata_count": 281,
-  "conversion_time_seconds": 0.12230443954467773
+  "conversion_time_seconds": 0.05688977241516113,
+  "consistency_fix_date": "2025-06-18 23:56:54",
+  "original_embeddings_count": 754,
+  "corrected_embeddings_count": 281,
+  "embeddings_shape_after_fix": [
+    281,
+    1024
+  ],
+  "fix_method": "truncate",
+  "backup_file": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\🧑🏻‍💼 Recoloca.AI\\rag_infra\\data_index\\faiss_index_bge_m3\\backup_before_fix\\embeddings_backup_20250618_235654.npy"
 }

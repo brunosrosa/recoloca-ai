@@ -15,7 +15,7 @@ sticker: lucide//codesandbox
 
 ## 📊 **RESUMO EXECUTIVO**
 
-**Status Atual:** Fase 0 (25-30% concluída) | **Foco:** Operacionalização RAG + Configuração Agentes Tier 1
+**Status Atual:** Fase 0 (35-40% concluída) | **Foco:** Operacionalização RAG + Configuração Agentes Tier 1
 
 **Próximas 4 Tarefas Críticas:**
 1. **[IMP-RAG-003]** Operacionalização Completa do Sistema RAG
@@ -29,6 +29,9 @@ sticker: lucide//codesandbox
 - ✅ **[KAN-REO-001]** Reorganização Completa do Kanban Interno do Projeto
 - ✅ **[CFG-TRA-001]** Configuração AgenteM_Orquestrador no TRAE IDE
 - ✅ **[REV-DOC-001]** Review Documentos Core
+- ✅ **[RAG-INFRA-FIX]** Correção completa de imports absolutos em `core_logic/`
+- ✅ **[RAG-CONST-ADD]** Adição de constantes PyTorch faltantes em `constants.py`
+- ✅ **[RAG-TEST-VAL]** Validação de funcionamento dos módulos RAG principais
 
 ---
 
@@ -49,6 +52,9 @@ sticker: lucide//codesandbox
      - [x] Implementar e testar `rag_indexer.py` funcional ✅ 2025-06-17
      - [x] Indexação completa de todos os documentos core ✅ 2025-06-17
      - [x] **[RAG-INFRA]** Correção da infraestrutura RAG (dependências, embedding model, retrieval system) ✅ 2025-06-18
+     - [x] **[RAG-IMPORTS]** Correção completa de imports absolutos para relativos ✅ 2025-01-16
+     - [x] **[RAG-CONSTANTS]** Adição de constantes PyTorch faltantes ✅ 2025-01-16
+     - [x] **[RAG-MODULES]** Validação de funcionamento dos módulos principais ✅ 2025-01-16
      - [ ] **[RAG-REINDEX]** Re-indexação completa e otimizada com validação de qualidade
      - [ ] **[RAG-MCP]** Integração robusta do servidor MCP com testes de conectividade
      - [ ] **[RAG-CONTEXT]** Validação contextual específica para @AgenteM_DevFastAPI
@@ -67,6 +73,21 @@ sticker: lucide//codesandbox
      - [ ] Integração com sistema RAG existente
      - [ ] Testes de conectividade e performance
      - [ ] Documentação de configuração e uso
+
+2.1. **[REO-RAG-001] Reorganização Estrutural da Infraestrutura RAG** 🔺
+   - **Objetivo:** Reorganizar infraestrutura RAG para melhor manutenibilidade e escalabilidade
+   - **Entregável:** Estrutura modular reorganizada + documentação atualizada
+   - **Risco:** MÉDIO - Melhora qualidade do código e facilita manutenção
+   - **Prazo:** Semana Atual (Paralelo)
+   - **Status:** ⏳ Pendente
+   - **Dependências:** [IMP-RAG-003] concluído
+   - **Próximos Passos:**
+     - [ ] **[REO-DIR-001]** Criar estrutura de diretórios detalhada (`core_logic/`, `tests/`, `scripts/`, `results and reports/`)
+     - [ ] **[REO-DEP-001]** Mapear dependências entre arquivos e planejar migração
+     - [ ] **[REO-MIG-001]** Executar migração gradual por categoria
+     - [ ] **[REO-IMP-001]** Atualizar imports relativos e configurações (pytest.ini, pyproject.toml)
+     - [ ] **[REO-TST-001]** Executar testes para validar reorganização e manter cobertura
+     - [ ] **[REO-DOC-001]** Atualizar documentação (README.md, guias de desenvolvimento)
 
 3. **[CFG-RAG-001] Configuração e Integração RAG via MCP no Trae IDE** 🔺
    - **Objetivo:** Integrar RAG ao Trae IDE via MCP para uso pelos agentes

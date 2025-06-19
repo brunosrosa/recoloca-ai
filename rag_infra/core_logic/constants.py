@@ -24,12 +24,21 @@ RAG_ROOT_DIR = Path(__file__).parent.parent
 SOURCE_DOCUMENTS_DIR = RAG_ROOT_DIR / "source_documents"
 DATA_INDEX_DIR = RAG_ROOT_DIR / "data_index"
 FAISS_INDEX_DIR = DATA_INDEX_DIR / "faiss_index_bge_m3"
+PYTORCH_INDEX_DIR = DATA_INDEX_DIR / "pytorch_index_bge_m3"
 LOGS_DIR = RAG_ROOT_DIR / "logs"
+CACHE_DIR = RAG_ROOT_DIR / "cache"
+METRICS_DIR = RAG_ROOT_DIR / "metrics"
 
-# Subdiretórios de documentos
-PM_KNOWLEDGE_DIR = SOURCE_DOCUMENTS_DIR / "PM_Knowledge"
-UX_KNOWLEDGE_DIR = SOURCE_DOCUMENTS_DIR / "UX_Knowledge"
-TECH_STACK_DIR = SOURCE_DOCUMENTS_DIR / "Tech_Stack"
+# Subdiretórios de documentos (estrutura reorganizada)
+DOCUMENTACAO_CENTRAL_DIR = SOURCE_DOCUMENTS_DIR / "00_Documentacao_Central"
+GESTAO_PROCESSOS_DIR = SOURCE_DOCUMENTS_DIR / "01_Gestao_e_Processos"
+REQUISITOS_ESPECIFICACOES_DIR = SOURCE_DOCUMENTS_DIR / "02_Requisitos_e_Especificacoes"
+ARQUITETURA_DESIGN_DIR = SOURCE_DOCUMENTS_DIR / "03_Arquitetura_e_Design"
+PADROES_GUIAS_DIR = SOURCE_DOCUMENTS_DIR / "04_Padroes_e_Guias"
+TECH_STACK_DIR = SOURCE_DOCUMENTS_DIR / "05_Tech_Stack"
+AGENTES_IA_DIR = SOURCE_DOCUMENTS_DIR / "06_Agentes_e_IA"
+UX_DESIGN_DIR = SOURCE_DOCUMENTS_DIR / "07_UX_e_Design"
+CONHECIMENTO_ESPECIALIZADO_DIR = SOURCE_DOCUMENTS_DIR / "08_Conhecimento_Especializado"
 
 # =============================================================================
 # CONFIGURAÇÕES DO MODELO DE EMBEDDING
@@ -58,6 +67,7 @@ EMBEDDING_MODEL_CONFIG = {
 # Configurações para divisão de documentos
 CHUNK_SIZE = 1000  # Tamanho do chunk em caracteres
 CHUNK_OVERLAP = 200  # Sobreposição entre chunks
+MIN_CHUNK_SIZE = 100  # Tamanho mínimo dos chunks em caracteres
 SEPARATORS = ["\n\n", "\n", ".", "!", "?", ",", " ", ""]  # Separadores para chunking
 
 # =============================================================================
@@ -67,11 +77,27 @@ SEPARATORS = ["\n\n", "\n", ".", "!", "?", ",", " ", ""]  # Separadores para chu
 # Configurações do índice FAISS
 FAISS_INDEX_TYPE = "IndexFlatIP"  # Inner Product para embeddings normalizados
 FAISS_METRIC_TYPE = "METRIC_INNER_PRODUCT"
+FAISS_NPROBE = 32  # Número de clusters a serem pesquisados
+FAISS_NLIST = 100  # Número de clusters para IVF
+FAISS_FACTORY_STRING = "Flat"  # String de configuração do índice
+FAISS_TRAIN_SIZE = 10000  # Tamanho mínimo para treinamento
+FAISS_EF_SEARCH = 64  # Parâmetro de busca para HNSW
 
 # Nomes dos arquivos do índice
 FAISS_INDEX_FILE = "faiss_index.bin"
 FAISS_METADATA_FILE = "metadata.json"
 FAISS_DOCUMENTS_FILE = "documents.json"
+FAISS_EMBEDDINGS_FILE = "embeddings.npy"
+
+# Nomes dos arquivos PyTorch
+PYTORCH_INDEX_FILE = "pytorch_index.pt"
+PYTORCH_EMBEDDINGS_FILE = "embeddings.pt"
+PYTORCH_METADATA_FILE = "metadata.json"
+PYTORCH_DOCUMENTS_FILE = "documents.json"
+PYTORCH_MAPPING_FILE = "mapping.json"
+
+# Arquivo de mapeamento FAISS
+FAISS_MAPPING_FILE = "mapping.json"
 
 # =============================================================================
 # CONFIGURAÇÕES DE BUSCA
@@ -80,7 +106,7 @@ FAISS_DOCUMENTS_FILE = "documents.json"
 # Parâmetros padrão para busca
 DEFAULT_TOP_K = 5  # Número padrão de resultados retornados
 MAX_TOP_K = 20     # Número máximo de resultados permitidos
-MIN_SIMILARITY_SCORE = 0.3  # Score mínimo de similaridade
+MIN_SIMILARITY_SCORE = 0.1  # Threshold reduzido para melhor recall  # Score mínimo de similaridade
 
 # =============================================================================
 # CONFIGURAÇÕES DE LOGGING
@@ -106,16 +132,44 @@ QUERY_TIMEOUT = 30  # Timeout para consultas em segundos
 MAX_BATCH_SIZE = 100  # Tamanho máximo do batch para processamento
 CACHE_SIZE = 1000  # Tamanho do cache de consultas
 
+# Configurações específicas do PyTorch
+PYTORCH_BATCH_SIZE = 32  # Tamanho do batch para PyTorch
+PYTORCH_MAX_MEMORY_GB = 4  # Memória máxima em GB para PyTorch
+
+# Configurações de funcionalidades
+ENABLE_METRICS = True  # Habilitar coleta de métricas
+ENABLE_CACHING = True  # Habilitar cache de resultados
+ENABLE_PYTORCH_OPTIMIZATION = True  # Habilitar otimizações PyTorch
+
 # =============================================================================
 # EXTENSÕES DE ARQUIVO SUPORTADAS
 # =============================================================================
 
-SUPPORTED_EXTENSIONS = {
-    ".md": "markdown",
-    ".txt": "text",
-    ".pdf": "pdf",
-    ".docx": "docx",
-    ".html": "html"
+SUPPORTED_EXTENSIONS = [
+    '.txt', '.md', '.py', '.js', '.html', '.css', '.json', '.xml', '.yaml', '.yml',
+    '.csv', '.tsv', '.log', '.ini', '.cfg', '.conf', '.sh', '.bat', '.ps1',
+    '.sql', '.r', '.scala', '.go', '.rust', '.cpp', '.c', '.h', '.hpp',
+    '.java', '.kt', '.swift', '.php', '.rb', '.pl', '.lua', '.dart'
+]
+
+# Configurações de encoding
+ENCODING_FALLBACKS = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
+
+# Mensagens de status
+STATUS_MESSAGES = {
+    'indexing': 'Indexando documentos...',
+    'searching': 'Buscando documentos...',
+    'complete': 'Operação concluída',
+    'error': 'Erro na operação'
+}
+
+# Template de resultado
+RESULT_TEMPLATE = {
+    'query': '',
+    'results': [],
+    'total_results': 0,
+    'processing_time': 0.0,
+    'status': 'success'
 }
 
 # =============================================================================
@@ -213,7 +267,10 @@ def create_directories():
     directories = [
         DATA_INDEX_DIR,
         FAISS_INDEX_DIR,
-        LOGS_DIR
+        PYTORCH_INDEX_DIR,
+        LOGS_DIR,
+        CACHE_DIR,
+        METRICS_DIR
     ]
     
     for directory in directories:

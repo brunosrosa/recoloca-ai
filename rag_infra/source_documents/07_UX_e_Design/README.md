@@ -18,7 +18,7 @@ Esta pasta contém toda a **documentação de UX/UI, design system, pesquisa de 
 
 ### ❌ Não Incluir:
 - Código de componentes (manter no repositório)
-- Documentação técnica (usar 02_Arquitetura_e_Design)
+- Documentação técnica (usar 03_Arquitetura_e_Design)
 - Assets finais (usar pasta específica de assets)
 
 ## 🔍 Prioridade RAG

@@ -395,8 +395,8 @@ Validar sistematicamente as principais premissas de negócio do Recoloca.ai ante
 - [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia base
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão e objetivos
 - [[docs/02_Requisitos/ERS.md]] (v1.1) - Especificação de requisitos
-- [[docs/08_Marketing_e_Vendas/ESTRATEGIA_GO_TO_MARKET.md]] (v1.1) - Estratégia de marketing
-- [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] (v1.1) - Métricas de negócio
+- [[ESTRATEGIA_GO_TO_MARKET]] (v1.1) - Estratégia de marketing
+- [[METRICAS_SUCESSO_BASE_MERCADO]] (v1.1) - Métricas de negócio
 - [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
 
 **Nota:** Este documento (v1.1) está totalmente alinhado com a metodologia de "Orquestração Inteligente" e "Specialized Intelligence" definida no [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), incorporando automação de processos de validação e medição contínua de eficácia.

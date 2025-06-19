@@ -510,7 +510,7 @@ _(Um diagrama Mermaid.js detalhado será incluído e mantido no [[../03_Arquitet
 
 Para garantir que os Agentes de IA Mentores operem com informações atualizadas, específicas do projeto e consistentes com a "Documentação Viva", será implementado um sistema de **Retrieval Augmented Generation (RAG)**.
 
-- **Base de Conhecimento para RAG:** Localizada na pasta [[../../rag_infra/source_documents/]]. Conterá versões otimizadas para RAG da documentação do projeto (ex: [[../../rag_infra/source_documents/ERS_para_RAG.md]]) e materiais de referência (ex: [[../../rag_infra/source_documents/PM_Knowledge/]] para o `@AgenteM_Orquestrador`).
+- **Base de Conhecimento para RAG:** Localizada na pasta [[../../rag_infra/source_documents/]]. Conterá versões otimizadas para RAG da documentação do projeto (ex: [[../../rag_infra/source_documents/02_Requisitos_e_Especificacoes/ERS_para_RAG.md]]) e materiais de referência (ex: [[../../rag_infra/source_documents/07_Conhecimento_Especializado/PM_Knowledge/]] para o `@AgenteM_Orquestrador`).
     
 - **Tecnologias RAG:**
     
@@ -582,7 +582,7 @@ _(Um diagrama Mermaid.js será mantido no arquivo [[../03_Arquitetura_e_Design/F
 
 ### 7.1. Configuração e Uso do Obsidian Kanban e Métricas de Sucesso
 
-O gerenciamento de tarefas será centralizado no **Obsidian** utilizando o plugin **"Kanban"**, conforme arquivo [[../00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]. Este Kanban será fundamental para acompanhar o progresso em direção aos objetivos do MVP, cujas métricas de sucesso estão detalhadas no documento [[../07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]].
+O gerenciamento de tarefas será centralizado no **Obsidian** utilizando o plugin **"Kanban"**, conforme arquivo [[../00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]. Este Kanban será fundamental para acompanhar o progresso em direção aos objetivos do MVP, cujas métricas de sucesso estão detalhadas no documento [[METRICAS_SUCESSO_BASE_MERCADO]].
 
 - **Estrutura de Colunas:** `🧊 Backlog Geral`, `🎯 A Fazer - Próxima Iteração`, `✍️ Preparação/Revisão - Maestro`, `🤖 Em Processamento - Agente IA`, `⚙️ Em Processamento - Maestro`, `🧐 Validação - Maestro (HITL)`, `✅ Concluído na Iteração`, `🚀 Deployado/Arquivado`.
     

@@ -231,6 +231,37 @@ sticker: lucide//align-start-horizontal
 	- [ ] Documentação de configuração e uso
 	- **Dependências:** [IMP-RAG-003] concluído
 	- **Definition of Done:** MCP Server funcional e documentado
+- [ ] **[REO-RAG-001]** Reorganização Estrutural da Infraestrutura RAG 🔺 \ #rag \ #reorganizacao \ #infraestrutura \ #critico \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
+	- [x] **[REO-DIR-001]** Criar estrutura de diretórios detalhada conforme proposta ✅ 2025-06-18
+		- [x] Implementar separação `core_logic/`, `tests/`, `scripts/`, `results_and_reports/`
+		- [x] Mover arquivos para diretórios apropriados por categoria
+		- [x] Validar estrutura final com padrões de projeto
+	- [x] **[REO-DEP-001]** Mapear e corrigir dependências entre arquivos ✅ 2025-06-18
+		- [x] Identificar todas as dependências de imports entre módulos
+		- [x] Documentar mapa de dependências atual
+		- [x] Planejar sequência de migração para minimizar quebras
+	- [x] **[REO-MIG-001]** Executar migração gradual por categoria ✅ 2025-06-18
+		- [x] Migrar arquivos de `core_logic/` primeiro (rag_indexer, rag_retriever, etc.)
+		- [x] Migrar testes de integração para `tests/`
+		- [x] Migrar scripts utilitários e demos para `scripts/`
+		- [x] Migrar relatórios e resultados para `results_and_reports/`
+	- [x] **[REO-IMP-001]** Atualizar imports e configurações ✅ 2025-06-18
+		- [x] Corrigir imports relativos em todos os arquivos migrados
+		- [x] Adicionar constantes PyTorch faltantes em constants.py
+		- [x] Validar funcionamento de todos os módulos core
+		- [x] Corrigir erros de import absolutos
+	- [ ] **[REO-TST-001]** Executar testes para validar reorganização
+		- [ ] Executar suite completa de testes após migração
+		- [ ] Validar funcionamento do MCP Server
+		- [ ] Testar indexação e retrieval após reorganização
+		- [ ] Manter cobertura de testes existente
+	- [ ] **[REO-DOC-001]** Atualizar documentação pós-reorganização
+		- [ ] Atualizar README.md da infraestrutura RAG
+		- [ ] Revisar documentação de setup e instalação
+		- [ ] Atualizar guias de desenvolvimento
+		- [ ] Documentar nova estrutura para outros agentes
+	- **Dependências:** [IMP-RAG-003] concluído
+	- **Definition of Done:** Infraestrutura RAG reorganizada, testada e documentada com nova estrutura modular
 
 
 ## ✅ CONCLUÍDO

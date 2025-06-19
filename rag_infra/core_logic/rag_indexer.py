@@ -35,25 +35,21 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core_logic.constants import (
-    SOURCE_DOCUMENTS_DIR,
-    FAISS_INDEX_DIR,
-    LOGS_DIR,
-    EMBEDDING_MODEL_NAME,
-    USE_GPU,
-    CHUNK_SIZE,
-    CHUNK_OVERLAP,
-    SEPARATORS,
-    FAISS_INDEX_FILE,
-    FAISS_METADATA_FILE,
-    FAISS_DOCUMENTS_FILE,
-    SUPPORTED_EXTENSIONS,
-    METADATA_FIELDS,
-    DOCUMENT_CATEGORIES,
-    STATUS_MESSAGES,
+from constants import (
+    RAG_ROOT_DIR, SOURCE_DOCUMENTS_DIR, FAISS_INDEX_DIR, FAISS_INDEX_FILE,
+    FAISS_DOCUMENTS_FILE, FAISS_METADATA_FILE, EMBEDDING_MODEL_NAME, USE_GPU,
+    PYTORCH_INDEX_DIR, PYTORCH_INDEX_FILE, PYTORCH_DOCUMENTS_FILE, PYTORCH_METADATA_FILE,
+    PYTORCH_EMBEDDINGS_FILE, PYTORCH_MAPPING_FILE,
+    LOGS_DIR, CACHE_DIR, METRICS_DIR,
+    ENABLE_METRICS, ENABLE_CACHING, ENABLE_PYTORCH_OPTIMIZATION,
+    PYTORCH_BATCH_SIZE, PYTORCH_MAX_MEMORY_GB,
+    FAISS_NPROBE, FAISS_EF_SEARCH,
+    CHUNK_SIZE, CHUNK_OVERLAP, MIN_CHUNK_SIZE,
+    SUPPORTED_EXTENSIONS, ENCODING_FALLBACKS,
+    STATUS_MESSAGES, RESULT_TEMPLATE,
     create_directories
 )
-from core_logic.embedding_model import EmbeddingModelManager, initialize_embedding_model, get_embedding_manager
+from embedding_model import EmbeddingModelManager, initialize_embedding_model, get_embedding_manager
 
 # Configurar logging
 logging.basicConfig(

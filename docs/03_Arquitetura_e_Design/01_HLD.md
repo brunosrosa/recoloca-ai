@@ -544,7 +544,7 @@ graph TD
 -   **Backend (FastAPI):** Aproveitar a natureza assíncrona do FastAPI para I/O-bound operations (chamadas para Supabase, LLMs, Stripe). Otimizar consultas ao banco de dados.
 -   **LLMs:** Escolher modelos apropriados (Flash vs. Pro) com base na complexidade da tarefa e latência aceitável. Otimizar prompts.
 -   **RAG:** Otimizar a recuperação de vetores e o tamanho dos chunks para balancear relevância e latência.
--   **Métricas Detalhadas:** Consultar [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] para métricas de negócio, performance e monitoramento completo.
+-   **Métricas Detalhadas:** Consultar [[METRICAS_SUCESSO_BASE_MERCADO]] para métricas de negócio, performance e monitoramento completo.
 
 #### 6.3.1. Métricas de "Specialized Intelligence"
 

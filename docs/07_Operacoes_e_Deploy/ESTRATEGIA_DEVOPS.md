@@ -109,7 +109,7 @@ Serão configurados pipelines separados para o backend e o frontend.
 ## 6. Monitoramento e Alertas (Pós-MVP Inicial)
 
 *   Inicialmente, o monitoramento será focado nas saídas dos workflows do GitHub Actions para identificar falhas de build, teste ou deploy.
-*   A integração com ferramentas de monitoramento de aplicação (ex: Sentry, Google Analytics para o frontend, logs da plataforma de hospedagem para o backend) será planejada para fases posteriores, alinhada com o documento [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] (v1.1).
+*   A integração com ferramentas de monitoramento de aplicação (ex: Sentry, Google Analytics para o frontend, logs da plataforma de hospedagem para o backend) será planejada para fases posteriores, alinhada com o documento [[METRICAS_SUCESSO_BASE_MERCADO]] (v1.1).
 
 ## 7. Próximos Passos e Evolução
 
@@ -176,7 +176,7 @@ Serão configurados pipelines separados para o backend e o frontend.
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão e objetivos
 - [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de alto nível
 - [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Decisões arquiteturais
-- [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] (v1.1) - Métricas de negócio
+- [[METRICAS_SUCESSO_BASE_MERCADO]] (v1.1) - Métricas de negócio
 - [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
 - [[docs/07_Operacoes_e_Deploy/GUIA_DEPLOY_BACKEND.md]] - Guia específico de deploy backend
 - [[docs/07_Operacoes_e_Deploy/GUIA_DEPLOY_FRONTEND.md]] - Guia específico de deploy frontend

@@ -27,18 +27,16 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core_logic.constants import (
-    FAISS_INDEX_DIR,
-    FAISS_DOCUMENTS_FILE,
-    FAISS_METADATA_FILE,
-    DEFAULT_TOP_K,
-    MIN_SIMILARITY_SCORE,
-    EMBEDDING_MODEL_NAME,
-    STATUS_MESSAGES,
-    RESULT_TEMPLATE,
-    LOGS_DIR
+from constants import (
+    PYTORCH_INDEX_DIR, PYTORCH_INDEX_FILE, PYTORCH_DOCUMENTS_FILE, PYTORCH_METADATA_FILE,
+    PYTORCH_EMBEDDINGS_FILE, PYTORCH_MAPPING_FILE,
+    EMBEDDING_MODEL_NAME, USE_GPU, DEFAULT_TOP_K, MIN_SIMILARITY_SCORE,
+    PYTORCH_BATCH_SIZE, PYTORCH_MAX_MEMORY_GB,
+    LOGS_DIR, CACHE_DIR, METRICS_DIR,
+    ENABLE_METRICS, ENABLE_CACHING
 )
-from core_logic.embedding_model import initialize_embedding_model, get_embedding_manager
+from torch_utils import is_cuda_available, safe_cuda_empty_cache, safe_tensor_cleanup
+from embedding_model import initialize_embedding_model, get_embedding_manager
 
 # Configurar logging
 logging.basicConfig(
@@ -116,7 +114,7 @@ class PyTorchGPURetriever:
         self.batch_size = batch_size
         
         # Configurar dispositivo
-        if force_cpu or not torch.cuda.is_available():
+        if force_cpu or not is_cuda_available():
             self.device = torch.device('cpu')
             logger.info("Usando CPU para busca vetorial")
         else:
@@ -387,13 +385,13 @@ class PyTorchGPURetriever:
         stats = {
             "is_loaded": self.is_loaded,
             "device": str(self.device),
-            "cuda_available": torch.cuda.is_available(),
+            "cuda_available": is_cuda_available(),
             "documents_count": len(self.documents),
             "cache_size": len(self._query_cache),
             "batch_size": self.batch_size
         }
         
-        if torch.cuda.is_available() and not self.force_cpu:
+        if is_cuda_available() and not self.force_cpu:
             stats.update({
                 "gpu_name": torch.cuda.get_device_name(0),
                 "gpu_memory_allocated": torch.cuda.memory_allocated(0),
@@ -446,11 +444,8 @@ class PyTorchGPURetriever:
         """
         Cleanup ao destruir o objeto.
         """
-        if hasattr(self, 'embeddings_tensor') and self.embeddings_tensor is not None:
-            del self.embeddings_tensor
-        
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
+        safe_tensor_cleanup('embeddings_tensor', self)
+        safe_cuda_empty_cache()
 
 # Função de conveniência para criar retriever
 def create_pytorch_gpu_retriever(force_cpu: bool = False, batch_size: int = 1000) -> PyTorchGPURetriever:

@@ -87,7 +87,7 @@ Tom técnico, pragmático, orientado a soluções e colaborativo. Trate como "Ma
 - `[[04_Agentes_IA/02_AGENTES_IA_MENTORES_OVERVIEW.md]]` - Integração com outros agentes
 
 **Fontes Técnicas Complementares:**
-- `[[rag_infra/source_documents/06_Tech_Stack/]]` - Documentação técnica
+- `[[rag_infra/source_documents/04_Tech_Stack/]]` - Documentação técnica
 - `[[docs/03_Arquitetura_e_Design/00_API_Specs/]]` - Especificações de API
 - Context7 MCP para documentação oficial de FastAPI, Pydantic, SQLAlchemy e bibliotecas Python
 - Web Search para melhores práticas e soluções técnicas atuais

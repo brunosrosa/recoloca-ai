@@ -18,12 +18,13 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-from .constants import (
+from constants import (
     EMBEDDING_MODEL_NAME,
     EMBEDDING_MODEL_CONFIG,
     STATUS_MESSAGES,
     LOGS_DIR
 )
+from torch_utils import is_cuda_available, safe_cuda_empty_cache
 
 # Configurar logging
 logging.basicConfig(
@@ -75,7 +76,7 @@ class EmbeddingModelManager:
             logger.info("Forçando uso de CPU")
             return "cpu"
         
-        if torch.cuda.is_available():
+        if is_cuda_available():
             gpu_count = torch.cuda.device_count()
             gpu_name = torch.cuda.get_device_name(0) if gpu_count > 0 else "Unknown"
             logger.info(STATUS_MESSAGES["gpu_available"])
@@ -321,22 +322,30 @@ class EmbeddingModelManager:
         """
         Descarrega o modelo da memória.
         """
-        if self.model is not None:
-            del self.model
-            self.model = None
-            self.is_loaded = False
-            
-            # Limpar cache CUDA se usando GPU
-            if self.device == "cuda" and torch.cuda.is_available():
-                torch.cuda.empty_cache()
-            
-            logger.info("Modelo descarregado da memória")
+        try:
+            if self.model is not None:
+                del self.model
+                self.model = None
+                self.is_loaded = False
+                
+                # Limpar cache CUDA se usando GPU
+                if self.device == "cuda":
+                    safe_cuda_empty_cache()
+                
+                logger.info("Modelo descarregado da memória")
+        except (AttributeError, RuntimeError):
+            # Ignorar erros durante cleanup - módulos podem já ter sido descarregados
+            pass
     
     def __del__(self):
         """
         Destrutor para limpeza automática.
         """
-        self.unload_model()
+        try:
+            self.unload_model()
+        except (AttributeError, RuntimeError):
+            # Ignorar erros durante cleanup - módulos podem já ter sido descarregados
+            pass
 
 # Instância global do gerenciador (singleton pattern)
 _embedding_manager: Optional[EmbeddingModelManager] = None

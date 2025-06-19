@@ -27,9 +27,17 @@ rag_infra/
 ├── logs/                   # Logs do sistema
 ├── mcp_server.py          # Servidor MCP
 ├── setup_rag.py           # Script de configuração
-├── test_rag_system.py     # Testes do sistema
-├── trae_mcp_config.json   # Configuração para Trae IDE
-└── environment.yml        # Dependências Conda
+├── tests/                 # Testes do sistema
+│   ├── test_rag_system.py
+│   ├── test_rag_validation.py
+│   └── ...
+├── config/                # Configurações
+│   ├── trae_mcp_config.json
+│   └── environment.yml
+├── scripts/               # Scripts utilitários
+│   ├── check_backend.py
+│   └── ...
+└── utils/                 # Utilitários e resultados
 ```
 
 ## 🚀 Instalação e Configuração
@@ -45,7 +53,7 @@ rag_infra/
 
 ```bash
 # Criar ambiente Conda
-conda env create -f rag_infra/environment.yml
+conda env create -f rag_infra/config/environment.yml
 conda activate rag_env
 
 # Ou instalar via pip
@@ -69,7 +77,7 @@ python rag_infra/setup_rag.py --verbose        # Modo debug
 
 ```bash
 # Testar sistema completo
-python rag_infra/test_rag_system.py
+python rag_infra/tests/test_rag_system.py
 
 # Testar componentes individuais
 python rag_infra/core_logic/rag_indexer.py

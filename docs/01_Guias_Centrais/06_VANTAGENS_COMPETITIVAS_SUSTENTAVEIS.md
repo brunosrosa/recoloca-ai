@@ -297,7 +297,7 @@ Brand & Trust                 :active, immediate2, 2025-07, 2026-06
 ## 7. Integração com Outros Documentos Estratégicos
 
 ### 7.1 Alinhamento com Go-to-Market
-- As estratégias de moats devem ser comunicadas no [[docs/08_Marketing_e_Vendas/ESTRATEGIA_GO_TO_MARKET.md]]
+- As estratégias de moats devem ser comunicadas no [[ESTRATEGIA_GO_TO_MARKET]]
 - Mensagens de diferenciação baseadas nos moats mais fortes em cada fase
 
 ### 7.2 Validação de Premissas
@@ -305,7 +305,7 @@ Brand & Trust                 :active, immediate2, 2025-07, 2026-06
 - Métricas de moats incluídas nos experimentos de validação
 
 ### 7.3 Métricas de Sucesso
-- KPIs de moats integrados ao [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]]
+- KPIs de moats integrados ao [[METRICAS_SUCESSO_BASE_MERCADO]]
 - Benchmarking contínuo contra concorrentes
 
 ## 8. Próximos Passos e Responsabilidades
@@ -373,8 +373,8 @@ A chave do sucesso está em **executar excelentemente os moats imediatos** enqua
 
 - [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia base
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão estratégica geral
-- [[docs/08_Marketing_e_Vendas/ESTRATEGIA_GO_TO_MARKET.md]] (v1.1) - Execução de mercado
-- [[docs/07_Metricas_e_Analytics/METRICAS_SUCESSO_BASE_MERCADO.md]] (v1.1) - Acompanhamento de performance
+- [[ESTRATEGIA_GO_TO_MARKET]] (v1.1) - Execução de mercado
+- [[METRICAS_SUCESSO_BASE_MERCADO]] (v1.1) - Acompanhamento de performance
 - [[docs/01_Guias_Centrais/PLANO_VALIDACAO_PREMISSAS_NEGOCIO.md]] (v1.1) - Validação de hipóteses
 - [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
 

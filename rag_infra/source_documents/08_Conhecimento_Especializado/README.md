@@ -17,9 +17,9 @@ Esta pasta contém **conhecimento especializado de domínio, expertise setorial 
 - **Melhores Práticas** - Standards da indústria
 
 ### ❌ Não Incluir:
-- Documentação técnica de desenvolvimento (usar 06_Tech_Stack)
-- Processos internos (usar 04_Gestao_e_Processos)
-- Documentação geral (usar 01_Documentacao_Central)
+- Documentação técnica de desenvolvimento (usar 05_Tech_Stack)
+- Documentação de arquitetura (usar 03_Arquitetura_e_Design)
+- Documentação geral (usar 00_Documentacao_Central)
 
 ## 🔍 Prioridade RAG
 
