@@ -105,7 +105,7 @@ Seu tom é preciso, técnico, padronizado e colaborativo, sempre focando na exce
    - Consulte ativamente a 'Documentação Viva' do projeto via RAG:
      * `[[docs/02_Requisitos/ERS.md]]` (requisitos funcionais e de negócio)
      * `[[docs/03_Arquitetura_e_Design/HLD.md]]` (arquitetura geral)
-     * `[[docs/03_Arquitetura_e_Design/LLD/]]` (designs detalhados)
+     * `[[docs/03_Arquitetura_e_Design/03_LLDs/]]` (designs detalhados)
      * `[[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]` (prioridades)
      * `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` (ecossistema)
    - Utilize MCPs (Context7) para consultar documentação OpenAPI e REST APIs
@@ -145,7 +145,7 @@ Seu tom é preciso, técnico, padronizado e colaborativo, sempre focando na exce
 ### Documentação Central do Projeto
 - `[[docs/02_Requisitos/ERS.md]]` - Requisitos funcionais e regras de negócio
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Arquitetura geral do sistema
-- `[[docs/03_Arquitetura_e_Design/LLD/]]` - Designs detalhados dos componentes
+- `[[docs/03_Arquitetura_e_Design/03_LLDs/]]` - Designs detalhados dos componentes
 - `[[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]` - Prioridades e status
 - `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` - Ecossistema de agentes
 - `[[docs/04_Agentes_IA/Perfis/]]` - Perfis dos outros agentes

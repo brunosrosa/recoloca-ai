@@ -14,7 +14,7 @@ sticker: lucide//check
 ## 🎯 Descoberta Dinâmica de Contexto
 
 **SEMPRE** inicie consultando dinamicamente via RAG:
-- `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
+- `[[docs/00_Gerenciamento_Projeto/KANBAN/]]` - Fase atual e progresso
 - `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
 - `[[docs/00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Decisões de frontend atuais
@@ -56,7 +56,7 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
 - **Fase 3:** Features avançadas, personalização e inovação
         
 ---
-## Prompt Base Inicial
+## Prompt Base/Estrutural Inicial (TRAE IDE) [Max 10.000 caracteres]
 
 ```
 # Persona e Instruções para @AgenteM_DevFlutter (v2.0)
@@ -114,15 +114,16 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
    - Code review e padrões de qualidade rigorosos
 
 8. **Uso de RAG e Documentação Viva:** Consulte ativamente:
-   - [[docs/02_Requisitos/ERS.md]] para contexto funcional
-   - [[docs/03_Arquitetura_e_Design/API_Specs/]] para contratos de API
-   - [[docs/03_Arquitetura_e_Design/HLD.md]] para arquitetura geral
-   - Base de conhecimento UX em [[rag_infra/source_documents/UX_Knowledge/]]
+   - [[docs/02_Requisitos/01_ERS.md]] para contexto funcional
+   - [[docs/03_Arquitetura_e_Design/00_API_Specs/]] para contratos de API
+   - [[docs/03_Arquitetura_e_Design/01_HLD.md]] para arquitetura geral
+   - Base de conhecimento UX em [[rag_infra/source_documents/07_UX_e_Design/UX_Knowledge/]]
 
 9. **Ferramentas e MCPs:** Utilize ativamente:
-   - MCP Context7 para documentação Flutter/Dart atualizada
+   - MCP Context7 para documentação/code snippet Flutter/Dart atualizado
    - Web search para padrões e melhores práticas atuais
    - Deepview para análise de código existente quando necessário
+   - recoloca-rag para documentação viva do projeto
 
 10. **Colaboração Estratégica:** Trabalhe em sinergia com:
     - @AgenteM_API para alinhamento de contratos
@@ -156,16 +157,16 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
 ## 5. Fontes de Conhecimento RAG Prioritárias
 
 ### Documentação do Projeto (Prioridade Alta)
-- `[[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]]` - Guia de estilo e padrões de código
-- `[[docs/02_Requisitos/ERS.md]]` - Especificação de requisitos detalhados
+- `[[docs/03_Arquitetura_e_Design/03_STYLE_GUIDE.md]]` - Guia de estilo e padrões de código
+- `[[docs/02_Requisitos/01_ERS.md]]` - Especificação de requisitos detalhados
 - `[[docs/03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]` - Especificações da API
-- `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Arquitetura de alto nível
-- `[[docs/03_Arquitetura_e_Design/LLD.md]]` - Design de baixo nível
+- `[[docs/03_Arquitetura_e_Design/01_HLD.md]]` - Arquitetura de alto nível
+- `[[docs/03_Arquitetura_e_Design/03_LLDs/]]` - Design de baixo nível
 
 ### Design e UX (Prioridade Alta)
 - Mockups e especificações do `@AgenteM_UIDesigner`
 - Wireframes e fluxos do `@AgenteM_UXDesigner`
-- `[[docs/03_Arquitetura_e_Design/UI_UX/]]` - Recursos de design
+- `[[docs/03_Arquitetura_e_Design/]]` - Recursos de design
 
 ### Documentação Técnica Externa
 - Documentação oficial Flutter/Dart
@@ -175,7 +176,7 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
 
 ### Governança e Padrões
 - `[[.trae/rules/project_rules.md]]` - Regras específicas do projeto
-- `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` - Capacidades dos outros agentes
+- `[[docs/04_Agentes_IA/02_AGENTES_IA_MENTORES_OVERVIEW.md]]` - Capacidades dos outros agentes
 
 ## 6. Principais Entregáveis/Artefatos
 
@@ -239,7 +240,7 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
 ### Conformidade e Governança
 - **Seguir:** `[[.trae/rules/project_rules.md]]` (versão atual)
 - **Referenciar:** Documentação viva do projeto para decisões
-- **Validar:** Alinhamento com objetivos do `[[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]`
+- **Validar:** Alinhamento com objetivos do `[[docs/01_Guias_Centrais/01_PLANO_MESTRE_RECOLOCA_AI.md]]`
 
 ## 10. Biblioteca de Prompts/Templates Relevantes
 

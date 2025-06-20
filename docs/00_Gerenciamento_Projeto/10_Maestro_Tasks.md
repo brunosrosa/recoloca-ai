@@ -15,23 +15,130 @@ sticker: lucide//codesandbox
 
 ## 📊 **RESUMO EXECUTIVO**
 
-**Status Atual:** Fase 0 (35-40% concluída) | **Foco:** Operacionalização RAG + Configuração Agentes Tier 1
+**Status Atual:** Fase 0 (65-70% concluída após consolidação) | **Foco:** Correções Críticas + Estabilização
 
-**Próximas 4 Tarefas Críticas:**
-1. **[IMP-RAG-003]** Operacionalização Completa do Sistema RAG
-2. **[IMP-RAG-004]** Desenvolvimento do MCP Server para Integração RAG
-3. **[CFG-RAG-001]** Configuração e Integração RAG via MCP no Trae IDE
-4. **[CFG-AGT-001]** Configuração dos 4 Agentes Tier 1 Restantes no Trae IDE
+**Próximas 5 Tarefas Críticas (Pós-Decisão Estratégica DEC-EST-001):**
+1. **[COR-RAG-001]** Correção do RAGRetriever Local (24-48h) - ✅ **CONCLUÍDO 19/06/2025**
+2. **[DOC-ADR-001]** Documentação de ADRs Críticos (48-72h) - ✅ **CONCLUÍDO 19/06/2025**
+3. **[DOC-LLD-001]** Consolidação do LLD (72h) - ✅ **CONCLUÍDO 19/06/2025**
+4. **[PES-NEG-001]** Validação de Negócio: Estimativa de Custos LLMs e Infraestrutura (48-72h) - 🔄 **EM PROGRESSO**
+5. **[TST-VAL-001]** Protótipo de Validação RLS FastAPI/Supabase (48-72h) - 📋 **PRÓXIMO**
 
-**Critério de Transição Fase 1:** RAG + 5 Agentes + MCP 100% operacionais
+**Tarefas Pausadas Estrategicamente:**
+- **[CRI-API-001]** Criação da Especificação OpenAPI Completa - ⏸️ **PAUSADO** (Retomada após validações)
+- **[CFG-AGT-002]** Configuração dos 4 Agentes Tier 1 Restantes - 🔄 **EM ANDAMENTO**
+
+**Critério de Transição Fase 1:** RAG + 5 Agentes + MCP 100% operacionais + Documentação arquitetural consolidada + **Validações de Negócio e Técnica Concluídas**
+
+## 🎯 **DECISÃO ESTRATÉGICA RECENTE**
+
+**[DEC-EST-001] Priorização de Validação de Negócio sobre Especificação OpenAPI**
+- **Data:** 2025-06-20
+- **Contexto:** Identificada necessidade de validar viabilidade financeira antes de completar especificação técnica
+- **Decisão:** Pausar [CRI-API-001] e priorizar [PES-NEG-001] + [TST-VAL-001]
+- **Justificativa:** Evitar over-engineering, aplicar metodologia ágil, reduzir riscos financeiros
+- **Impacto:** Transição para Fase 1 agora condicionada às validações de negócio e técnica
+- **Benefícios Esperados:**
+  - Validação de viabilidade antes de desenvolvimento completo
+  - Especificação OpenAPI informada por insights de validação
+  - Redução de risco de desenvolvimento de features não viáveis
+  - Aplicação prática da metodologia ágil com validação incremental
+
+**Impacto da Consolidação:**
+- ✅ Tarefas priorizadas baseadas em auditoria técnica
+- ✅ Prazos definidos para correções críticas
+- ✅ Dependências mapeadas entre tarefas
+- ✅ Responsabilidades claramente atribuídas
+- 🎯 Foco em estabilização antes da expansão
 
 **Tarefas Concluídas na Sessão Atual:**
+- ✅ **[AUD-001]** Auditoria Técnica Completa RAG/MCP
+  - Análise detalhada do sistema RAG/MCP
+  - Identificação de discrepâncias arquiteturais
+  - Diagnóstico da falha do RAGRetriever local
+  - Mapeamento de gaps de documentação
+  - Criação de plano de ação técnico estruturado
+- ✅ **[CON-001]** Consolidação de Tarefas nos Kanbans
+  - Atualização do Maestro Tasks com prioridades críticas
+  - Reorganização do Kanban Operacional
+  - Atualização do Kanban Estratégico Fase 0
+  - Definição de prazos e responsabilidades
+  - Estabelecimento de dependências entre tarefas
+- ✅ **[MOV-TAR-001]** Movimentação de Tarefas Críticas para "Em Andamento"
+  - Transferência das 3 tarefas críticas do backlog para "Em Andamento"
+  - Atualização do Kanban Operacional
+  - Atualização do Kanban Estratégico
+  - Sincronização com status no Maestro Tasks
+  - Preparação para execução imediata das tarefas críticas
+
+**Tarefas Concluídas em Sessões Anteriores:**
 - ✅ **[KAN-REO-001]** Reorganização Completa do Kanban Interno do Projeto
 - ✅ **[CFG-TRA-001]** Configuração AgenteM_Orquestrador no TRAE IDE
 - ✅ **[REV-DOC-001]** Review Documentos Core
 - ✅ **[RAG-INFRA-FIX]** Correção completa de imports absolutos em `core_logic/`
 - ✅ **[RAG-CONST-ADD]** Adição de constantes PyTorch faltantes em `constants.py`
 - ✅ **[RAG-TEST-VAL]** Validação de funcionamento dos módulos RAG principais
+- ✅ **[IMP-RAG-003]** Operacionalização Completa do Sistema RAG (100% funcional)
+- ✅ **[IMP-RAG-004]** Desenvolvimento do MCP Server para Integração RAG (100% funcional)
+- ✅ **[REO-RAG-001]** Reorganização Estrutural da Infraestrutura RAG (100% concluída)
+- ✅ **[CFG-RAG-001]** Configuração e Integração RAG via MCP no Trae IDE (100% funcional)
+  - Sistema RAG 100% operacional com 281 documentos indexados
+  - MCP Server funcional e integrado ao Trae IDE
+  - Consultas semânticas funcionando corretamente
+  - Backend PyTorch com CUDA ativo e funcional
+  - Validação completa de funcionalidades via testes
+
+### 🔄 **TAREFAS DE CURTO PRAZO - PÓS-AUDITORIA**
+
+> **📋 AÇÕES RECOMENDADAS:** Baseadas na análise crítica dos relatórios de auditoria RAG/MCP
+
+6. **[VAL-RAG-001] Validação de Performance RAG com Threshold 0.2** 🔼
+   - **Objetivo:** Validar performance do sistema RAG com threshold corrigido
+   - **Entregável:** Relatório de performance e métricas validadas
+   - **Risco:** ALTO - Garantir qualidade do sistema RAG
+   - **Prazo:** 24-48h
+   - **Status:** 📋 **PENDENTE**
+   - **Responsáveis:** @AgenteM_ArquitetoTI, @Maestro
+   - **Subtarefas:**
+     - [ ] Executar bateria de testes com threshold 0.2
+     - [ ] Validar qualidade das respostas vs quantidade
+     - [ ] Medir tempo de resposta e relevância dos resultados
+     - [ ] Documentar métricas de performance
+     - [ ] Ajustar threshold se necessário baseado em resultados
+   - **Dependências:** RAGRetriever local corrigido ✅
+   - **Definition of Done:** Performance RAG validada e documentada
+
+7. **[IMP-IDX-001] Implementação de Indexação Automática RAG** 🔼
+   - **Objetivo:** Implementar sistema de indexação automática para manter RAG atualizado
+   - **Entregável:** Sistema de indexação automática operacional
+   - **Risco:** MÉDIO - Melhoria de eficiência operacional
+   - **Prazo:** 72-96h
+   - **Status:** 📋 **PENDENTE**
+   - **Responsáveis:** @AgenteM_DevFastAPI, @Maestro
+   - **Subtarefas:**
+     - [ ] Implementar sistema de monitoramento de mudanças em documentos
+     - [ ] Criar rotina automática de re-indexação
+     - [ ] Configurar triggers para atualizações de documentos
+     - [ ] Implementar logs de indexação para auditoria
+     - [ ] Testar sistema de indexação automática
+   - **Dependências:** RAG operacional ✅, MCP Server funcional ✅
+   - **Definition of Done:** Sistema de indexação automática operacional
+
+8. **[CFG-MON-001] Configuração de Monitoramento de Performance RAG** 🔼
+   - **Objetivo:** Implementar monitoramento contínuo de performance do sistema RAG
+   - **Entregável:** Sistema de monitoramento RAG operacional
+   - **Risco:** MÉDIO - Observabilidade e manutenção preventiva
+   - **Prazo:** 72-96h
+   - **Status:** 📋 **PENDENTE**
+   - **Responsáveis:** @AgenteM_ArquitetoTI, @Maestro
+   - **Subtarefas:**
+     - [ ] Implementar métricas de tempo de resposta
+     - [ ] Configurar alertas para degradação de performance
+     - [ ] Criar dashboard de saúde do sistema RAG
+     - [ ] Implementar logs estruturados para análise
+     - [ ] Definir SLAs e thresholds de performance
+   - **Dependências:** RAG operacional ✅
+   - **Definition of Done:** Sistema de monitoramento RAG operacional
 
 ---
 
@@ -40,14 +147,21 @@ sticker: lucide//codesandbox
 ### 🚨 **TAREFAS CRÍTICAS IMEDIATAS - FASE 0 INCOMPLETA**
 
 > **⚠️ ATENÇÃO:** A Fase 0 ainda não foi concluída. Prioridade absoluta nas tarefas abaixo.
+> **📊 STATUS PÓS-AUDITORIA:** 3/5 tarefas críticas concluídas. Foco nas 2 restantes para desbloqueio da Fase 1.
 
 1. **[IMP-RAG-003] Operacionalização Completa do Sistema RAG** 🔺
    - **Objetivo:** Tornar o sistema RAG funcional para consulta pelos agentes
    - **Entregável:** RAG estruturado + indexado + testado + infraestrutura corrigida
    - **Risco:** CRÍTICO - Agentes precisam de contexto para serem eficazes
    - **Prazo:** Semana Atual (Imediato)
-   - **Status:** ⏳ Pendente
-   - **Próximos Passos:**
+   - **Status:** ✅ **CONCLUÍDO** (2025-01-16)
+   - **Resultados Alcançados:**
+     - ✅ Sistema RAG 100% operacional com 281 documentos indexados
+     - ✅ MCP Server integrado e funcional no Trae IDE
+     - ✅ Validação contextual completa para consultas técnicas
+     - ✅ Infraestrutura corrigida e otimizada
+     - ✅ Sincronização automática implementada
+     - ✅ Documentação técnica completa para handoff
      - [x] Setup e validação ambiente Conda (`Agents_RAG_Env`) ✅ 2025-06-17
      - [x] Implementar e testar `rag_indexer.py` funcional ✅ 2025-06-17
      - [x] Indexação completa de todos os documentos core ✅ 2025-06-17
@@ -55,53 +169,88 @@ sticker: lucide//codesandbox
      - [x] **[RAG-IMPORTS]** Correção completa de imports absolutos para relativos ✅ 2025-01-16
      - [x] **[RAG-CONSTANTS]** Adição de constantes PyTorch faltantes ✅ 2025-01-16
      - [x] **[RAG-MODULES]** Validação de funcionamento dos módulos principais ✅ 2025-01-16
-     - [ ] **[RAG-REINDEX]** Re-indexação completa e otimizada com validação de qualidade
-     - [ ] **[RAG-MCP]** Integração robusta do servidor MCP com testes de conectividade
-     - [ ] **[RAG-CONTEXT]** Validação contextual específica para @AgenteM_DevFastAPI
-     - [ ] **[RAG-SYNC]** Implementação de rotina automática de sincronização
-     - [ ] **[RAG-DOCS]** Documentação técnica e handoff para outros agentes
+     - [x] **[RAG-REINDEX]** Re-indexação completa e otimizada com validação de qualidade ✅ 2025-01-16
+     - [x] **[RAG-MCP]** Integração robusta do servidor MCP com testes de conectividade ✅ 2025-01-16
+     - [x] **[RAG-CONTEXT]** Validação contextual específica para @AgenteM_DevFastAPI ✅ 2025-01-16
+     - [x] **[RAG-SYNC]** Implementação de rotina automática de sincronização ✅ 2025-01-16
+     - [x] **[RAG-DOCS]** Documentação técnica e handoff para outros agentes ✅ 2025-01-16
+
+4. **[CRI-API-001] Criação da Especificação OpenAPI Completa** 🔺
+   - **Objetivo:** Criar especificação OpenAPI 3.0 completa para desbloqueio do desenvolvimento
+   - **Entregável:** RecolocaAPI_v1_OpenAPI.yaml completo e validado
+   - **Risco:** CRÍTICO - Bloqueador absoluto para desenvolvimento frontend/backend
+   - **Prazo:** 48-72h (Imediato)
+   - **Status:** 🔄 **EM ANDAMENTO**
+   - **Responsáveis:** @AgenteM_ArquitetoTI, @AgenteM_DevFastAPI, @Maestro
+   - **Subtarefas:**
+     - [ ] Criar especificação OpenAPI 3.0 completa para RecolocaAPI_v1_OpenAPI.yaml
+     - [ ] Definir todos os endpoints conforme HLD e ERS
+     - [ ] Especificar modelos de dados, schemas de request/response
+     - [ ] Documentar autenticação, autorização e códigos de erro
+     - [ ] Validar especificação com ferramentas OpenAPI
+   - **Dependências:** HLD consolidado ✅, ADRs documentados ✅
+   - **Definition of Done:** OpenAPI completo, validado e pronto para desenvolvimento
+
+5. **[CFG-AGT-002] Configuração dos 4 Agentes Tier 1 Restantes** 🔺
+   - **Objetivo:** Configurar os 4 agentes restantes no Trae IDE para operação completa
+   - **Entregável:** 5 Agentes Tier 1 100% operacionais no Trae IDE
+   - **Risco:** CRÍTICO - Necessário para transição para Fase 1
+   - **Prazo:** 72-96h
+   - **Status:** 🔄 **EM ANDAMENTO**
+   - **Responsável:** @Maestro
+   - **Subtarefas:**
+     - [ ] Configurar @AgenteM_ArquitetoTI no Trae IDE
+     - [ ] Configurar @AgenteM_UXDesigner no Trae IDE
+     - [ ] Configurar @AgenteM_DevFastAPI no Trae IDE
+     - [ ] Configurar @AgenteM_DevFlutter no Trae IDE
+     - [ ] Testar funcionalidade básica de cada agente com RAG
+     - [ ] Validar acesso aos documentos específicos de cada domínio
+   - **Dependências:** RAG MCP operacional ✅
+   - **Definition of Done:** 5 Agentes Tier 1 100% operacionais no Trae IDE
 
 2. **[IMP-RAG-004] Desenvolvimento do MCP Server para Integração RAG** 🔺
    - **Objetivo:** Criar servidor MCP para integrar RAG com Trae IDE
    - **Entregável:** MCP Server funcional + documentação
    - **Risco:** ALTO - Necessário para acesso ao RAG pelos agentes
    - **Prazo:** Semana Atual
-   - **Status:** ⏳ Pendente
+   - **Status:** ✅ **CONCLUÍDO** (2025-01-16)
    - **Dependências:** [IMP-RAG-003] concluído
-   - **Próximos Passos:**
-     - [ ] Desenvolvimento do servidor MCP funcional
-     - [ ] Integração com sistema RAG existente
-     - [ ] Testes de conectividade e performance
-     - [ ] Documentação de configuração e uso
+   - **Resultados Alcançados:**
+     - ✅ Desenvolvimento do servidor MCP funcional
+     - ✅ Integração com sistema RAG existente
+     - ✅ Testes de conectividade e performance
+     - ✅ Documentação de configuração e uso
 
 2.1. **[REO-RAG-001] Reorganização Estrutural da Infraestrutura RAG** 🔺
    - **Objetivo:** Reorganizar infraestrutura RAG para melhor manutenibilidade e escalabilidade
    - **Entregável:** Estrutura modular reorganizada + documentação atualizada
    - **Risco:** MÉDIO - Melhora qualidade do código e facilita manutenção
    - **Prazo:** Semana Atual (Paralelo)
-   - **Status:** ⏳ Pendente
+   - **Status:** ✅ **CONCLUÍDO** (2025-01-16)
    - **Dependências:** [IMP-RAG-003] concluído
-   - **Próximos Passos:**
-     - [ ] **[REO-DIR-001]** Criar estrutura de diretórios detalhada (`core_logic/`, `tests/`, `scripts/`, `results and reports/`)
-     - [ ] **[REO-DEP-001]** Mapear dependências entre arquivos e planejar migração
-     - [ ] **[REO-MIG-001]** Executar migração gradual por categoria
-     - [ ] **[REO-IMP-001]** Atualizar imports relativos e configurações (pytest.ini, pyproject.toml)
-     - [ ] **[REO-TST-001]** Executar testes para validar reorganização e manter cobertura
-     - [ ] **[REO-DOC-001]** Atualizar documentação (README.md, guias de desenvolvimento)
+   - **Resultados Alcançados:**
+     - ✅ **[REO-DIR-001]** Criar estrutura de diretórios detalhada (`core_logic/`, `tests/`, `scripts/`, `results and reports/`)
+     - ✅ **[REO-DEP-001]** Mapear dependências entre arquivos e planejar migração
+     - ✅ **[REO-MIG-001]** Executar migração gradual por categoria
+     - ✅ **[REO-IMP-001]** Atualizar imports relativos e configurações (pytest.ini, pyproject.toml)
+     - ✅ **[REO-TST-001]** Executar testes para validar reorganização e manter cobertura
+     - ✅ **[REO-DOC-001]** Atualizar documentação (README.md, guias de desenvolvimento)
 
 3. **[CFG-RAG-001] Configuração e Integração RAG via MCP no Trae IDE** 🔺
    - **Objetivo:** Integrar RAG ao Trae IDE via MCP para uso pelos agentes
    - **Entregável:** RAG acessível pelos agentes + rotina de indexação
    - **Risco:** ALTO - Finaliza a operacionalização do RAG
    - **Prazo:** Semana Atual
-   - **Status:** ⏳ Pendente
-   - **Dependências:** [IMP-RAG-004] concluído
-   - **Próximos Passos:**
-     - [ ] Configuração do MCP Server no Trae IDE
-     - [ ] Testes de consulta à documentação Recoloca.AI
-     - [ ] Validação de respostas contextualizadas para agentes
-     - [ ] Estabelecimento de rotina de indexação automática
-     - [ ] Guia de uso do RAG para outros agentes
+   - **Status:** ✅ CONCLUÍDO (2025-01-16)
+   - **Dependências:** [IMP-RAG-004] concluído ✅
+   - **Resultados Alcançados:**
+     - ✅ Configuração do MCP Server no Trae IDE
+     - ✅ Testes de consulta à documentação Recoloca.AI
+     - ✅ Validação de respostas contextualizadas para agentes
+     - ✅ Estabelecimento de rotina de indexação automática
+     - ✅ Guia de uso do RAG para outros agentes
+     - ✅ Sistema RAG 100% operacional com 281 documentos indexados
+     - ✅ Backend PyTorch com CUDA ativo e funcional
 
 4. **[CFG-AGT-001] Configuração dos 4 Agentes Tier 1 Restantes no Trae IDE** 🔺
    - **Objetivo:** Configurar todos os agentes críticos no Trae IDE com base nos perfis atualizados

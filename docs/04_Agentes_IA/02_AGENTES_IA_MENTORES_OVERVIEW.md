@@ -12,7 +12,7 @@ sticker: lucide//check
     
 - [[docs/01_Guias_Centrais/02_GUIA_AVANCADO.md]] (v1.1+)
     
-- [[docs/03_Arquitetura_e_Design/00_ADR/ADR_001_Ferramentas_Core.md]] (v1.0+)
+- [[docs/03_Arquitetura_e_Design/02_ADRs/ADR-001_Ferramentas_Core.md]] (v1.0+)
     
 - [[.trae/rules/project_rules.md]] (v1.3+)
     
@@ -324,7 +324,7 @@ Este ciclo reforça a importância da documentação não como uma tarefa poster
 ### Documentos Técnicos
 - [[docs/02_Requisitos/01_ERS.md]] - Especificação de Requisitos
 - [[docs/03_Arquitetura_e_Design/01_HLD.md]] - Arquitetura de Alto Nível
-- [[docs/03_Arquitetura_e_Design/00_ADR/ADR_001_Ferramentas_Core.md]] - Decisões Arquiteturais
+- [[docs/03_Arquitetura_e_Design/02_ADRs/ADR-001_Ferramentas_Core.md]] - Decisões Arquiteturais
 - [[.trae/rules/project_rules.md]] - Regras do Projeto
 
 ### Perfis de Agentes

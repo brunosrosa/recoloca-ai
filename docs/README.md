@@ -48,7 +48,7 @@ Documentação técnica e arquitetural:
 - **[[SISTEMA_ENTREGAVEIS_GATILHOS.md]]** - Sistema de entregáveis e gatilhos
 - **ADR/** - Architectural Decision Records
 - **API_Specs/** - Especificações de APIs
-- **LLD/** - Low-Level Design (detalhes de implementação)
+- **03_LLDs/** - Low-Level Design (detalhes de implementação)
 
 ### 🤖 04_Agentes_IA
 Documentação dos Agentes de IA Mentores:

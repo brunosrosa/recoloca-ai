@@ -3,7 +3,7 @@ sticker: lucide//palette
 ---
 # STYLE GUIDE - RECOLOCA.AI
 
-**Versão:** 1.0 (Estrutura Inicial)
+**Versão:** 1.0 (Estrutura Inicial Como MODELO - Não Aprovada)
 **Data de Criação:** Junho de 2025
 **Data de Última Atualização:** Junho de 2025
 **Autor:** @AgenteOrquestrador

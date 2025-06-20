@@ -1,4 +1,25 @@
-# Scripts Utilitários - Sistema RAG
+# Scripts RAG - Recoloca.ai [REORGANIZADO]
+
+⚠️ **AVISO DE REORGANIZAÇÃO ARQUITETURAL**
+
+Este diretório foi reorganizado conforme o plano arquitetural enterprise.
+Os scripts foram movidos para localizações mais apropriadas:
+
+## 📁 Nova Estrutura Organizacional
+
+### Scripts Movidos:
+- `demo_rag_system.py` → `utils/demos/`
+- `rag_optimization_suite.py` → `utils/optimization/`
+- `rebuild_index.py` → `utils/maintenance/`
+- `rag_auto_sync.py` → `utils/maintenance/`
+- `test_rag_final.py` → `tests/integration/`
+
+### Benefícios da Reorganização:
+- ✅ **Eliminação de duplicações funcionais**
+- ✅ **Estrutura enterprise-ready**
+- ✅ **Melhor manutenibilidade**
+- ✅ **Padrões de código consistentes**
+- ✅ **Separação clara de responsabilidades**
 
 Esta pasta contém scripts utilitários para manutenção e diagnóstico do sistema RAG.
 

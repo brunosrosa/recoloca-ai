@@ -169,7 +169,7 @@ Seguir `[[.trae/rules/project_rules.md]]` e `[[.trae/rules/user_rules_copy.md]]`
 
 ### Documentação Central do Projeto
 - `[[docs/03_Arquitetura_e_Design/00_API_Specs/]]` - Especificações completas da API
-- `[[docs/03_Arquitetura_e_Design/02_LLD/]]` - Low Level Designs específicos do backend
+- `[[docs/03_Arquitetura_e_Design/03_LLDs/]]` - Low Level Designs específicos do backend
 - `[[docs/02_Requisitos/01_ERS.md]]` - Especificação de requisitos e lógica de negócios
 - `[[docs/03_Arquitetura_e_Design/01_HLD.md]]` - Arquitetura geral do sistema
 - `[[docs/00_Gerenciamento_Projeto/KANBAN/]]` - Prioridades e status operacional

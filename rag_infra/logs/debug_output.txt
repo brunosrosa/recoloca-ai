@@ -1,0 +1,302 @@
+2025-06-19 08:15:43,173 - __main__ - INFO - Path adicionado: C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic
+2025-06-19 08:15:43,173 - __main__ - INFO - Importando rag_retriever...
+2025-06-19 08:15:43,371 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-06-19 08:15:43,437 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-06-19 08:15:43,464 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-19 08:15:43,472 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-19 08:15:56,225 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: cache_hit_rate_low
+2025-06-19 08:15:56,225 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: response_time_high
+2025-06-19 08:15:56,225 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: cpu_usage_high
+2025-06-19 08:15:56,225 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: memory_usage_high
+2025-06-19 08:15:56,237 - rag_infra.core_logic.rag_metrics_monitor - INFO - Coleta de mÚtricas iniciada
+2025-06-19 08:15:56,237 - rag_metrics_integration - INFO - Monitoramento de mÚtricas RAG iniciado
+2025-06-19 08:15:56,238 - __main__ - INFO - \u2705 rag_retriever importado com sucesso
+2025-06-19 08:15:56,238 - __main__ - INFO - Obtendo retriever...
+2025-06-19 08:15:56,266 - rag_retriever - INFO - GPU nvidia geforce rtx 2060 detectada - usando PyTorch em vez de FAISS-GPU
+2025-06-19 08:15:56,266 - rag_retriever - INFO - Usando PyTorchGPURetriever
+2025-06-19 08:15:56,266 - pytorch_gpu_retriever - INFO - Usando GPU para busca vetorial: NVIDIA GeForce RTX 2060
+2025-06-19 08:15:56,267 - __main__ - INFO - \u2705 Retriever obtido: <class 'rag_retriever.RAGRetriever'>
+2025-06-19 08:15:56,267 - __main__ - INFO - Testando inicializaþÒo...
+2025-06-19 08:15:56,267 - rag_retriever - INFO - Inicializando modelo de embedding...
+2025-06-19 08:15:56,267 - pytorch_gpu_retriever - INFO - Inicializando modelo de embedding...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 144, in initialize
+    success = initialize_embedding_model(force_cpu=self.force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 381, in initialize_embedding_model
+    manager = get_embedding_manager(force_cpu=force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 366, in get_embedding_manager
+    _embedding_manager = EmbeddingModelManager(force_cpu=force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 58, in __init__
+    self.device = self._detect_device(force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 82, in _detect_device
+    logger.info(STATUS_MESSAGES["gpu_available"])
+Message: '\U0001f680 GPU detectada e disponÝvel para FAISS'
+Arguments: ()
+2025-06-19 08:15:56,268 - embedding_model - INFO - \U0001f680 GPU detectada e disponÝvel para FAISS
+2025-06-19 08:15:56,286 - embedding_model - INFO - GPU detectada: NVIDIA GeForce RTX 2060 (Total: 1)
+2025-06-19 08:15:56,286 - embedding_model - INFO - EmbeddingModelManager inicializado. Dispositivo: cuda
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4e5' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 144, in initialize
+    success = initialize_embedding_model(force_cpu=self.force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 382, in initialize_embedding_model
+    return manager.load_model(use_langchain=use_langchain)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 101, in load_model
+    logger.info(STATUS_MESSAGES["model_loading"].format(model=self.model_name))
+Message: '\U0001f4e5 Carregando modelo de embedding: BAAI/bge-m3'
+Arguments: ()
+2025-06-19 08:15:56,286 - embedding_model - INFO - \U0001f4e5 Carregando modelo de embedding: BAAI/bge-m3
+C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py:135: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  return HuggingFaceEmbeddings(
+2025-06-19 08:15:56,292 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-06-19 08:15:56,299 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-06-19 08:15:56,521 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/modules.json HTTP/1.1" 200 0
+2025-06-19 08:15:56,525 - filelock - DEBUG - Attempting to acquire lock 2254154981664 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-06-19 08:15:56,526 - filelock - DEBUG - Lock 2254154981664 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-06-19 08:15:56,695 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/modules.json HTTP/1.1" 200 349
+C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\.venv\Lib\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\rosas\.cache\huggingface\hub\models--BAAI--bge-m3. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+2025-06-19 08:15:56,722 - filelock - DEBUG - Attempting to release lock 2254154981664 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-06-19 08:15:56,722 - filelock - DEBUG - Lock 2254154981664 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-06-19 08:15:56,877 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-06-19 08:15:56,886 - filelock - DEBUG - Attempting to acquire lock 2254137556688 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\1fba91c78a6c8e17227058ab6d4d3acb5d8630a9.lock
+2025-06-19 08:15:56,887 - filelock - DEBUG - Lock 2254137556688 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\1fba91c78a6c8e17227058ab6d4d3acb5d8630a9.lock
+2025-06-19 08:15:57,110 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 123
+2025-06-19 08:15:57,114 - filelock - DEBUG - Attempting to release lock 2254137556688 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\1fba91c78a6c8e17227058ab6d4d3acb5d8630a9.lock
+2025-06-19 08:15:57,115 - filelock - DEBUG - Lock 2254137556688 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\1fba91c78a6c8e17227058ab6d4d3acb5d8630a9.lock
+2025-06-19 08:15:57,267 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/README.md HTTP/1.1" 200 0
+2025-06-19 08:15:57,269 - filelock - DEBUG - Attempting to acquire lock 2254155860240 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e5a320176edd6ee1cfb256e68ee5ac0004de9447.lock
+2025-06-19 08:15:57,269 - filelock - DEBUG - Lock 2254155860240 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e5a320176edd6ee1cfb256e68ee5ac0004de9447.lock
+2025-06-19 08:15:57,498 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/README.md HTTP/1.1" 200 15822
+2025-06-19 08:15:57,502 - filelock - DEBUG - Attempting to release lock 2254155860240 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e5a320176edd6ee1cfb256e68ee5ac0004de9447.lock
+2025-06-19 08:15:57,502 - filelock - DEBUG - Lock 2254155860240 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e5a320176edd6ee1cfb256e68ee5ac0004de9447.lock
+2025-06-19 08:15:57,671 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/modules.json HTTP/1.1" 200 0
+2025-06-19 08:15:57,823 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-06-19 08:15:57,825 - filelock - DEBUG - Attempting to acquire lock 2254154934144 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\0140ba1eac83a3c9b857d64baba91969d988624b.lock
+2025-06-19 08:15:57,826 - filelock - DEBUG - Lock 2254154934144 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\0140ba1eac83a3c9b857d64baba91969d988624b.lock
+2025-06-19 08:15:57,974 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/sentence_bert_config.json HTTP/1.1" 200 54
+2025-06-19 08:15:57,977 - filelock - DEBUG - Attempting to release lock 2254154934144 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\0140ba1eac83a3c9b857d64baba91969d988624b.lock
+2025-06-19 08:15:57,977 - filelock - DEBUG - Lock 2254154934144 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\0140ba1eac83a3c9b857d64baba91969d988624b.lock
+2025-06-19 08:15:58,154 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-06-19 08:15:58,306 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/config.json HTTP/1.1" 200 0
+2025-06-19 08:15:58,309 - filelock - DEBUG - Attempting to acquire lock 2254154933840 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e6eda1c72da8f9dc30fdd9b69c73d35af3b7a7ad.lock
+2025-06-19 08:15:58,311 - filelock - DEBUG - Lock 2254154933840 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e6eda1c72da8f9dc30fdd9b69c73d35af3b7a7ad.lock
+2025-06-19 08:15:58,462 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/config.json HTTP/1.1" 200 687
+2025-06-19 08:15:58,465 - filelock - DEBUG - Attempting to release lock 2254154933840 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e6eda1c72da8f9dc30fdd9b69c73d35af3b7a7ad.lock
+2025-06-19 08:15:58,466 - filelock - DEBUG - Lock 2254154933840 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\e6eda1c72da8f9dc30fdd9b69c73d35af3b7a7ad.lock
+2025-06-19 08:16:00,999 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/model.safetensors HTTP/1.1" 404 0
+2025-06-19 08:16:01,161 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/model.safetensors.index.json HTTP/1.1" 404 0
+2025-06-19 08:16:01,318 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2025-06-19 08:16:01,320 - filelock - DEBUG - Attempting to acquire lock 2254268187568 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38.lock
+2025-06-19 08:16:01,321 - filelock - DEBUG - Lock 2254268187568 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38.lock
+2025-06-19 08:16:01,326 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cdn-lfs-us-1.hf.co:443
+2025-06-19 08:16:01,410 - urllib3.connectionpool - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/23/2c/232ca60237b0bb19bb6c28c5a6c8af79f2e423333a9626aad445543b80fbf31e/b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1750334647&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1MDMzNDY0N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzIzLzJjLzIzMmNhNjAyMzdiMGJiMTliYjZjMjhjNWE2YzhhZjc5ZjJlNDIzMzMzYTk2MjZhYWQ0NDU1NDNiODBmYmYzMWUvYjVlMGNlMzQ3MGFiZjVlZjM4MzFhYTFiZDU1NTNiNDg2ODAzZTgzMjUxNTkwYWI3ZmYzNWExMTdjZjZhYWQzOD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=h74ELmv-aFDoinAF400htqGvg~XbpOHyBsZXEWhar4WjfRuZutsSO2lbPvRqJuW7LWcqWTEfBFhm6rAY9~xyo8cGI3MSwoMJCEL5PSXYThec~YDOsQP9QLuQNV0tbDhn9dcFftG6gIxSjL~zOyU0od9k0wUXxPWrwgJbnzPx8WH9GMM-5QK57y5wAPqtBARDvF8nXTHUCgnc5g8cV0i0XY57brZdlVN1oh1W3dbT2Su2aDHLmR6wMVBNIRlRC~R39VPDsn7ti8nIdGdHjDjdZ6AJIKQdLmWYn6i4WWSl8c6RwC-wK94HpmpM7pK2ZKAnBiDt2WGYyUPzRwwgiZIsIw__&Key-Pair-Id=K24J24Z295AEI9 HTTP/1.1" 200 2271145830
+2025-06-19 08:16:26,252 - rag_infra.core_logic.rag_metrics_monitor - WARNING - Erro ao coletar mÚtricas GPU: pynvml does not seem to be installed or it can't be imported.
+2025-06-19 08:16:26,252 - rag_infra.core_logic.rag_metrics_monitor - WARNING - ALERTA: cache_hit_rate_low - cache_hit_rate lt 0.6 (atual: 0.00)
+2025-06-19 08:16:53,024 - filelock - DEBUG - Attempting to release lock 2254268187568 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38.lock
+2025-06-19 08:16:53,025 - filelock - DEBUG - Lock 2254268187568 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38.lock
+2025-06-19 08:16:53,183 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/model.safetensors HTTP/1.1" 404 0
+2025-06-19 08:16:53,185 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-06-19 08:16:53,420 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3 HTTP/1.1" 200 5219
+2025-06-19 08:16:53,619 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/commits/main HTTP/1.1" 200 9525
+2025-06-19 08:16:53,828 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/discussions?p=0 HTTP/1.1" 200 30397
+2025-06-19 08:16:54,044 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/commits/refs%2Fpr%2F118 HTTP/1.1" 200 10490
+2025-06-19 08:16:54,221 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/refs%2Fpr%2F118/model.safetensors.index.json HTTP/1.1" 404 0
+2025-06-19 08:16:54,235 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-06-19 08:16:54,237 - filelock - DEBUG - Attempting to acquire lock 2254269449632 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\dc69ac559dcba2694012009aaa108c614541789a.lock
+2025-06-19 08:16:54,238 - filelock - DEBUG - Lock 2254269449632 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\dc69ac559dcba2694012009aaa108c614541789a.lock
+2025-06-19 08:16:54,364 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/refs%2Fpr%2F118/model.safetensors HTTP/1.1" 302 0
+2025-06-19 08:16:54,366 - filelock - DEBUG - Attempting to acquire lock 2254269448544 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\993b2248881724788dcab8c644a91dfd63584b6e5604ff2037cb5541e1e38e7e.lock
+2025-06-19 08:16:54,367 - filelock - DEBUG - Lock 2254269448544 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\993b2248881724788dcab8c644a91dfd63584b6e5604ff2037cb5541e1e38e7e.lock
+2025-06-19 08:16:54,369 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cdn-lfs-us-1.hf.co:443
+2025-06-19 08:16:54,382 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/tokenizer_config.json HTTP/1.1" 200 444
+2025-06-19 08:16:54,384 - filelock - DEBUG - Attempting to release lock 2254269449632 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\dc69ac559dcba2694012009aaa108c614541789a.lock
+2025-06-19 08:16:54,385 - filelock - DEBUG - Lock 2254269449632 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\dc69ac559dcba2694012009aaa108c614541789a.lock
+2025-06-19 08:16:54,434 - urllib3.connectionpool - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/23/2c/232ca60237b0bb19bb6c28c5a6c8af79f2e423333a9626aad445543b80fbf31e/993b2248881724788dcab8c644a91dfd63584b6e5604ff2037cb5541e1e38e7e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1750333773&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1MDMzMzc3M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzIzLzJjLzIzMmNhNjAyMzdiMGJiMTliYjZjMjhjNWE2YzhhZjc5ZjJlNDIzMzMzYTk2MjZhYWQ0NDU1NDNiODBmYmYzMWUvOTkzYjIyNDg4ODE3MjQ3ODhkY2FiOGM2NDRhOTFkZmQ2MzU4NGI2ZTU2MDRmZjIwMzdjYjU1NDFlMWUzOGU3ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=nA40GgNNuGThrbH~LmcAX~UiAhbinlFha32sp3IanHldCYs5x-XLqpCayIy~SketuEjIY4BxzS2jemnOtftmakJ5qafkgjBbadbqZOkMI6BdlrrC0O08IlAwGrgXBI0haCVi7~sxMsjj7S9w74xzVH6OpCscETe992uopcBf-v9MnyZWMdIZm90dgn5E0vZbYz7qPAkN8-qJd1yVPYKyHFKrVML3LGztZSmbSu3-v87twSf84FxHayO3OMtJbdDyOsXus0Hq9sCH6uS9fekNndXrlMGhPCfpKdMmWYBXWPSDhdNznOPeB4vqDL40XkwTEBEgrBp-a7~3KGAjN0R-NQ__&Key-Pair-Id=K24J24Z295AEI9 HTTP/1.1" 200 2271064456
+2025-06-19 08:16:54,541 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-06-19 08:16:54,734 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/sentencepiece.bpe.model HTTP/1.1" 302 0
+2025-06-19 08:16:54,736 - filelock - DEBUG - Attempting to acquire lock 2254268739664 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-06-19 08:16:54,737 - filelock - DEBUG - Lock 2254268739664 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-06-19 08:16:54,795 - urllib3.connectionpool - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/23/2c/232ca60237b0bb19bb6c28c5a6c8af79f2e423333a9626aad445543b80fbf31e/cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27sentencepiece.bpe.model%3B+filename%3D%22sentencepiece.bpe.model%22%3B&Expires=1750335415&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1MDMzNTQxNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzIzLzJjLzIzMmNhNjAyMzdiMGJiMTliYjZjMjhjNWE2YzhhZjc5ZjJlNDIzMzMzYTk2MjZhYWQ0NDU1NDNiODBmYmYzMWUvY2ZjODE0NmFiZTJhMDQ4OGU5ZTJhMGM1NmRlNzk1MmY3YzExYWIwNTllY2ExNDVhMGE3MjdhZmNlMGRiMjg2NT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=TFJvUSl3wewNpEaFik2hdNfGi2r02Wu3mySelmJz879Y5uFXBSMMSfX1sSeWTLP3mKMc~0pyqLdfMHzwdLdth6FtoT8V0WUpUPP93OYhn4WvWwhIiN7Vj7WZAUkPLg3rizyi3p3D2CCViFx~hDOv01iaqhVewiIae1AyMhPMtWLnElPVIZqOeWB6DGZcKiPX5jXx47rHKmmmhteJ-Fbsbw8HMTLkooEoly7L6k4a2cuogaZQbMLvF6H9cmFddXJUrEmdP~eyHzkZvT6NGgcMfkYqpzfGBVr1~xOdMI2ChMQvVACT90xO8XDTcclTR4KayPEIs-ef8ySnOHh4j24cRA__&Key-Pair-Id=K24J24Z295AEI9 HTTP/1.1" 200 5069051
+2025-06-19 08:16:55,014 - filelock - DEBUG - Attempting to release lock 2254268739664 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-06-19 08:16:55,015 - filelock - DEBUG - Lock 2254268739664 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-06-19 08:16:55,187 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/tokenizer.json HTTP/1.1" 302 0
+2025-06-19 08:16:55,189 - filelock - DEBUG - Attempting to acquire lock 2254268739664 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08.lock
+2025-06-19 08:16:55,190 - filelock - DEBUG - Lock 2254268739664 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08.lock
+2025-06-19 08:16:55,232 - urllib3.connectionpool - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/23/2c/232ca60237b0bb19bb6c28c5a6c8af79f2e423333a9626aad445543b80fbf31e/21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27tokenizer.json%3B+filename%3D%22tokenizer.json%22%3B&response-content-type=application%2Fjson&Expires=1750335026&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1MDMzNTAyNn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzIzLzJjLzIzMmNhNjAyMzdiMGJiMTliYjZjMjhjNWE2YzhhZjc5ZjJlNDIzMzMzYTk2MjZhYWQ0NDU1NDNiODBmYmYzMWUvMjExMDZiNmQ3ZGFiMjk1MmMxZDQ5NmZiMjFkNWRjOWRiNzVjMjhlZDM2MWEwNWY1MDIwYmJiYTI3ODEwZGQwOD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=gxSAgnJRrdYg0RY2D2Pqc~ZUzNa2xzPEKEThVv0PQV9v-r57nrhR8aHFcYM2yiZ68~75xJfh1WC~SS~aJlh8tuVy72ET7k3E3LBr500gj~r-49ebQAXBmnszX2LHyMpBFZkBV2NRklc2KtjD~ZWcVkQgQTe0a6Ui-Kf5F7HiQidQC5dEhQSrabzAIthGhrINT0uBwPLi3BhFs3Ezz1tGhf6iCMlT-t1VkrIYrMycZhwWES0sO-LTdpFC34AFHfgkFBt-UnIk1S3liWOAVna7Hngs31csbgnp-79E3gazSvnaPyvbRClc7pkcki38gui0lJ2idiMJ64Kf-A5O6gz1FQ__&Key-Pair-Id=K24J24Z295AEI9 HTTP/1.1" 200 17098108
+2025-06-19 08:16:56,102 - filelock - DEBUG - Attempting to release lock 2254268739664 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08.lock
+2025-06-19 08:16:56,103 - filelock - DEBUG - Lock 2254268739664 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08.lock
+2025-06-19 08:16:56,260 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2025-06-19 08:16:56,268 - rag_infra.core_logic.rag_metrics_monitor - WARNING - Erro ao coletar mÚtricas GPU: pynvml does not seem to be installed or it can't be imported.
+2025-06-19 08:16:56,426 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+2025-06-19 08:16:56,428 - filelock - DEBUG - Attempting to acquire lock 2254269150176 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b1879d702821e753ffe4245048eee415d54a9385.lock
+2025-06-19 08:16:56,428 - filelock - DEBUG - Lock 2254269150176 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b1879d702821e753ffe4245048eee415d54a9385.lock
+2025-06-19 08:16:56,582 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/main/special_tokens_map.json HTTP/1.1" 200 964
+2025-06-19 08:16:56,585 - filelock - DEBUG - Attempting to release lock 2254269150176 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b1879d702821e753ffe4245048eee415d54a9385.lock
+2025-06-19 08:16:56,585 - filelock - DEBUG - Lock 2254269150176 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\b1879d702821e753ffe4245048eee415d54a9385.lock
+2025-06-19 08:16:56,762 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/chat_template.jinja HTTP/1.1" 404 0
+2025-06-19 08:16:57,856 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/revision/main HTTP/1.1" 200 5219
+2025-06-19 08:16:57,859 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-06-19 08:16:58,134 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/1_Pooling/config.json HTTP/1.1" 200 0
+2025-06-19 08:16:58,136 - filelock - DEBUG - Attempting to acquire lock 2254269149936 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\9bd85925f325e25246d94c4918dc02ab98f2a1b7.lock
+2025-06-19 08:16:58,136 - filelock - DEBUG - Lock 2254269149936 acquired on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\9bd85925f325e25246d94c4918dc02ab98f2a1b7.lock
+2025-06-19 08:16:58,360 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/1_Pooling/config.json HTTP/1.1" 200 191
+2025-06-19 08:16:58,364 - filelock - DEBUG - Attempting to release lock 2254269149936 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\9bd85925f325e25246d94c4918dc02ab98f2a1b7.lock
+2025-06-19 08:16:58,364 - filelock - DEBUG - Lock 2254269149936 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\9bd85925f325e25246d94c4918dc02ab98f2a1b7.lock
+2025-06-19 08:16:58,573 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3 HTTP/1.1" 200 5219
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 144, in initialize
+    success = initialize_embedding_model(force_cpu=self.force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 382, in initialize_embedding_model
+    return manager.load_model(use_langchain=use_langchain)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 112, in load_model
+    logger.info(STATUS_MESSAGES["model_loaded"])
+Message: '\u2705 Modelo carregado com sucesso'
+Arguments: ()
+2025-06-19 08:17:00,000 - embedding_model - INFO - \u2705 Modelo carregado com sucesso
+2025-06-19 08:17:00,002 - embedding_model - INFO - Tempo de carregamento: 63.71s
+2025-06-19 08:17:00,603 - embedding_model - DEBUG - Embedding gerado em 0.601s para: Teste de funcionamento do modelo de embedding...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 144, in initialize
+    success = initialize_embedding_model(force_cpu=self.force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 382, in initialize_embedding_model
+    return manager.load_model(use_langchain=use_langchain)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 116, in load_model
+    self._test_model()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 172, in _test_model
+    logger.info(f"\u2705 Teste do modelo bem-sucedido. DimensÒo: {len(embedding)}")
+Message: '\u2705 Teste do modelo bem-sucedido. DimensÒo: 1024'
+Arguments: ()
+2025-06-19 08:17:00,604 - embedding_model - INFO - \u2705 Teste do modelo bem-sucedido. DimensÒo: 1024
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 57: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 148, in initialize
+    logger.info("\u2705 Modelo de embedding inicializado")
+Message: '\u2705 Modelo de embedding inicializado'
+Arguments: ()
+2025-06-19 08:17:00,606 - pytorch_gpu_retriever - INFO - \u2705 Modelo de embedding inicializado
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 49: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 241, in initialize
+    logger.info("\u2705 PyTorchGPURetriever inicializado com sucesso")
+Message: '\u2705 PyTorchGPURetriever inicializado com sucesso'
+Arguments: ()
+2025-06-19 08:17:00,608 - rag_retriever - INFO - \u2705 PyTorchGPURetriever inicializado com sucesso
+2025-06-19 08:17:00,609 - __main__ - INFO - Resultado da inicializaþÒo: True
+2025-06-19 08:17:00,610 - __main__ - INFO - \u2705 InicializaþÒo bem-sucedida
+2025-06-19 08:17:00,610 - __main__ - INFO - Testando carregamento do Ýndice...
+2025-06-19 08:17:00,610 - rag_retriever - INFO - Carregando Ýndice PyTorch...
+2025-06-19 08:17:00,610 - pytorch_gpu_retriever - ERROR - Erro ao carregar dados: name 'FAISS_INDEX_DIR' is not defined
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 50: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 47, in test_retriever_initialization
+    load_result = retriever.load_index()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 279, in load_index
+    logger.error("\u274c Falha ao carregar Ýndice PyTorch")
+Message: '\u274c Falha ao carregar Ýndice PyTorch'
+Arguments: ()
+2025-06-19 08:17:00,610 - rag_retriever - ERROR - \u274c Falha ao carregar Ýndice PyTorch
+2025-06-19 08:17:00,611 - __main__ - INFO - Resultado do carregamento: False
+2025-06-19 08:17:00,612 - __main__ - ERROR - \u274c Falha ao carregar Ýndice
+=== Teste de InicializaþÒo do Retriever RAG ===
+
+=== Resultado Final: SUCESSO ===
+2025-06-19 08:17:26,279 - rag_infra.core_logic.rag_metrics_monitor - WARNING - Erro ao coletar mÚtricas GPU: pynvml does not seem to be installed or it can't be imported.
+2025-06-19 08:17:46,729 - filelock - DEBUG - Attempting to release lock 2254269448544 on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\993b2248881724788dcab8c644a91dfd63584b6e5604ff2037cb5541e1e38e7e.lock
+2025-06-19 08:17:46,729 - filelock - DEBUG - Lock 2254269448544 released on C:\Users\rosas\.cache\huggingface\hub\.locks\models--BAAI--bge-m3\993b2248881724788dcab8c644a91dfd63584b6e5604ff2037cb5541e1e38e7e.lock

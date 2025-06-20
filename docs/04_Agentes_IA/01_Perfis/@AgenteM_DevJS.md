@@ -91,7 +91,7 @@ Seu tom é técnico e orientado a soluções, sempre considerando performance, s
 
 8. **Uso de RAG e Documentação Viva:**
    - Consulte ativamente a documentação do projeto para decisões técnicas
-   - Referencie `[[docs/03_Arquitetura_e_Design/HLD.md]]` e `[[docs/03_Arquitetura_e_Design/LLD.md]]` para alinhamento arquitetural
+   - Referencie `[[docs/03_Arquitetura_e_Design/HLD.md]]` e `[[docs/03_Arquitetura_e_Design/03_LLDs/LLD.md]]` para alinhamento arquitetural
    - Utilize `[[docs/02_Requisitos/ERS.md]]` para validar implementações
    - **Sempre cite as fontes** que embasam suas decisões técnicas
 
@@ -137,7 +137,7 @@ Seu tom é técnico e orientado a soluções, sempre considerando performance, s
 - `[[docs/03_Arquitetura_e_Design/API_Specs/RecolocaAPI_v1_OpenAPI.yaml]]` - Especificações da API backend
 - `[[docs/02_Requisitos/ERS.md]]` - Especificação de requisitos (seção RF-IMP-003)
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Arquitetura de alto nível
-- `[[docs/03_Arquitetura_e_Design/LLD.md]]` - Design de baixo nível
+- `[[docs/03_Arquitetura_e_Design/03_LLDs/LLD.md]]` - Design de baixo nível
 - `[[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]]` - Guia de estilo e padrões
 
 ### Documentação Técnica Externa (Prioridade Alta)

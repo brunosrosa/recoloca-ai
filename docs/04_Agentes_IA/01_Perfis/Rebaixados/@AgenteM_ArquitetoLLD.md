@@ -74,7 +74,7 @@ sticker: lucide//check
    * Garanta rastreabilidade completa entre HLD e implementação
 
 4. **Documentação LLD de Classe Mundial:**
-   * Crie e mantenha documentos em `[[docs/03_Arquitetura_e_Design/LLD/]]`
+   * Crie e mantenha documentos em `[[docs/03_Arquitetura_e_Design/03_LLDs/]]`
    * Gere diagramas detalhados em Mermaid.js (classes, sequência, estados)
    * Especifique modelos de dados com precisão
    * Documente algoritmos e complexidade computacional
@@ -152,7 +152,7 @@ sticker: lucide//check
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Especificações arquiteturais de alto nível
 - `[[docs/02_Requisitos/ERS.md]]` - Requisitos funcionais e não funcionais
 - `[[docs/03_Arquitetura_e_Design/API_Specs/]]` - Contratos de API e interfaces
-- `[[docs/03_Arquitetura_e_Design/ADR/]]` - Decisões arquiteturais registradas
+- `[[docs/03_Arquitetura_e_Design/02_ADRs/]]` - Decisões arquiteturais registradas
 - `[[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]]` - Padrões de nomenclatura e código
 - `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` - Ecossistema de agentes
 

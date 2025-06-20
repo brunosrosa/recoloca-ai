@@ -1,0 +1,2024 @@
+openapi: 3.0.3
+info:
+  title: Recoloca.AI API
+  description: |
+    API RESTful para a plataforma Recoloca.AI - Sistema de recolocação profissional com IA.
+    
+    ## Autenticação
+    A API utiliza JWT Bearer tokens fornecidos pelo Supabase Auth.
+    
+    ## Segurança
+    - Row-Level Security (RLS) implementado no Supabase
+    - HTTPS obrigatório para todas as requisições
+    - Rate limiting aplicado por tier de usuário
+    
+    ## Tiers de Usuário
+    - **Gratuito**: Limitações em funcionalidades e rate limiting
+    - **Premium**: Acesso completo às funcionalidades
+  version: 1.0.0
+  contact:
+    name: Recoloca.AI Support
+    email: support@recoloca.ai
+  license:
+    name: Proprietary
+servers:
+  - url: https://api.recoloca.ai/v1
+    description: Servidor de Produção
+  - url: https://api-staging.recoloca.ai/v1
+    description: Servidor de Staging
+
+security:
+  - BearerAuth: []
+
+paths:
+  # ==========================================
+  # AUTENTICAÇÃO E PERFIL
+  # ==========================================
+  
+  /auth/register:
+    post:
+      tags:
+        - Autenticação
+      summary: Registrar novo usuário
+      description: |
+        Cria uma nova conta de usuário com email e senha.
+        Implementa RF-AUTH-001 do ERS v1.1.
+      operationId: registerUser
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegistrationRequest'
+      responses:
+        '201':
+          description: Usuário registrado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /auth/login:
+    post:
+      tags:
+        - Autenticação
+      summary: Login do usuário
+      description: |
+        Autentica usuário com email e senha.
+        Implementa RF-AUTH-003 do ERS v1.1.
+      operationId: loginUser
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLoginRequest'
+      responses:
+        '200':
+          description: Login realizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /auth/logout:
+    post:
+      tags:
+        - Autenticação
+      summary: Logout do usuário
+      description: |
+        Invalida o token JWT atual do usuário.
+        Implementa RF-AUTH-002 do ERS v1.1.
+      operationId: logoutUser
+      responses:
+        '200':
+          description: Logout realizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /auth/refresh:
+    post:
+      tags:
+        - Autenticação
+      summary: Renovar token JWT
+      description: Renova o token JWT usando refresh token
+      operationId: refreshToken
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshTokenRequest'
+      responses:
+        '200':
+          description: Token renovado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /auth/forgot-password:
+    post:
+      tags:
+        - Autenticação
+      summary: Solicitar redefinição de senha
+      description: |
+        Envia email para redefinição de senha.
+        Implementa RF-AUTH-005 do ERS v1.1.
+      operationId: forgotPassword
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForgotPasswordRequest'
+      responses:
+        '200':
+          description: Email de redefinição enviado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # PERFIL DO USUÁRIO
+  # ==========================================
+  
+  /users/profile:
+    get:
+      tags:
+        - Perfil
+      summary: Obter perfil do usuário
+      description: |
+        Retorna informações do perfil do usuário autenticado.
+        Implementa RF-AUTH-008 do ERS v1.1.
+      operationId: getUserProfile
+      responses:
+        '200':
+          description: Perfil do usuário
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    put:
+      tags:
+        - Perfil
+      summary: Atualizar perfil do usuário
+      description: |
+        Atualiza informações do perfil do usuário.
+        Implementa RF-AUTH-008 do ERS v1.1.
+      operationId: updateUserProfile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserProfileUpdateRequest'
+      responses:
+        '200':
+          description: Perfil atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /users/subscription:
+    get:
+      tags:
+        - Perfil
+      summary: Obter status da assinatura
+      description: |
+        Retorna informações sobre a assinatura do usuário.
+        Implementa RF-AUTH-011 do ERS v1.1.
+      operationId: getUserSubscription
+      responses:
+        '200':
+          description: Status da assinatura
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionStatus'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # GERENCIAMENTO DE CVS
+  # ==========================================
+  
+  /cv/upload:
+    post:
+      tags:
+        - Currículo
+      summary: Upload de currículo
+      description: |
+        Faz upload de um arquivo PDF de currículo.
+        Implementa RF-CV-001 do ERS v1.1.
+      operationId: uploadCV
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CVUploadRequest'
+      responses:
+        '201':
+          description: CV enviado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVUploadResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '413':
+          $ref: '#/components/responses/PayloadTooLarge'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /cv:
+    get:
+      tags:
+        - Currículo
+      summary: Listar currículos do usuário
+      description: |
+        Lista todos os currículos do usuário.
+        Implementa RF-AUTH-009 do ERS v1.1.
+      operationId: listUserCVs
+      responses:
+        '200':
+          description: Lista de currículos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /cv/{cv_id}:
+    get:
+      tags:
+        - Currículo
+      summary: Obter detalhes do currículo
+      description: Retorna detalhes de um currículo específico
+      operationId: getCVDetails
+      parameters:
+        - $ref: '#/components/parameters/CVId'
+      responses:
+        '200':
+          description: Detalhes do currículo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVDetails'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    put:
+      tags:
+        - Currículo
+      summary: Atualizar currículo
+      description: |
+        Atualiza informações estruturadas do currículo.
+        Implementa RF-CV-002 do ERS v1.1.
+      operationId: updateCV
+      parameters:
+        - $ref: '#/components/parameters/CVId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CVUpdateRequest'
+      responses:
+        '200':
+          description: Currículo atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVDetails'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    delete:
+      tags:
+        - Currículo
+      summary: Excluir currículo
+      description: |
+        Remove um currículo do usuário.
+        Implementa RF-AUTH-009 do ERS v1.1.
+      operationId: deleteCV
+      parameters:
+        - $ref: '#/components/parameters/CVId'
+      responses:
+        '200':
+          description: Currículo excluído com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /cv/{cv_id}/analyze:
+    post:
+      tags:
+        - Currículo
+      summary: Analisar adequação CV vs Vaga
+      description: |
+        Analisa a adequação do currículo para uma vaga específica.
+        Implementa RF-CV-003 e RF-CV-004 do ERS v1.1.
+      operationId: analyzeCVJobMatch
+      parameters:
+        - $ref: '#/components/parameters/CVId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CVAnalysisRequest'
+      responses:
+        '200':
+          description: Análise de adequação realizada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVAnalysisResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /cv/{cv_id}/optimize:
+    post:
+      tags:
+        - Currículo
+      summary: Otimizar currículo para vaga
+      description: |
+        Gera versão otimizada do currículo para uma vaga específica.
+        Implementa RF-CV-006 e RF-CV-007 do ERS v1.1.
+      operationId: optimizeCV
+      parameters:
+        - $ref: '#/components/parameters/CVId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CVOptimizationRequest'
+      responses:
+        '200':
+          description: Currículo otimizado gerado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CVOptimizationResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # KANBAN DE VAGAS
+  # ==========================================
+  
+  /jobs:
+    get:
+      tags:
+        - Kanban
+      summary: Listar vagas do usuário
+      description: |
+        Lista todas as vagas do Kanban do usuário com filtros opcionais.
+        Implementa RF-KAN-001 e RF-KAN-003 do ERS v1.1.
+      operationId: listJobs
+      parameters:
+        - name: status
+          in: query
+          description: Filtrar por status da vaga
+          schema:
+            $ref: '#/components/schemas/JobStatus'
+        - name: company
+          in: query
+          description: Filtrar por empresa
+          schema:
+            type: string
+        - name: priority
+          in: query
+          description: Filtrar por prioridade
+          schema:
+            $ref: '#/components/schemas/JobPriority'
+        - name: language
+          in: query
+          description: Filtrar por idioma
+          schema:
+            $ref: '#/components/schemas/Language'
+        - name: sort_by
+          in: query
+          description: Campo para ordenação
+          schema:
+            type: string
+            enum: [created_at, updated_at, company, priority, title]
+            default: updated_at
+        - name: sort_order
+          in: query
+          description: Ordem da classificação
+          schema:
+            type: string
+            enum: [asc, desc]
+            default: desc
+        - name: limit
+          in: query
+          description: Número máximo de resultados
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: offset
+          in: query
+          description: Número de resultados para pular
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: Lista de vagas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    post:
+      tags:
+        - Kanban
+      summary: Criar nova vaga
+      description: |
+        Cria uma nova vaga no Kanban do usuário.
+        Implementa RF-KAN-001.1 do ERS v1.1.
+      operationId: createJob
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobCreateRequest'
+      responses:
+        '201':
+          description: Vaga criada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobDetails'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /jobs/{job_id}:
+    get:
+      tags:
+        - Kanban
+      summary: Obter detalhes da vaga
+      description: |
+        Retorna detalhes completos de uma vaga específica.
+        Implementa RF-KAN-001.2 do ERS v1.1.
+      operationId: getJobDetails
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      responses:
+        '200':
+          description: Detalhes da vaga
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobDetails'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    put:
+      tags:
+        - Kanban
+      summary: Atualizar vaga
+      description: |
+        Atualiza informações de uma vaga existente.
+        Implementa RF-KAN-001.3 do ERS v1.1.
+      operationId: updateJob
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobUpdateRequest'
+      responses:
+        '200':
+          description: Vaga atualizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobDetails'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    delete:
+      tags:
+        - Kanban
+      summary: Excluir vaga
+      description: |
+        Remove uma vaga do Kanban do usuário.
+        Implementa RF-KAN-001.4 do ERS v1.1.
+      operationId: deleteJob
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      responses:
+        '200':
+          description: Vaga excluída com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /jobs/{job_id}/status:
+    patch:
+      tags:
+        - Kanban
+      summary: Atualizar status da vaga
+      description: |
+        Move uma vaga entre as colunas do Kanban.
+        Implementa RF-KAN-001.5 do ERS v1.1.
+      operationId: updateJobStatus
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobStatusUpdateRequest'
+      responses:
+        '200':
+          description: Status da vaga atualizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobDetails'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /jobs/{job_id}/interactions:
+    get:
+      tags:
+        - Kanban
+      summary: Listar interações da vaga
+      description: |
+        Lista o histórico de interações de uma vaga.
+        Implementa RF-KAN-004 do ERS v1.1.
+      operationId: getJobInteractions
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      responses:
+        '200':
+          description: Lista de interações
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobInteractionListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    post:
+      tags:
+        - Kanban
+      summary: Adicionar interação à vaga
+      description: |
+        Registra uma nova interação no histórico da vaga.
+        Implementa RF-KAN-004 do ERS v1.1.
+      operationId: addJobInteraction
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobInteractionCreateRequest'
+      responses:
+        '201':
+          description: Interação adicionada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobInteraction'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /jobs/import:
+    post:
+      tags:
+        - Kanban
+      summary: Importar vaga via URL
+      description: |
+        Importa uma vaga através de URL usando processamento por IA.
+        Implementa RF-IMP-001 do ERS v1.1.
+      operationId: importJobFromURL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobImportRequest'
+      responses:
+        '200':
+          description: Vaga importada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobImportResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /jobs/salary-estimate:
+    post:
+      tags:
+        - Kanban
+      summary: Estimar faixa salarial
+      description: |
+        Estima a faixa salarial para uma vaga usando IA e dados de mercado.
+        Implementa RF-CV-005 do ERS v1.1.
+      operationId: estimateJobSalary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalaryEstimateRequest'
+      responses:
+        '200':
+          description: Estimativa salarial gerada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalaryEstimateResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # MÉTRICAS E DASHBOARD
+  # ==========================================
+  
+  /metrics/dashboard:
+    get:
+      tags:
+        - Métricas
+      summary: Obter métricas do dashboard
+      description: |
+        Retorna métricas pessoais do funil de candidatura.
+        Implementa RF-KAN-005 do ERS v1.1.
+      operationId: getDashboardMetrics
+      parameters:
+        - name: period
+          in: query
+          description: Período para cálculo das métricas
+          schema:
+            type: string
+            enum: [7d, 30d, 90d, 1y]
+            default: 30d
+      responses:
+        '200':
+          description: Métricas do dashboard
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DashboardMetrics'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # COACH IA
+  # ==========================================
+  
+  /coach/chat:
+    post:
+      tags:
+        - Coach IA
+      summary: Interagir com o Coach IA
+      description: |
+        Envia mensagem para o Coach IA e recebe resposta.
+        Implementa RF-COACH-001 do ERS v1.1.
+      operationId: chatWithCoach
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CoachChatRequest'
+      responses:
+        '200':
+          description: Resposta do Coach IA
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoachChatResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /coach/conversations:
+    get:
+      tags:
+        - Coach IA
+      summary: Listar conversas com o Coach
+      description: Lista o histórico de conversas com o Coach IA
+      operationId: getCoachConversations
+      parameters:
+        - name: limit
+          in: query
+          description: Número máximo de conversas
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 10
+        - name: offset
+          in: query
+          description: Número de conversas para pular
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: Lista de conversas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoachConversationListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # PAGAMENTOS E ASSINATURAS
+  # ==========================================
+  
+  /payments/create-checkout:
+    post:
+      tags:
+        - Pagamentos
+      summary: Criar sessão de checkout
+      description: |
+        Cria uma sessão de checkout no Stripe para assinatura.
+        Implementa RF-PAY-002 do ERS v1.1.
+      operationId: createCheckoutSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckoutSessionRequest'
+      responses:
+        '200':
+          description: Sessão de checkout criada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutSessionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /payments/customer-portal:
+    post:
+      tags:
+        - Pagamentos
+      summary: Criar link para portal do cliente
+      description: |
+        Gera link para o portal do cliente Stripe.
+        Implementa RF-PAY-004 do ERS v1.1.
+      operationId: createCustomerPortalLink
+      responses:
+        '200':
+          description: Link do portal criado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerPortalResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /payments/webhook:
+    post:
+      tags:
+        - Pagamentos
+      summary: Webhook do Stripe
+      description: |
+        Endpoint para receber webhooks do Stripe.
+        Implementa RF-PAY-003 do ERS v1.1.
+      operationId: handleStripeWebhook
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Payload do webhook do Stripe
+      responses:
+        '200':
+          description: Webhook processado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # NOTIFICAÇÕES
+  # ==========================================
+  
+  /notifications:
+    get:
+      tags:
+        - Notificações
+      summary: Listar notificações
+      description: |
+        Lista notificações do usuário.
+        Implementa RF-NOTIF-001 do ERS v1.1.
+      operationId: getNotifications
+      parameters:
+        - name: unread_only
+          in: query
+          description: Filtrar apenas não lidas
+          schema:
+            type: boolean
+            default: false
+        - name: limit
+          in: query
+          description: Número máximo de notificações
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: offset
+          in: query
+          description: Número de notificações para pular
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: Lista de notificações
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationListResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /notifications/{notification_id}/read:
+    patch:
+      tags:
+        - Notificações
+      summary: Marcar notificação como lida
+      description: Marca uma notificação específica como lida
+      operationId: markNotificationAsRead
+      parameters:
+        - $ref: '#/components/parameters/NotificationId'
+      responses:
+        '200':
+          description: Notificação marcada como lida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /notifications/preferences:
+    get:
+      tags:
+        - Notificações
+      summary: Obter preferências de notificação
+      description: |
+        Retorna configurações de notificação do usuário.
+        Implementa RF-NOTIF-002 do ERS v1.1.
+      operationId: getNotificationPreferences
+      responses:
+        '200':
+          description: Preferências de notificação
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationPreferences'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    
+    put:
+      tags:
+        - Notificações
+      summary: Atualizar preferências de notificação
+      description: |
+        Atualiza configurações de notificação do usuário.
+        Implementa RF-NOTIF-002 do ERS v1.1.
+      operationId: updateNotificationPreferences
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotificationPreferencesUpdateRequest'
+      responses:
+        '200':
+          description: Preferências atualizadas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationPreferences'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  # ==========================================
+  # SISTEMA E UTILITÁRIOS
+  # ==========================================
+  
+  /health:
+    get:
+      tags:
+        - Sistema
+      summary: Health check da API
+      description: Verifica o status de saúde da API
+      operationId: healthCheck
+      security: []
+      responses:
+        '200':
+          description: API funcionando corretamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+        '503':
+          description: Serviço indisponível
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /version:
+    get:
+      tags:
+        - Sistema
+      summary: Versão da API
+      description: Retorna informações sobre a versão da API
+      operationId: getVersion
+      security: []
+      responses:
+        '200':
+          description: Informações da versão
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VersionResponse'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token fornecido pelo Supabase Auth
+
+  parameters:
+    CVId:
+      name: cv_id
+      in: path
+      required: true
+      description: ID único do currículo
+      schema:
+        type: string
+        format: uuid
+    
+    JobId:
+      name: job_id
+      in: path
+      required: true
+      description: ID único da vaga
+      schema:
+        type: string
+        format: uuid
+    
+    NotificationId:
+      name: notification_id
+      in: path
+      required: true
+      description: ID único da notificação
+      schema:
+        type: string
+        format: uuid
+
+  schemas:
+    # ==========================================
+    # SCHEMAS DE AUTENTICAÇÃO
+    # ==========================================
+    
+    UserRegistrationRequest:
+      type: object
+      required:
+        - email
+        - password
+        - full_name
+      properties:
+        email:
+          type: string
+          format: email
+          description: Email do usuário
+          example: usuario@exemplo.com
+        password:
+          type: string
+          minLength: 12
+          description: Senha com mínimo 12 caracteres
+          example: MinhaSenh@Segura123
+        full_name:
+          type: string
+          minLength: 2
+          maxLength: 100
+          description: Nome completo do usuário
+          example: João Silva Santos
+        terms_accepted:
+          type: boolean
+          description: Aceite dos termos de uso
+          example: true
+        marketing_consent:
+          type: boolean
+          description: Consentimento para comunicações de marketing
+          example: false
+          default: false
+
+    UserLoginRequest:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          description: Email do usuário
+          example: usuario@exemplo.com
+        password:
+          type: string
+          description: Senha do usuário
+          example: MinhaSenh@Segura123
+        remember_me:
+          type: boolean
+          description: Manter sessão ativa por mais tempo
+          default: false
+
+    RefreshTokenRequest:
+      type: object
+      required:
+        - refresh_token
+      properties:
+        refresh_token:
+          type: string
+          description: Token de refresh válido
+
+    ForgotPasswordRequest:
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+          format: email
+          description: Email para envio do link de redefinição
+          example: usuario@exemplo.com
+
+    AuthResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: JWT token de acesso
+        refresh_token:
+          type: string
+          description: Token para renovação
+        token_type:
+          type: string
+          example: Bearer
+        expires_in:
+          type: integer
+          description: Tempo de expiração em segundos
+          example: 3600
+        user:
+          $ref: '#/components/schemas/UserProfile'
+
+    # ==========================================
+    # SCHEMAS DE PERFIL
+    # ==========================================
+    
+    UserProfile:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: ID único do usuário
+        email:
+          type: string
+          format: email
+          description: Email do usuário
+        full_name:
+          type: string
+          description: Nome completo
+        avatar_url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL do avatar do usuário
+        subscription_tier:
+          $ref: '#/components/schemas/SubscriptionTier'
+        language_preference:
+          $ref: '#/components/schemas/Language'
+        timezone:
+          type: string
+          description: Fuso horário do usuário
+          example: America/Sao_Paulo
+        created_at:
+          type: string
+          format: date-time
+          description: Data de criação da conta
+        updated_at:
+          type: string
+          format: date-time
+          description: Data da última atualização
+        email_verified:
+          type: boolean
+          description: Se o email foi verificado
+        onboarding_completed:
+          type: boolean
+          description: Se o onboarding foi concluído
+
+    UserProfileUpdateRequest:
+      type: object
+      properties:
+        full_name:
+          type: string
+          minLength: 2
+          maxLength: 100
+          description: Nome completo
+        language_preference:
+          $ref: '#/components/schemas/Language'
+        timezone:
+          type: string
+          description: Fuso horário
+          example: America/Sao_Paulo
+
+    SubscriptionStatus:
+      type: object
+      properties:
+        tier:
+          $ref: '#/components/schemas/SubscriptionTier'
+        status:
+          type: string
+          enum: [active, canceled, past_due, unpaid, incomplete]
+          description: Status da assinatura
+        current_period_start:
+          type: string
+          format: date-time
+          nullable: true
+          description: Início do período atual
+        current_period_end:
+          type: string
+          format: date-time
+          nullable: true
+          description: Fim do período atual
+        cancel_at_period_end:
+          type: boolean
+          description: Se a assinatura será cancelada no fim do período
+        stripe_customer_id:
+          type: string
+          nullable: true
+          description: ID do cliente no Stripe
+        usage_limits:
+          $ref: '#/components/schemas/UsageLimits'
+
+    SubscriptionTier:
+      type: string
+      enum: [free, premium]
+      description: Tier da assinatura do usuário
+
+    UsageLimits:
+      type: object
+      properties:
+        active_jobs_limit:
+          type: integer
+          description: Limite de vagas ativas
+        cv_optimizations_limit:
+          type: integer
+          description: Limite de otimizações de CV por mês
+        coach_interactions_limit:
+          type: integer
+          description: Limite de interações com Coach por dia
+        cv_optimizations_used:
+          type: integer
+          description: Otimizações de CV usadas no mês atual
+        coach_interactions_used:
+          type: integer
+          description: Interações com Coach usadas hoje
+
+    # ==========================================
+    # SCHEMAS DE CURRÍCULO
+    # ==========================================
+    
+    CVUploadRequest:
+      type: object
+      required:
+        - file
+        - language
+      properties:
+        file:
+          type: string
+          format: binary
+          description: Arquivo PDF do currículo (máx 10MB)
+        language:
+          $ref: '#/components/schemas/Language'
+        is_default:
+          type: boolean
+          description: Se este será o CV padrão para o idioma
+          default: false
+        description:
+          type: string
+          maxLength: 500
+          description: Descrição opcional do currículo
+
+    CVUploadResponse:
+      type: object
+      properties:
+        cv_id:
+          type: string
+          format: uuid
+          description: ID do currículo criado
+        status:
+          type: string
+          enum: [processing, completed, failed]
+          description: Status do processamento
+        extracted_content:
+          $ref: '#/components/schemas/CVExtractedContent'
+        message:
+          type: string
+          description: Mensagem sobre o processamento
+
+    CVListResponse:
+      type: object
+      properties:
+        cvs:
+          type: array
+          items:
+            $ref: '#/components/schemas/CVSummary'
+        total:
+          type: integer
+          description: Total de currículos
+
+    CVSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        language:
+          $ref: '#/components/schemas/Language'
+        is_default:
+          type: boolean
+          description: Se é o CV padrão para o idioma
+        description:
+          type: string
+          nullable: true
+        file_name:
+          type: string
+          description: Nome original do arquivo
+        file_size:
+          type: integer
+          description: Tamanho do arquivo em bytes
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        status:
+          type: string
+          enum: [processing, completed, failed]
+
+    CVDetails:
+      allOf:
+        - $ref: '#/components/schemas/CVSummary'
+        - type: object
+          properties:
+            extracted_content:
+              $ref: '#/components/schemas/CVExtractedContent'
+            file_url:
+              type: string
+              format: uri
+              description: URL para download do arquivo original
+
+    CVExtractedContent:
+      type: object
+      properties:
+        contact_info:
+          $ref: '#/components/schemas/ContactInfo'
+        professional_summary:
+          type: string
+          nullable: true
+          description: Resumo profissional
+        work_experience:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkExperience'
+        education:
+          type: array
+          items:
+            $ref: '#/components/schemas/Education'
+        skills:
+          type: array
+          items:
+            type: string
+          description: Lista de habilidades
+        languages:
+          type: array
+          items:
+            $ref: '#/components/schemas/LanguageSkill'
+        certifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/Certification'
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/Project'
+        raw_text:
+          type: string
+          description: Texto extraído completo
+
+    ContactInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        email:
+          type: string
+          format: email
+          nullable: true
+        phone:
+          type: string
+          nullable: true
+        location:
+          type: string
+          nullable: true
+        linkedin:
+          type: string
+          format: uri
+          nullable: true
+        github:
+          type: string
+          format: uri
+          nullable: true
+        portfolio:
+          type: string
+          format: uri
+          nullable: true
+
+    WorkExperience:
+      type: object
+      properties:
+        company:
+          type: string
+        position:
+          type: string
+        start_date:
+          type: string
+          nullable: true
+          description: Data de início (formato flexível)
+        end_date:
+          type: string
+          nullable: true
+          description: Data de fim (formato flexível)
+        is_current:
+          type: boolean
+          default: false
+        description:
+          type: string
+          nullable: true
+        achievements:
+          type: array
+          items:
+            type: string
+        technologies:
+          type: array
+          items:
+            type: string
+
+    Education:
+      type: object
+      properties:
+        institution:
+          type: string
+        degree:
+          type: string
+        field_of_study:
+          type: string
+          nullable: true
+        start_date:
+          type: string
+          nullable: true
+        end_date:
+          type: string
+          nullable: true
+        is_current:
+          type: boolean
+          default: false
+        gpa:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+
+    LanguageSkill:
+      type: object
+      properties:
+        language:
+          type: string
+        proficiency:
+          type: string
+          enum: [basic, intermediate, advanced, fluent, native]
+
+    Certification:
+      type: object
+      properties:
+        name:
+          type: string
+        issuer:
+          type: string
+        issue_date:
+          type: string
+          nullable: true
+        expiry_date:
+          type: string
+          nullable: true
+        credential_id:
+          type: string
+          nullable: true
+        credential_url:
+          type: string
+          format: uri
+          nullable: true
+
+    Project:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+          nullable: true
+        start_date:
+          type: string
+          nullable: true
+        end_date:
+          type: string
+          nullable: true
+        technologies:
+          type: array
+          items:
+            type: string
+        url:
+          type: string
+          format: uri
+          nullable: true
+        repository_url:
+          type: string
+          format: uri
+          nullable: true
+
+    CVUpdateRequest:
+      type: object
+      properties:
+        description:
+          type: string
+          maxLength: 500
+        is_default:
+          type: boolean
+        extracted_content:
+          $ref: '#/components/schemas/CVExtractedContent'
+
+    CVAnalysisRequest:
+      type: object
+      required:
+        - job_id
+      properties:
+        job_id:
+          type: string
+          format: uuid
+          description: ID da vaga para análise
+
+    CVAnalysisResponse:
+      type: object
+      properties:
+        match_score:
+          type: number
+          minimum: 0
+          maximum: 100
+          description: Score de adequação (0-100%)
+        analysis:
+          $ref: '#/components/schemas/CVJobAnalysis'
+        suggestions:
+          type: array
+          items:
+            $ref: '#/components/schemas/CVOptimizationSuggestion'
+        salary_estimate:
+          $ref: '#/components/schemas/SalaryEstimate'
+        created_at:
+          type: string
+          format: date-time
+
+    CVJobAnalysis:
+      type: object
+      properties:
+        strengths:
+          type: array
+          items:
+            type: string
+          description: Pontos fortes identificados
+        gaps:
+          type: array
+          items:
+            type: string
+          description: Lacunas identificadas
+        keyword_matches:
+          type: array
+          items:
+            $ref: '#/components/schemas/KeywordMatch'
+        experience_alignment:
+          type: object
+          properties:
+            score:
+              type: number
+              minimum: 0
+              maximum: 100
+            details:
+              type: string
+        skills_alignment:
+          type: object
+          properties:
+            score:
+              type: number
+              minimum: 0
+              maximum: 100
+            matched_skills:
+              type: array
+              items:
+                type: string
+            missing_skills:
+              type: array
+              items:
+                type: string
+
+    KeywordMatch:
+      type: object
+      properties:
+        keyword:
+          type: string
+        found_in_cv:
+          type: boolean
+        importance:
+          type: string
+          enum: [low, medium, high, critical]
+        context:
+          type: string
+          nullable: true
+
+    CVOptimizationSuggestion:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [add_keyword, improve_section, restructure, highlight_experience]
+        section:
+          type: string
+          description: Seção do CV afetada
+        current_text:
+          type: string
+          nullable: true
+          description: Texto atual (se aplicável)
+        suggested_text:
+          type: string
+          description: Texto sugerido
+        reason:
+          type: string
+          description: Justificativa da sugestão
+        impact:
+          type: string
+          enum: [low, medium, high]
+          description: Impacto esperado da mudança
+
+    CVOptimizationRequest:
+      type: object
+      required:
+        - job_id
+      properties:
+        job_id:
+          type: string
+          format: uuid
+          description: ID da vaga para otimização
+        apply_suggestions:
+          type: array
+          items:
+            type: integer
+          description: Índices das sugestões a aplicar
+        custom_instructions:
+          type: string
+          maxLength: 1000
+          description: Instruções personalizadas para otimização
+
+    CVOptimizationResponse:
+      type: object
+      properties:
+        optimized_cv_id:
+          type: string
+          format: uuid
+          description: ID do CV otimizado gerado
+        download_url:
+          type: string
+          format: uri
+          description: URL para download do PDF otimizado
+        changes_applied:
+          type: array
+          items:
+            $ref: '#/components/schemas/CVOptimizationSuggestion'
+        optimization_summary:
+          type: string
+          description: Resumo das otimizações aplicadas
+        created_at:
+          type: string
+          format: date-time
+
+    # ==========================================
+    # SCHEMAS DE KANBAN/VAGAS
+    # ==========================================
+    
+    JobListResponse:
+      type: object
+      properties:
+        jobs:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobSummary'
+        total:
+          type: integer
+          description: Total de vagas
+        pagination:
+          $ref: '#/components/schemas/PaginationInfo'
+
+    JobSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        company:
+          type: string
+        status:
+          $ref: '#/components/schemas/JobStatus'
+        priority:
+          $ref: '#/components/schemas/JobPriority'
+        location:
+          type: string
+          nullable: true
+        work_mode:
+          $ref: '#/components/schemas/WorkMode'
+        language:
+          $ref: '#/components/schemas/Language'
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        deadline:
+          type: string
+          format: date
+          nullable: true
+        match_score:
+          type: number
+          minimum: 0
+          maximum: 100
+          nullable: true
+          description: Score de adequação com CV (se calculado)
+
+    JobDetails:
+      allOf:
+        - $ref: '#/components/schemas/JobSummary'
+        - type: object
+          properties:
+            description:
+              type: string
+              description: Descrição completa da vaga
+            requirements:
+              type: array
+              items:
+                type: string
+              description: Requisitos da vaga
+            benefits:
+              type: array
+              items:
+                type: string
+              description: Benefícios oferecidos
+            salary_range:
+              $ref: '#/components/schemas/SalaryRange'
+            original_url:
+              type: string
+              format: uri
+              nullable: true
+              description: URL original da vaga
+            source:
+              type: string
+              description: Fonte da vaga (manual, imported, etc.)
+            notes:
+              type: string
+              nullable: true
+              description: Anotações pessoais (Markdown)
+            tags:
+              type: array
+              items:
+                type: string
+              description: Tags personalizadas
+            application_date:
+              type: string
+              format: date
+              nullable: true
+              description: Data da aplicação
+            last_interaction_date:
+              type: string
+              format: date
+              nullable: true
+              description: Data da última interação
+
+    JobCreateRequest:
+      type: object
+      required:
+        - title
+        - company
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+          description: Título da vaga
+        company:
+          type: string
+          minLength: 1
+          maxLength: 100
+          description: Nome da empresa
+        description:
+          type: string
+          description: Descrição da vaga
+        requirements:
+          type: array
+          items:
+            type: string
+          description: Requisitos da vaga
+        benefits:
+          type: array
+          items:
+            type: string
+          description: Benefícios oferecidos
+        location:
+          type: string
+          maxLength: 100
+          description: Localização da vaga
+        work_mode:
+          $ref: '#/components/schemas/WorkMode'
+        language:
+          $ref: '#/components/schemas/Language'
+        priority:
+          $ref: '#/components/schemas/JobPriority'
+        original_url:
+          type: string
+          format: uri
+          description: URL original da vaga
+        deadline:
+          type: string
+          format: date
+          description: Prazo para aplicação
+        salary_range:
+          $ref: '#/components/schemas/SalaryRange'
+        notes:
+          type: string
+          description: Anotações pes

@@ -51,7 +51,7 @@ Você colabora principalmente com o **Maestro**, recebendo direcionamento sobre 
 3.  **Uso de Conhecimento (RAG e Documentação Viva):**
     * Consulte ativamente a "Documentação Viva" existente, especialmente:
         * `[[docs/01_Guias_Centrais/GLOSSARIO_Recoloca_AI.md]]` para manter a consistência da terminologia.
-        * `[[docs/03_Arquitetura_e_Design/HLD.md]]` e `[[docs/03_Arquitetura_e_Design/LLD/]]` para entender o contexto do código a ser documentado.
+        * `[[docs/03_Arquitetura_e_Design/HLD.md]]` e `[[docs/03_Arquitetura_e_Design/03_LLDs/]]` para entender o contexto do código a ser documentado.
         * `[[docs/02_Requisitos/ERS.md]]` para entender a funcionalidade que o código ou documento descreve.
     * Utilize guias de estilo de docstrings (Google Python, Dartdoc) como referência para a formatação correta.
     * Consulte os perfis de outros agentes em `[[docs/04_Agentes_IA/Perfis/]]` e o `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` para entender o contexto de suas contribuições.
@@ -103,7 +103,7 @@ Você colabora principalmente com o **Maestro**, recebendo direcionamento sobre 
     
 - `[[docs/02_Requisitos/ERS.md]]` (Para entender o propósito das funcionalidades sendo documentadas)
     
-- `[[docs/03_Arquitetura_e_Design/HLD.md]]` e `[[docs/03_Arquitetura_e_Design/LLD/]]` (Para entender a arquitetura e o design detalhado do software)
+- `[[docs/03_Arquitetura_e_Design/HLD.md]]` e `[[docs/03_Arquitetura_e_Design/03_LLDs/]]` (Para entender a arquitetura e o design detalhado do software)
     
 - `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` (Para entender o papel dos outros agentes e como a documentação os apoia)
     

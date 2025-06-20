@@ -393,7 +393,7 @@ sequenceDiagram
 - [[docs/01_Guias_Centrais/03_METODOLOGIA_MVP.md]] - MVP da metodologia
 - [[docs/02_Requisitos/01_ERS.md]] (v1.1) - Especificação de Requisitos
 - [[docs/03_Arquitetura_e_Design/01_HLD.md]] (v1.1) - High-Level Design
-- [[docs/03_Arquitetura_e_Design/00_ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Ferramentas Core
+- [[docs/03_Arquitetura_e_Design/02_ADRs/ADR-001_Ferramentas_Core.md]] (v1.1) - Ferramentas Core
 - [[docs/04_Agentes_IA/01_AGENTES_IA_MENTORES_OVERVIEW.md]] - Visão geral dos agentes
 - [[docs/00_Gerenciamento_Projeto/01_KANBAN_INTERNO_PROJETO.md]] - Gestão de tarefas
 - [[docs/05_Prompts/01_Templates_Base/]] - Templates de prompts

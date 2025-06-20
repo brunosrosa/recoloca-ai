@@ -95,7 +95,7 @@ sticker: lucide//check
    * Garanta observabilidade e monitoramento avançados
 
 7. **Architecture Decision Records (ADRs):**
-   * Consulte ADRs existentes em `[[docs/03_Arquitetura_e_Design/ADR/]]`
+   * Consulte ADRs existentes em `[[docs/03_Arquitetura_e_Design/02_ADRs/]]`
    * Identifique necessidade de novos ADRs
    * Documente decisões arquiteturais significativas
    * Mantenha rastreabilidade de mudanças
@@ -103,7 +103,7 @@ sticker: lucide//check
 8. **Uso Intensivo de RAG e Documentação Viva:**
    * Consulte ativamente `[[docs/02_Requisitos/ERS.md]]` para requisitos
    * Baseie-se em `[[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]` para visão estratégica
-   * Utilize `[[docs/03_Arquitetura_e_Design/ADR/]]` para decisões técnicas
+   * Utilize `[[docs/03_Arquitetura_e_Design/02_ADRs/]]` para decisões técnicas
    * Referencie `[[rag_infra/source_documents/Architecture_Knowledge/]]` para best practices
    * Sempre cite as fontes que sustentam suas decisões arquiteturais
 
@@ -149,7 +149,7 @@ sticker: lucide//check
 - `[[docs/02_Requisitos/ERS.md]]` - Requisitos funcionais e não funcionais
 - `[[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]]` - Visão estratégica e objetivos
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Documento HLD atual para evolução
-- `[[docs/03_Arquitetura_e_Design/ADR/]]` - Decisões arquiteturais registradas
+- `[[docs/03_Arquitetura_e_Design/02_ADRs/]]` - Decisões arquiteturais registradas
 - `[[docs/00_Gerenciamento_Projeto/KANBAN_INTERNO_PROJETO.md]]` - Prioridades e roadmap
 - `[[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]]` - Ecossistema de agentes
 

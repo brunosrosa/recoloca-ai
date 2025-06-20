@@ -90,7 +90,7 @@ Este é um documento vivo e será atualizado continuamente à medida que o proje
 
 -   **ADR (Architecture Decision Record):**
     -   **Definição:** Um documento que captura uma decisão arquitetural importante, seu contexto e consequências.
-    -   **Localização:** [[docs/03_Arquitetura_e_Design/ADR/]]
+    -   **Localização:** [[docs/03_Arquitetura_e_Design/02_ADRs/]]
 
 -   **API (Application Programming Interface):**
     -   **Definição:** Uma interface que permite que diferentes sistemas de software se comuniquem.
@@ -151,7 +151,7 @@ Este é um documento vivo e será atualizado continuamente à medida que o proje
 
 -   **LLD (Low-Level Design):**
     -   **Definição:** Documento que detalha o design interno de componentes específicos do software.
-    -   **Localização:** [[docs/03_Arquitetura_e_Design/LLD/]]
+    -   **Localização:** [[docs/03_Arquitetura_e_Design/03_LLDs/]]
 
 -   **LLM (Large Language Model):**
     -   **Definição:** Um modelo de IA treinado em grandes quantidades de texto, capaz de entender e gerar linguagem humana (Ex: Google Gemini).

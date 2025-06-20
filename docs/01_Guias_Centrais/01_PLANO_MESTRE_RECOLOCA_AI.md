@@ -343,7 +343,7 @@ Os seguintes Agentes Mentores serão configurados no Trae IDE, cada um com uma p
     
     - **Foco:** Arquitetura Completa (Alto e Baixo Nível).
         
-    - **Tarefas:** Criar/otimizar o [[../03_Arquitetura_e_Design/HLD.md]], gerar diagramas de arquitetura (componentes, interações) em Mermaid.js, definir interações entre módulos e com sistemas externos, identificar riscos arquiteturais, detalhar classes, funções, modelos de dados e algoritmos para os módulos em [[../03_Arquitetura_e_Design/LLD/]], criar diagramas de sequência e de classes em Mermaid.js.
+    - **Tarefas:** Criar/otimizar o [[../03_Arquitetura_e_Design/HLD.md]], gerar diagramas de arquitetura (componentes, interações) em Mermaid.js, definir interações entre módulos e com sistemas externos, identificar riscos arquiteturais, detalhar classes, funções, modelos de dados e algoritmos para os módulos em [[../03_Arquitetura_e_Design/03_LLDs/]], criar diagramas de sequência e de classes em Mermaid.js.
         
 4. `@AgenteM_API` **(Arquiteto de APIs):**
     

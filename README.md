@@ -1,4 +1,4 @@
-# 🧑🏻‍💼 Recoloca.AI
+# 💼 Recoloca.AI
 
 > **Micro-SaaS para Recolocação Profissional no Brasil**  
 > *Desenvolvido com Metodologia "Solo Ágil Aumentado por IA"*
@@ -20,6 +20,12 @@ O **Recoloca.AI** é um "Cockpit do Candidato" - uma plataforma integrada que of
 - **🇧🇷 Foco no Mercado Brasileiro**: Adaptado às particularidades culturais e legais do Brasil
 
 ## 🏗️ Arquitetura e Stack Tecnológica
+
+### 🐍 Ambiente Python
+- **Python 3.13.3** - Versão principal
+- **Ambiente Virtual**: `.venv/` (padrão do projeto)
+- **Gerenciador de Pacotes**: pip
+- **Ambiente RAG Alternativo**: Conda (opcional para desenvolvimento avançado)
 
 ### Backend
 - **FastAPI** (Python) - API REST principal
@@ -95,7 +101,7 @@ Todos os agentes têm acesso à **"Documentação Viva"** do projeto através de
 ## 📁 Estrutura do Projeto
 
 ```
-🧑🏻‍💼 Recoloca.AI/
+💼 Recoloca.AI/
 ├── 📄 README.md                    # Este arquivo
 ├── 📁 docs/                        # Documentação Viva
 │   ├── 📁 00_Gerenciamento_Projeto/ # Kanban, Tasks, Planejamento
@@ -118,12 +124,16 @@ Todos os agentes têm acesso à **"Documentação Viva"** do projeto através de
 
 ### Pré-requisitos
 - **Trae IDE** - IDE principal para desenvolvimento com IA
-- **Conda** - Gerenciamento de ambiente Python
+- **Python 3.13+** - Linguagem principal do backend
 - **Git** - Controle de versão
 - **Flutter SDK** - Para desenvolvimento frontend
 - **Supabase CLI** - Para gerenciamento do backend
 
 ### Configuração do Ambiente
+
+#### 🐍 Ambiente Python Principal (.venv/)
+
+O projeto utiliza **`.venv/`** como ambiente virtual padrão para desenvolvimento.
 
 1. **Clone o repositório**
    ```bash
@@ -131,35 +141,77 @@ Todos os agentes têm acesso à **"Documentação Viva"** do projeto através de
    cd Recoloca.AI
    ```
 
-2. **Configure o ambiente RAG**
+2. **Ative o ambiente virtual**
+   
+   **Opção 1: Scripts de conveniência (recomendado)**
    ```bash
-   cd rag_infra
-   conda env create -f environment.yml
-   conda activate Agents_RAG_Env
+   # Windows (PowerShell)
+   .\activate_env.ps1
+   
+   # Linux/macOS
+   source activate_env.sh
+   ```
+   
+   **Opção 2: Ativação manual**
+   ```bash
+   # Windows (PowerShell)
+   .venv\Scripts\Activate.ps1
+   
+   # Windows (CMD)
+   .venv\Scripts\activate.bat
+   
+   # Linux/macOS
+   source .venv/bin/activate
    ```
 
-3. **Configure o backend**
+3. **Instale as dependências**
    ```bash
-   cd src/backend_fastapi
    pip install -r requirements.txt
    ```
 
-4. **Configure o frontend**
-   ```bash
-   cd src/frontend_flutter
-   flutter pub get
-   ```
+#### 🧠 Ambiente RAG (Opcional - Conda)
+
+Para desenvolvimento avançado do sistema RAG, você pode usar o ambiente Conda:
+
+```bash
+cd rag_infra
+conda env create -f environment.yml
+conda activate Agents_RAG_Env
+```
+
+#### 📱 Frontend Flutter
+
+```bash
+cd src/frontend_flutter
+flutter pub get
+```
 
 ### Executando o Projeto
 
+#### 🚀 Backend (FastAPI)
 ```bash
-# Backend (FastAPI)
+# Certifique-se de que o ambiente .venv está ativo
+.venv\Scripts\Activate.ps1  # Windows PowerShell
+# ou
+source .venv/bin/activate   # Linux/macOS
+
+# Execute o servidor de desenvolvimento
 cd src/backend_fastapi
 uvicorn main:app --reload
+```
 
-# Frontend (Flutter Web)
+#### 🌐 Frontend (Flutter Web)
+```bash
 cd src/frontend_flutter
 flutter run -d web-server --web-port 3000
+```
+
+#### 🧠 Sistema RAG (Opcional)
+```bash
+# Para desenvolvimento do sistema RAG
+conda activate Agents_RAG_Env
+cd rag_infra
+python mcp_server.py
 ```
 
 ## 📖 Documentação Principal

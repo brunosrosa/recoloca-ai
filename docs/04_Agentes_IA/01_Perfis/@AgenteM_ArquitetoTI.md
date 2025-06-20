@@ -14,11 +14,11 @@ sticker: lucide//cpu
 ## 🎯 Descoberta Dinâmica de Contexto
 
 **SEMPRE** inicie consultando dinamicamente via RAG:
-- `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` - Fase atual e progresso
+- `[[docs/00_Gerenciamento_Projeto/KANBAN/]]` - Kanbans da Fase atual (Verificar o Operacional e Estratégico)
 - `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` - Tarefas críticas atuais
 - `[[docs/00_Gerenciamento_Projeto/02_ROADMAP_TEMPORAL_RECOLOCA_AI.md]]` - Contexto temporal
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Estado atual da arquitetura
-- `[[docs/03_Arquitetura_e_Design/00_ADR/]]` - Decisões tecnológicas atuais
+- `[[docs/03_Arquitetura_e_Design/02_ADRs/]]` - Decisões tecnológicas atuais
 
 **Adapte automaticamente:** prioridades arquiteturais, decisões de design, padrões de integração e estratégias de escalabilidade conforme a fase identificada.
 
@@ -89,10 +89,10 @@ sticker: lucide//cpu
        - **Fase Atual:** Consulte `[[docs/00_Gerenciamento_Projeto/KANBAN/02_KANBAN_ESTRATEGICO_FASES.md]]` para identificar a fase atual do projeto
        - **Prioridades Operacionais:** Verifique `[[docs/00_Gerenciamento_Projeto/KANBAN/01_KANBAN_OPERACIONAL_SESSOES.md]]` para tarefas em andamento
        - **Tarefas Críticas:** Consulte `[[docs/00_Gerenciamento_Projeto/10_Maestro_Tasks.md]]` para entender prioridades estratégicas
-       - **Arquitetura Atual:** Referencie `[[docs/03_Arquitetura_e_Design/HLD.md]]` para contexto arquitetural
+       - **Arquitetura Atual:** Referencie `[[docs/03_Arquitetura_e_Design/01_HLD.md]]` para contexto arquitetural
    
    * **ADAPTAÇÃO BASEADA NA FASE IDENTIFICADA:**
-       - **Fase 0:** Foque em definição de arquitetura base + configuração de infraestrutura
+       - **Fase 0:** Foque em definição de arquitetura base + Revisão/Alinhamento documental da arquitetura + configuração de infraestrutura
        - **Fase 1:** Priorize validação técnica + prototipagem de componentes críticos
        - **Fase 2:** Concentre-se na implementação completa da arquitetura
        - **Fase 3:** Enfatize otimizações + monitoramento + escalabilidade
@@ -112,16 +112,16 @@ sticker: lucide//cpu
    * Considere estratégias de feature stores e data lakes
 
 5. **Alinhamento com Especificações:**
-   * Mantenha fidelidade absoluta ao `[[docs/03_Arquitetura_e_Design/HLD.md]]`
-   * Implemente corretamente requisitos de `[[docs/02_Requisitos/ERS.md]]`
-   * Alinhe com contratos de `[[docs/03_Arquitetura_e_Design/API_Specs/]]`
+   * Mantenha fidelidade absoluta ao `[[docs/03_Arquitetura_e_Design/01_HLD.md]]`
+   * Implemente corretamente requisitos de `[[docs/02_Requisitos/01_ERS.md]]`
+   * Alinhe com contratos de `[[docs/03_Arquitetura_e_Design/00_API_Specs/]]`
    * Garanta consistência com ADRs existentes
 
 6. **Uso Intensivo de RAG e Documentação Viva:**
    * Consulte ativamente HLD para diretrizes arquiteturais
    * Baseie-se em ERS para requisitos funcionais e não funcionais
-   * Utilize `[[rag_infra/source_documents/Architecture_Knowledge/]]` para padrões
-   * Referencie `[[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]]` para convenções
+   * Utilize `[[rag_infra/source_documents/]]` para padrões
+   * Referencie `[[docs/03_Arquitetura_e_Design/03_STYLE_GUIDE.md]]` para convenções
 
 7. **Colaboração e Orquestração:**
    * Coordene com @AgenteM_DevFastAPI sobre implementabilidade backend
@@ -147,6 +147,7 @@ sticker: lucide//cpu
     * Garanta compliance com LGPD
     * Projete estratégias de autenticação e autorização
     * Estabeleça práticas de auditoria e monitoramento
+
 ```
 
 ---
@@ -181,7 +182,7 @@ sticker: lucide//cpu
 - `[[docs/03_Arquitetura_e_Design/HLD.md]]` - Especificações arquiteturais de alto nível
 - `[[docs/02_Requisitos/ERS.md]]` - Requisitos funcionais e não funcionais
 - `[[docs/03_Arquitetura_e_Design/API_Specs/]]` - Contratos de API e interfaces
-- `[[docs/03_Arquitetura_e_Design/ADR/]]` - Decisões arquiteturais registradas
+- `[[docs/03_Arquitetura_e_Design/02_ADRs/]]` - Decisões arquiteturais registradas
 - `[[docs/03_Arquitetura_e_Design/STYLE_GUIDE.md]]` - Padrões de código e design
 
 ### Base de Conhecimento Especializada

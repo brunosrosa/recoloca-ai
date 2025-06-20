@@ -175,7 +175,7 @@ Serão configurados pipelines separados para o backend e o frontend.
 - [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1) - Metodologia base
 - [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão e objetivos
 - [[docs/03_Arquitetura_e_Design/HLD.md]] (v1.1) - Arquitetura de alto nível
-- [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.1) - Decisões arquiteturais
+- [[docs/03_Arquitetura_e_Design/02_ADRs/ADR-001_Ferramentas_Core.md]] (v1.1) - Decisões arquiteturais
 - [[METRICAS_SUCESSO_BASE_MERCADO]] (v1.1) - Métricas de negócio
 - [[docs/04_Agentes_IA/AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
 - [[docs/07_Operacoes_e_Deploy/GUIA_DEPLOY_BACKEND.md]] - Guia específico de deploy backend

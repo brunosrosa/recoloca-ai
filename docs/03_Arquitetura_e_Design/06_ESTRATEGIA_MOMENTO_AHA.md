@@ -310,7 +310,7 @@ Semana 5-8: Padrões e insights
 - [[docs/01_Guias_Centrais/02_GUIA_AVANCADO.md]] (v1.1) - Metodologia base
 - [[docs/01_Guias_Centrais/01_PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1) - Visão e objetivos
 - [[docs/02_Requisitos/01_ERS.md]] (v1.1) - Requisitos funcionais
-- [[docs/03_Arquitetura_e_Design/02_LLD/LLD_Modulo_Landing.md]] (v1.1) - Landing page
+- [[docs/03_Arquitetura_e_Design/03_LLDs/LLD_Modulo_Landing.md]] (v1.1) - Landing page
 - [[docs/08_Marketing_e_Vendas/01_ESTRATEGIA_GO_TO_MARKET.md]] (v1.1) - Estratégia de marketing
 - [[docs/04_Agentes_IA/01_AGENTES_IA_MENTORES_OVERVIEW.md]] - Agentes especializados
 

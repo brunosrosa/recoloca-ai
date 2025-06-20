@@ -1,4 +1,5 @@
 ---
+
 tags:
   - kanban
   - projeto
@@ -9,26 +10,123 @@ versao: "1.0"
 data_criacao: 2025-01-16
 kanban-plugin: board
 sticker: lucide//diamond
+
 ---
 
-# 📋 KANBAN ESTRATÉGICO - BACKLOG RECOLOCA.AI
+## 📋 KANBAN ESTRATÉGICO - BACKLOG RECOLOCA.AI
+
+## 🎯 DECISÕES ESTRATÉGICAS DOCUMENTADAS
+
+### [DEC-EST-001] Priorização de Validação de Negócio sobre Especificação OpenAPI
+**Data:** 2025-06-20  
+**Contexto:** Durante análise da tarefa [CRI-API-001], identificou-se necessidade de validar viabilidade financeira antes de completar especificação técnica.  
+**Alternativas Consideradas:**
+- **Opção A:** Continuar [CRI-API-001] até conclusão completa
+- **Opção B:** Pausar [CRI-API-001] e priorizar validações de negócio ([PES-NEG-001], [TST-VAL-001])
+
+**Decisão:** Opção B - Priorizar validação de negócio  
+**Justificativa:**
+- Evitar over-engineering sem validação de viabilidade
+- Aplicar metodologia ágil com validação incremental
+- Reduzir risco de desenvolvimento de features não viáveis financeiramente
+- Permitir ajustes na especificação baseados em insights de validação
+
+**Impacto:**
+- [CRI-API-001] pausada temporariamente
+- [PES-NEG-001] movida para "EM PROGRESSO" com prazo 48-72h
+- [TST-VAL-001] adicionada ao backlog prioritário
+- Transição para Fase 1 condicionada às validações
+
+**Responsáveis:** @AgenteM_Orquestrador, @Maestro  
+**Critério de Revisão:** Após conclusão de [PES-NEG-001] e [TST-VAL-001]
+
+---
+
+## 📋 BACKLOG (Não Priorizado)
+
+- [ ] **Tarefas futuras e melhorias pós-MVP**
+- [ ] **Features avançadas para versões futuras**
+- [ ] **Otimizações e refinamentos contínuos**
+
 
 ## 📊 **RESUMO EXECUTIVO**
 
-**Status Atual:** Fase 0 (35-40% concluída) | **Foco:** Operacionalização RAG + Configuração Agentes Tier 1
-
-**Próximas 4 Tarefas Críticas:**
-1. Operacionalização Completa do RAG
-2. Desenvolvimento do MCP Server  
-3. Configuração RAG via MCP no TRAE IDE
-4. Configuração dos 4 Agentes Tier 1 Restantes
-
-**Critério de Transição Fase 1:** RAG + 5 Agentes + MCP 100% operacionais
+- [ ] Operacionalização Completa do RAG
+- [ ] Desenvolvimento do MCP Server
+- [ ] Configuração RAG via MCP no TRAE IDE
+- [ ] Configuração dos 4 Agentes Tier 1 Restantes
 
 
-## 🎯 FASE 0: FUNDAÇÃO RAG + AGENTES
+## 🏗️ **FASE 0: RAG + AGENTES FOUNDATION** (Atual)
 
-- [ ] **Fase 0 (Semanas 1-2):** Operacionalização RAG + Configuração Agentes Tier 1
+
+
+## 🔄 **EM ANDAMENTO**
+
+- [x] **[COR-RAG-001]** Correção do RAGRetriever Local 🔺 \ #rag \ #correção \ #local \ #retriever \ #critico \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO 19/06/2025**
+	- [ ] Investigar incompatibilidade RAGRetriever com backend PyTorch
+	- [ ] Corrigir interface de busca local
+	- [ ] Implementar testes de validação
+	- [ ] Documentar correções aplicadas
+	- [ ] Validar consistência com MCP Server
+	- **Dependências:** Sistema RAG operacional
+	- **Definition of Done:** RAGRetriever local funcional + testes + documentação
+- [x] **[DOC-ADR-001]** Documentação de ADRs Críticos 🔺 \ #documentacao \ #adr \ #arquitetura \ #decisoes \ #critico \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO 19/06/2025**
+	- [ ] ADR-002: PyTorch vs FAISS-GPU
+	- [ ] ADR-003: Otimizações RTX 2060
+	- [ ] ADR-004: Evolução MCP Server
+	- [ ] ADR-005: Reorganização estrutural
+	- [ ] Consolidar decisões técnicas
+	- **Dependências:** Infraestrutura RAG estável
+	- **Definition of Done:** 4 ADRs documentados + consolidação técnica
+- [x] **[DOC-LLD-001]** Consolidação do LLD 🔺 \ #lld \ #arquitetura \ #detalhamento \ #documentacao \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO 19/06/2025**
+	- [x] Detalhar componentes RAG/MCP
+	- [x] Especificar interfaces de integração
+	- [x] Documentar estruturas de dados
+	- [x] Definir padrões de implementação
+	- [x] Validar com equipe técnica
+	- **Dependências:** ADRs documentados
+	- **Definition of Done:** LLD consolidado + validação técnica
+
+
+## 📋 **PENDENTE**
+
+- [ ] **[CRI-API-001] [CRÍTICA]** Criação da Especificação OpenAPI Completa
+	  - [ ] Criar especificação OpenAPI 3.0 completa
+	  - [ ] Definir todos os endpoints conforme HLD e ERS
+	  - [ ] Especificar modelos de dados e schemas
+	  - **Responsável:** `@AgenteM_ArquitetoTI` `@AgenteM_DevFastAPI` `@Maestro`
+	  - **Dependência:** HLD consolidado, ADRs documentados
+	  - **Prioridade:** BLOQUEADOR para desenvolvimento
+
+- [ ] **[CFG-AGT-002] [CRÍTICA]** Configuração dos 4 Agentes Tier 1 Restantes
+	  - [ ] @AgenteM_ArquitetoTI
+	  - [ ] @AgenteM_DevFastAPI
+	  - [ ] @AgenteM_DevFlutter
+	  - [ ] @AgenteM_UXDesigner
+	  - **Responsável:** `@Maestro`
+	  - **Dependência:** RAG MCP operacional
+	  - **Prioridade:** CRÍTICA - Necessário para transição Fase 1
+
+- [ ] **[VAL-RAG-001] [ALTA]** Validação de Performance RAG com Threshold 0.2
+	  - [ ] Executar bateria de testes com threshold 0.2
+	  - [ ] Validar qualidade vs quantidade de respostas
+	  - [ ] Documentar métricas de performance
+	  - **Responsável:** `@AgenteM_ArquitetoTI` `@Maestro`
+	  - **Dependência:** RAGRetriever local corrigido
+
+- [ ] **[IMP-IDX-001] [MÉDIA]** Implementação de Indexação Automática RAG
+	  - [ ] Sistema de monitoramento de mudanças em documentos
+	  - [ ] Rotina automática de re-indexação
+	  - **Responsável:** `@AgenteM_DevFastAPI` `@Maestro`
+	  - **Dependência:** RAG operacional
+
+- [ ] **[CFG-MON-001] [MÉDIA]** Configuração de Monitoramento de Performance RAG
+	  - [ ] Métricas de tempo de resposta
+	  - [ ] Dashboard de saúde do sistema RAG
+	  - **Responsável:** `@AgenteM_ArquitetoTI` `@Maestro`
+	  - **Dependência:** RAG operacional
+
 - [ ] **[CFG-INF-001] [MVP]** Ambiente Dev/Deploy - Configuração Inicial 🔺 \\ #devops \\ #infra \\ #Semana1-2 \\ #Fase0_RAG_Agentes `@Maestro`
 	- [ ] Criar repositórios Git para frontend, backend
 	- [ ] Configurar linters, formatters e hooks de pré-commit
@@ -207,18 +305,17 @@ sticker: lucide//diamond
 	- [ ] Planejar próximas iterações baseadas em dados
 
 
-## 📋 BACKLOG (Não Priorizado)
+## ✅ **CONCLUÍDO**
 
-- [ ] **Tarefas futuras e melhorias pós-MVP**
-- [ ] **Features avançadas para versões futuras**
-- [ ] **Otimizações e refinamentos contínuos**
+- [x] **[RAG-001]** Operacionalização do Sistema RAG
+- [x] **[MCP-001]** Desenvolvimento do MCP Server para Integração RAG
+- [x] **[CFG-001]** Configuração e Integração RAG via MCP no Trae IDE
 
----
 
-### 📋 **CONFIGURAÇÕES DO KANBAN**
+
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","lane-width":400,"list-collapse":[null,null,null,null,null,false]}
+{"kanban-plugin":"board","lane-width":400,"list-collapse":[null,null,null,null,null,false,null]}
 ```
 %%
