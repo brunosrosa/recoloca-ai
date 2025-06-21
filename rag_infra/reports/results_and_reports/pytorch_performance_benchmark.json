@@ -1,0 +1,432 @@
+﻿{
+  "timestamp": 1750220534.9737387,
+  "total_benchmarks": 7,
+  "successful_benchmarks": 7,
+  "summary": {
+    "avg_queries_per_second": 1687.7274020439122,
+    "avg_memory_usage_mb": 0.0,
+    "avg_success_rate": 1.0,
+    "best_performance": {
+      "queries_per_second": {
+        "test": "concurrent_queries_10",
+        "value": 4104.55114822547
+      },
+      "memory_efficiency": {
+        "test": "single_queries",
+        "value": 0.0
+      },
+      "reliability": {
+        "test": "single_queries",
+        "value": 1.0
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "test_name": "single_queries",
+      "duration": 0.687171459197998,
+      "queries_per_second": 21.82861322195568,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "individual_times": [
+          0.06271529197692871,
+          0.05089426040649414,
+          0.05328965187072754,
+          0.054686546325683594,
+          0.04354381561279297,
+          0.03655266761779785,
+          0.0417332649230957,
+          0.043304443359375,
+          0.048864126205444336,
+          0.04062032699584961,
+          0.045622825622558594,
+          0.043346405029296875,
+          0.03928661346435547,
+          0.03888750076293945,
+          0.03960895538330078
+        ],
+        "avg_query_time": 0.045530446370442706,
+        "min_query_time": 0.03655266761779785,
+        "max_query_time": 0.06271529197692871,
+        "std_query_time": 0.006977245113469214
+      }
+    },
+    {
+      "test_name": "batch_queries_3",
+      "duration": 0.010313272476196289,
+      "queries_per_second": 1454.436507386088,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "batch_size": 3,
+        "batch_times": [
+          0.0019164085388183594,
+          0.0021910667419433594,
+          0.0017733573913574219,
+          0.0015895366668701172,
+          0.0013530254364013672
+        ],
+        "avg_batch_time": 0.001764678955078125,
+        "total_batches": 5
+      }
+    },
+    {
+      "test_name": "batch_queries_5",
+      "duration": 0.0061686038970947266,
+      "queries_per_second": 2431.6685347659723,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "batch_size": 5,
+        "batch_times": [
+          0.0015521049499511719,
+          0.0015251636505126953,
+          0.002194643020629883
+        ],
+        "avg_batch_time": 0.0017573038736979167,
+        "total_batches": 3
+      }
+    },
+    {
+      "test_name": "concurrent_queries_5",
+      "duration": 0.004330158233642578,
+      "queries_per_second": 3464.0766435414603,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "max_workers": 5,
+        "concurrent_results": [
+          {
+            "success": true,
+            "time": 1.0013580322265625e-05,
+            "results_count": 5,
+            "query": "Como implementar autenticação ..."
+          },
+          {
+            "success": true,
+            "time": 5.9604644775390625e-06,
+            "results_count": 5,
+            "query": "Segurança em APIs REST..."
+          },
+          {
+            "success": true,
+            "time": 5.9604644775390625e-06,
+            "results_count": 5,
+            "query": "Deploy de aplicação Python com..."
+          },
+          {
+            "success": true,
+            "time": 6.4373016357421875e-06,
+            "results_count": 5,
+            "query": "Middleware personalizado..."
+          },
+          {
+            "success": true,
+            "time": 4.5299530029296875e-06,
+            "results_count": 5,
+            "query": "Validação de dados com Pydanti..."
+          },
+          {
+            "success": true,
+            "time": 6.9141387939453125e-06,
+            "results_count": 5,
+            "query": "Implementar WebSockets..."
+          },
+          {
+            "success": true,
+            "time": 2.6226043701171875e-06,
+            "results_count": 5,
+            "query": "Configuração de CI/CD..."
+          },
+          {
+            "success": true,
+            "time": 6.9141387939453125e-06,
+            "results_count": 5,
+            "query": "Arquitetura de microserviços..."
+          },
+          {
+            "success": true,
+            "time": 2.384185791015625e-06,
+            "results_count": 5,
+            "query": "Implementar sistema de cache R..."
+          },
+          {
+            "success": true,
+            "time": 5.9604644775390625e-06,
+            "results_count": 5,
+            "query": "Gerenciamento de estado..."
+          },
+          {
+            "success": true,
+            "time": 6.4373016357421875e-06,
+            "results_count": 5,
+            "query": "Configurar banco de dados Post..."
+          },
+          {
+            "success": true,
+            "time": 7.62939453125e-06,
+            "results_count": 5,
+            "query": "Monitoramento e logging estrut..."
+          },
+          {
+            "success": true,
+            "time": 5.7220458984375e-06,
+            "results_count": 5,
+            "query": "Performance e otimização de qu..."
+          },
+          {
+            "success": true,
+            "time": 2.86102294921875e-06,
+            "results_count": 5,
+            "query": "Testes automatizados com pytes..."
+          },
+          {
+            "success": true,
+            "time": 2.384185791015625e-06,
+            "results_count": 5,
+            "query": "Rate limiting e throttling..."
+          }
+        ],
+        "avg_concurrent_time": 5.515416463216146e-06,
+        "min_concurrent_time": 2.384185791015625e-06,
+        "max_concurrent_time": 1.0013580322265625e-05
+      }
+    },
+    {
+      "test_name": "concurrent_queries_10",
+      "duration": 0.00365447998046875,
+      "queries_per_second": 4104.55114822547,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "max_workers": 10,
+        "concurrent_results": [
+          {
+            "success": true,
+            "time": 6.9141387939453125e-06,
+            "results_count": 5,
+            "query": "Middleware personalizado..."
+          },
+          {
+            "success": true,
+            "time": 4.291534423828125e-06,
+            "results_count": 5,
+            "query": "Deploy de aplicação Python com..."
+          },
+          {
+            "success": true,
+            "time": 7.867813110351562e-06,
+            "results_count": 5,
+            "query": "Monitoramento e logging estrut..."
+          },
+          {
+            "success": true,
+            "time": 2.1457672119140625e-06,
+            "results_count": 5,
+            "query": "Rate limiting e throttling..."
+          },
+          {
+            "success": true,
+            "time": 1.6689300537109375e-06,
+            "results_count": 5,
+            "query": "Configuração de CI/CD..."
+          },
+          {
+            "success": true,
+            "time": 5.0067901611328125e-06,
+            "results_count": 5,
+            "query": "Configurar banco de dados Post..."
+          },
+          {
+            "success": true,
+            "time": 6.9141387939453125e-06,
+            "results_count": 5,
+            "query": "Validação de dados com Pydanti..."
+          },
+          {
+            "success": true,
+            "time": 4.5299530029296875e-06,
+            "results_count": 5,
+            "query": "Gerenciamento de estado..."
+          },
+          {
+            "success": true,
+            "time": 3.814697265625e-06,
+            "results_count": 5,
+            "query": "Implementar WebSockets..."
+          },
+          {
+            "success": true,
+            "time": 6.67572021484375e-06,
+            "results_count": 5,
+            "query": "Segurança em APIs REST..."
+          },
+          {
+            "success": true,
+            "time": 5.0067901611328125e-06,
+            "results_count": 5,
+            "query": "Performance e otimização de qu..."
+          },
+          {
+            "success": true,
+            "time": 2.384185791015625e-06,
+            "results_count": 5,
+            "query": "Implementar sistema de cache R..."
+          },
+          {
+            "success": true,
+            "time": 9.775161743164062e-06,
+            "results_count": 5,
+            "query": "Como implementar autenticação ..."
+          },
+          {
+            "success": true,
+            "time": 2.384185791015625e-06,
+            "results_count": 5,
+            "query": "Testes automatizados com pytes..."
+          },
+          {
+            "success": true,
+            "time": 4.0531158447265625e-06,
+            "results_count": 5,
+            "query": "Arquitetura de microserviços..."
+          }
+        ],
+        "avg_concurrent_time": 4.895528157552084e-06,
+        "min_concurrent_time": 1.6689300537109375e-06,
+        "max_concurrent_time": 9.775161743164062e-06
+      }
+    },
+    {
+      "test_name": "cache_performance",
+      "duration": 0.04859614372253418,
+      "queries_per_second": 205.77764476737624,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "first_run_times": [
+          0.011440515518188477,
+          0.009212732315063477,
+          0.008971214294433594,
+          0.006873369216918945,
+          0.012063264846801758
+        ],
+        "second_run_times": [
+          1.0013580322265625e-05,
+          2.6226043701171875e-06,
+          1.6689300537109375e-06,
+          1.6689300537109375e-06,
+          1.1920928955078125e-06
+        ],
+        "avg_first_run": 0.00971221923828125,
+        "avg_second_run": 3.4332275390625e-06,
+        "cache_speedup": 2828.8888888888887,
+        "cache_hit_improvement": "282788.9%"
+      }
+    },
+    {
+      "test_name": "memory_optimization",
+      "duration": 0.11384963989257812,
+      "queries_per_second": 131.7527223990618,
+      "memory_used_mb": 0.0,
+      "gpu_utilization": 99.93107060755632,
+      "success_rate": 1.0,
+      "additional_metrics": {
+        "initial_memory_mb": 2176.0556640625,
+        "peak_memory_mb": 2176.0556640625,
+        "final_memory_mb": 2176.0556640625,
+        "memory_snapshots": [
+          {
+            "query_index": 0,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 1,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 2,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 3,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 4,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 5,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 6,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 7,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 8,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 9,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 10,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 11,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 12,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 13,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          },
+          {
+            "query_index": 14,
+            "memory_mb": 2176.0556640625,
+            "memory_delta": 0.0
+          }
+        ],
+        "avg_memory_delta": 0.0,
+        "max_memory_delta": 0.0,
+        "memory_efficiency": 1.0
+      }
+    }
+  ],
+  "recommendations": [
+    "Usar 10 workers concorrentes para máxima throughput",
+    "Cache oferece 2828.9x speedup - implementar cache persistente"
+  ]
+}

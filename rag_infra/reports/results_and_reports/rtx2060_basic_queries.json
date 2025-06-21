@@ -1,0 +1,44 @@
+﻿{
+  "total_queries": 5,
+  "total_time": 0.004857778549194336,
+  "average_time": 0.0009715557098388672,
+  "total_results": 0,
+  "cache_hit_rate": 0,
+  "queries": [
+    {
+      "query": "Como criar um currículo profissional?",
+      "results_count": 0,
+      "response_time": 0.0004971027374267578,
+      "cache_hits": 0,
+      "cache_hit_rate": 0
+    },
+    {
+      "query": "Dicas para entrevista de emprego",
+      "results_count": 0,
+      "response_time": 0.00030684471130371094,
+      "cache_hits": 0,
+      "cache_hit_rate": 0
+    },
+    {
+      "query": "Habilidades técnicas mais demandadas",
+      "results_count": 0,
+      "response_time": 0.00063323974609375,
+      "cache_hits": 0,
+      "cache_hit_rate": 0
+    },
+    {
+      "query": "Como se preparar para mudança de carreira?",
+      "results_count": 0,
+      "response_time": 0.000331878662109375,
+      "cache_hits": 0,
+      "cache_hit_rate": 0
+    },
+    {
+      "query": "Networking profissional efetivo",
+      "results_count": 0,
+      "response_time": 0.0003838539123535156,
+      "cache_hits": 0,
+      "cache_hit_rate": 0
+    }
+  ]
+}

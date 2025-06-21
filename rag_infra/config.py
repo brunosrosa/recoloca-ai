@@ -7,20 +7,20 @@ import os
 PROJECT_ROOT = Path(__file__).parent.parent
 RAG_INFRA_ROOT = Path(__file__).parent
 
-# Diretórios principais
-RESULTS_AND_REPORTS_DIR = RAG_INFRA_ROOT / "results_and_reports"
-LOGS_DIR = RAG_INFRA_ROOT / "logs"
-DATA_INDEX_DIR = RAG_INFRA_ROOT / "data_index"
-SOURCE_DOCUMENTS_DIR = RAG_INFRA_ROOT / "source_documents"
+# Diretórios principais (nova estrutura)
+RESULTS_AND_REPORTS_DIR = RAG_INFRA_ROOT / "reports" / "results_and_reports"
+LOGS_DIR = RAG_INFRA_ROOT / "temp" / "logs" / "application"
+DATA_INDEX_DIR = RAG_INFRA_ROOT / "data" / "indexes"
+SOURCE_DOCUMENTS_DIR = RAG_INFRA_ROOT / "data" / "source_documents"
 
-# Diretórios organizacionais (novos)
+# Diretórios organizacionais (nova estrutura)
 DIAGNOSTICS_DIR = RAG_INFRA_ROOT / "diagnostics"
 SERVER_DIR = RAG_INFRA_ROOT / "server"
 SETUP_DIR = RAG_INFRA_ROOT / "setup"
-TESTS_DIR = RAG_INFRA_ROOT / "tests"
+TESTS_DIR = RAG_INFRA_ROOT / "src" / "tests"
 SCRIPTS_DIR = RAG_INFRA_ROOT / "scripts"
-CORE_LOGIC_DIR = RAG_INFRA_ROOT / "core_logic"
-UTILS_DIR = RAG_INFRA_ROOT / "utils"
+CORE_LOGIC_DIR = RAG_INFRA_ROOT / "src" / "core" / "src/core/core_logic"
+UTILS_DIR = RAG_INFRA_ROOT / "src" / "utils"
 
 # Garantir que os diretórios existam
 RESULTS_AND_REPORTS_DIR.mkdir(exist_ok=True)
@@ -98,7 +98,7 @@ def get_module_path(module_category: str, module_name: str = None) -> Path:
         'setup': SETUP_DIR,
         'tests': TESTS_DIR,
         'scripts': SCRIPTS_DIR,
-        'core_logic': CORE_LOGIC_DIR,
+        "src/core/core_logic": CORE_LOGIC_DIR,
         'utils': UTILS_DIR
     }
     

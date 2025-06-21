@@ -14,8 +14,8 @@ __author__ = "@AgenteM_DevFastAPI"
 
 # Importações principais
 try:
-    from .core_logic.rag_indexer import RAGIndexer
-    from .core_logic.rag_retriever import RAGRetriever
+    from rag_infra.src.core.core_logic.rag_indexer import RAGIndexer
+    from rag_infra.src.core.core_logic.rag_retriever import RAGRetriever
     
     __all__ = [
         "RAGIndexer",

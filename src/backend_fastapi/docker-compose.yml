@@ -1,0 +1,144 @@
+# Recoloca.AI FastAPI Backend - Docker Compose Configuration
+# Development environment with all required services
+
+version: '3.8'
+
+services:
+  # =============================================================================
+  # FastAPI Backend Service
+  # =============================================================================
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: recoloca-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - DEBUG=true
+      - HOST=0.0.0.0
+      - PORT=8000
+      - REDIS_URL=redis://redis:6379/0
+      - RAG_ENABLED=true
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+    depends_on:
+      - redis
+    networks:
+      - recoloca-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # =============================================================================
+  # Redis Service (Cache & Rate Limiting)
+  # =============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: recoloca-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - recoloca-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # =============================================================================
+  # Redis Commander (Redis GUI - Development Only)
+  # =============================================================================
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: recoloca-redis-commander
+    ports:
+      - "8081:8081"
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+      - HTTP_USER=admin
+      - HTTP_PASSWORD=admin
+    depends_on:
+      - redis
+    networks:
+      - recoloca-network
+    restart: unless-stopped
+    profiles:
+      - dev-tools
+
+  # =============================================================================
+  # Nginx (Reverse Proxy - Production)
+  # =============================================================================
+  nginx:
+    image: nginx:alpine
+    container_name: recoloca-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - api
+    networks:
+      - recoloca-network
+    restart: unless-stopped
+    profiles:
+      - production
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  recoloca-network:
+    driver: bridge
+    name: recoloca-network
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  redis_data:
+    driver: local
+    name: recoloca-redis-data
+
+# =============================================================================
+# Development Commands
+# =============================================================================
+# Start development environment:
+#   docker-compose up -d
+#
+# Start with Redis GUI:
+#   docker-compose --profile dev-tools up -d
+#
+# Start production environment:
+#   docker-compose --profile production up -d
+#
+# View logs:
+#   docker-compose logs -f api
+#
+# Execute commands in container:
+#   docker-compose exec api bash
+#
+# Run tests:
+#   docker-compose exec api pytest
+#
+# Stop all services:
+#   docker-compose down
+#
+# Stop and remove volumes:
+#   docker-compose down -v

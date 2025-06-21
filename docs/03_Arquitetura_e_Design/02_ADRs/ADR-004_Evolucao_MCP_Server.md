@@ -1,7 +1,7 @@
 # ADR-004: Evolução do MCP Server
 
 **Status:** Aceito  
-**Data:** 2025-01-19  
+**Data:** 2025-06-19  
 **Decisores:** @AgenteM_ArquitetoTI, @Maestro  
 **Tags:** #mcp #server #integracao #trae #rag #evolucao
 
@@ -318,5 +318,5 @@ rag_get_status() -> SystemStatus
 ---
 
 **Versão:** 1.0  
-**Última Atualização:** 2025-01-19  
+**Última Atualização:** 2025-06-19  
 **Próxima Revisão:** 2025-02-19

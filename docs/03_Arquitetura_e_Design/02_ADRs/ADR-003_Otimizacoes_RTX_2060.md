@@ -1,7 +1,7 @@
 # ADR-003: Otimizações para RTX 2060
 
 **Status:** Aceito  
-**Data:** 2025-01-19  
+**Data:** 2025-06-19  
 **Decisores:** @AgenteM_ArquitetoTI, @Maestro  
 **Tags:** #hardware #gpu #otimizacao #rtx2060 #pytorch #faiss
 
@@ -173,5 +173,5 @@ if torch.cuda.get_device_name(0) == 'NVIDIA GeForce RTX 2060':
 ---
 
 **Versão:** 1.0  
-**Última Atualização:** 2025-01-19  
+**Última Atualização:** 2025-06-19  
 **Próxima Revisão:** 2025-02-19

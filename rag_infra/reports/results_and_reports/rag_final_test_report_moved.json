@@ -1,0 +1,245 @@
+﻿{
+  "timestamp": "2025-06-19 11:47:43",
+  "system_info": {
+    "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "pytorch_version": "2.7.1+cu118",
+    "index_status": {
+      "index_dir_exists": true,
+      "documents_file_exists": true,
+      "metadata_file_exists": true,
+      "embeddings_file_exists": true,
+      "documents_count": 281,
+      "metadata_count": 281,
+      "consistent": true
+    },
+    "gpu_memory": 6442123264
+  },
+  "initialization_test": {
+    "success": true,
+    "error": null,
+    "initialization_time": 8.678122282028198,
+    "backend_used": "PyTorch",
+    "gpu_detected": false
+  },
+  "index_loading_test": {
+    "success": true,
+    "error": null,
+    "loading_time": 0.16858267784118652,
+    "index_size": 281,
+    "backend_type": "OptimizedPyTorchRetriever"
+  },
+  "search_tests": {
+    "total_queries": 20,
+    "successful_queries": 19,
+    "failed_queries": 1,
+    "total_results": 69,
+    "avg_search_time": 0.2687083125114441,
+    "avg_results_per_query": 3.6315789473684212,
+    "query_results": {
+      "arquitetura sistema": {
+        "results_count": 4,
+        "search_time": 0.2760021686553955,
+        "top_score": 0.5249496698379517,
+        "avg_score": 0.5084830150008202,
+        "success": true
+      },
+      "requisitos funcionais": {
+        "results_count": 5,
+        "search_time": 0.26010560989379883,
+        "top_score": 0.6190348267555237,
+        "avg_score": 0.5968009829521179,
+        "success": true
+      },
+      "design interface": {
+        "results_count": 1,
+        "search_time": 0.27624011039733887,
+        "top_score": 0.5796493291854858,
+        "avg_score": 0.5796493291854858,
+        "success": true
+      },
+      "API endpoints": {
+        "results_count": 3,
+        "search_time": 0.35271310806274414,
+        "top_score": 0.5671325325965881,
+        "avg_score": 0.5550491213798523,
+        "success": true
+      },
+      "banco de dados": {
+        "results_count": 2,
+        "search_time": 0.2698211669921875,
+        "top_score": 0.5160868763923645,
+        "avg_score": 0.5135321617126465,
+        "success": true
+      },
+      "autenticação": {
+        "results_count": 2,
+        "search_time": 0.26341819763183594,
+        "top_score": 0.572747528553009,
+        "avg_score": 0.5628953576087952,
+        "success": true
+      },
+      "FastAPI": {
+        "results_count": 2,
+        "search_time": 0.26682162284851074,
+        "top_score": 0.5790077447891235,
+        "avg_score": 0.5776786208152771,
+        "success": true
+      },
+      "Supabase": {
+        "results_count": 3,
+        "search_time": 0.26622939109802246,
+        "top_score": 0.5132739543914795,
+        "avg_score": 0.510128378868103,
+        "success": true
+      },
+      "Python": {
+        "results_count": 0,
+        "search_time": 0.2668149471282959,
+        "success": false,
+        "reason": "Nenhum resultado encontrado"
+      },
+      "backend": {
+        "results_count": 3,
+        "search_time": 0.2725973129272461,
+        "top_score": 0.6279346942901611,
+        "avg_score": 0.6236425439516703,
+        "success": true
+      },
+      "recoloca": {
+        "results_count": 5,
+        "search_time": 0.2597081661224365,
+        "top_score": 0.56894850730896,
+        "avg_score": 0.5472525358200073,
+        "success": true
+      },
+      "mentores": {
+        "results_count": 5,
+        "search_time": 0.2738642692565918,
+        "top_score": 0.527540922164917,
+        "avg_score": 0.5167261481285095,
+        "success": true
+      },
+      "agentes IA": {
+        "results_count": 5,
+        "search_time": 0.2635674476623535,
+        "top_score": 0.5658477544784546,
+        "avg_score": 0.5494570136070251,
+        "success": true
+      },
+      "MVP": {
+        "results_count": 5,
+        "search_time": 0.2547171115875244,
+        "top_score": 0.483195424079895,
+        "avg_score": 0.4602335155010223,
+        "success": true
+      },
+      "roadmap": {
+        "results_count": 5,
+        "search_time": 0.2555732727050781,
+        "top_score": 0.5651859641075134,
+        "avg_score": 0.5459246635437012,
+        "success": true
+      },
+      "kanban": {
+        "results_count": 5,
+        "search_time": 0.25586915016174316,
+        "top_score": 0.5687198638916016,
+        "avg_score": 0.5489114403724671,
+        "success": true
+      },
+      "tech stack": {
+        "results_count": 3,
+        "search_time": 0.2599632740020752,
+        "top_score": 0.5763707756996155,
+        "avg_score": 0.5341099699338278,
+        "success": true
+      },
+      "documentação": {
+        "results_count": 5,
+        "search_time": 0.2543659210205078,
+        "top_score": 0.5742636919021606,
+        "avg_score": 0.5513371467590332,
+        "success": true
+      },
+      "desenvolvimento": {
+        "results_count": 3,
+        "search_time": 0.269329309463501,
+        "top_score": 0.5281490087509155,
+        "avg_score": 0.5146478215853373,
+        "success": true
+      },
+      "plataforma": {
+        "results_count": 3,
+        "search_time": 0.25644469261169434,
+        "top_score": 0.5171892642974854,
+        "avg_score": 0.5030111571153005,
+        "success": true
+      }
+    },
+    "errors": []
+  },
+  "performance_tests": {
+    "batch_search_time": 1.4827146530151367,
+    "single_search_time": 0.02854609489440918,
+    "memory_usage": 6724.34375,
+    "gpu_memory_usage": 8674.82421875,
+    "throughput_queries_per_second": 3.3721930176061705
+  },
+  "threshold_tests": {
+    "query_used": "arquitetura sistema",
+    "threshold_results": {
+      "0.0": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "min_score": 0.49523839354515076,
+        "max_score": 0.5249496698379517
+      },
+      "0.1": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "min_score": 0.49523839354515076,
+        "max_score": 0.5249496698379517
+      },
+      "0.2": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "min_score": 0.49523839354515076,
+        "max_score": 0.5249496698379517
+      },
+      "0.3": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "min_score": 0.49523839354515076,
+        "max_score": 0.5249496698379517
+      },
+      "0.4": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "min_score": 0.49523839354515076,
+        "max_score": 0.5249496698379517
+      },
+      "0.5": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "min_score": 0.49523839354515076,
+        "max_score": 0.5249496698379517
+      }
+    },
+    "optimal_threshold": 0.0
+  },
+  "summary": {
+    "overall_success": true,
+    "system_functional": true,
+    "performance_acceptable": true,
+    "issues_found": [],
+    "success_rate": 95.0
+  },
+  "recommendations": [
+    "✅ Sistema RAG funcionando corretamente",
+    "🔧 Considere ajustar threshold para otimizar resultados",
+    "📊 Monitore performance em produção",
+    "🎯 Considere usar threshold 0.0 para melhores resultados"
+  ]
+}

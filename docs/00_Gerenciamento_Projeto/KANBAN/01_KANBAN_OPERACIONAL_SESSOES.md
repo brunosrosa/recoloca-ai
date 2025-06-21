@@ -7,22 +7,76 @@ sticker: lucide//align-start-horizontal
 
 ## 🧊 BACKLOG (Não Priorizado)
 
-
-
-## ⏸️ PAUSADO (Decisão Estratégica)
-
-- [ ] **[CRI-API-001]** Criação da Especificação OpenAPI Completa 🔺 \ #api \ #openapi \ #especificacao \ #backend \ #pausado \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@AgenteM_Orquestrador`
-	- [x] Análise da especificação atual (RecolocaAPI_v1_OpenAPI.yaml) ✅ 2025-06-20
-	- [x] Identificação de endpoints faltantes vs ERS ✅ 2025-06-20
-	- [ ] **PAUSADO:** Implementação de endpoints de análise de CV por IA
-	- [ ] **PAUSADO:** Implementação de endpoints de otimização de CV
-	- [ ] **PAUSADO:** Implementação de endpoints de busca de vagas
-	- [ ] **PAUSADO:** Implementação de endpoints de Kanban pessoal
-	- [ ] **PAUSADO:** Validação de consistência com HLD e ERS
-	- [ ] **PAUSADO:** Documentação de schemas de dados completos
-	- **Motivo da Pausa:** Priorização de validação de negócio antes de especificação completa
-	- **Retomada Prevista:** Após conclusão de [PES-NEG-001] e [TST-VAL-001]
-	- **Definition of Done:** OpenAPI 100% completa + validação técnica
+- [ ] **[MET-AHA-001]** Implementação de Métricas Específicas para "Momentos AHA!" ⏫ \ #metricas \ #aha_moments \ #analytics \ #Backlog `@Maestro` `@AgenteM_Performance`
+	- [ ] Definir métricas específicas para medir a eficácia dos "Momentos AHA!"
+	- [ ] Implementar tracking de tempo até primeiro valor percebido
+	- [ ] Criar dashboards para monitoramento em tempo real
+	- [ ] Estabelecer benchmarks e metas de performance
+	- **Dependências:** MVP funcional
+	- **Definition of Done:** Sistema de métricas AHA! operacional
+- [ ] **[MET-PER-001]** Sistema de Monitoramento de Performance e Alertas ⏫ \ #performance \ #monitoramento \ #alertas \ #Backlog `@Maestro` `@AgenteM_Performance`
+	- [ ] Configurar monitoramento de performance de APIs e frontend
+	- [ ] Implementar alertas para degradação de performance
+	- [ ] Criar dashboards de saúde do sistema
+	- [ ] Implementar notificações automáticas para desvios críticos
+	- [ ] Criar sistema de relatórios automatizados para stakeholders
+- [ ] **[PES-INF-001]** Pesquisa de Opções de Hospedagem ⏫ \ #pesquisa \ #infraestrutura \ #hospedagem \ #Backlog `@Maestro` `@AgenteM_ArquitetoTI`
+	- [ ] Analisar e comparar opções de hospedagem para Frontend (Vercel, Netlify, Firebase Hosting, GitHub Pages)
+	- [ ] Analisar e comparar opções de hospedagem para Backend (Render, Railway, Fly.io, DigitalOcean App Platform)
+	- [ ] Considerar custos, performance, facilidade de deploy e escalabilidade
+	- [ ] Documentar recomendações com justificativas técnicas e financeiras
+	- **Dependências:** Nenhuma
+	- **Definition of Done:** Relatório de hospedagem com recomendações
+- [ ] **[VAL-NEG-001]** Validação de Premissas de Negócio ⏫ \ #validacao \ #negocio \ #estrategia \ #Backlog `@Maestro`
+	- [ ] Validar hipóteses sobre dor do usuário e proposta de valor
+	- [ ] Testar conceito inicial e proposta de valor
+	- [ ] Documentar resultados e ajustar estratégia conforme necessário
+- [ ] **[EST-GTM-001]** Implementação da Estratégia Go-to-Market ⏫ \ #estrategia \ #marketing \ #gtm \ #Backlog `@Maestro`
+	- [ ] Executar ações de pré-lançamento conforme [[docs/08_Marketing_e_Vendas/01_ESTRATEGIA_GO_TO_MARKET.md]]
+	- [ ] Implementar canais de aquisição prioritários
+	- [ ] Executar estratégia de pricing e monetização
+	- [ ] Estabelecer parcerias estratégicas (RH, consultorias, etc.)
+	- **Dependências:** MVP validado
+	- **Definition of Done:** Estratégia GTM em execução
+- [ ] **[EST-MOA-001]** Implementação de Moats Competitivos ⏫ \ #estrategia \ #competitivo \ #moats \ #Backlog `@Maestro`
+	- [ ] Implementar vantagens competitivas sustentáveis
+	- [ ] Monitorar métricas de moats mensalmente
+	- [ ] Executar estratégias de defesa competitiva conforme [[docs/01_Guias_Centrais/03_VANTAGENS_COMPETITIVAS_SUSTENTAVEIS.md]]
+- [ ] **[DOC-UXD-004]** Design: Criação do Style Guide Detalhado (`STYLE_GUIDE.md`) 🔼 \ #ux \ #ui \ #documentacao \ #Backlog `@AgenteM_UXDesigner` `@Maestro`
+	- [ ] Incluir elementos visuais que reforcem "Specialized Intelligence"
+	- [ ] Definir paleta de cores, tipografia e iconografia
+	- [ ] Criar componentes de UI reutilizáveis
+	- [ ] Documentar padrões de interação e micro-animações
+	- **Dependências:** Wireframes aprovados
+	- **Definition of Done:** Style Guide completo e aprovado
+- [ ] **[CFG-ANA-001]** Setup Analytics e Métricas de Produto 🔻 \ #analytics \ #metricas \ #produto \ #BacklogEstrategico `@AgenteM_Orquestrador` `@Maestro`
+	- [ ] Configurar Google Analytics 4 ou Mixpanel
+	- [ ] Definir eventos de conversão e funis
+	- [ ] Implementar tracking de "AHA! Moments"
+	- [ ] Dashboard de métricas de produto
+	- **Dependências:** MVP funcional
+	- **Definition of Done:** Sistema de analytics operacional
+- [ ] **[PES-COM-001]** Análise Competitiva Detalhada 🔻 \ #pesquisa \ #competitivo \ #estrategia \ #BacklogEstrategico `@AgenteM_Orquestrador` `@Maestro`
+	- [ ] Mapear funcionalidades dos principais concorrentes
+	- [ ] Identificar gaps e oportunidades de diferenciação
+	- [ ] Análise de pricing e modelos de negócio
+	- [ ] Benchmarking de UX e "AHA! Moments"
+	- **Dependências:** Nenhuma
+	- **Definition of Done:** Relatório competitivo completo
+- [ ] **[GTM-EST-001]** Estratégia de Go-to-Market 🔻 \ #gtm \ #estrategia \ #crescimento \ #BacklogEstrategico `@AgenteM_Orquestrador` `@Maestro`
+	- [ ] Definir canais de aquisição prioritários
+	- [ ] Estratégia de pricing e monetização
+	- [ ] Plano de lançamento e comunicação
+	- [ ] Parcerias estratégicas (RH, consultorias, etc.)
+	- **Dependências:** MVP validado
+	- **Definition of Done:** Plano de GTM executável
+- [ ] **[DES-SYS-001]** Design System e Componentes 🔻 \ #design \ #ux \ #sistema \ #BacklogEstrategico `@AgenteM_UXDesigner` `@AgenteM_Orquestrador` `@Maestro`
+	- [ ] Criar design system consistente
+	- [ ] Biblioteca de componentes reutilizáveis
+	- [ ] Guia de estilo e identidade visual
+	- [ ] Documentação de padrões de UX
+	- **Dependências:** MVP funcional
+	- **Definition of Done:** Design system documentado e implementado
 
 
 ## 🚀 FASE 2: DESENVOLVIMENTO MVP
@@ -130,108 +184,20 @@ sticker: lucide//align-start-horizontal
 	- **Definition of Done:** HLD refinado e backlog priorizado
 
 
-## Fase 1: Validação Técnica e Estratégica (Próximas Prioridades)
-
-- [ ] **[TST-VAL-001]** Protótipo de Validação RLS FastAPI/Supabase 🔺 \ #validacao \ #tecnica \ #rls \ #prototipo \ #critico \ #Fase1_Validacao `@AgenteM_DevFastAPI` `@AgenteM_ArquitetoTI`
-	- [ ] Implementar protótipo mínimo de autenticação Supabase
-	- [ ] Configurar RLS (Row Level Security) básico
-	- [ ] Testar upload e processamento básico de CV
-	- [ ] Validar integração FastAPI + Supabase + RLS
-	- [ ] Documentar resultados e limitações
-	- **Dependências:** [PES-NEG-001] iniciado
-	- **Definition of Done:** Protótipo funcional + validação técnica documentada
-	- **Prioridade:** ALTA - Validação técnica crítica
-	- **Prazo:** 48-72h após [PES-NEG-001]
-- [ ] **[MET-AHA-001]** Implementação de Métricas Específicas para "Momentos AHA!" ⏫ \ #metricas \ #aha_moments \ #analytics \ #Backlog `@Maestro` `@AgenteM_Performance`
-	- [ ] Definir métricas específicas para medir a eficácia dos "Momentos AHA!"
-	- [ ] Implementar tracking de tempo até primeiro valor percebido
-	- [ ] Criar dashboards para monitoramento em tempo real
-	- [ ] Estabelecer benchmarks e metas de performance
-	- **Dependências:** MVP funcional
-	- **Definition of Done:** Sistema de métricas AHA! operacional
-- [ ] **[MET-PER-001]** Sistema de Monitoramento de Performance e Alertas ⏫ \ #performance \ #monitoramento \ #alertas \ #Backlog `@Maestro` `@AgenteM_Performance`
-	- [ ] Configurar monitoramento de performance de APIs e frontend
-	- [ ] Implementar alertas para degradação de performance
-	- [ ] Criar dashboards de saúde do sistema
-	- [ ] Implementar notificações automáticas para desvios críticos
-	- [ ] Criar sistema de relatórios automatizados para stakeholders
-- [ ] **[PES-INF-001]** Pesquisa de Opções de Hospedagem ⏫ \ #pesquisa \ #infraestrutura \ #hospedagem \ #Backlog `@Maestro` `@AgenteM_ArquitetoTI`
-	- [ ] Analisar e comparar opções de hospedagem para Frontend (Vercel, Netlify, Firebase Hosting, GitHub Pages)
-	- [ ] Analisar e comparar opções de hospedagem para Backend (Render, Railway, Fly.io, DigitalOcean App Platform)
-	- [ ] Considerar custos, performance, facilidade de deploy e escalabilidade
-	- [ ] Documentar recomendações com justificativas técnicas e financeiras
-	- **Dependências:** Nenhuma
-	- **Definition of Done:** Relatório de hospedagem com recomendações
-- [ ] **[VAL-NEG-001]** Validação de Premissas de Negócio ⏫ \ #validacao \ #negocio \ #estrategia \ #Backlog `@Maestro`
-	- [ ] Validar hipóteses sobre dor do usuário e proposta de valor
-	- [ ] Testar conceito inicial e proposta de valor
-	- [ ] Documentar resultados e ajustar estratégia conforme necessário
-- [ ] **[EST-GTM-001]** Implementação da Estratégia Go-to-Market ⏫ \ #estrategia \ #marketing \ #gtm \ #Backlog `@Maestro`
-	- [ ] Executar ações de pré-lançamento conforme [[docs/08_Marketing_e_Vendas/01_ESTRATEGIA_GO_TO_MARKET.md]]
-	- [ ] Implementar canais de aquisição prioritários
-	- [ ] Executar estratégia de pricing e monetização
-	- [ ] Estabelecer parcerias estratégicas (RH, consultorias, etc.)
-	- **Dependências:** MVP validado
-	- **Definition of Done:** Estratégia GTM em execução
-- [ ] **[EST-MOA-001]** Implementação de Moats Competitivos ⏫ \ #estrategia \ #competitivo \ #moats \ #Backlog `@Maestro`
-	- [ ] Implementar vantagens competitivas sustentáveis
-	- [ ] Monitorar métricas de moats mensalmente
-	- [ ] Executar estratégias de defesa competitiva conforme [[docs/01_Guias_Centrais/03_VANTAGENS_COMPETITIVAS_SUSTENTAVEIS.md]]
-- [ ] **[DOC-UXD-004]** Design: Criação do Style Guide Detalhado (`STYLE_GUIDE.md`) 🔼 \ #ux \ #ui \ #documentacao \ #Backlog `@AgenteM_UXDesigner` `@Maestro`
-	- [ ] Incluir elementos visuais que reforcem "Specialized Intelligence"
-	- [ ] Definir paleta de cores, tipografia e iconografia
-	- [ ] Criar componentes de UI reutilizáveis
-	- [ ] Documentar padrões de interação e micro-animações
-	- **Dependências:** Wireframes aprovados
-	- **Definition of Done:** Style Guide completo e aprovado
-- [ ] **[CFG-ANA-001]** Setup Analytics e Métricas de Produto 🔻 \ #analytics \ #metricas \ #produto \ #BacklogEstrategico `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] Configurar Google Analytics 4 ou Mixpanel
-	- [ ] Definir eventos de conversão e funis
-	- [ ] Implementar tracking de "AHA! Moments"
-	- [ ] Dashboard de métricas de produto
-	- **Dependências:** MVP funcional
-	- **Definition of Done:** Sistema de analytics operacional
-- [ ] **[PES-COM-001]** Análise Competitiva Detalhada 🔻 \ #pesquisa \ #competitivo \ #estrategia \ #BacklogEstrategico `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] Mapear funcionalidades dos principais concorrentes
-	- [ ] Identificar gaps e oportunidades de diferenciação
-	- [ ] Análise de pricing e modelos de negócio
-	- [ ] Benchmarking de UX e "AHA! Moments"
-	- **Dependências:** Nenhuma
-	- **Definition of Done:** Relatório competitivo completo
-- [ ] **[GTM-EST-001]** Estratégia de Go-to-Market 🔻 \ #gtm \ #estrategia \ #crescimento \ #BacklogEstrategico `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] Definir canais de aquisição prioritários
-	- [ ] Estratégia de pricing e monetização
-	- [ ] Plano de lançamento e comunicação
-	- [ ] Parcerias estratégicas (RH, consultorias, etc.)
-	- **Dependências:** MVP validado
-	- **Definition of Done:** Plano de GTM executável
-- [ ] **[DES-SYS-001]** Design System e Componentes 🔻 \ #design \ #ux \ #sistema \ #BacklogEstrategico `@AgenteM_UXDesigner` `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] Criar design system consistente
-	- [ ] Biblioteca de componentes reutilizáveis
-	- [ ] Guia de estilo e identidade visual
-	- [ ] Documentação de padrões de UX
-	- **Dependências:** MVP funcional
-	- **Definition of Done:** Design system documentado e implementado
-
-
 ## 🚨 FASE 0: FUNDAÇÃO RAG + AGENTES
 
-- [ ] **[IMP-IDX-001]** Implementação de Indexação Automática RAG 🔼 \ #rag \ #automacao \ #indexacao \ #Fase0_RAG_Agentes `@AgenteM_DevFastAPI` `@Maestro`
-	- [ ] Implementar sistema de monitoramento de mudanças em documentos
-	- [ ] Criar rotina automática de re-indexação
-	- [ ] Configurar triggers para atualizações de documentos
-	- [ ] Implementar logs de indexação para auditoria
-	- [ ] Testar sistema de indexação automática
-	- **Dependências:** RAG operacional, MCP Server funcional
-	- **Definition of Done:** Sistema de indexação automática operacional
-- [ ] **[CFG-MON-001]** Configuração de Monitoramento de Performance RAG 🔼 \ #rag \ #monitoramento \ #performance \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` `@Maestro`
-	- [ ] Implementar métricas de tempo de resposta
-	- [ ] Configurar alertas para degradação de performance
-	- [ ] Criar dashboard de saúde do sistema RAG
-	- [ ] Implementar logs estruturados para análise
-	- [ ] Definir SLAs e thresholds de performance
-	- **Dependências:** RAG operacional
-	- **Definition of Done:** Sistema de monitoramento RAG operacional
+- [ ] [EST-MAESTRO-001] Investigar melhorias para Agentes ⏫ \ #agentes \ #processo \ #documentacao \ #Fase0_RAG_Agentes 
+	- [ ] Verificar como os Agentes podem atuar para Acompanhar/Criar/Modificar/Mover Tarefas nos Kanbans com consistência.
+	- [ ] Revisar os Perfis de Agentes de forma crítica, para verificar discrepâncias, nuances, inconsistências, problemas de links e outros de aprendizado.
+	- [ ] Entender quando há necessidade ter o link completo dos documentos no /docs ou reforçar o uso do RAG para buscar um contexto mais semântico?
+- [ ] **[CFG-AGT-001]** Configuração dos 4 Agentes Tier 1 Restantes no Trae IDE 🔺 \ #agentes \ #configuracao \ #critico \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
+	- [ ] Configurar @AgenteM_ArquitetoTI no Trae IDE (HLD + LLD unificado)
+	- [ ] Configurar @AgenteM_UXDesigner no Trae IDE
+	- [ ] Configurar @AgenteM_DevFastAPI no Trae IDE
+	- [ ] Configurar @AgenteM_DevFlutter no Trae IDE
+	- [ ] Testar funcionalidade básica de cada agente com RAG
+	- **Dependências:** [CFG-RAG-001] concluído
+	- **Definition of Done:** 5 Agentes Tier 1 operacionais no Trae IDE
 - [ ] **[EST-AGT-002]** Definição de Responsabilidades de Documentação para Agentes 🔼 \ #estrategia \ #agentes \ #documentacao \ #Fase0_RAG_Agentes `@AgenteM_Orquestrador` `@Maestro`
 	- [ ] Discutir como outros agentes contribuem para "Documentação Viva"
 	- [ ] Definir responsabilidades e fluxos para consistência contextual
@@ -242,77 +208,38 @@ sticker: lucide//align-start-horizontal
 
 ## 🔄 EM ANDAMENTO
 
-- [ ] **[CFG-AGT-002]** Evolução & Configuração dos 4 Agentes Tier 1 Restantes (Crítico) 🔺 \ #agentes \ #configuracao \ #critico \ #Fase0_RAG_Agentes `@Maestro`
-	- [ ] Revisar Perfis de Agentes Tier 1, relacionado também as dúvidas da tarefa: [EST-MAESTRO-001]  para uma análise crítica, discrepâncias, referências erradas, prompt "estrutural" do TRAE IDE atualizado (max 10.000 caracteres e melhor definição de uso do RAG) e análise de melhorias possíveis.
-	- [ ] Configurar @AgenteM_ArquitetoTI no Trae IDE
-	- [ ] Configurar @AgenteM_UXDesigner no Trae IDE
-	- [ ] Configurar @AgenteM_DevFastAPI no Trae IDE
-	- [ ] Configurar @AgenteM_DevFlutter no Trae IDE
-	- [ ] Testar funcionalidade básica de cada agente com RAG
-	- [ ] Validar acesso aos documentos específicos de cada domínio
-	- **Dependências:** RAG MCP operacional
-	- **Definition of Done:** 5 Agentes Tier 1 100% operacionais no Trae IDE
-	- **Prioridade:** CRÍTICA - Necessário para transição Fase 1
-- [ ] [EST-MAESTRO-001] Investigar melhorias para Agentes ⏫ \ #agentes \ #processo \ #documentacao \ #Fase0_RAG_Agentes  `@Maestro` `@AgenteM_Orquestrador`
-	- [ ] Verificar como os Agentes podem atuar para Acompanhar/Criar/Modificar/Mover Tarefas nos Kanbans com consistência.
-	- [ ] Revisar os Perfis de Agentes de forma crítica, para verificar discrepâncias, nuances, inconsistências, problemas de links e outros de aprendizado.
-	- [ ] Entender quando há necessidade ter o link completo dos documentos no /docs ou reforçar o uso do RAG para buscar um contexto mais semântico?
-	- [ ] Como manter a orquestração entre agentes?
-	- [ ] Como colocar o Orquestrador para gerar templates de prompts para orquestrar e apoiar outros agentes à orquestrar os pedidos entre agentes?
-	- [ ] Como fazer para os Agentes "Intuir" melhor a organização da criação de arquivos em pastas corretas e seguindo uma lógica.
-	- [ ] Como utilizar o /00_COMUNICAÇÃO_ENTRE_AGENTES para manter uma comunicação e um banco de "memória de médio prazo" para os Agentes?
-- [ ] **[PES-NEG-001]** Validação de Negócio: Estimativa de Custos LLMs e Infraestrutura 🔺 \ #validacao \ #negocio \ #custos \ #llm \ #infraestrutura \ #critico \ #Fase1_Validacao `@AgenteM_Orquestrador` `@Maestro`
-	- [ ] Análise de custos de APIs LLM (Google Gemini via OpenRouter)
-	- [ ] Estimativa de custos de infraestrutura (Supabase, hosting)
-	- [ ] Projeção de custos por usuário/mês
-	- [ ] Análise de viabilidade financeira do modelo freemium
-	- [ ] Definição de limites de uso para tier gratuito
-	- [ ] Documentação de modelo de precificação
-	- **Dependências:** Especificação OpenAPI parcial
-	- **Definition of Done:** Modelo de custos validado + viabilidade confirmada
-	- **Prioridade:** CRÍTICA - Validação antes de desenvolvimento completo
-	- **Prazo:** 48-72h
-- [ ] **[VAL-RAG-001]** Validação de Performance RAG com Threshold 0.2 🔼 \ #rag \ #performance \ #validacao \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` `@Maestro`
-	- [ ] Executar bateria de testes com threshold 0.2
-	- [ ] Validar qualidade das respostas vs quantidade
-	- [ ] Medir tempo de resposta e relevância dos resultados
-	- [ ] Documentar métricas de performance
-	- [ ] Ajustar threshold se necessário baseado em resultados
-	- **Dependências:** RAGRetriever local corrigido
-	- **Definition of Done:** Performance RAG validada e documentada
-	- **Prioridade:** ALTA - Garantir qualidade do sistema
+- [x] **[COR-RAG-001]** Correção do RAGRetriever Local 🔺 \ #rag \ #correção \ #local \ #retriever \ #critico \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO 19/06/2025**
+	- [x] Investigar incompatibilidade RAGRetriever com backend PyTorch
+	- [x] Corrigir interface de busca local (threshold otimizado de 0.7 para 0.2)
+	- [x] Implementar testes de validação (diagnostico_rag.py, correcao_rag.py)
+	- [x] Documentar correções aplicadas (ADR-007)
+	- [x] Validar consistência com MCP Server
+	- **Dependências:** Sistema RAG operacional
+	- **Definition of Done:** RAGRetriever local funcional + testes + documentação
+	- **Resultado:** Sistema RAG retornando 5 resultados vs 0 anteriormente, performance 12-170ms
+- [x] **[DOC-ADR-001]** Documentação de ADRs Críticos 🔺 \ #documentacao \ #adr \ #arquitetura \ #decisoes \ #critico \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO 19/06/2025**
+	- [x] ADR-002: PyTorch vs FAISS-GPU ✅
+	- [ ] ADR-003: Otimizações RTX 2060
+	- [ ] ADR-004: Evolução MCP Server
+	- [ ] ADR-005: Reorganização estrutural
+	- [x] Consolidar decisões técnicas ✅
+	- **Dependências:** Infraestrutura RAG estável
+	- **Definition of Done:** 4 ADRs documentados + consolidação técnica
+	- **Resultado:** ADR-002 criado com análise detalhada PyTorch vs FAISS-GPU, métricas de performance documentadas
+- [x] **[DOC-LLD-001]** Consolidação do LLD 🔺 \ #lld \ #arquitetura \ #detalhamento \ #documentacao \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO 19/06/2025**
+	- [x] Detalhar componentes RAG/MCP
+	- [x] Especificar interfaces de integração
+	- [x] Documentar estruturas de dados
+	- [x] Definir padrões de implementação
+	- [x] Validar com equipe técnica
+	- **Dependências:** ADRs documentados
+	- **Definition of Done:** LLD consolidado + validação técnica
 
 
 ## ✅ CONCLUÍDO
 
-- [x] **[DOC-LLD-001]** Consolidação do LLD 🔺 \ #lld \ #arquitetura \ #detalhamento \ #documentacao \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO**  ✅ 2025-06-20
-	- [x] Detalhar componentes RAG/MCP ✅ 2025-06-20
-	- [x] Especificar interfaces de integração ✅ 2025-06-20
-	- [x] Documentar estruturas de dados ✅ 2025-06-20
-	- [x] Definir padrões de implementação ✅ 2025-06-20
-	- [x] Validar com equipe técnica ✅ 2025-06-20
-	- **Dependências:** ADRs documentados
-	- **Definition of Done:** LLD consolidado + validação técnica
-- [x] **[DOC-ADR-001]** Documentação de ADRs Críticos 🔺 \ #documentacao \ #adr \ #arquitetura \ #decisoes \ #critico \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO** ✅ 2025-06-20
-	- [x] ADR-002: PyTorch vs FAISS-GPU ✅ 2025-06-20
-	- [x] ADR-003: Otimizações RTX 2060 ✅ 2025-06-20
-	- [x] ADR-004: Evolução MCP Server ✅ 2025-06-20
-	- [x] ADR-005: Reorganização estrutural ✅ 2025-06-20
-	- [x] Consolidar decisões técnicas ✅ 2025-06-20
-	- **Dependências:** Infraestrutura RAG estável
-	- **Definition of Done:** 4 ADRs documentados + consolidação técnica
-	- **Resultado:** ADR-002 criado com análise detalhada PyTorch vs FAISS-GPU, métricas de performance documentadas
-- [x] **[COR-RAG-001]** Correção do RAGRetriever Local 🔺 \ #rag \ #correção \ #local \ #retriever \ #critico \ #Fase0_RAG_Agentes `@AgenteM_ArquitetoTI` ✅ **CONCLUÍDO** ✅ 2025-06-20
-	- [x] Investigar incompatibilidade RAGRetriever com backend PyTorch ✅ 2025-06-20
-	- [x] Corrigir interface de busca local (threshold otimizado de 0.7 para 0.2) ✅ 2025-06-20
-	- [x] Implementar testes de validação (diagnostico_rag.py, correcao_rag.py) ✅ 2025-06-20
-	- [x] Documentar correções aplicadas (ADR-007) ✅ 2025-06-20
-	- [x] Validar consistência com MCP Server ✅ 2025-06-20
-	- **Dependências:** Sistema RAG operacional
-	- **Definition of Done:** RAGRetriever local funcional + testes + documentação
-	- **Resultado:** Sistema RAG retornando 5 resultados vs 0 anteriormente, performance 12-170ms
 - [x] **[CFG-RAG-001]** Configuração e Integração RAG via MCP no Trae IDE 🔺 \ #rag \ #mcp \ #configuracao \ #critico \ #Fase0_RAG_Agentes `@Maestro` ✅ 2025-01-16
-	- [x] Configuração do MCP Server no Trae IDE ✅ ✅ 2025-06-20
+	- [x] Configuração do MCP Server no Trae IDE ✅
 	- [x] Testes de consulta à documentação Recoloca.AI ✅
 	- [x] Validação de respostas contextualizadas para agentes ✅
 	- [x] Estabelecimento de rotina de indexação automática ✅

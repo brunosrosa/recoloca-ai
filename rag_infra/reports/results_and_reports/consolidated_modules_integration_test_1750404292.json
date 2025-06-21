@@ -1,0 +1,43 @@
+﻿{
+  "timestamp": 1750404251.761343,
+  "test_session_id": "integration_test_1750404251",
+  "modules_tested": [
+    "core_logic",
+    "diagnostics",
+    "utils",
+    "server",
+    "setup"
+  ],
+  "tests": {
+    "core_logic": {
+      "module": "core_logic",
+      "status": "success",
+      "components": {
+        "rag_retriever": "success",
+        "pytorch_gpu_retriever": "success",
+        "embedding_model": "success",
+        "rag_initialization": {
+          "status": "success",
+          "backend_info": {
+            "current_backend": "Auto",
+            "recommended_backend": "pytorch",
+            "gpu_available": true,
+            "cuda_device_count": 1,
+            "gpu_name": "NVIDIA GeForce RTX 2060",
+            "gpu_memory_total": 6442123264
+          }
+        }
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "diagnostics": {
+      "module": "diagnostics",
+      "status": "success",
+      "components": {
+        "rag_diagnostics": "success",
+        "rag_fixes": "success",
+        "basic_diagnostics": {
+          "status": "success",
+          "result": [
+            

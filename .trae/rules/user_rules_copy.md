@@ -50,6 +50,8 @@ Data de Última Atualização: 06 de junho de 2025
     - Equilibre a robustez com as necessidades do MVP: Para componentes de núcleo, priorize design robusto. Para funcionalidades mais periféricas em um MVP, soluções mais simples podem ser aceitáveis, mas qualquer débito técnico significativo DEVE ser sinalizado.
 - **Considerações de Segurança (Geral):**
     - Mesmo para tarefas de código aparentemente simples, sempre considere as implicações de segurança. Se identificar um risco potencial, mesmo que fora do escopo imediato da tarefa, sinalize-o.
+- **Utilização de Terminal:**
+    - PowerShell 5.1 (windows 11)
 
 ## 2.1. Gestão de Conflitos entre Regras (Código)
 

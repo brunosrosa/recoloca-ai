@@ -33,9 +33,9 @@ logger = logging.getLogger(__name__)
 
 # Imports do sistema RAG
 try:
-    from rag_infra.core_logic.rag_retriever import RAGRetriever
+    from rag_infra.src.core.core_logic.rag_retriever import RAGRetriever
     from rag_infra.config.rag_optimization_config import RAGOptimizationConfig
-    from rag_infra.core_logic.rag_metrics_monitor import MetricsCollector, start_monitoring, stop_monitoring
+    from rag_infra.src.core.core_logic.rag_metrics_monitor import MetricsCollector, start_monitoring, stop_monitoring
     from rag_infra.tests.test_load_performance import RAGLoadTester, run_rtx2060_optimized_test
 except ImportError as e:
     logger.error(f"Erro ao importar módulos RAG: {e}")

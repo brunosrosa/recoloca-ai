@@ -1,7 +1,7 @@
 # ADR-005: Reorganização Estrutural do Projeto
 
 **Status:** Aceito  
-**Data:** 2025-01-19  
+**Data:** 2025-06-19  
 **Decisores:** @AgenteM_ArquitetoTI, @AgenteM_Orquestrador, @Maestro  
 **Tags:** #organizacao #estrutura #documentacao #infraestrutura #kanban
 
@@ -322,5 +322,5 @@ def test_mcp_server_funcional():
 ---
 
 **Versão:** 1.0  
-**Última Atualização:** 2025-01-19  
+**Última Atualização:** 2025-06-19  
 **Próxima Revisão:** 2025-02-19

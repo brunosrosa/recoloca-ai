@@ -1,0 +1,6 @@
+﻿{
+  "embedding_dim": 1024,
+  "num_embeddings": 754,
+  "dtype": "torch.float32",
+  "device": "cpu"
+}

@@ -23,7 +23,10 @@ from dataclasses import dataclass
 from abc import ABC, abstractmethod
 
 # Adicionar o diretório core_logic ao path
-sys.path.insert(0, str(Path(__file__).parent.parent / "core_logic"))
+
+project_root = Path(__file__).parent.parent
+
+sys.path.insert(0, str(project_root / "src" / "core" / "src/core/core_logic"))
 
 # Configurar logging
 logging.basicConfig(

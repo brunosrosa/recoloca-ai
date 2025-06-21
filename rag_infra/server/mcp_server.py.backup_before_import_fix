@@ -1,0 +1,540 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+MCP Server para Sistema RAG - Recoloca.ai
+
+Este servidor MCP expõe as funcionalidades do sistema RAG para integração
+com o Trae IDE e outros clientes MCP.
+
+Autor: @AgenteM_DevFastAPI
+Versão: 1.0
+Data: Junho 2025
+"""
+
+import asyncio
+import json
+import logging
+import sys
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Sequence
+
+# Adicionar os diretórios necessários ao path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+sys.path.insert(0, str(project_root / "src" / "core" / "core_logic"))
+sys.path.insert(0, str(project_root / "src" / "utils" / "utils"))
+
+try:
+    from mcp.server import Server
+    from mcp.server.models import InitializationOptions
+    from mcp.server.stdio import stdio_server
+    from mcp.types import (
+        Resource,
+        Tool,
+        TextContent,
+        ImageContent,
+        EmbeddedResource,
+        LoggingLevel
+    )
+except ImportError as e:
+    print(f"Erro: Biblioteca MCP não encontrada. Instale com: pip install mcp")
+    print(f"Detalhes: {e}")
+    sys.exit(1)
+
+# Importar módulos RAG da nova estrutura
+try:
+    from rag_indexer import RAGIndexer
+    from rag_retriever import (
+        RAGRetriever, 
+        initialize_retriever, 
+        search_documents
+    )
+    from constants import (
+        MCP_SERVER_NAME,
+        MCP_SERVER_VERSION,
+        MCP_TOOLS,
+        DEFAULT_TOP_K,
+        MIN_SIMILARITY_SCORE,
+        SOURCE_DOCUMENTS_DIR,
+        FAISS_INDEX_DIR,
+        LOGS_DIR,
+        SEPARATORS,
+        create_directories
+    )
+except ImportError as e:
+    print(f"Erro: Módulos RAG não encontrados: {e}")
+    print(f"Verifique se os módulos estão em: {project_root / 'src' / 'core' / 'core_logic'}")
+    sys.exit(1)
+
+# Configurar logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Criar servidor MCP
+server = Server(MCP_SERVER_NAME)
+
+# Estado global do servidor
+server_state = {
+    "initialized": False,
+    "indexer": None,
+    "retriever": None,
+    "last_error": None
+}
+
+@server.list_tools()
+async def handle_list_tools() -> List[Tool]:
+    """
+    Lista as ferramentas disponíveis no servidor MCP.
+    
+    Returns:
+        List[Tool]: Lista de ferramentas disponíveis
+    """
+    return [
+        Tool(
+            name="rag_query",
+            description="Realiza consulta semântica no sistema RAG. Busca documentos relevantes baseado na similaridade semântica da consulta.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "Consulta de busca semântica"
+                    },
+                    "top_k": {
+                        "type": "integer",
+                        "description": "Número de resultados a retornar (padrão: 5, máximo: 20)",
+                        "default": DEFAULT_TOP_K,
+                        "minimum": 1,
+                        "maximum": 20
+                    },
+                    "min_score": {
+                        "type": "number",
+                        "description": "Score mínimo de similaridade (0.0 a 1.0)",
+                        "default": MIN_SIMILARITY_SCORE,
+                        "minimum": 0.0,
+                        "maximum": 1.0
+                    },
+                    "category_filter": {
+                        "type": "string",
+                        "description": "Filtro por categoria de documento (opcional)",
+                        "enum": ["arquitetura", "requisitos", "guias", "kanban", "agentes", "tech_stack"]
+                    }
+                },
+                "required": ["query"]
+            }
+        ),
+        Tool(
+            name="rag_search_by_document",
+            description="Busca documentos por padrão no nome ou caminho do arquivo.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "document_pattern": {
+                        "type": "string",
+                        "description": "Padrão para buscar no nome/caminho do documento"
+                    },
+                    "top_k": {
+                        "type": "integer",
+                        "description": "Número máximo de resultados",
+                        "default": DEFAULT_TOP_K,
+                        "minimum": 1,
+                        "maximum": 50
+                    }
+                },
+                "required": ["document_pattern"]
+            }
+        ),
+        Tool(
+            name="rag_get_document_list",
+            description="Retorna lista de todos os documentos indexados no sistema RAG.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "type": "string",
+                        "description": "Filtro por categoria (opcional)",
+                        "enum": ["arquitetura", "requisitos", "guias", "kanban", "agentes", "tech_stack"]
+                    }
+                },
+                "required": []
+            }
+        ),
+        Tool(
+            name="rag_reindex",
+            description="Força a reindexação de todos os documentos. Use apenas quando necessário.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "force_cpu": {
+                        "type": "boolean",
+                        "description": "Força o uso de CPU em vez de GPU",
+                        "default": False
+                    },
+                    "clear_cache": {
+                        "type": "boolean",
+                        "description": "Limpa o cache antes da reindexação",
+                        "default": True
+                    }
+                },
+                "required": []
+            }
+        ),
+        Tool(
+            name="rag_get_status",
+            description="Retorna informações sobre o status do sistema RAG.",
+            inputSchema={
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        )
+    ]
+
+@server.call_tool()
+async def handle_call_tool(name: str, arguments: Dict[str, Any]) -> Sequence[TextContent]:
+    """
+    Manipula chamadas de ferramentas do MCP.
+    
+    Args:
+        name: Nome da ferramenta
+        arguments: Argumentos da ferramenta
+        
+    Returns:
+        Sequence[TextContent]: Resultado da execução
+    """
+    try:
+        # Verificar se o sistema está inicializado
+        if not server_state["initialized"] and name != "rag_get_status":
+            await _initialize_rag_system()
+        
+        # Executar ferramenta específica
+        if name == "rag_query":
+            return await _handle_rag_query(arguments)
+        elif name == "rag_search_by_document":
+            return await _handle_search_by_document(arguments)
+        elif name == "rag_get_document_list":
+            return await _handle_get_document_list(arguments)
+        elif name == "rag_reindex":
+            return await _handle_reindex(arguments)
+        elif name == "rag_get_status":
+            return await _handle_get_status(arguments)
+        else:
+            return [TextContent(
+                type="text",
+                text=f"Ferramenta desconhecida: {name}"
+            )]
+            
+    except Exception as e:
+        logger.error(f"Erro ao executar ferramenta {name}: {str(e)}")
+        server_state["last_error"] = str(e)
+        return [TextContent(
+            type="text",
+            text=f"Erro ao executar {name}: {str(e)}"
+        )]
+
+async def _initialize_rag_system() -> bool:
+    """
+    Inicializa o sistema RAG.
+    
+    Returns:
+        bool: True se inicializado com sucesso
+    """
+    try:
+        logger.info("Inicializando sistema RAG...")
+        
+        # Inicializar retriever
+        success = initialize_retriever()
+        
+        if success:
+            server_state["retriever"] = get_retriever()
+            server_state["initialized"] = True
+            logger.info("✅ Sistema RAG inicializado com sucesso")
+            return True
+        else:
+            logger.error("❌ Falha ao inicializar sistema RAG")
+            server_state["last_error"] = "Falha na inicialização do retriever"
+            return False
+            
+    except Exception as e:
+        logger.error(f"Erro na inicialização do sistema RAG: {str(e)}")
+        server_state["last_error"] = str(e)
+        return False
+
+async def _handle_rag_query(arguments: Dict[str, Any]) -> Sequence[TextContent]:
+    """
+    Manipula consultas RAG.
+    
+    Args:
+        arguments: Argumentos da consulta
+        
+    Returns:
+        Sequence[TextContent]: Resultados da busca
+    """
+    query = arguments.get("query", "")
+    top_k = arguments.get("top_k", DEFAULT_TOP_K)
+    min_score = arguments.get("min_score", MIN_SIMILARITY_SCORE)
+    category_filter = arguments.get("category_filter")
+    
+    if not query.strip():
+        return [TextContent(
+            type="text",
+            text="Erro: Consulta vazia"
+        )]
+    
+    try:
+        retriever = server_state["retriever"]
+        results = retriever.search(query, top_k, min_score, category_filter)
+        
+        if not results:
+            return [TextContent(
+                type="text",
+                text=f"Nenhum resultado encontrado para: {query}"
+            )]
+        
+        # Formatar resultados
+        response_data = {
+            "query": query,
+            "total_results": len(results),
+            "parameters": {
+                "top_k": top_k,
+                "min_score": min_score,
+                "category_filter": category_filter
+            },
+            "results": [result.to_dict() for result in results]
+        }
+        
+        return [TextContent(
+            type="text",
+            text=json.dumps(response_data, ensure_ascii=False, indent=2)
+        )]
+        
+    except Exception as e:
+        logger.error(f"Erro na consulta RAG: {str(e)}")
+        return [TextContent(
+            type="text",
+            text=f"Erro na consulta: {str(e)}"
+        )]
+
+async def _handle_search_by_document(arguments: Dict[str, Any]) -> Sequence[TextContent]:
+    """
+    Manipula busca por documento.
+    
+    Args:
+        arguments: Argumentos da busca
+        
+    Returns:
+        Sequence[TextContent]: Resultados da busca
+    """
+    document_pattern = arguments.get("document_pattern", "")
+    top_k = arguments.get("top_k", DEFAULT_TOP_K)
+    
+    if not document_pattern.strip():
+        return [TextContent(
+            type="text",
+            text="Erro: Padrão de documento vazio"
+        )]
+    
+    try:
+        retriever = server_state["retriever"]
+        results = retriever.search_by_document(document_pattern, top_k)
+        
+        response_data = {
+            "document_pattern": document_pattern,
+            "total_results": len(results),
+            "results": [result.to_dict() for result in results]
+        }
+        
+        return [TextContent(
+            type="text",
+            text=json.dumps(response_data, ensure_ascii=False, indent=2)
+        )]
+        
+    except Exception as e:
+        logger.error(f"Erro na busca por documento: {str(e)}")
+        return [TextContent(
+            type="text",
+            text=f"Erro na busca: {str(e)}"
+        )]
+
+async def _handle_get_document_list(arguments: Dict[str, Any]) -> Sequence[TextContent]:
+    """
+    Manipula listagem de documentos.
+    
+    Args:
+        arguments: Argumentos da listagem
+        
+    Returns:
+        Sequence[TextContent]: Lista de documentos
+    """
+    category = arguments.get("category")
+    
+    try:
+        retriever = server_state["retriever"]
+        documents = retriever.get_document_list(category)
+        
+        response_data = {
+            "category_filter": category,
+            "total_documents": len(documents),
+            "documents": documents
+        }
+        
+        return [TextContent(
+            type="text",
+            text=json.dumps(response_data, ensure_ascii=False, indent=2)
+        )]
+        
+    except Exception as e:
+        logger.error(f"Erro ao listar documentos: {str(e)}")
+        return [TextContent(
+            type="text",
+            text=f"Erro na listagem: {str(e)}"
+        )]
+
+async def _handle_reindex(arguments: Dict[str, Any]) -> Sequence[TextContent]:
+    """
+    Manipula reindexação.
+    
+    Args:
+        arguments: Argumentos da reindexação
+        
+    Returns:
+        Sequence[TextContent]: Status da reindexação
+    """
+    force_cpu = arguments.get("force_cpu", False)
+    clear_cache = arguments.get("clear_cache", True)
+    
+    try:
+        logger.info("Iniciando reindexação...")
+        
+        # Limpar cache se solicitado
+        if clear_cache and server_state["retriever"]:
+            server_state["retriever"].clear_cache()
+        
+        # Criar novo indexer
+        indexer = RAGIndexer(force_cpu=force_cpu)
+        
+        # Executar indexação
+        success = indexer.index_documents()
+        
+        if success:
+            # Recarregar retriever
+            if server_state["retriever"]:
+                server_state["retriever"].reload_index()
+            
+            response_data = {
+                "status": "success",
+                "message": "Reindexação concluída com sucesso",
+                "parameters": {
+                    "force_cpu": force_cpu,
+                    "clear_cache": clear_cache
+                }
+            }
+        else:
+            response_data = {
+                "status": "error",
+                "message": "Falha na reindexação",
+                "parameters": {
+                    "force_cpu": force_cpu,
+                    "clear_cache": clear_cache
+                }
+            }
+        
+        return [TextContent(
+            type="text",
+            text=json.dumps(response_data, ensure_ascii=False, indent=2)
+        )]
+        
+    except Exception as e:
+        logger.error(f"Erro na reindexação: {str(e)}")
+        return [TextContent(
+            type="text",
+            text=f"Erro na reindexação: {str(e)}"
+        )]
+
+async def _handle_get_status(arguments: Dict[str, Any]) -> Sequence[TextContent]:
+    """
+    Manipula consulta de status.
+    
+    Args:
+        arguments: Argumentos (não utilizados)
+        
+    Returns:
+        Sequence[TextContent]: Status do sistema
+    """
+    try:
+        # Status básico
+        status_data = {
+            "server_name": MCP_SERVER_NAME,
+            "server_version": MCP_SERVER_VERSION,
+            "initialized": server_state["initialized"],
+            "last_error": server_state["last_error"]
+        }
+        
+        # Informações do retriever se disponível
+        if server_state["retriever"]:
+            index_info = server_state["retriever"].get_index_info()
+            status_data["index_info"] = index_info
+        
+        # Verificar diretórios
+        status_data["directories"] = {
+            "source_documents": {
+                "path": str(SOURCE_DOCUMENTS_DIR),
+                "exists": SOURCE_DOCUMENTS_DIR.exists()
+            },
+            "faiss_index": {
+                "path": str(FAISS_INDEX_DIR),
+                "exists": FAISS_INDEX_DIR.exists()
+            }
+        }
+        
+        return [TextContent(
+            type="text",
+            text=json.dumps(status_data, ensure_ascii=False, indent=2)
+        )]
+        
+    except Exception as e:
+        logger.error(f"Erro ao obter status: {str(e)}")
+        return [TextContent(
+            type="text",
+            text=f"Erro ao obter status: {str(e)}"
+        )]
+
+async def main():
+    """
+    Função principal do servidor MCP.
+    """
+    logger.info(f"Iniciando {MCP_SERVER_NAME} v{MCP_SERVER_VERSION}")
+    
+    # Configurar opções de inicialização
+    init_options = InitializationOptions(
+        server_name=MCP_SERVER_NAME,
+        server_version=MCP_SERVER_VERSION,
+        capabilities={}
+    )
+    
+    try:
+        # Executar servidor via stdio
+        async with stdio_server() as (read_stream, write_stream):
+            await server.run(
+                read_stream,
+                write_stream,
+                init_options
+            )
+    except KeyboardInterrupt:
+        logger.info("Servidor interrompido pelo usuário")
+    except Exception as e:
+        logger.error(f"Erro no servidor: {str(e)}")
+        raise
+
+if __name__ == "__main__":
+    # Executar servidor
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("\n🛑 Servidor MCP RAG interrompido")
+    except Exception as e:
+        print(f"❌ Erro fatal: {e}")
+        sys.exit(1)

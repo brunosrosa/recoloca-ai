@@ -18,8 +18,11 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
 
-# Adicionar o diretório core_logic ao path
-sys.path.insert(0, str(Path(__file__).parent / "core_logic"))
+# Adicionar os diretórios necessários ao path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+sys.path.insert(0, str(project_root / "src" / "core" / "core_logic"))
+sys.path.insert(0, str(project_root / "src" / "utils" / "utils"))
 
 try:
     from mcp.server import Server
@@ -38,20 +41,15 @@ except ImportError as e:
     print(f"Detalhes: {e}")
     sys.exit(1)
 
-# Importar módulos RAG
+# Importar módulos RAG da nova estrutura
 try:
-    import sys
-    import os
-    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-    
-    from core_logic.rag_indexer import RAGIndexer
-    from core_logic.rag_retriever import (
+    from rag_indexer import RAGIndexer
+    from rag_retriever import (
         RAGRetriever, 
         initialize_retriever, 
-        get_retriever,
         search_documents
     )
-    from core_logic.constants import (
+    from constants import (
         MCP_SERVER_NAME,
         MCP_SERVER_VERSION,
         MCP_TOOLS,
@@ -65,6 +63,7 @@ try:
     )
 except ImportError as e:
     print(f"Erro: Módulos RAG não encontrados: {e}")
+    print(f"Verifique se os módulos estão em: {project_root / 'src' / 'core' / "src/core/core_logic"}")
     sys.exit(1)
 
 # Configurar logging

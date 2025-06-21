@@ -1,0 +1,57 @@
+﻿{
+  "timestamp": 1750217748.1907308,
+  "backend_detection": {
+    "auto_detection": {
+      "backend": "PyTorch",
+      "force_cpu": false,
+      "force_pytorch": false
+    },
+    "force_faiss": {
+      "backend": "PyTorch",
+      "force_cpu": false,
+      "force_pytorch": false
+    },
+    "force_pytorch": {
+      "backend": "PyTorch",
+      "force_cpu": false,
+      "force_pytorch": true
+    },
+    "force_cpu": {
+      "backend": "FAISS",
+      "force_cpu": true,
+      "force_pytorch": false
+    }
+  },
+  "initialization_performance": {
+    "pytorch": {
+      "error": "'PyTorchGPURetriever' object has no attribute 'get_index_info'"
+    },
+    "faiss": {
+      "error": "'PyTorchGPURetriever' object has no attribute 'get_index_info'"
+    }
+  },
+  "search_performance": {
+    "auto": {
+      "error": "Falha na inicialização"
+    },
+    "pytorch": {
+      "error": "Falha na inicialização"
+    }
+  },
+  "concurrent_performance": {
+    "auto": {
+      "error": "Falha na inicialização"
+    },
+    "pytorch": {
+      "error": "Falha na inicialização"
+    }
+  },
+  "summary": {
+    "recommended_backend": "auto",
+    "performance_winner": "auto",
+    "stability_assessment": "poor",
+    "recommendations": [
+      "Revisar configuração antes de produção"
+    ]
+  }
+}

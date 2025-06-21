@@ -19,7 +19,7 @@ import json
 
 # Configurações base do projeto
 PROJECT_ROOT = Path(__file__).parent.parent
-CACHE_DIR = PROJECT_ROOT / "core_logic" / "cache"
+CACHE_DIR = PROJECT_ROOT / "src/core/core_logic" / "cache"
 LOGS_DIR = PROJECT_ROOT / "logs"
 METRICS_DIR = PROJECT_ROOT / "metrics"
 

@@ -389,7 +389,7 @@ Este diretório deve ser incluído em backups regulares.
             'temp/README.md': """
 # Arquivos Temporários - RAG Infrastructure
 
-⚠️ **ATENÇÃO**: Este diretório é ignorado pelo Git.
+**ATENÇÃO**: Este diretório é ignorado pelo Git.
 
 Contém arquivos temporários, cache e logs que podem ser regenerados.
 
@@ -484,7 +484,7 @@ def main():
         base_path = Path(args.base_path)
     
     # Validar que estamos no diretório correto
-    if not (base_path / 'core_logic').exists() and not (base_path / 'rag_infra').exists():
+    if not (base_path / "src/core/core_logic").exists() and not (base_path / 'rag_infra').exists() and not (base_path / 'src' / 'core' / "src/core/core_logic").exists():
         logger.error("Diretório rag_infra não encontrado. Verifique o caminho.")
         return 1
     

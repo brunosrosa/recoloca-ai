@@ -17,32 +17,12 @@ sticker: lucide//codesandbox
 
 **Status Atual:** Fase 0 (65-70% concluída após consolidação) | **Foco:** Correções Críticas + Estabilização
 
-**Próximas 5 Tarefas Críticas (Pós-Decisão Estratégica DEC-EST-001):**
+**Próximas 3 Tarefas Críticas:**
 1. **[COR-RAG-001]** Correção do RAGRetriever Local (24-48h) - ✅ **CONCLUÍDO 19/06/2025**
 2. **[DOC-ADR-001]** Documentação de ADRs Críticos (48-72h) - ✅ **CONCLUÍDO 19/06/2025**
 3. **[DOC-LLD-001]** Consolidação do LLD (72h) - ✅ **CONCLUÍDO 19/06/2025**
-4. **[PES-NEG-001]** Validação de Negócio: Estimativa de Custos LLMs e Infraestrutura (48-72h) - 🔄 **EM PROGRESSO**
-5. **[TST-VAL-001]** Protótipo de Validação RLS FastAPI/Supabase (48-72h) - 📋 **PRÓXIMO**
 
-**Tarefas Pausadas Estrategicamente:**
-- **[CRI-API-001]** Criação da Especificação OpenAPI Completa - ⏸️ **PAUSADO** (Retomada após validações)
-- **[CFG-AGT-002]** Configuração dos 4 Agentes Tier 1 Restantes - 🔄 **EM ANDAMENTO**
-
-**Critério de Transição Fase 1:** RAG + 5 Agentes + MCP 100% operacionais + Documentação arquitetural consolidada + **Validações de Negócio e Técnica Concluídas**
-
-## 🎯 **DECISÃO ESTRATÉGICA RECENTE**
-
-**[DEC-EST-001] Priorização de Validação de Negócio sobre Especificação OpenAPI**
-- **Data:** 2025-06-20
-- **Contexto:** Identificada necessidade de validar viabilidade financeira antes de completar especificação técnica
-- **Decisão:** Pausar [CRI-API-001] e priorizar [PES-NEG-001] + [TST-VAL-001]
-- **Justificativa:** Evitar over-engineering, aplicar metodologia ágil, reduzir riscos financeiros
-- **Impacto:** Transição para Fase 1 agora condicionada às validações de negócio e técnica
-- **Benefícios Esperados:**
-  - Validação de viabilidade antes de desenvolvimento completo
-  - Especificação OpenAPI informada por insights de validação
-  - Redução de risco de desenvolvimento de features não viáveis
-  - Aplicação prática da metodologia ágil com validação incremental
+**Critério de Transição Fase 1:** RAG + 5 Agentes + MCP 100% operacionais + Documentação arquitetural consolidada
 
 **Impacto da Consolidação:**
 - ✅ Tarefas priorizadas baseadas em auditoria técnica
@@ -88,58 +68,6 @@ sticker: lucide//codesandbox
   - Backend PyTorch com CUDA ativo e funcional
   - Validação completa de funcionalidades via testes
 
-### 🔄 **TAREFAS DE CURTO PRAZO - PÓS-AUDITORIA**
-
-> **📋 AÇÕES RECOMENDADAS:** Baseadas na análise crítica dos relatórios de auditoria RAG/MCP
-
-6. **[VAL-RAG-001] Validação de Performance RAG com Threshold 0.2** 🔼
-   - **Objetivo:** Validar performance do sistema RAG com threshold corrigido
-   - **Entregável:** Relatório de performance e métricas validadas
-   - **Risco:** ALTO - Garantir qualidade do sistema RAG
-   - **Prazo:** 24-48h
-   - **Status:** 📋 **PENDENTE**
-   - **Responsáveis:** @AgenteM_ArquitetoTI, @Maestro
-   - **Subtarefas:**
-     - [ ] Executar bateria de testes com threshold 0.2
-     - [ ] Validar qualidade das respostas vs quantidade
-     - [ ] Medir tempo de resposta e relevância dos resultados
-     - [ ] Documentar métricas de performance
-     - [ ] Ajustar threshold se necessário baseado em resultados
-   - **Dependências:** RAGRetriever local corrigido ✅
-   - **Definition of Done:** Performance RAG validada e documentada
-
-7. **[IMP-IDX-001] Implementação de Indexação Automática RAG** 🔼
-   - **Objetivo:** Implementar sistema de indexação automática para manter RAG atualizado
-   - **Entregável:** Sistema de indexação automática operacional
-   - **Risco:** MÉDIO - Melhoria de eficiência operacional
-   - **Prazo:** 72-96h
-   - **Status:** 📋 **PENDENTE**
-   - **Responsáveis:** @AgenteM_DevFastAPI, @Maestro
-   - **Subtarefas:**
-     - [ ] Implementar sistema de monitoramento de mudanças em documentos
-     - [ ] Criar rotina automática de re-indexação
-     - [ ] Configurar triggers para atualizações de documentos
-     - [ ] Implementar logs de indexação para auditoria
-     - [ ] Testar sistema de indexação automática
-   - **Dependências:** RAG operacional ✅, MCP Server funcional ✅
-   - **Definition of Done:** Sistema de indexação automática operacional
-
-8. **[CFG-MON-001] Configuração de Monitoramento de Performance RAG** 🔼
-   - **Objetivo:** Implementar monitoramento contínuo de performance do sistema RAG
-   - **Entregável:** Sistema de monitoramento RAG operacional
-   - **Risco:** MÉDIO - Observabilidade e manutenção preventiva
-   - **Prazo:** 72-96h
-   - **Status:** 📋 **PENDENTE**
-   - **Responsáveis:** @AgenteM_ArquitetoTI, @Maestro
-   - **Subtarefas:**
-     - [ ] Implementar métricas de tempo de resposta
-     - [ ] Configurar alertas para degradação de performance
-     - [ ] Criar dashboard de saúde do sistema RAG
-     - [ ] Implementar logs estruturados para análise
-     - [ ] Definir SLAs e thresholds de performance
-   - **Dependências:** RAG operacional ✅
-   - **Definition of Done:** Sistema de monitoramento RAG operacional
-
 ---
 
 ## 🔥 **FASE 0: FUNDAÇÃO RAG + AGENTES** (Semana Atual - CRÍTICO)
@@ -147,7 +75,6 @@ sticker: lucide//codesandbox
 ### 🚨 **TAREFAS CRÍTICAS IMEDIATAS - FASE 0 INCOMPLETA**
 
 > **⚠️ ATENÇÃO:** A Fase 0 ainda não foi concluída. Prioridade absoluta nas tarefas abaixo.
-> **📊 STATUS PÓS-AUDITORIA:** 3/5 tarefas críticas concluídas. Foco nas 2 restantes para desbloqueio da Fase 1.
 
 1. **[IMP-RAG-003] Operacionalização Completa do Sistema RAG** 🔺
    - **Objetivo:** Tornar o sistema RAG funcional para consulta pelos agentes
@@ -174,39 +101,6 @@ sticker: lucide//codesandbox
      - [x] **[RAG-CONTEXT]** Validação contextual específica para @AgenteM_DevFastAPI ✅ 2025-01-16
      - [x] **[RAG-SYNC]** Implementação de rotina automática de sincronização ✅ 2025-01-16
      - [x] **[RAG-DOCS]** Documentação técnica e handoff para outros agentes ✅ 2025-01-16
-
-4. **[CRI-API-001] Criação da Especificação OpenAPI Completa** 🔺
-   - **Objetivo:** Criar especificação OpenAPI 3.0 completa para desbloqueio do desenvolvimento
-   - **Entregável:** RecolocaAPI_v1_OpenAPI.yaml completo e validado
-   - **Risco:** CRÍTICO - Bloqueador absoluto para desenvolvimento frontend/backend
-   - **Prazo:** 48-72h (Imediato)
-   - **Status:** 🔄 **EM ANDAMENTO**
-   - **Responsáveis:** @AgenteM_ArquitetoTI, @AgenteM_DevFastAPI, @Maestro
-   - **Subtarefas:**
-     - [ ] Criar especificação OpenAPI 3.0 completa para RecolocaAPI_v1_OpenAPI.yaml
-     - [ ] Definir todos os endpoints conforme HLD e ERS
-     - [ ] Especificar modelos de dados, schemas de request/response
-     - [ ] Documentar autenticação, autorização e códigos de erro
-     - [ ] Validar especificação com ferramentas OpenAPI
-   - **Dependências:** HLD consolidado ✅, ADRs documentados ✅
-   - **Definition of Done:** OpenAPI completo, validado e pronto para desenvolvimento
-
-5. **[CFG-AGT-002] Configuração dos 4 Agentes Tier 1 Restantes** 🔺
-   - **Objetivo:** Configurar os 4 agentes restantes no Trae IDE para operação completa
-   - **Entregável:** 5 Agentes Tier 1 100% operacionais no Trae IDE
-   - **Risco:** CRÍTICO - Necessário para transição para Fase 1
-   - **Prazo:** 72-96h
-   - **Status:** 🔄 **EM ANDAMENTO**
-   - **Responsável:** @Maestro
-   - **Subtarefas:**
-     - [ ] Configurar @AgenteM_ArquitetoTI no Trae IDE
-     - [ ] Configurar @AgenteM_UXDesigner no Trae IDE
-     - [ ] Configurar @AgenteM_DevFastAPI no Trae IDE
-     - [ ] Configurar @AgenteM_DevFlutter no Trae IDE
-     - [ ] Testar funcionalidade básica de cada agente com RAG
-     - [ ] Validar acesso aos documentos específicos de cada domínio
-   - **Dependências:** RAG MCP operacional ✅
-   - **Definition of Done:** 5 Agentes Tier 1 100% operacionais no Trae IDE
 
 2. **[IMP-RAG-004] Desenvolvimento do MCP Server para Integração RAG** 🔺
    - **Objetivo:** Criar servidor MCP para integrar RAG com Trae IDE

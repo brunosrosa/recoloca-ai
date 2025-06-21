@@ -22,17 +22,20 @@ from typing import List, Tuple, Optional
 
 # Adicionar o diretório rag_infra ao path
 rag_infra_path = Path(__file__).parent
+
+project_root = Path(__file__).parent.parent
+
 sys.path.insert(0, str(rag_infra_path))
-sys.path.insert(0, str(rag_infra_path / "core_logic"))
+sys.path.insert(0, str(project_root / "src" / "core" / "src/core/core_logic"))
 
 try:
-    from core_logic.constants import (
+    from rag_infra.src.core.core_logic.constants import (
         RAG_ROOT_DIR, SOURCE_DOCUMENTS_DIR, FAISS_INDEX_DIR, 
         LOGS_DIR, EMBEDDING_MODEL_NAME, USE_GPU
     )
-    from core_logic.embedding_model import EmbeddingModelManager
-    from core_logic.rag_indexer import RAGIndexer
-    from core_logic.rag_retriever import RAGRetriever
+    from rag_infra.src.core.core_logic.embedding_model import EmbeddingModelManager
+    from rag_infra.src.core.core_logic.rag_indexer import RAGIndexer
+    from rag_infra.src.core.core_logic.rag_retriever import RAGRetriever
 except ImportError as e:
     print(f"❌ Erro ao importar módulos RAG: {e}")
     print("Verifique se todos os arquivos estão no local correto.")

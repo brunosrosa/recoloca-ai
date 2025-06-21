@@ -1,0 +1,8 @@
+﻿{
+  "batch_size": 8,
+  "total_time": 0.005524635314941406,
+  "avg_time_per_query": 0.0006905794143676758,
+  "total_results": 0,
+  "cache_hit_rate": 0,
+  "queries_per_second": 1448.059382012774
+}
