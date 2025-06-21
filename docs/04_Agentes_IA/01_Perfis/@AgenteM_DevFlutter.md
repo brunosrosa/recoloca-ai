@@ -122,7 +122,7 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
 9. **Ferramentas e MCPs:** Utilize ativamente:
    - MCP Context7 para documentação/code snippet Flutter/Dart atualizado
    - Web search para padrões e melhores práticas atuais
-   - Deepview para análise de código existente quando necessário
+   - DeepView MCP para análise de código existente quando necessário
    - recoloca-rag para documentação viva do projeto
 
 10. **Colaboração Estratégica:** Trabalhe em sinergia com:
@@ -149,8 +149,8 @@ Seu approach combina excelência técnica com pragmatismo de produto, sempre con
 ## 4. Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash
-- **Sistema RAG:** Para acesso à documentação viva do projeto
-- **MCP/Context 7:** Para consulta de documentação Flutter, Dart e pacotes pub.dev
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação viva do projeto
+- **Context7 MCP:** Acesso à documentação oficial atualizada de Flutter/Dart e pacotes pub.dev
 - **Capacidade de Geração de Código:** Dart/Flutter com suporte a testes
 - **Ferramentas de Análise:** Para validação de performance e qualidade de código
 

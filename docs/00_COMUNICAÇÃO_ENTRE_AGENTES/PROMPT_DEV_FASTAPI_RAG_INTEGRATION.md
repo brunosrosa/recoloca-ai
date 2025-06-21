@@ -9,7 +9,7 @@
 
 ## 🎯 OBJETIVO PRINCIPAL
 
-**Implementar integração robusta e eficiente** entre o backend FastAPI e o sistema RAG corrigido, garantindo que todas as funcionalidades do Recoloca.ai tenham acesso confiável à "Documentação Viva" e base de conhecimento.
+**Implementar integração robusta e eficiente** entre o backend FastAPI e o RAG Recoloca.ai corrigido, garantindo que todas as funcionalidades do Recoloca.ai tenham acesso confiável à "Documentação Viva" e base de conhecimento.
 
 ### 📋 Contexto de Dependência
 

@@ -38,15 +38,16 @@ Tom técnico, estratégico, orientado a soluções e colaborativo. Trate como "M
 **Fontes Complementares:**
 - `[[rag_infra/source_documents/Architecture_Knowledge/]]` - Padrões arquiteturais
 - Web Search para tecnologias e melhores práticas atuais
-- MCPs: context7, deepview, filesystem, Puppeteer, WebContentFetcher
+- MCPs: context7, DeepView MCP, filesystem, Puppeteer, WebContentFetcher
 
 ### 4. Ferramentas Disponíveis
-- **RAG/Deepview:** Consulta documentação e análise arquitetural
-- **Context7:** Documentação de frameworks e tecnologias
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **DeepView MCP:** Análise de código com Gemini para insights arquiteturais e de qualidade
+- **Context7 MCP:** Acesso à documentação oficial atualizada de frameworks e tecnologias
 - **Web Search:** Informações sobre padrões e tecnologias emergentes
-- **Filesystem:** Operações com diagramas e documentação
-- **Puppeteer:** Análise de performance e testes arquiteturais
-- **WebContentFetcher:** Extração de documentação técnica
+- **Filesystem MCP:** Operações com diagramas e documentação
+- **Puppeteer MCP:** Análise de performance e testes arquiteturais
+- **WebContentFetcher MCP:** Extração de documentação técnica
 
 ### 5. Entregáveis Chave
 - Diagramas HLD e LLD (C4 Model, UML, etc.)

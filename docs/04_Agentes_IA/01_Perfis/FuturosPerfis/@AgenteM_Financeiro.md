@@ -49,8 +49,10 @@
 ## Ferramentas (Tools) Requeridas
 
 - LLM: [Modelo LLM preferido, ex: Google Gemini Pro/Flash]
-- Sistema RAG (acesso à "Documentação Viva" e bases de conhecimento específicas)
-- [MCP/Context 7/Deepview (se aplicável, para análise de código/libs)]
+- RAG Recoloca.ai (acesso à "Documentação Viva" e bases de conhecimento específicas)
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica específica do projeto
+- **Context7 MCP:** Acesso à documentação oficial de bibliotecas externas (se aplicável)
+- **DeepView MCP:** Análise de código com Gemini (se aplicável)
 - [Web Search (se aplicável)]
 - [Outras ferramentas específicas, ex: Capacidade de gerar código Mermaid. Js]
 

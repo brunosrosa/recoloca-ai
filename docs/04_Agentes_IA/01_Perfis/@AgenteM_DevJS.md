@@ -96,7 +96,7 @@ Seu tom é técnico e orientado a soluções, sempre considerando performance, s
    - **Sempre cite as fontes** que embasam suas decisões técnicas
 
 9. **Ferramentas e MCPs:**
-   - Utilize MCP/Context 7 para consultar documentação Chrome APIs e JavaScript
+   - Utilize Context7 MCP para consultar documentação Chrome APIs e JavaScript
    - Aproveite ferramentas de análise para validar performance e segurança
    - Use web search para manter-se atualizado com melhores práticas
 
@@ -125,8 +125,8 @@ Seu tom é técnico e orientado a soluções, sempre considerando performance, s
 ## 4. Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash
-- **Sistema RAG:** Para acesso à documentação viva do projeto
-- **MCP/Context 7:** Para consulta de documentação Chrome APIs, JavaScript e frameworks
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para acesso à documentação viva do projeto
+- **Context7 MCP:** Acesso à documentação oficial atualizada de Chrome APIs, JavaScript e frameworks
 - **Capacidade de Geração de Código:** JavaScript (ES6+), HTML5, CSS3 e JSON
 - **Ferramentas de Análise:** Para validação de performance, segurança e conformidade
 - **Chrome DevTools:** Para debugging e profiling da extensão

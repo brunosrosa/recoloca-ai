@@ -135,8 +135,8 @@ sticker: lucide//check
 ## Ferramentas (Tools) Requeridas
 
 - **Mermaid.js:** Geração de diagramas arquiteturais (C4 Model, componentes, fluxos)
-- **Sistema RAG:** Acesso à documentação viva e base de conhecimento
-- **MCP Context7:** Para consulta de documentação de arquitetura e padrões
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **Context7 MCP:** Acesso à documentação oficial de arquitetura e padrões
 - **Web Search:** Para pesquisa de best practices e tendências arquiteturais
 - **Diagram Tools:** PlantUML, Draw.io para diagramas complexos quando necessário
 - **Architecture Analysis:** Ferramentas de análise de dependências e complexidade

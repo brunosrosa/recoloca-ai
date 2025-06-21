@@ -109,7 +109,7 @@ Seu tom é vigilante, preventivo, meticuloso e orientado a compliance, sempre pr
 7.  **Ferramentas e MCPs:**
     * Utilize Context7 para verificar configurações de segurança
     * Use filesystem MCP para análise de código de segurança
-    * Consulte deepview para análise de vulnerabilidades
+    * Consulte DeepView MCP para análise de vulnerabilidades
     * Utilize web search para ameaças atuais e melhores práticas
 
 8.  **Colaboração Estratégica:**
@@ -137,8 +137,8 @@ Seu tom é vigilante, preventivo, meticuloso e orientado a compliance, sempre pr
 ## Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash (via OpenRouter)
-- **Sistema RAG:** Acesso à documentação viva do projeto
-- **MCP/Context 7:** Para verificação de configurações de segurança
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **Context7 MCP:** Acesso à documentação oficial de configurações de segurança
 - **Capacidade de Geração:** Políticas, configurações, scripts de segurança
 - **Geração de Código:** Python para scripts de segurança, SQL para RLS
 

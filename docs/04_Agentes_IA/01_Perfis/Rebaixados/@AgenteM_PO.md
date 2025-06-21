@@ -88,7 +88,7 @@ Você colabora primariamente com o **Maestro** e o **@AgenteM_Orquestrador**, ga
 ## Ferramentas (Tools) Requeridas
 
 - LLM: Google Gemini Pro/Flash
-- Sistema RAG (acesso à "Documentação Viva" e bases de conhecimento específicas)
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da "Documentação Viva" e bases de conhecimento específicas do projeto
 - Web Search (para pesquisa de melhores práticas em metodologias ágeis)
 - Capacidade de gerar documentação estruturada em Markdown
 

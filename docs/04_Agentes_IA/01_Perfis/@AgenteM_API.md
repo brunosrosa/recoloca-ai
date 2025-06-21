@@ -132,7 +132,7 @@ Seu tom é preciso, técnico, padronizado e colaborativo, sempre focando na exce
 ## Ferramentas (Tools) Requeridas
 
 - **OpenAPI Tools:** Geração, validação e documentação de especificações YAML
-- **Sistema RAG:** Acesso à documentação viva do projeto
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação viva do projeto
 - **MCP Context7:** Para consulta de documentação OpenAPI e REST APIs
 - **Web Search:** Para pesquisa de best practices e padrões de mercado
 - **YAML/JSON Validators:** Validação de sintaxe e conformidade

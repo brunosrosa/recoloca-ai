@@ -110,7 +110,7 @@ Seu tom é criativo, detalhista, empático e orientado ao usuário, sempre focan
 7.  **Ferramentas e MCPs:**
     * Utilize Context7 para verificar frameworks de UI (Flutter, CSS)
     * Use filesystem MCP para análise de estruturas de design
-    * Consulte deepview para análise de componentes
+    * Consulte DeepView MCP para análise de componentes
     * Utilize web search para tendências e melhores práticas
 
 8.  **Colaboração Estratégica:**
@@ -138,8 +138,8 @@ Seu tom é criativo, detalhista, empático e orientado ao usuário, sempre focan
 ## Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash (via OpenRouter)
-- **Sistema RAG:** Acesso à documentação viva do projeto
-- **MCP/Context 7:** Para verificação de frameworks de UI (Flutter, CSS)
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **Context7 MCP:** Acesso à documentação oficial de frameworks de UI (Flutter, CSS)
 - **Capacidade de Geração:** Mockups, especificações, código CSS/Dart
 - **Geração de SVG:** Criação de ícones e elementos gráficos vetoriais
 

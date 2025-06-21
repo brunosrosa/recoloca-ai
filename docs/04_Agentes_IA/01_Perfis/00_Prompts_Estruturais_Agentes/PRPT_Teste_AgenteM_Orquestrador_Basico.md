@@ -43,7 +43,7 @@ Base suas respostas na documentação do projeto e aplique seu conhecimento de P
 - [ ] Demonstra postura de mentor sênior
 
 ### **Funcionalidades Técnicas**
-- [ ] Acessa e utiliza o sistema RAG
+- [ ] Acessa e utiliza o RAG Recoloca.ai
 - [ ] Referencia documentos com links corretos
 - [ ] Estrutura resposta de forma clara e organizada
 
@@ -64,7 +64,7 @@ Base suas respostas na documentação do projeto e aplique seu conhecimento de P
 
 **Antes do Teste:**
 - [ ] @AgenteM_Orquestrador configurado no Trae IDE
-- [ ] Sistema RAG operacional
+- [ ] RAG Recoloca.ai operacional
 - [ ] Documentação viva atualizada
 
 **Durante o Teste:**

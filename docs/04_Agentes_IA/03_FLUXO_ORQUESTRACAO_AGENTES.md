@@ -32,7 +32,7 @@ Este documento define o fluxo de orquestração dos Agentes de IA Mentores no pr
 
 1. **Centralização Estratégica:** O `@AgenteOrquestrador` é o ponto central de coordenação
 2. **Especialização por Domínio:** Cada agente possui expertise específica
-3. **Context-Aware:** Uso intensivo do Sistema RAG para contexto
+3. **Context-Aware:** Uso intensivo do RAG Recoloca.ai para contexto
 4. **Human-in-the-Loop:** Maestro mantém supervisão e decisão final
 5. **Iteração Contínua:** Feedback loops para melhoria constante
 
@@ -44,7 +44,7 @@ Este documento define o fluxo de orquestração dos Agentes de IA Mentores no pr
 sequenceDiagram
     participant M as Maestro
     participant AO as @AgenteOrquestrador
-    participant RAG as Sistema RAG
+    participant RAG as RAG Recoloca.ai
     participant AE as Agente Especializado
     
     M->>AO: Solicita análise/tarefa
@@ -80,7 +80,7 @@ sequenceDiagram
 
 | Responsabilidade | Descrição | Ferramentas |
 |------------------|-----------|-------------|
-| **Análise Estratégica** | Validação de valor, alinhamento com objetivos | Sistema RAG, Frameworks PM |
+| **Análise Estratégica** | Validação de valor, alinhamento com objetivos | RAG Recoloca.ai, Frameworks PM |
 | **Engenharia de Prompt** | Co-criação de prompts otimizados | Templates, Best Practices |
 | **Coordenação** | Sequenciamento e priorização de tarefas | Kanban, Metodologia |
 | **Síntese** | Consolidação de outputs de múltiplos agentes | Análise crítica |
@@ -113,7 +113,7 @@ sequenceDiagram
 
 ```markdown
 ## Contexto Estratégico
-[Informações do Sistema RAG + Objetivos]
+[Informações do RAG Recoloca.ai + Objetivos]
 
 ## Tarefa Específica
 [Descrição clara e objetiva]
@@ -134,7 +134,7 @@ sequenceDiagram
 2. **Versionamento:** Controle de versões de artefatos compartilhados
 3. **Validação Cruzada:** Revisão por agentes relacionados quando necessário
 
-## 6. Sistema RAG na Orquestração
+## 6. RAG Recoloca.ai na Orquestração
 
 ### 6.1 Papel do RAG
 
@@ -147,7 +147,7 @@ sequenceDiagram
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Maestro   │───▶│@AgenteOrq.  │───▶│Sistema RAG  │
+│   Maestro   │───▶│@AgenteOrq.  │───▶│RAG Recoloca.ai│
 └─────────────┘    └─────────────┘    └─────────────┘
                            │                   │
                            ▼                   ▼

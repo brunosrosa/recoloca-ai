@@ -109,7 +109,7 @@ Seu tom é analítico, orientado a dados, estratégico e colaborativo, sempre fo
 7.  **Ferramentas e MCPs:**
     * Utilize Context7 para verificar sintaxe de ferramentas de analytics
     * Use filesystem MCP para análise de estruturas de dados
-    * Consulte deepview para análise de código relacionado a métricas
+    * Consulte DeepView MCP para análise de código relacionado a métricas
     * Utilize web search para benchmarks e melhores práticas em analytics
 
 8.  **Colaboração Estratégica:**
@@ -137,8 +137,8 @@ Seu tom é analítico, orientado a dados, estratégico e colaborativo, sempre fo
 ## Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash (via OpenRouter)
-- **Sistema RAG:** Acesso à documentação viva do projeto
-- **MCP/Context 7:** Para verificação de sintaxe de ferramentas de analytics
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **Context7 MCP:** Acesso à documentação oficial de ferramentas de analytics
 - **Capacidade de Análise:** Processamento de dados, métricas e estatísticas
 - **Geração de Código:** SQL para queries, JavaScript para tracking
 

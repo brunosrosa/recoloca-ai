@@ -109,7 +109,7 @@ Seu tom é analítico, preciso, orientado a evidências e colaborativo, sempre f
 7.  **Ferramentas e MCPs:**
     * Utilize Context7 para verificar sintaxe de bibliotecas Python de dados
     * Use filesystem MCP para análise de estruturas de dados existentes
-    * Consulte deepview para análise de código relacionado a dados
+    * Consulte DeepView MCP para análise de código relacionado a dados
     * Utilize web search para benchmarks e melhores práticas em Data Science
 
 8.  **Colaboração Estratégica:**
@@ -137,8 +137,8 @@ Seu tom é analítico, preciso, orientado a evidências e colaborativo, sempre f
 ## Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash (via OpenRouter)
-- **Sistema RAG:** Acesso à documentação viva do projeto
-- **MCP/Context 7:** Para verificação de sintaxe de bibliotecas Python de dados
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **Context7 MCP:** Acesso à documentação oficial de bibliotecas Python de dados
 - **Capacidade de Análise:** Processamento de dados estruturados e não estruturados
 - **Geração de Código:** Python para pipelines de dados, SQL para consultas
 

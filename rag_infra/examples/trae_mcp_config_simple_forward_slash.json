@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "recoloca-rag": {
+      "command": "python",
+      "args": [
+        "C:/Users/rosas/OneDrive/Documentos/Obisidian DB/🟢 Projects/💼 Recoloca.AI/rag_infra/server/mcp_server.py"
+      ],
+      "cwd": "C:/Users/rosas/OneDrive/Documentos/Obisidian DB/🟢 Projects/💼 Recoloca.AI/rag_infra",
+      "env": {
+        "PYTHONPATH": "C:/Users/rosas/OneDrive/Documentos/Obisidian DB/🟢 Projects/💼 Recoloca.AI/rag_infra;C:/Users/rosas/OneDrive/Documentos/Obisidian DB/🟢 Projects/💼 Recoloca.AI/rag_infra/src;C:/Users/rosas/OneDrive/Documentos/Obisidian DB/🟢 Projects/💼 Recoloca.AI/rag_infra/src/core;C:/Users/rosas/OneDrive/Documentos/Obisidian DB/🟢 Projects/💼 Recoloca.AI/rag_infra/src/core/core_logic",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "RAG_CONFIG_PATH": "config/rag_optimization_config.json",
+        "RAG_DATA_PATH": "data",
+        "RAG_LOGS_PATH": "logs"
+      },
+      "disabled": false,
+      "alwaysAllow": [
+        "rag_query",
+        "rag_search_by_document",
+        "rag_get_document_list",
+        "rag_reindex",
+        "rag_get_status"
+      ]
+    }
+  }
+}

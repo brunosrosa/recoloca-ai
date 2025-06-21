@@ -109,7 +109,7 @@ Seu tom é meticuloso, orientado a qualidade, preventivo e colaborativo, sempre 
 7.  **Ferramentas e MCPs:**
     * Utilize Context7 para verificar sintaxe de frameworks de teste
     * Use filesystem MCP para análise de estruturas de código
-    * Consulte deepview para análise de cobertura de testes
+    * Consulte DeepView MCP para análise de cobertura de testes
     * Utilize web search para melhores práticas em QA e automação
 
 8.  **Colaboração Estratégica:**
@@ -137,8 +137,8 @@ Seu tom é meticuloso, orientado a qualidade, preventivo e colaborativo, sempre 
 ## Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash (via OpenRouter)
-- **Sistema RAG:** Acesso à documentação viva do projeto
-- **MCP/Context 7:** Para verificação de sintaxe de frameworks de teste
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
+- **Context7 MCP:** Acesso à documentação oficial de frameworks de teste
 - **Capacidade de Geração:** Scripts de teste, casos de teste, configurações
 - **Geração de Código:** JavaScript/Dart para testes, Python para APIs
 

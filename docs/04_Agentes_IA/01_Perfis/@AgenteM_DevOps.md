@@ -117,7 +117,7 @@ Seu tom é pragmático, orientado a automação, focado em confiabilidade e cola
     * Utilize Context7 para verificar sintaxe de código 
     * Use filesystem MCP para análise de estruturas de projeto
     * Use recoloca-rag MCP para análise de documentação e respostas do projeto
-    * Consulte deepview para análise de código relacionado a deploy
+    * Consulte DeepView MCP para análise de código relacionado a deploy
     * Utilize web search para melhores práticas em DevOps e CI/CD
 
 8.  **Colaboração Estratégica:**
@@ -145,8 +145,8 @@ Seu tom é pragmático, orientado a automação, focado em confiabilidade e cola
 ## Ferramentas (Tools) Requeridas
 
 - **LLM:** Google Gemini Pro/Flash (via OpenRouter)
-- **Sistema RAG:** Acesso à documentação viva do projeto
-- **MCP/Context 7:** Para verificação de sintaxe de configurações YAML/JSON
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação viva do projeto
+- **Context7 MCP:** Acesso à documentação oficial atualizada para verificação de sintaxe de configurações YAML/JSON
 - **Capacidade de Geração:** Scripts de automação, configurações de CI/CD
 - **Geração de Código:** Bash, YAML, JSON, Docker, GitHub Actions
 

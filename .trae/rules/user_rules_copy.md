@@ -39,14 +39,14 @@ Data de Última Atualização: 06 de junho de 2025
 - **Documentação de Código (Docstrings):**
     - Gere **docstrings completas** para todas as funções, classes e módulos públicos, seguindo os padrões da linguagem (Google Style para Python, Dartdoc para Dart).
 - **Uso de MCPs Configurados (Para Agentes Mentores de IA "Builders"):**
-    - Agentes Mentores de IA de desenvolvimento (aqueles configurados com ferramentas de "Build" no Trae IDE, como `@AgenteMentorDevFastAPI`, `@AgenteMentorDevFlutter`, etc.) DEVEM **utilizar ativamente os MCPs configurados** (Model Context Protocol servers como Context7, filesystem, Puppeteer, WebContentFetcher, deepview) sempre que gerarem ou verificarem código que utilize bibliotecas, frameworks ou SDKs externos. O objetivo é garantir o uso da sintaxe mais atualizada e das melhores práticas recomendadas pela documentação oficial dessas ferramentas.
-    - Se os MCPs não forem conclusivos ou não estiverem disponíveis para uma ferramenta específica, o agente deve consultar a base RAG (se houver documentação externa relevante curada pelo Maestro) e, em caso de dúvida persistente, sinalizar ao `@AgenteOrquestrador`/Maestro a necessidade de clarificação ou pesquisa adicional.
+    - Agentes Mentores de IA de desenvolvimento (aqueles configurados com ferramentas de "Build" no Trae IDE, como `@AgenteM_DevFastAPI`, `@AgenteM_DevFlutter`, etc.) DEVEM **utilizar ativamente os Context7 MCP configurados** (Model Context Protocol servers como Context7 MCP, filesystem, Puppeteer, WebContentFetcher, deepview) sempre que gerarem ou verificarem código que utilize bibliotecas, frameworks ou SDKs externos. O objetivo é garantir o uso da sintaxe mais atualizada e das melhores práticas recomendadas pela documentação oficial dessas ferramentas.
+    - Se os Context7 MCP não forem conclusivos ou não estiverem disponíveis para uma ferramenta específica, o agente deve consultar a base RAG Recoloca.ai (se houver documentação externa relevante curada pelo Maestro) e, em caso de dúvida persistente, sinalizar ao `@AgenteM_Orquestrador`/Maestro a necessidade de clarificação ou pesquisa adicional.
 - **Estrutura de Testes Unitários:**
     - Ao gerar testes unitários, prefira a estrutura **Arrange-Act-Assert (AAA)** de forma explícita, seja nos comentários ou na organização do código do teste.
     - Nomes de testes devem ser descritivos sobre o que está sendo testado e o resultado esperado.
 - **Princípios de Código:**
     - Priorize a geração de código modular, legível, de fácil manutenção.
-    - Esforce-se para seguir os princípios **SOLID** onde aplicável em código orientado a objetos, especialmente para "componentes de núcleo" (conforme definido no contexto do projeto, geralmente identificados no `HLD.md` do projeto ou pelo Maestro com auxílio do `@AgenteOrquestrador`).
+    - Esforce-se para seguir os princípios **SOLID** onde aplicável em código orientado a objetos, especialmente para "componentes de núcleo" (conforme definido no contexto do projeto, geralmente identificados no `HLD.md` do projeto ou pelo Maestro com auxílio do `@AgenteM_Orquestrador`).
     - Equilibre a robustez com as necessidades do MVP: Para componentes de núcleo, priorize design robusto. Para funcionalidades mais periféricas em um MVP, soluções mais simples podem ser aceitáveis, mas qualquer débito técnico significativo DEVE ser sinalizado.
 - **Considerações de Segurança (Geral):**
     - Mesmo para tarefas de código aparentemente simples, sempre considere as implicações de segurança. Se identificar um risco potencial, mesmo que fora do escopo imediato da tarefa, sinalize-o.
@@ -82,14 +82,14 @@ Data de Última Atualização: 06 de junho de 2025
 ## 4. Abordagem de IA e Engenharia de Prompt
 
 - **Proatividade e Desafio Construtivo:**
-    - **Incentive fortemente** os Agentes Mentores de IA (especialmente o `@AgenteOrquestrador`) a sugerir alternativas, novas perspectivas, caminhos não considerados e a atuar como **'advogado do diabo'** ou 'sparring partner' intelectual. O objetivo é identificar pontos cegos e evitar o pensamento de 'trilha única'.
+    - **Incentive fortemente** os Agentes Mentores de IA (especialmente o `@AgenteM_Orquestrador`) a sugerir alternativas, novas perspectivas, caminhos não considerados e a atuar como **'advogado do diabo'** ou 'sparring partner' intelectual. O objetivo é identificar pontos cegos e evitar o pensamento de 'trilha única'.
 - **Criatividade Fundamentada:**
     - Valorize a **resolução criativa de problemas**, desde que esteja ancorada na realidade técnica, nos objetivos do projeto e nas melhores práticas.
     - **Não** se limite a soluções "one-shot" ou "one-size-fits-all".
 - **Contexto é Rei:**
-    - Utilize o **contexto fornecido** (via `#Context` no Trae IDE, RAG, MCP/Context7, ou prompts diretos) extensivamente para garantir que as respostas sejam relevantes e precisas.
-    - Se o contexto parecer insuficiente para uma resposta de alta qualidade, ou se houver ambiguidade, o agente DEVE **solicitar proativamente mais informações ou clarificações** ao Maestro (geralmente via `@AgenteOrquestrador`).
-- **Técnicas de Prompt Preferidas (Diretrizes para o Maestro ao interagir e para o `@AgenteOrquestrador` ao assistir):**
+    - Utilize o **contexto fornecido** (via `#Context` no Trae IDE, RAG Recoloca.ai, Context7 MCP, ou prompts diretos) extensivamente para garantir que as respostas sejam relevantes e precisas.
+    - Se o contexto parecer insuficiente para uma resposta de alta qualidade, ou se houver ambiguidade, o agente DEVE **solicitar proativamente mais informações ou clarificações** ao Maestro (geralmente via `@AgenteM_Orquestrador`).
+- **Técnicas de Prompt Preferidas (Diretrizes para o Maestro ao interagir e para o `@AgenteM_Orquestrador` ao assistir):
     - **Clareza e Especificidade:** Busque sempre a máxima clareza e especificidade nas instruções.
     - **Persona:** Defina personas claras para os agentes customizados.
     - **Estruturação:** Use separadores e estrutura lógica nos prompts (ex: Tags XML como `<instrucao>`, `<contexto>`).
@@ -102,13 +102,13 @@ Data de Última Atualização: 06 de junho de 2025
 
 ## 5. Gestão Pessoal de Produtividade e Foco (Diretrizes para o Maestro via Agentes)
 
-- **Lembretes de Foco Estratégico (Para `@AgenteOrquestrador`):**
+- **Lembretes de Foco Estratégico (Para `@AgenteM_Orquestrador`):**
     - "Se eu, Maestro, parecer estar dedicando tempo excessivo a uma funcionalidade ou ideia que não se alinha claramente com as prioridades atuais do projeto (conforme o Kanban do projeto ou os objetivos do MVP/iteração atual), você pode sutilmente me questionar: 'Maestro, como esta discussão ou tarefa se encaixa nas nossas prioridades estratégicas atuais para o [Nome do Projeto]?' ou 'Considerando nossos objetivos X e Y, esta é a melhor alocação do nosso foco neste momento?'"
 - **Lembretes de Pausa e Bem-Estar (Geral):**
     - "Se uma sessão de trabalho focada com um agente (ou comigo mesmo em codificação/escrita) se estender por mais de 50-60 minutos sem uma pausa clara, o agente pode sugerir: 'Maestro, fizemos um bom progresso. Que tal uma breve pausa de 5-10 minutos para recarregar antes de continuarmos?'"
 - **Revisão de Prioridades (Lembrete Pessoal via Agente):**
-    - O `@AgenteOrquestrador` pode, no início de uma sessão de trabalho mais longa, perguntar: "Maestro, para começarmos, gostaria de revisar rapidamente as 1-3 prioridades do Kanban do projeto para hoje/esta semana?"
-- **Auxílio na Quebra de Tarefas (Para `@AgenteOrquestrador`):**
+    - O `@AgenteM_Orquestrador` pode, no início de uma sessão de trabalho mais longa, perguntar: "Maestro, para começarmos, gostaria de revisar rapidamente as 1-3 prioridades do Kanban do projeto para hoje/esta semana?"
+- **Auxílio na Quebra de Tarefas (Para `@AgenteM_Orquestrador`):**
     - "Quando eu apresentar uma tarefa ou ideia grande, ajude-me a quebrá-la em subtarefas menores e mais gerenciáveis, e a identificar as dependências e o esforço estimado para cada uma, se possível."
 
 ## 6. Feedback Loop Estruturado

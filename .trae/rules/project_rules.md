@@ -1,15 +1,15 @@
 # Project Rules for Recoloca.ai
 
 **Versão**: 1.4
-**Data de Última Atualização**: Junho de 2025
+**Data de Última Atualização**: 06 de junho de 2025
 **Baseado em**: [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1), [[docs/02_Requisitos/ERS.md]] (v1.1), [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1), [[docs/03_Arquitetura_e_Design/ADR/ADR_001_Ferramentas_Core.md]] (v1.0)
 
 ## 1. Diretrizes Gerais do Projeto
 
 - **Objetivo Principal do Projeto:** Desenvolver o Recoloca.ai, um Micro-SaaS para auxiliar profissionais brasileiros na recolocação profissional, com um foco inicial no MVP para validar a proposta de valor e evoluir continuamente com base no feedback e na visão de longo prazo. Conforme definido em [[docs/01_Guias_Centrais/PLANO_MESTRE_RECOLOCA_AI.md]] (v1.1, Seção 1.1 e 1.3) e [[docs/02_Requisitos/ERS.md]] (v1.1).
-- **Metodologia:** Aplicar o "Desenvolvimento Solo Ágil Aumentado por IA", com o "Maestro" orquestrando "Agentes Mentores de IA", conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1). O `@AgenteOrquestrador` atua como um PM Mentor chave, auxiliando o Maestro na validação estratégica antes da delegação de tarefas.
+- **Metodologia:** Aplicar o "Desenvolvimento Solo Ágil Aumentado por IA", com o "Maestro" orquestrando "Agentes Mentores de IA", conforme [[docs/01_Guias_Centrais/GUIA_AVANCADO.md]] (v1.1). O `@AgenteM_Orquestrador` atua como um PM Mentor chave, auxiliando o Maestro na validação estratégica antes da delegação de tarefas.
 - **Público-Alvo:** Focar nas necessidades de profissionais de tecnologia brasileiros em busca de recolocação, conforme detalhado na [[docs/02_Requisitos/ERS.md]] (v1.1).
-- **Fonte da Verdade:** A "Documentação Viva" mantida no Obsidian e versionada com Git é a fonte primária da verdade. Agentes DEVEM priorizar informações de documentos linkados e do RAG. Todos os links para documentos internos DEVEM usar o caminho relativo a partir da raiz do vault (ex: [[docs/02_Requisitos/ERS.md]]).
+- **Fonte da Verdade:** A "Documentação Viva" mantida no Obsidian e versionada com Git é a fonte primária da verdade. Agentes DEVEM priorizar informações de documentos linkados e do RAG Recoloca.ai. Todos os links para documentos internos DEVEM usar o caminho relativo a partir da raiz do vault (ex: [[docs/02_Requisitos/ERS.md]]).
     
 ## 2. Padrões Técnicos Mandatórios
 
@@ -30,10 +30,10 @@
     
 ## 3. Diretrizes para Agentes de IA
 
-- **Consulta à Base de Conhecimento (RAG) e Ferramentas de Contexto:**
-    - **SEMPRE** consulte a base de conhecimento RAG (via ferramenta configurada ou `#Context` aprofundado) antes de gerar código, design ou documentação complexa para garantir alinhamento com [[docs/02_Requisitos/ERS.md]], [[docs/03_Arquitetura_e_Design/HLD.md]], LLDs e ADRs.
-    - O `@AgenteOrquestrador` DEVE utilizar o RAG para acessar materiais de Product Management (em [[rag_infra/source_documents/PM_Knowledge/]]) para embasar suas perguntas estratégicas ao Maestro.
-    - **Agentes Mentores de IA (Builders):** Ao gerar ou verificar código que utilize bibliotecas, frameworks ou SDKs externos, DEVEM utilizar ativamente os **MCPs configurados** (Model Context Protocol servers como Context7, filesystem, Puppeteer, WebContentFetcher, deepview) em conjunto com o RAG. O RAG fornecerá o contexto específico do projeto e da "Documentação Viva", enquanto os MCPs fornecerão a sintaxe mais atualizada e melhores práticas da ferramenta externa. Em caso de conflito ou dúvida, priorize a documentação oficial da ferramenta externa e sinalize ao `@AgenteOrquestrador`/Maestro.
+- **Consulta à Base de Conhecimento (RAG Recoloca.ai) e Ferramentas de Contexto:**
+    - **SEMPRE** consulte a base de conhecimento RAG Recoloca.ai (via ferramenta configurada ou `#Context` aprofundado) antes de gerar código, design ou documentação complexa para garantir alinhamento com [[docs/02_Requisitos/ERS.md]], [[docs/03_Arquitetura_e_Design/HLD.md]], LLDs e ADRs.
+    - O `@AgenteM_Orquestrador` DEVE utilizar o RAG Recoloca.ai para acessar materiais de Product Management (em [[rag_infra/source_documents/PM_Knowledge/]]) para embasar suas perguntas estratégicas ao Maestro.
+    - **Agentes Mentores de IA (Builders):** Ao gerar ou verificar código que utilize bibliotecas, frameworks ou SDKs externos, DEVEM utilizar ativamente os **Context7 MCP configurados** (Model Context Protocol servers como Context7 MCP, filesystem, Puppeteer, WebContentFetcher, deepview) em conjunto com o RAG Recoloca.ai. O RAG Recoloca.ai fornecerá o contexto específico do projeto e da "Documentação Viva", enquanto os Context7 MCP fornecerão a sintaxe mais atualizada e melhores práticas da ferramenta externa. Em caso de conflito ou dúvida, priorize a documentação oficial da ferramenta externa e sinalize ao `@AgenteM_Orquestrador`/Maestro.
 - **Documentação Viva:**
     - Gere docstrings (Google Style para Python, Dartdoc para Dart) e comentários em Português do Brasil para todo código produzido.
     - Gere diagramas UML e de fluxo em **Mermaid.js**.
@@ -63,13 +63,13 @@
     - **Diagramas:** Código Mermaid.js (sem indentação inicial e com textos de nós entre aspas, escapando aspas internas com `&quot;` se necessário).
 - **Referências:** Sempre que possível, indique as fontes de informação ou os requisitos que basearam sua resposta.
     
-## 5. Interação com o `@AgenteOrquestrador` (PM Mentor)
+## 5. Interação com o `@AgenteM_Orquestrador` (PM Mentor)
 
-- O `@AgenteOrquestrador` é o **ponto de partida** para a maioria das novas tarefas ou features que envolvam estratégia de produto ou refinamento de requisitos.
+- O `@AgenteM_Orquestrador` é o **ponto de partida** para a maioria das novas tarefas ou features que envolvam estratégia de produto ou refinamento de requisitos.
     
-- Agentes Mentores de IA especializados (Dev, QA, etc.) devem esperar prompts que foram co-criados ou validados pelo Maestro em conjunto com o `@AgenteOrquestrador`, garantindo que o contexto estratégico e os requisitos de Product Management tenham sido considerados.
+- Agentes Mentores de IA especializados (Dev, QA, etc.) devem esperar prompts que foram co-criados ou validados pelo Maestro em conjunto com o `@AgenteM_Orquestrador`, garantindo que o contexto estratégico e os requisitos de Product Management tenham sido considerados.
     
-- Se um Agente Mentor de IA especializado receber um prompt diretamente do Maestro que pareça carecer de clareza estratégica ou desalinhado com os objetivos do produto (conforme RAG), ele PODE sugerir uma consulta prévia ao `@AgenteOrquestrador`.
+- Se um Agente Mentor de IA especializado receber um prompt diretamente do Maestro que pareça carecer de clareza estratégica ou desalinhado com os objetivos do produto (conforme RAG Recoloca.ai), ele PODE sugerir uma consulta prévia ao `@AgenteM_Orquestrador`.
 
 ## 6. Gestão de Conflitos entre Regras
 
@@ -81,7 +81,7 @@
 
 **Processo de Resolução:**
 - **Identificação:** Agente identifica conflito entre diretrizes
-- **Escalação:** Sinaliza ao `@AgenteOrquestrador`/Maestro com contexto claro
+- **Escalação:** Sinaliza ao `@AgenteM_Orquestrador`/Maestro com contexto claro
 - **Documentação:** Registra a decisão tomada para referência futura
 - **Atualização:** Sugere atualização das regras se necessário
 

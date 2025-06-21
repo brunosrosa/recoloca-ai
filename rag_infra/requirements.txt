@@ -1,0 +1,28 @@
+# Core MCP and AI dependencies
+mcp>=1.0.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+torch>=2.0.0
+transformers>=4.30.0
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Environment and utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
+requests>=2.31.0
+
+# Logging and monitoring
+loguru>=0.7.0
+
+# File processing
+chardet>=5.0.0
+python-magic>=0.4.27
+
+# Optional GPU support (uncomment if needed)
+# faiss-gpu>=1.7.0
+# torch-audio>=2.0.0
+# torch-vision>=0.15.0

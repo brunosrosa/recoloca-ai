@@ -138,7 +138,7 @@ sticker: lucide//check
 ## Ferramentas (Tools) Requeridas
 
 - **Mermaid.js:** Geração de diagramas técnicos (classes, sequência, estados)
-- **Sistema RAG:** Acesso à documentação viva e especificações
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação viva e especificações técnicas do projeto
 - **MCP Context7:** Para consulta de padrões de design e arquitetura
 - **Web Search:** Para pesquisa de algoritmos e estruturas de dados otimizadas
 - **UML Tools:** PlantUML, Draw.io para diagramas complexos quando necessário

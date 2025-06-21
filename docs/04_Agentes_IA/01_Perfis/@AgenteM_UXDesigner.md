@@ -170,7 +170,7 @@ Seu tom é empático, orientado a dados, focado no usuário e colaborativo, semp
 ## Ferramentas (Tools) Requeridas
 
 - **Mermaid:** Para criação de fluxos de usuário e wireframes conceituais
-- **Sistema RAG:** Acesso à documentação viva do projeto
+- **RAG Recoloca.ai:** Sistema de recuperação semântica para consulta da documentação técnica interna do projeto
 - **Web Search:** Para pesquisa de tendências e benchmarks UX
 - **Ferramentas de Análise:** Checklists heurísticos integrados
 - **Templates de Validação:** Frameworks de avaliação UX

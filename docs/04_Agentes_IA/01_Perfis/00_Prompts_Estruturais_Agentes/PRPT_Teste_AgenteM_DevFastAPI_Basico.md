@@ -43,7 +43,7 @@ Base suas respostas na documentação do projeto e aplique seu conhecimento de d
 - [ ] Demonstra postura de desenvolvedor sênior
 
 ### **Funcionalidades Técnicas**
-- [ ] Acessa e utiliza o sistema RAG
+- [ ] Acessa e utiliza o RAG Recoloca.ai
 - [ ] Referencia documentos com links corretos
 - [ ] Estrutura resposta de forma clara e organizada
 

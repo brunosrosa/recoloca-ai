@@ -31,7 +31,7 @@ A visão é construir um "super squad" de IA, onde cada agente atua como um espe
 Para garantir a eficácia do squad de agentes, monitoramos as seguintes métricas:
 
 - **Eficiência de Orquestração**: Tempo médio de resolução de tarefas complexas com múltiplos agentes
-- **Qualidade do Sistema RAG**: Precisão e relevância das consultas à "Documentação Viva"
+- **Qualidade do RAG Recoloca.ai**: Precisão e relevância das consultas à "Documentação Viva"
 - **Satisfação/Produtividade**: Feedback do Maestro sobre a utilidade e eficiência dos agentes
 
 ### 1.2. Critérios para Agentes "Production-Ready"
@@ -45,7 +45,7 @@ Cada agente deve atender aos seguintes critérios objetivos:
 
 **Tier 2 (Avançado)**:
 - Precisão ≥ 95% em tarefas complexas
-- Integração eficaz com sistema RAG (≥ 85% de consultas relevantes)
+- Integração eficaz com RAG Recoloca.ai (≥ 85% de consultas relevantes)
 - Capacidade de colaboração multi-agente
 
 **Tier 3 (Expert)**:
@@ -277,7 +277,7 @@ graph LR
     
 8. **Crucialmente**, cada etapa de criação/atualização de artefatos documentais (HUs, Designs, Casos de Teste, Guias de Deploy) alimenta a "Documentação Viva". O `@AgenteM_Orquestrador` desempenha um papel central na gestão e criação de documentação.
     
-9. A "Documentação Viva" atualizada é então usada para **refrescar** a **base de conhecimento do Sistema RAG**, garantindo que todos os agentes (incluindo o `@AgenteM_Orquestrador`) tenham acesso ao contexto mais recente para as interações futuras.
+9. A "Documentação Viva" atualizada é então usada para **refrescar** a **base de conhecimento do RAG Recoloca.ai**, garantindo que todos os agentes (incluindo o `@AgenteM_Orquestrador`) tenham acesso ao contexto mais recente para as interações futuras.
     
 
 Este ciclo reforça a importância da documentação não como uma tarefa posterior, mas como parte integral e contínua do desenvolvimento, potencializando a eficácia dos Agentes de IA.
@@ -300,7 +300,7 @@ Este ciclo reforça a importância da documentação não como uma tarefa poster
 - Remoção de duplicações e inconsistências estruturais
 
 ### v3.1 (Junho 2025) - Orquestração Inteligente e Specialized Intelligence
-- **Métricas de "Specialized Intelligence"**: Inclusão de métricas de eficiência de orquestração, qualidade do sistema RAG e satisfação/produtividade
+- **Métricas de "Specialized Intelligence"**: Inclusão de métricas de eficiência de orquestração, qualidade do RAG Recoloca.ai e satisfação/produtividade
 - **Critérios Objetivos Expandidos**: Definição de critérios "Production-Ready" em três tiers (Essencial, Avançado, Expert)
 - **Framework de Medição**: Estabelecimento de benchmarks quantitativos para avaliação de agentes
 - **Indicadores de Produtividade**: Métricas de tempo de resposta, precisão e autonomia operacional
@@ -311,7 +311,7 @@ Este ciclo reforça a importância da documentação não como uma tarefa poster
 - Estruturação do squad em Tier 1 (MVP) e Tier 2 (Pós-MVP)
 - Definição de agentes essenciais e especializados
 - Criação do diagrama de processo de desenvolvimento otimizado
-- Integração com a "Documentação Viva" e sistema RAG
+- Integração com a "Documentação Viva" e RAG Recoloca.ai
 
 ## 6. Documentos Relacionados
 

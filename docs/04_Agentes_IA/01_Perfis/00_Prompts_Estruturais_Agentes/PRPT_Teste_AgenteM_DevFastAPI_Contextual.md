@@ -24,7 +24,7 @@
 
 2. **Stack Tecnológico:**
    - Valide nossa escolha de FastAPI para o projeto
-   - Como se integra com Supabase e nosso sistema RAG?
+   - Como se integra com Supabase e nosso RAG Recoloca.ai?
    - Que bibliotecas/frameworks complementares recomenda?
 
 3. **Análise de Requisitos:**
