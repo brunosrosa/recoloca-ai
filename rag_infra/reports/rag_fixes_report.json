@@ -1,0 +1,71 @@
+﻿{
+  "timestamp": "0",
+  "fixes_applied": [
+    "Threshold reduzido de 0.3 para 0.1",
+    "PyTorch: Cache CUDA limpo",
+    "PyTorch: CuDNN benchmark habilitado",
+    "PyTorch: TF32 habilitado para matmul",
+    "PyTorch: TF32 habilitado para CuDNN",
+    "Normalização de embeddings verificada"
+  ],
+  "errors_found": [
+    "Inconsistência no índice detectada",
+    "Falha ao recriar índice: C://Users//rosas//OneDrive//Documentos//Obisidian DB////U0001f7e2 Projects////U0001f9d1//U0001f3fb//u200d//U0001f4bc Recoloca.AI//.venv//Scripts//python.exe: can't open file 'C:////Users////rosas////OneDrive////Documentos////Obisidian DB//////U0001f7e2 Projects//////U0001f9d1//U0001f3fb//u200d//U0001f4bc Recoloca.AI////rag_infra////data_index////setup_rag.py': [Errno 2] No such file or directory/n",
+    "Falha ao carregar índice"
+  ],
+  "index_status": {
+    "index_dir_exists": true,
+    "documents_file_exists": true,
+    "metadata_file_exists": true,
+    "index_files_found": [
+      "backup",
+      "documents.json",
+      "embeddings.npy",
+      "faiss_index.bin",
+      "metadata.json",
+      "pytorch_conversion_info.json"
+    ],
+    "documents_count": 281,
+    "metadata_count": 7,
+    "consistency_check": false,
+    "fix_applied": false
+  },
+  "threshold_fix": {
+    "current_threshold": 0.3,
+    "recommended_threshold": 0.1,
+    "fix_applied": true,
+    "config_file_updated": true
+  },
+  "pytorch_config": {
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "rtx_2060_detected": true,
+    "optimizations_applied": [
+      "Cache CUDA limpo",
+      "CuDNN benchmark habilitado",
+      "TF32 habilitado para matmul",
+      "TF32 habilitado para CuDNN"
+    ],
+    "memory_optimized": true,
+    "backend_configured": true
+  },
+  "normalization_fix": {
+    "embedding_config_checked": true,
+    "normalization_enabled": true,
+    "config_updated": false,
+    "fix_applied": false
+  },
+  "test_results": {
+    "retriever_initialization": true,
+    "index_loading": false,
+    "search_test": false,
+    "results_found": 0,
+    "avg_search_time": 0.0,
+    "test_queries": [
+      "arquitetura",
+      "sistema",
+      "documentação"
+    ],
+    "individual_results": {}
+  }
+}

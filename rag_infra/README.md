@@ -12,6 +12,7 @@ Sistema RAG (Retrieval-Augmented Generation) consolidado e otimizado para o proj
 
 ```
 rag_infra/
+<<<<<<< HEAD
 ├── 📁 core_logic/           # Lógica principal do sistema
 │   ├── constants.py         # Constantes e configurações
 │   ├── embedding_model.py   # Modelo de embeddings
@@ -43,6 +44,40 @@ rag_infra/
 ├── 📁 source_documents/     # Documentos fonte
 ├── 📁 results_and_reports/  # Relatórios e resultados
 └── 📁 logs/                 # Logs do sistema
+=======
+├── 📁 src/                  # Código fonte principal da aplicação RAG
+│   ├── 📁 core/              # Lógica de negócio e componentes centrais
+│   │   ├── constants.py       # Constantes globais (e.g., caminhos, nomes de modelos)
+│   │   ├── embedding_model.py # Carregamento e gerenciamento do modelo de embedding
+│   │   ├── rag_indexer.py     # Lógica para criar e atualizar índices (FAISS, etc.)
+│   │   └── rag_retriever.py   # Lógica para buscar e recuperar documentos
+│   │
+│   ├── 📁 diagnostics/       # Ferramentas para diagnóstico e correção do sistema
+│   │   ├── rag_diagnostics.py # Script para rodar uma suíte de testes de saúde
+│   │   └── rag_fixes.py       # Funções para corrigir problemas comuns
+│   │
+│   ├── 📁 utils/              # Módulos utilitários reutilizáveis
+│   │   ├── 📁 maintenance/    # Scripts para manutenção (reindexar, sincronizar)
+│   │   └── 📁 optimization/   # Ferramentas para otimização de performance
+│   │
+│   └── 📁 tests/              # Testes automatizados
+│       └── test_rag_final.py  # Teste de integração final do sistema RAG
+│
+├── 📁 server/               # Lógica do servidor para expor o RAG como um serviço
+│   ├── mcp_server.py        # Implementação do servidor MCP para o Trae IDE
+│   └── 📁 trae_ide_mcp_configuration/ # Configuração do MCP
+│
+├── 📁 data_index/           # Armazenamento dos índices e dados processados
+│   ├── faiss_index.bin      # Índice vetorial FAISS
+│   ├── embeddings.pt        # Embeddings dos documentos (PyTorch)
+│   ├── documents.json       # Conteúdo dos documentos indexados
+│   └── metadata.json        # Metadados associados aos documentos
+│
+├── 📁 source_documents/     # Documentos originais que servem de base para o RAG
+├── 📁 config/               # Arquivos de configuração
+├── 📁 logs/                 # Logs gerados pela aplicação
+└── 📁 results_and_reports/  # Relatórios de diagnósticos e benchmarks
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 ```
 
 ## 🚀 Principais Melhorias da Versão 2.0

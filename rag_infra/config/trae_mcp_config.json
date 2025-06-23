@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 ﻿{
+=======
+{
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
   "mcpServers": {
     "recoloca-rag": {
       "command": "python",
       "args": [
+<<<<<<< HEAD
         "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\💼 Recoloca.AI\\rag_infra\\server\\mcp_server.py"
       ],
       "cwd": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\💼 Recoloca.AI",
@@ -12,6 +17,17 @@
         "RAG_CONFIG_PATH": "rag_infra\\config\\rag_optimization_config.json",
         "RAG_DATA_PATH": "rag_infra\\data",
         "RAG_LOGS_PATH": "rag_infra\\logs"
+=======
+        "C:/Users/rosas/OneDrive/Documentos/Obisidian DB/Projects/Recoloca.AI/rag_infra/src/core/mcp_server.py"
+      ],
+      "cwd": "C:/Users/rosas/OneDrive/Documentos/Obisidian DB/Projects/Recoloca.AI",
+      "env": {
+        "PYTHONPATH": "rag_infra;rag_infra/src/core;rag_infra/src/utils",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "RAG_CONFIG_PATH": "rag_infra/config/rag_optimization_config.json",
+        "RAG_DATA_PATH": "rag_infra/data",
+        "RAG_LOGS_PATH": "rag_infra/logs"
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
       },
       "description": "Sistema RAG para documentação do projeto Recoloca.ai - Versão Reorganizada",
       "timeout": 30000,
@@ -109,7 +125,11 @@
       },
       "logging": {
         "level": "INFO",
+<<<<<<< HEAD
         "file": "rag_infra\\logs\\mcp_server.log",
+=======
+        "file": "rag_infra/logs/mcp_server.log",
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
         "maxSize": "10MB",
         "backupCount": 5
       },
@@ -168,7 +188,11 @@
         "enabled": true,
         "schedule": "0 2 * * *",
         "retention": "30d",
+<<<<<<< HEAD
         "location": "rag_infra\\reports\\backups"
+=======
+        "location": "rag_infra/reports/backups"
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
       },
       "experimental": {
         "hybridSearch": false,

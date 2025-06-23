@@ -1,0 +1,400 @@
+﻿{
+  "timestamp": 1750282411.1518097,
+  "tests": {
+    "connectivity_performance": {
+      "status": "success",
+      "response_times": [
+        0.11514616012573242,
+        0.06422138214111328,
+        0.05505824089050293,
+        0.05380892753601074,
+        0.05424237251281738
+      ],
+      "queries_tested": 5,
+      "average_response_time": 0.06849541664123535,
+      "errors": []
+    },
+    "context_validation": {
+      "status": "excellent",
+      "context_queries": [
+        {
+          "query": "FastAPI backend architecture Recoloca.ai",
+          "results_count": 5,
+          "top_documents": [
+            {
+              "document": "Unknown",
+              "score": 0.5368335247039795,
+              "content_preview": "### 2.5. Categoria: AI Coach (COACH)\n\n#### RF-COACH-001: Chat com AI Coach\n- **Reach:** 6 (40-70% do..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.5069718360900879,
+              "content_preview": "- **Conhecimento da Equipe (20%):**\n  - 90-100%: Domínio completo da tecnologia/domínio\n  - 70-89%: ..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.5059762001037598,
+              "content_preview": "### Termos do Projeto\n- **Maestro**: O desenvolvedor solo do projeto (Bruno S. Rosa)\n- **Agente Ment..."
+            }
+          ]
+        },
+        {
+          "query": "Supabase authentication integration",
+          "results_count": 5,
+          "top_documents": [
+            {
+              "document": "Unknown",
+              "score": 0.44872838258743286,
+              "content_preview": "**✅ Critério de Conclusão Fase 4**: Aplicação em produção + Primeiros usuários + Métricas estabeleci..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.4428413510322571,
+              "content_preview": "## 🎯 PROPÓSITO E ESCOPO\n\n### 1.1. Propósito\n\nEste documento especifica os **requisitos funcionais** ..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.428238183259964,
+              "content_preview": "### RAG System\n\n#### **RAG Service**\n\n```python\nclass RAGService:\n    def __init__(self, vector_db: ..."
+            }
+          ]
+        },
+        {
+          "query": "API endpoints specification",
+          "results_count": 5,
+          "top_documents": [
+            {
+              "document": "Unknown",
+              "score": 0.49553629755973816,
+              "content_preview": "### Documentos de Processo\n- **TRAE_IDE_BEST_PRACTICES_para_RAG.md**: Melhores práticas de desenvolv..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.49049657583236694,
+              "content_preview": "---\nrag_metadata:\n  document_type: \"project_management\"\n  category: \"kanban\"\n  priority: \"critical\"\n..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.4872768223285675,
+              "content_preview": "#### **Color Palette**\n```dart\n// theme/app_colors.dart\nclass AppColors {\n  // Primary Colors\n  stat..."
+            }
+          ]
+        },
+        {
+          "query": "Python development patterns",
+          "results_count": 5,
+          "top_documents": [
+            {
+              "document": "Unknown",
+              "score": 0.5410717725753784,
+              "content_preview": "## 📈 MÉTRICAS DE ACOMPANHAMENTO\n\n### Métricas de Desenvolvimento\n\n#### Progresso\n- **Velocity**: Sto..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.5099543929100037,
+              "content_preview": "2. **Complexidade da IA**\n   - Risco: RF-CV-003 pode ser mais complexo que estimado\n   - Mitigação: ..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.5048926472663879,
+              "content_preview": "4. **RF-CV-003** (Análise CV vs Vaga)\n   - Desbloqueia: RF-CV-004, RF-CV-005\n   - Impacto: \"Momento ..."
+            }
+          ]
+        },
+        {
+          "query": "MVP backend requirements",
+          "results_count": 5,
+          "top_documents": [
+            {
+              "document": "Unknown",
+              "score": 0.4576415717601776,
+              "content_preview": "### Documentos de Processo\n- **TRAE_IDE_BEST_PRACTICES_para_RAG.md**: Melhores práticas de desenvolv..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.44859153032302856,
+              "content_preview": "- **Conhecimento da Equipe (20%):**\n  - 90-100%: Domínio completo da tecnologia/domínio\n  - 70-89%: ..."
+            },
+            {
+              "document": "Unknown",
+              "score": 0.44526657462120056,
+              "content_preview": "# STYLE GUIDE - RECOLOCA.AI\n\n## Informações do Documento\n- **Versão**: 1.0\n- **Data de Criação**: 18..."
+            }
+          ]
+        }
+      ],
+      "quality_score": 100.0,
+      "relevant_documents_found": 25
+    },
+    "mcp_integration": {
+      "status": "ready",
+      "mcp_server_available": true,
+      "config_valid": true,
+      "config_content": {
+        "mcpServers": {
+          "recoloca-rag": {
+            "command": "python",
+            "args": [
+              "rag_infra/mcp_server.py"
+            ],
+            "cwd": ".",
+            "env": {
+              "PYTHONPATH": "rag_infra:rag_infra/core_logic",
+              "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "description": "Sistema RAG para documentação do projeto Recoloca.ai",
+            "timeout": 30000,
+            "retries": 3,
+            "healthCheck": {
+              "enabled": true,
+              "interval": 60000,
+              "tool": "rag_get_status"
+            },
+            "capabilities": {
+              "tools": [
+                {
+                  "name": "rag_query",
+                  "description": "Consulta semântica no sistema RAG",
+                  "category": "search",
+                  "priority": "high"
+                },
+                {
+                  "name": "rag_search_by_document",
+                  "description": "Busca documentos por nome/caminho",
+                  "category": "search",
+                  "priority": "medium"
+                },
+                {
+                  "name": "rag_get_document_list",
+                  "description": "Lista documentos indexados",
+                  "category": "info",
+                  "priority": "medium"
+                },
+                {
+                  "name": "rag_reindex",
+                  "description": "Reindexar documentos",
+                  "category": "maintenance",
+                  "priority": "low"
+                },
+                {
+                  "name": "rag_get_status",
+                  "description": "Status do sistema RAG",
+                  "category": "info",
+                  "priority": "high"
+                }
+              ]
+            },
+            "logging": {
+              "level": "INFO",
+              "file": "rag_infra/logs/mcp_server.log",
+              "maxSize": "10MB",
+              "maxFiles": 5
+            },
+            "performance": {
+              "maxConcurrentRequests": 5,
+              "requestTimeout": 30000,
+              "cacheEnabled": true,
+              "cacheTTL": 300000
+            }
+          }
+        },
+        "agentConfigurations": {
+          "@AgenteM_DevFastAPI": {
+            "preferredTools": [
+              "rag_query",
+              "rag_search_by_document",
+              "rag_get_document_list"
+            ],
+            "defaultParameters": {
+              "rag_query": {
+                "top_k": 5,
+                "min_score": 0.3,
+                "category_filter": "tech_stack"
+              }
+            },
+            "autoSuggestions": {
+              "enabled": true,
+              "triggers": [
+                "como implementar",
+                "documentação sobre",
+                "exemplo de",
+                "arquitetura",
+                "requisitos"
+              ]
+            }
+          },
+          "@AgenteM_Orquestrador": {
+            "preferredTools": [
+              "rag_query",
+              "rag_get_document_list"
+            ],
+            "defaultParameters": {
+              "rag_query": {
+                "top_k": 3,
+                "min_score": 0.4,
+                "category_filter": "kanban"
+              }
+            }
+          },
+          "@AgenteM_ArquitetoTI": {
+            "preferredTools": [
+              "rag_query",
+              "rag_search_by_document"
+            ],
+            "defaultParameters": {
+              "rag_query": {
+                "top_k": 7,
+                "min_score": 0.2,
+                "category_filter": "arquitetura"
+              }
+            }
+          },
+          "@AgenteM_UXDesigner": {
+            "preferredTools": [
+              "rag_query"
+            ],
+            "defaultParameters": {
+              "rag_query": {
+                "top_k": 4,
+                "min_score": 0.3,
+                "category_filter": "requisitos"
+              }
+            }
+          }
+        },
+        "documentCategories": {
+          "arquitetura": {
+            "description": "Documentos de arquitetura e design do sistema",
+            "patterns": [
+              "**/03_Arquitetura/**",
+              "**/arquitetura/**",
+              "**/*arquitetura*",
+              "**/*architecture*"
+            ],
+            "priority": "high"
+          },
+          "requisitos": {
+            "description": "Especificações e requisitos do projeto",
+            "patterns": [
+              "**/02_Requisitos/**",
+              "**/requisitos/**",
+              "**/*requisitos*",
+              "**/*requirements*",
+              "**/ERS.md"
+            ],
+            "priority": "high"
+          },
+          "guias": {
+            "description": "Guias e documentação central",
+            "patterns": [
+              "**/01_Guias_Centrais/**",
+              "**/guias/**",
+              "**/*guia*",
+              "**/*guide*",
+              "**/README.md"
+            ],
+            "priority": "medium"
+          },
+          "kanban": {
+            "description": "Documentos de gerenciamento e kanban",
+            "patterns": [
+              "**/00_Gerenciamento_Projeto/**",
+              "**/KANBAN/**",
+              "**/*kanban*",
+              "**/*roadmap*",
+              "**/*tasks*"
+            ],
+            "priority": "medium"
+          },
+          "agentes": {
+            "description": "Documentação dos agentes de IA",
+            "patterns": [
+              "**/04_Agentes_IA/**",
+              "**/agentes/**",
+              "**/*agente*",
+              "**/*agent*"
+            ],
+            "priority": "medium"
+          },
+          "tech_stack": {
+            "description": "Documentação técnica e stack tecnológico",
+            "patterns": [
+              "**/Tech_Stack/**",
+              "**/tech/**",
+              "**/*tech*",
+              "**/*api*",
+              "**/*fastapi*",
+              "**/*python*"
+            ],
+            "priority": "high"
+          }
+        },
+        "indexingSchedule": {
+          "enabled": true,
+          "interval": "daily",
+          "time": "02:00",
+          "autoReindex": {
+            "onFileChange": true,
+            "watchPatterns": [
+              "**/*.md",
+              "**/*.txt",
+              "**/*.pdf",
+              "**/*.docx"
+            ],
+            "debounceMs": 5000
+          }
+        },
+        "searchSettings": {
+          "defaultTopK": 5,
+          "defaultMinScore": 0.3,
+          "maxTopK": 20,
+          "enableCache": true,
+          "cacheSize": 100,
+          "highlightResults": true,
+          "showMetadata": true
+        },
+        "troubleshooting": {
+          "commonIssues": {
+            "gpu_not_available": {
+              "description": "GPU não disponível, usando CPU",
+              "solution": "Verifique drivers CUDA ou use force_cpu=true",
+              "severity": "warning"
+            },
+            "index_not_found": {
+              "description": "Índice FAISS não encontrado",
+              "solution": "Execute a indexação inicial com rag_reindex",
+              "severity": "error"
+            },
+            "embedding_model_error": {
+              "description": "Erro ao carregar modelo de embedding",
+              "solution": "Verifique conexão com internet e espaço em disco",
+              "severity": "error"
+            },
+            "no_documents_found": {
+              "description": "Nenhum documento encontrado para indexar",
+              "solution": "Verifique se há documentos em rag_infra/source_documents",
+              "severity": "warning"
+            }
+          },
+          "diagnostics": {
+            "checkCommands": [
+              "rag_get_status",
+              "rag_get_document_list"
+            ],
+            "logFiles": [
+              "rag_infra/logs/rag_indexer.log",
+              "rag_infra/logs/rag_retriever.log",
+              "rag_infra/logs/mcp_server.log"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "overall_status": "success",
+  "recommendations": [
+    "🟢 [PERFORMANCE] Excelente tempo de resposta. Sistema otimizado.",
+    "🟢 [QUALITY] Excelente qualidade contextual. RAG pronto para produção.",
+    "🟢 [MCP] Sistema MCP pronto para integração com Trae IDE."
+  ]
+}

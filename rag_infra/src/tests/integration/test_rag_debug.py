@@ -4,7 +4,14 @@ Script de debug para testar o sistema RAG
 """
 
 import sys
+<<<<<<< HEAD
 sys.path.append('src')
+=======
+import os
+
+# Adiciona o diretório 'rag_infra' ao sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 
 from core.core_logic.rag_retriever import RAGRetriever
 import json
@@ -15,12 +22,20 @@ def test_rag_system():
     # Inicializar o retriever
     print("\n1. Inicializando RAGRetriever...")
     retriever = RAGRetriever(force_pytorch=True, force_cpu=True)
+<<<<<<< HEAD
     print("✅ RAGRetriever inicializado")
+=======
+    print("[OK] RAGRetriever inicializado")
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
     
     # Carregar índice
     print("\n2. Carregando índice...")
     retriever.load_index()
+<<<<<<< HEAD
     print("✅ Índice carregado")
+=======
+    print("[OK] Índice carregado")
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
     
     # Verificar dados carregados
     print("\n3. Verificando dados carregados...")
@@ -28,7 +43,11 @@ def test_rag_system():
     print(f"   Metadados: {len(retriever.metadata)}")
     
     if len(retriever.documents) == 0:
+<<<<<<< HEAD
         print("❌ PROBLEMA: Nenhum documento carregado!")
+=======
+        print("[ERROR] PROBLEMA: Nenhum documento carregado!")
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
         return
     
     # Testar busca com diferentes min_scores

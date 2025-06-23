@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-06-18 23:45:08",
+  "system_check": {
+    "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "torch_available": true,
+    "torch_version": "2.7.1+cu118",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "faiss_available": true,
+    "faiss_gpu_available": false,
+    "sentence_transformers_available": true
+  },
+  "index_integrity": {
+    "index_dir_exists": true,
+    "faiss_index_exists": true,
+    "documents_exists": true,
+    "metadata_exists": true,
+    "embeddings_exists": true,
+    "pytorch_info_exists": true,
+    "file_sizes": {
+      "faiss_index.bin": 3088429,
+      "documents.json": 256644,
+      "metadata.json": 55140,
+      "embeddings.npy": 1151104
+    },
+    "documents_count": 281,
+    "metadata_count": 281,
+    "embeddings_shape": [
+      281,
+      1024
+    ],
+    "consistency_check": true
+  },
+  "faiss_loading_test": {
+    "direct_load_success": false,
+    "temp_load_success": true,
+    "index_size": 754,
+    "index_dimension": 1024,
+    "error": "Carregamento direto falhou: Error in __cdecl faiss::FileIOReader::FileIOReader(const char *) at D:\\a\\faiss-wheels\\faiss-wheels\\faiss\\faiss\\impl\\io.cpp:68: Error: 'f' failed: could not open C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\data_index\\faiss_index_bge_m3\\faiss_index.bin for reading: No such file or directory"
+  },
+  "pytorch_loading_test": {
+    "embeddings_load_success": true,
+    "documents_load_success": true,
+    "metadata_load_success": true,
+    "gpu_transfer_success": true,
+    "embeddings_shape": [
+      281,
+      1024
+    ],
+    "device_used": "cuda:0",
+    "error": null
+  },
+  "embedding_model_test": {
+    "model_load_success": true,
+    "model_name": "BAAI/bge-m3",
+    "embedding_dimension": 1024,
+    "test_embedding_success": true,
+    "device_used": "cuda:0",
+    "error": null
+  },
+  "gpu_configuration_fix": {
+    "cuda_cache_cleared": true,
+    "torch_optimizations_applied": true,
+    "gpu_memory_optimized": true,
+    "fixes_applied": [
+      "Cache CUDA limpo",
+      "Otimizações PyTorch aplicadas",
+      "Memória GPU otimizada (80%)"
+    ]
+  },
+  "index_repair": {
+    "repair_needed": true,
+    "repair_attempted": true,
+    "repair_successful": false,
+    "actions_taken": []
+  },
+  "final_test": {
+    "rag_retriever_init": true,
+    "index_loading": false,
+    "search_test": false,
+    "backend_type": null,
+    "search_results_count": 0,
+    "error": "Falha no carregamento do índice com todas as configurações"
+  },
+  "fixes_applied": [
+    "Cache CUDA limpo",
+    "Otimizações PyTorch aplicadas",
+    "Memória GPU otimizada (80%)"
+  ],
+  "errors_found": [],
+  "recommendations": [
+    "🚨 CRÍTICO: Sistema ainda não funcional",
+    "🔄 Converter para PyTorch: usar convert_faiss_to_pytorch()"
+  ]
+}

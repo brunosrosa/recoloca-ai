@@ -1,0 +1,135 @@
+{
+  "timestamp": 1750404056.5762227,
+  "test_session_id": "integration_test_1750404056",
+  "modules_tested": [
+    "core_logic",
+    "diagnostics",
+    "utils",
+    "server",
+    "setup"
+  ],
+  "tests": {
+    "core_logic": {
+      "module": "core_logic",
+      "status": "success",
+      "components": {
+        "rag_retriever": "success",
+        "pytorch_gpu_retriever": "success",
+        "embedding_model": "success",
+        "rag_initialization": {
+          "status": "success",
+          "backend_info": {
+            "current_backend": "Auto",
+            "recommended_backend": "pytorch",
+            "gpu_available": true,
+            "cuda_device_count": 1,
+            "gpu_name": "NVIDIA GeForce RTX 2060",
+            "gpu_memory_total": 6442123264
+          }
+        }
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "diagnostics": {
+      "module": "diagnostics",
+      "status": "failed",
+      "components": {
+        "rag_diagnostics": "error: cannot import name 'RAGDiagnostics' from 'diagnostics.rag_diagnostics' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\diagnostics\\rag_diagnostics.py)",
+        "rag_fixes": "error: cannot import name 'RAGFixes' from 'diagnostics.rag_fixes' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\diagnostics\\rag_fixes.py)"
+      },
+      "errors": [
+        "rag_diagnostics import: cannot import name 'RAGDiagnostics' from 'diagnostics.rag_diagnostics' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\diagnostics\\rag_diagnostics.py)",
+        "rag_fixes import: cannot import name 'RAGFixes' from 'diagnostics.rag_fixes' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\diagnostics\\rag_fixes.py)"
+      ],
+      "warnings": [
+        "Diagnóstico básico pulado devido a erro de importação"
+      ]
+    },
+    "utils": {
+      "module": "utils",
+      "status": "partial",
+      "components": {
+        "rag_utilities": "error: cannot import name 'RAGUtilities' from 'utils.rag_utilities' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\utils\\rag_utilities.py)",
+        "rag_maintenance": "success"
+      },
+      "errors": [
+        "rag_utilities import: cannot import name 'RAGUtilities' from 'utils.rag_utilities' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\utils\\rag_utilities.py)"
+      ],
+      "warnings": [
+        "System info pulado devido a erro de importação"
+      ]
+    },
+    "server": {
+      "module": "server",
+      "status": "failed",
+      "components": {
+        "mcp_server": "error: cannot import name 'MCPServer' from 'server.mcp_server' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\server\\mcp_server.py)"
+      },
+      "errors": [
+        "mcp_server import: cannot import name 'MCPServer' from 'server.mcp_server' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\server\\mcp_server.py)"
+      ],
+      "warnings": [
+        "Configuração do servidor pulada devido a erro de importação"
+      ]
+    },
+    "setup": {
+      "module": "setup",
+      "status": "failed",
+      "components": {
+        "setup_rag": "error: cannot import name 'setup_rag_system' from 'setup.setup_rag' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\setup\\setup_rag.py)"
+      },
+      "errors": [
+        "setup_rag import: cannot import name 'setup_rag_system' from 'setup.setup_rag' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\setup\\setup_rag.py)"
+      ],
+      "warnings": [
+        "Validação do setup pulada devido a erro de importação"
+      ]
+    },
+    "integration_flow": {
+      "module": "integration_flow",
+      "status": "partial",
+      "components": {
+        "full_query": {
+          "status": "success",
+          "query": "Como implementar autenticação FastAPI?",
+          "results_count": 0,
+          "query_time": 0.000293731689453125
+        },
+        "diagnostics_integration": "error: cannot import name 'RAGDiagnostics' from 'diagnostics.rag_diagnostics' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\diagnostics\\rag_diagnostics.py)",
+        "utilities_integration": "error: cannot import name 'RAGUtilities' from 'utils.rag_utilities' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\utils\\rag_utilities.py)"
+      },
+      "errors": [
+        "diagnostics_integration execution: cannot import name 'RAGDiagnostics' from 'diagnostics.rag_diagnostics' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\diagnostics\\rag_diagnostics.py)",
+        "utilities_integration execution: cannot import name 'RAGUtilities' from 'utils.rag_utilities' (C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\🟢 Projects\\Projects/Recoloca.AI\\rag_infra\\utils\\rag_utilities.py)"
+      ],
+      "warnings": [],
+      "performance": {
+        "query_time": 0.000293731689453125,
+        "total_integration_time": 0.0021784305572509766
+      }
+    }
+  },
+  "summary": {
+    "total_tests": 6,
+    "passed": 3,
+    "failed": 3,
+    "warnings": 0
+  },
+  "performance_metrics": {
+    "query_time": 0.000293731689453125,
+    "total_integration_time": 0.0021784305572509766
+  },
+  "recommendations": [
+    "❌ Problemas críticos de integração detectados.",
+    "🛠️ Correções urgentes necessárias antes de prosseguir.",
+    "⚡ Excelente performance de consulta: 0.000s",
+    "🟢 Módulo core_logic: Funcionando perfeitamente",
+    "🔴 Módulo diagnostics: Requer correção imediata",
+    "🟡 Módulo utils: Alguns componentes precisam de atenção",
+    "🔴 Módulo server: Requer correção imediata",
+    "🔴 Módulo setup: Requer correção imediata",
+    "🟡 Módulo integration_flow: Alguns componentes precisam de atenção"
+  ],
+  "total_execution_time": 11.517279863357544
+}

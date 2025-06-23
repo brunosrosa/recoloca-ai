@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 💼 Recoloca.AI
+=======
+# Projects/Recoloca.AI
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 
 > **Micro-SaaS para Recolocação Profissional no Brasil**  
 > *Desenvolvido com Metodologia "Solo Ágil Aumentado por IA"*
@@ -101,7 +105,11 @@ Todos os agentes têm acesso à **"Documentação Viva"** do projeto através de
 ## 📁 Estrutura do Projeto
 
 ```
+<<<<<<< HEAD
 💼 Recoloca.AI/
+=======
+Projects/Recoloca.AI/
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 ├── 📄 README.md                    # Este arquivo
 ├── 📁 docs/                        # Documentação Viva
 │   ├── 📁 00_Gerenciamento_Projeto/ # Kanban, Tasks, Planejamento

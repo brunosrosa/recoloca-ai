@@ -1,0 +1,155 @@
+{
+  "timestamp": "2025-06-22 02:20:55",
+  "summary": {
+    "total_tests": 5,
+    "successful_tests": 4,
+    "failed_tests": 1,
+    "total_execution_time": 17.134307384490967
+  },
+  "results": [
+    {
+      "test_name": "Import Test",
+      "success": true,
+      "message": "Todos os imports necessários estão funcionando",
+      "execution_time": 3.3068435192108154,
+      "details": {
+        "pytorch": {
+          "version": "2.7.1+cpu",
+          "cuda_available": false,
+          "gpu_name": null,
+          "gpu_count": 0
+        },
+        "faiss": {
+          "version": "1.11.0",
+          "gpu_available": false
+        },
+        "transformers": {
+          "version": "4.52.4"
+        },
+        "numpy": {
+          "version": "2.3.1"
+        }
+      }
+    },
+    {
+      "test_name": "GPU Compatibility Test",
+      "success": false,
+      "message": "CUDA não disponível - executando em CPU",
+      "execution_time": 8.106231689453125e-06,
+      "details": {
+        "cuda_available": false
+      }
+    },
+    {
+      "test_name": "Index Files Test",
+      "success": true,
+      "message": "Todos os arquivos de índice estão presentes",
+      "execution_time": 4.807590007781982,
+      "details": {
+        "faiss_index": {
+          "index": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\faiss_index_bge_m3\\faiss_index.bin",
+            "size": 3088429
+          },
+          "documents": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\faiss_index_bge_m3\\documents.json",
+            "size": 639965
+          },
+          "metadata": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\faiss_index_bge_m3\\metadata.json",
+            "size": 415233
+          },
+          "embeddings": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\faiss_index_bge_m3\\embeddings.npy",
+            "size": 3088512
+          }
+        },
+        "pytorch_index": {
+          "embeddings": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\pytorch_index_bge_m3\\embeddings.pt",
+            "size": 3089982
+          },
+          "documents": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\pytorch_index_bge_m3\\documents.json",
+            "size": 256647
+          },
+          "metadata": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\pytorch_index_bge_m3\\metadata.json",
+            "size": 55143
+          },
+          "mapping": {
+            "exists": true,
+            "path": "C:\\Users\\rosas\\OneDrive\\Documentos\\Obisidian DB\\Projects\\Recoloca.AI\\rag_infra\\data\\indexes\\data_index\\pytorch_index_bge_m3\\mapping.json",
+            "size": 107
+          }
+        }
+      }
+    },
+    {
+      "test_name": "RAG Initialization Test",
+      "success": true,
+      "message": "RAG inicializado com sucesso",
+      "execution_time": 4.952193975448608,
+      "details": {
+        "retriever_created": true,
+        "initialization": true,
+        "index_loading": true,
+        "backend": "unknown",
+        "model_name": "unknown"
+      }
+    },
+    {
+      "test_name": "Search Functionality Test",
+      "success": true,
+      "message": "Busca funcional: 4/4 consultas bem-sucedidas",
+      "execution_time": 4.067671775817871,
+      "details": {
+        "search_results": {
+          "Recoloca.ai MVP": {
+            "success": true,
+            "results_count": 3,
+            "execution_time": 0.1886141300201416,
+            "top_scores": [
+              0.59157395362854,
+              0.5578515529632568,
+              0.5539532899856567
+            ]
+          },
+          "desenvolvimento": {
+            "success": true,
+            "results_count": 3,
+            "execution_time": 0.08309340476989746,
+            "top_scores": [
+              0.5281487703323364,
+              0.5146144032478333,
+              0.5011799335479736
+            ]
+          },
+          "API": {
+            "success": true,
+            "results_count": 1,
+            "execution_time": 0.08520960807800293,
+            "top_scores": [
+              0.5722538828849792
+            ]
+          },
+          "arquitetura": {
+            "success": true,
+            "results_count": 1,
+            "execution_time": 0.08843016624450684,
+            "top_scores": [
+              0.4954746961593628
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

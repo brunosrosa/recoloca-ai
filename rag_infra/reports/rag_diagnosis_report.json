@@ -1,0 +1,142 @@
+﻿{
+  "timestamp": "0",
+  "gpu_info": {
+    "cuda_available": true,
+    "device_count": 1,
+    "current_device": 0,
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "memory_info": {
+      "total": 6442123264,
+      "allocated": 0,
+      "cached": 0
+    },
+    "pytorch_version": "2.7.1+cu118",
+    "rtx_2060_detected": true,
+    "recommended_settings": {
+      "force_pytorch": true,
+      "batch_size": 16,
+      "use_optimizations": true,
+      "memory_fraction": 0.8
+    }
+  },
+  "threshold_analysis": {
+    "current_threshold": 0.3,
+    "threshold_too_high": false,
+    "recommended_threshold": null,
+    "test_results": [],
+    "error": "Falha ao carregar índice"
+  },
+  "filter_analysis": {
+    "category_filters_found": false,
+    "metadata_filters": [],
+    "filter_impact": {
+      "documentacao": {
+        "results_without_filter": 0,
+        "results_with_filter": 0,
+        "reduction_percentage": 0
+      },
+      "arquitetura": {
+        "results_without_filter": 0,
+        "results_with_filter": 0,
+        "reduction_percentage": 0
+      },
+      "requisitos": {
+        "results_without_filter": 0,
+        "results_with_filter": 0,
+        "reduction_percentage": 0
+      },
+      "design": {
+        "results_without_filter": 0,
+        "results_with_filter": 0,
+        "reduction_percentage": 0
+      }
+    }
+  },
+  "normalization_check": {
+    "embeddings_normalized": false,
+    "query_normalized": false,
+    "normalization_method": null,
+    "sample_norms": []
+  },
+  "backend_config": {
+    "pytorch_version": "2.7.1+cu118",
+    "cuda_version": "11.8",
+    "cudnn_version": 90100,
+    "backend_selection": "pytorch_optimized",
+    "memory_management": {
+      "memory_fraction": 6442123264,
+      "allow_growth": true,
+      "empty_cache_available": true
+    },
+    "optimization_flags": {
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "allow_tf32": false
+    },
+    "reason": "GPU GeForce com limitações FAISS-GPU"
+  },
+  "search_tests": {
+    "test_queries": [
+      "arquitetura sistema",
+      "requisitos funcionais",
+      "design interface",
+      "documentação técnica"
+    ],
+    "results": {
+      "arquitetura sistema": {
+        "results_count": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "min_score": 0.0
+      },
+      "requisitos funcionais": {
+        "results_count": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "min_score": 0.0
+      },
+      "design interface": {
+        "results_count": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "min_score": 0.0
+      },
+      "documentação técnica": {
+        "results_count": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "min_score": 0.0
+      }
+    },
+    "performance": {
+      "arquitetura sistema": {
+        "search_time": 0.0004489421844482422,
+        "results_per_second": 0.0
+      },
+      "requisitos funcionais": {
+        "search_time": 0.0003981590270996094,
+        "results_per_second": 0.0
+      },
+      "design interface": {
+        "search_time": 0.0003685951232910156,
+        "results_per_second": 0.0
+      },
+      "documentação técnica": {
+        "search_time": 0.00036406517028808594,
+        "results_per_second": 0.0
+      }
+    },
+    "success_rate": 0.0
+  },
+  "issues_found": [
+    "Nenhum resultado para query: 'arquitetura sistema'",
+    "Nenhum resultado para query: 'requisitos funcionais'",
+    "Nenhum resultado para query: 'design interface'",
+    "Nenhum resultado para query: 'documentação técnica'",
+    "Taxa de sucesso baixa: 0.0%"
+  ],
+  "fixes_applied": [],
+  "recommendations": [
+    "Sistema funcionando corretamente - nenhuma correção necessária"
+  ]
+}

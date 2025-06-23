@@ -43,7 +43,11 @@ Este guia fornece um roteiro completo para executar a reorganização estrutural
 #### 1.1 Backup Completo
 ```powershell
 # Navegar para o diretório do projeto
+<<<<<<< HEAD
 cd "c:\Users\rosas\OneDrive\Documentos\Obisidian DB\🟢 Projects\💼 Recoloca.AI"
+=======
+cd "c:\Users\rosas\OneDrive\Documentos\Obisidian DB\Projects/Recoloca.AI"
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 
 # Criar backup com timestamp
 $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"

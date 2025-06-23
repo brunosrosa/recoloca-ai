@@ -1,0 +1,56 @@
+{
+  "cache": {
+    "enabled": true,
+    "max_entries": 1500,
+    "ttl_seconds": 3600,
+    "auto_save_interval": 300,
+    "cache_dir": "c://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//core_logic//cache",
+    "memory_limit_mb": 4096,
+    "cleanup_threshold": 0.8
+  },
+  "batch": {
+    "enabled": true,
+    "default_batch_size": 8,
+    "max_batch_size": 20,
+    "max_workers": 4,
+    "timeout_seconds": 30,
+    "adaptive_sizing": true,
+    "min_batch_size": 2,
+    "performance_threshold_ms": 500.0
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics_dir": "c://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//metrics",
+    "log_level": "DEBUG",
+    "track_cache_metrics": true,
+    "cache_metrics_interval": 60,
+    "track_performance_metrics": true,
+    "performance_metrics_interval": 30,
+    "enable_alerts": true,
+    "cache_hit_rate_threshold": 0.6,
+    "avg_response_time_threshold": 1000.0,
+    "export_format": "json",
+    "export_interval": 300
+  },
+  "gpu": {
+    "force_cpu": false,
+    "force_pytorch": false,
+    "memory_fraction": 0.75,
+    "allow_growth": true,
+    "use_mixed_precision": true,
+    "enable_cudnn_benchmark": true,
+    "auto_fallback_cpu": true,
+    "memory_threshold_mb": 500
+  },
+  "load_test": {
+    "enabled": true,
+    "concurrent_users": 10,
+    "queries_per_user": 50,
+    "ramp_up_time": 30,
+    "test_duration": 300,
+    "test_queries_file": "c://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//tests//load_test_queries.json",
+    "target_response_time_p95": 1000.0,
+    "target_throughput_qps": 20.0,
+    "max_error_rate": 0.01
+  }
+}

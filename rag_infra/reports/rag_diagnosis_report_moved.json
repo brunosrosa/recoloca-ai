@@ -1,0 +1,167 @@
+﻿{
+  "timestamp": "0",
+  "gpu_info": {
+    "cuda_available": true,
+    "device_count": 1,
+    "current_device": 0,
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "memory_info": {
+      "total": 6442123264,
+      "allocated": 0,
+      "cached": 0
+    },
+    "pytorch_version": "2.7.1+cu118",
+    "rtx_2060_detected": true,
+    "recommended_settings": {
+      "force_pytorch": true,
+      "batch_size": 16,
+      "use_optimizations": true,
+      "memory_fraction": 0.8
+    }
+  },
+  "threshold_analysis": {
+    "current_threshold": 0.0,
+    "threshold_too_high": false,
+    "recommended_threshold": 0.1,
+    "test_results": [
+      {
+        "threshold": 0.1,
+        "results_count": 4,
+        "avg_score": 0.5084830150008202
+      },
+      {
+        "threshold": 0.2,
+        "results_count": 4,
+        "avg_score": 0.5084830150008202
+      },
+      {
+        "threshold": 0.3,
+        "results_count": 4,
+        "avg_score": 0.5084830150008202
+      },
+      {
+        "threshold": 0.4,
+        "results_count": 4,
+        "avg_score": 0.5084830150008202
+      },
+      {
+        "threshold": 0.5,
+        "results_count": 4,
+        "avg_score": 0.5084830150008202
+      }
+    ]
+  },
+  "filter_analysis": {
+    "category_filters_found": false,
+    "metadata_filters": [],
+    "filter_impact": {
+      "documentacao": {
+        "results_without_filter": 5,
+        "results_with_filter": 0,
+        "reduction_percentage": 100.0
+      },
+      "arquitetura": {
+        "results_without_filter": 5,
+        "results_with_filter": 0,
+        "reduction_percentage": 100.0
+      },
+      "requisitos": {
+        "results_without_filter": 5,
+        "results_with_filter": 0,
+        "reduction_percentage": 100.0
+      },
+      "design": {
+        "results_without_filter": 5,
+        "results_with_filter": 0,
+        "reduction_percentage": 100.0
+      }
+    }
+  },
+  "normalization_check": {
+    "embeddings_normalized": false,
+    "query_normalized": true,
+    "normalization_method": null,
+    "sample_norms": [],
+    "query_norm": 1.000000057366598
+  },
+  "backend_config": {
+    "pytorch_version": "2.7.1+cu118",
+    "cuda_version": "11.8",
+    "cudnn_version": 90100,
+    "backend_selection": "pytorch_optimized",
+    "memory_management": {
+      "memory_fraction": 6442123264,
+      "allow_growth": true,
+      "empty_cache_available": true
+    },
+    "optimization_flags": {
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "allow_tf32": false
+    },
+    "reason": "GPU GeForce com limitações FAISS-GPU"
+  },
+  "search_tests": {
+    "test_queries": [
+      "arquitetura sistema",
+      "requisitos funcionais",
+      "design interface",
+      "documentação técnica"
+    ],
+    "results": {
+      "arquitetura sistema": {
+        "results_count": 4,
+        "avg_score": 0.5084830150008202,
+        "max_score": 0.5249496698379517,
+        "min_score": 0.49523839354515076
+      },
+      "requisitos funcionais": {
+        "results_count": 5,
+        "avg_score": 0.5968009829521179,
+        "max_score": 0.6190348267555237,
+        "min_score": 0.5654858350753784
+      },
+      "design interface": {
+        "results_count": 1,
+        "avg_score": 0.5796493291854858,
+        "max_score": 0.5796493291854858,
+        "min_score": 0.5796493291854858
+      },
+      "documentação técnica": {
+        "results_count": 4,
+        "avg_score": 0.5483438521623611,
+        "max_score": 0.5629304647445679,
+        "min_score": 0.5384690761566162
+      }
+    },
+    "performance": {
+      "arquitetura sistema": {
+        "search_time": 0.024239540100097656,
+        "results_per_second": 165.01963252940945
+      },
+      "requisitos funcionais": {
+        "search_time": 0.06031036376953125,
+        "results_per_second": 82.9044908285895
+      },
+      "design interface": {
+        "search_time": 0.05776214599609375,
+        "results_per_second": 17.312376172236164
+      },
+      "documentação técnica": {
+        "search_time": 0.060091257095336914,
+        "results_per_second": 66.56542387944819
+      }
+    },
+    "success_rate": 1.0
+  },
+  "issues_found": [
+    "Filtro de categoria 'documentacao' muito restritivo",
+    "Filtro de categoria 'arquitetura' muito restritivo",
+    "Filtro de categoria 'requisitos' muito restritivo",
+    "Filtro de categoria 'design' muito restritivo"
+  ],
+  "fixes_applied": [],
+  "recommendations": [
+    "Revisar filtros de categoria - podem estar muito restritivos"
+  ]
+}

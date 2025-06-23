@@ -1,0 +1,71 @@
+﻿{
+  "total_tests": 9,
+  "successful_tests": 1,
+  "failed_tests": 8,
+  "success_rate": 0.1111111111111111,
+  "all_tests_passed": false,
+  "results": [
+    {
+      "module": "constants",
+      "description": "Constantes do sistema RAG",
+      "success": true,
+      "error": null,
+      "details": "Import realizado com sucesso"
+    },
+    {
+      "module": "embedding_model",
+      "description": "Modelo de embeddings",
+      "success": false,
+      "error": "ImportError: attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 79, in test_import/n    exec(f/"import {module_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//embedding_model.py/", line 21, in <module>/n    from .constants import (/n    ...<4 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    },
+    {
+      "module": "rag_indexer",
+      "description": "Indexador RAG",
+      "success": false,
+      "error": "ImportError: attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 79, in test_import/n    exec(f/"import {module_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_indexer.py/", line 52, in <module>/n    from embedding_model import EmbeddingModelManager, initialize_embedding_model, get_embedding_manager/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//embedding_model.py/", line 21, in <module>/n    from .constants import (/n    ...<4 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    },
+    {
+      "module": "rag_retriever",
+      "description": "Retriever RAG",
+      "success": false,
+      "error": "ImportError: attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 61, in <module>/n    from .embedding_model import initialize_embedding_model, get_embedding_manager/nImportError: attempted relative import with no known parent package/n/nDuring handling of the above exception, another exception occurred:/n/nTraceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 79, in test_import/n    exec(f/"import {module_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 63, in <module>/n    from embedding_model import initialize_embedding_model, get_embedding_manager/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//embedding_model.py/", line 21, in <module>/n    from .constants import (/n    ...<4 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    },
+    {
+      "module": "faiss_to_pytorch_converter",
+      "description": "Conversor FAISS para PyTorch",
+      "success": false,
+      "error": "ImportError: No module named 'faiss_to_pytorch_converter'",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 79, in test_import/n    exec(f/"import {module_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/nModuleNotFoundError: No module named 'faiss_to_pytorch_converter'/n"
+    },
+    {
+      "module": "pytorch_gpu_retriever",
+      "description": "Retriever GPU PyTorch",
+      "success": false,
+      "error": "ImportError: attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 79, in test_import/n    exec(f/"import {module_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//pytorch_gpu_retriever.py/", line 30, in <module>/n    from .constants import (/n    ...<8 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    },
+    {
+      "module": "rag_retriever.get_retriever",
+      "description": "Função get_retriever",
+      "success": false,
+      "error": "ImportError: attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 61, in <module>/n    from .embedding_model import initialize_embedding_model, get_embedding_manager/nImportError: attempted relative import with no known parent package/n/nDuring handling of the above exception, another exception occurred:/n/nTraceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 76, in test_import/n    exec(f/"from {module_path} import {item_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 63, in <module>/n    from embedding_model import initialize_embedding_model, get_embedding_manager/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//embedding_model.py/", line 21, in <module>/n    from .constants import (/n    ...<4 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    },
+    {
+      "module": "rag_retriever.initialize_retriever",
+      "description": "Função initialize_retriever",
+      "success": false,
+      "error": "ImportError: attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 61, in <module>/n    from .embedding_model import initialize_embedding_model, get_embedding_manager/nImportError: attempted relative import with no known parent package/n/nDuring handling of the above exception, another exception occurred:/n/nTraceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 76, in test_import/n    exec(f/"from {module_path} import {item_name}/")/n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/n  File /"<string>/", line 1, in <module>/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 63, in <module>/n    from embedding_model import initialize_embedding_model, get_embedding_manager/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//embedding_model.py/", line 21, in <module>/n    from .constants import (/n    ...<4 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    },
+    {
+      "test": "rag_system_initialization",
+      "success": false,
+      "error": "attempted relative import with no known parent package",
+      "details": "Traceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 61, in <module>/n    from .embedding_model import initialize_embedding_model, get_embedding_manager/nImportError: attempted relative import with no known parent package/n/nDuring handling of the above exception, another exception occurred:/n/nTraceback (most recent call last):/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//scripts//test_imports_after_fix.py/", line 134, in test_rag_system_initialization/n    from rag_retriever import get_retriever, initialize_retriever/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//rag_retriever.py/", line 63, in <module>/n    from embedding_model import initialize_embedding_model, get_embedding_manager/n  File /"C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//💼 Recoloca.AI//rag_infra//core_logic//embedding_model.py/", line 21, in <module>/n    from .constants import (/n    ...<4 lines>.../n    )/nImportError: attempted relative import with no known parent package/n"
+    }
+  ]
+}

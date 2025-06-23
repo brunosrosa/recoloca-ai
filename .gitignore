@@ -1,22 +1,32 @@
 # Arquivo.gitignore para o Projeto Recoloca.AI
 
 # 1. Ambientes Virtuais Python
+<<<<<<< HEAD
 # Substitua 'Python_virt-env_RAG/' pelo nome exato da sua pasta de ambiente virtual se for diferente.
 Python_virt-env_RAG/
+=======
+# Substitua 'XXXX/' pelo nome exato da sua pasta de ambiente virtual se for diferente.
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 venv/
 .venv/
 env/
 ENV/
+<<<<<<< HEAD
 # 3. Arquivos compilados/cache do Python
 __pycache__/
 *.pyc
 
 # 4. Arquivos compilados/cache do Python
+=======
+
+# 3. Arquivos compilados/cache do Python
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
+<<<<<<< HEAD
 # 5. Infraestrutura RAG - Dados Gerados
 # Não versionar o índice FAISS, pois ele é gerado a partir dos source_documents
 # e pode ser grande!
@@ -26,26 +36,56 @@ rag_infra/index_store/
 .ipynb_checkpoints/
 
 # 7. Arquivos específicos de IDEs/Editores
+=======
+# 4. Infraestrutura RAG - Dados Gerados
+# Não versionar o índice FAISS, pois ele é gerado a partir dos source_documents
+# e pode ser grande!
+rag_infra/data/
+rag_infra/knowledge_base_for_rag
+
+# 5. Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# 6. Arquivos específicos de IDEs/Editores
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 .idea/            # Para IntelliJ, PyCharm, Android Studio, etc.
 .vscode/          # Para VS Code (exceto se você quiser versionar configurações de launch/tasks compartilhadas)
 *.sublime-project
 *.sublime-workspace
 
+<<<<<<< HEAD
 # 8. Arquivos específicos do Sistema Operacional
+=======
+# 7. Arquivos específicos do Sistema Operacional
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 .DS_Store         # macOS
 Thumbs.db         # Windows
 ehthumbs.db       # Windows
 
+<<<<<<< HEAD
 # 9. Logs (se forem logs de execução e não templates de configuração de log)
 *.log
 logs/*.log        # Se você tiver arquivos.log dentro da pasta logs/
 
 # 10. Arquivos de build/distribuição (se aplicável no futuro)
+=======
+# 8. Logs (se forem logs de execução e não templates de configuração de log)
+*.log
+logs/*.log        # Se você tiver arquivos.log dentro da pasta logs/
+/cache
+/metrics
+
+# 9. Arquivos de build/distribuição (se aplicável no futuro)
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 build/
 dist/
 *.egg-info/
 
+<<<<<<< HEAD
 # 11. Arquivos de configuração local/sensíveis (se houver)
+=======
+# 10. Arquivos de configuração local/sensíveis (se houver)
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 # Exemplo:.env (para variáveis de ambiente locais)
 .env
 
@@ -53,4 +93,14 @@ dist/
 .pytest_cache/
 .mypy_cache/
 .coverage
+<<<<<<< HEAD
 .space/
+=======
+.space/
+
+# Arquivos temporários e do Windows
+*.lnk
+*.tmp
+Thumbs.db
+Desktop.ini
+>>>>>>> 1d8d89e (Messy. Needs to Refactore.)

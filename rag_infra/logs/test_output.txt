@@ -1,0 +1,128 @@
+2025-06-19 07:30:40,223 - __main__ - INFO - Path adicionado: C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic
+2025-06-19 07:30:40,223 - __main__ - INFO - Importando rag_retriever...
+2025-06-19 07:30:40,439 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-06-19 07:30:40,515 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-06-19 07:30:40,543 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-19 07:30:40,552 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-19 07:31:21,371 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: cache_hit_rate_low
+2025-06-19 07:31:21,372 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: response_time_high
+2025-06-19 07:31:21,372 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: cpu_usage_high
+2025-06-19 07:31:21,372 - rag_infra.core_logic.rag_metrics_monitor - INFO - Alerta adicionado: memory_usage_high
+2025-06-19 07:31:21,397 - rag_infra.core_logic.rag_metrics_monitor - INFO - Coleta de mÚtricas iniciada
+2025-06-19 07:31:21,397 - rag_metrics_integration - INFO - Monitoramento de mÚtricas RAG iniciado
+2025-06-19 07:31:21,400 - __main__ - INFO - \u2705 rag_retriever importado com sucesso
+2025-06-19 07:31:21,401 - __main__ - INFO - Obtendo retriever...
+2025-06-19 07:31:21,478 - rag_retriever - INFO - GPU nvidia geforce rtx 2060 detectada - usando PyTorch em vez de FAISS-GPU
+2025-06-19 07:31:21,479 - rag_retriever - INFO - Usando PyTorchGPURetriever
+2025-06-19 07:31:21,480 - pytorch_gpu_retriever - INFO - Usando GPU para busca vetorial: NVIDIA GeForce RTX 2060
+2025-06-19 07:31:21,481 - __main__ - INFO - \u2705 Retriever obtido: <class 'rag_retriever.RAGRetriever'>
+2025-06-19 07:31:21,481 - __main__ - INFO - Testando inicializaþÒo...
+2025-06-19 07:31:21,481 - rag_retriever - INFO - Inicializando modelo de embedding...
+2025-06-19 07:31:21,481 - pytorch_gpu_retriever - INFO - Inicializando modelo de embedding...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 144, in initialize
+    success = initialize_embedding_model(force_cpu=self.force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 381, in initialize_embedding_model
+    manager = get_embedding_manager(force_cpu=force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 366, in get_embedding_manager
+    _embedding_manager = EmbeddingModelManager(force_cpu=force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 58, in __init__
+    self.device = self._detect_device(force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 82, in _detect_device
+    logger.info(STATUS_MESSAGES["gpu_available"])
+Message: '\U0001f680 GPU detectada e disponÝvel para FAISS'
+Arguments: ()
+2025-06-19 07:31:21,484 - embedding_model - INFO - \U0001f680 GPU detectada e disponÝvel para FAISS
+2025-06-19 07:31:21,497 - embedding_model - INFO - GPU detectada: NVIDIA GeForce RTX 2060 (Total: 1)
+2025-06-19 07:31:21,498 - embedding_model - INFO - EmbeddingModelManager inicializado. Dispositivo: cuda
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4e5' in position 51: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 144, in initialize
+    success = initialize_embedding_model(force_cpu=self.force_cpu)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 382, in initialize_embedding_model
+    return manager.load_model(use_langchain=use_langchain)
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py", line 101, in load_model
+    logger.info(STATUS_MESSAGES["model_loading"].format(model=self.model_name))
+Message: '\U0001f4e5 Carregando modelo de embedding: BAAI/bge-m3'
+Arguments: ()
+2025-06-19 07:31:21,498 - embedding_model - INFO - \U0001f4e5 Carregando modelo de embedding: BAAI/bge-m3
+C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\embedding_model.py:135: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  return HuggingFaceEmbeddings(
+2025-06-19 07:31:21,511 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-06-19 07:31:21,520 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-06-19 07:31:21,777 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/modules.json HTTP/1.1" 200 0
+2025-06-19 07:31:21,926 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-06-19 07:31:22,300 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/README.md HTTP/1.1" 200 0
+2025-06-19 07:31:22,445 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/modules.json HTTP/1.1" 200 0
+2025-06-19 07:31:22,593 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-06-19 07:31:22,746 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-06-19 07:31:22,913 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/config.json HTTP/1.1" 200 0
+2025-06-19 07:31:31,408 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/model.safetensors HTTP/1.1" 404 0
+2025-06-19 07:31:31,419 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-06-19 07:31:31,627 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3 HTTP/1.1" 200 5219
+2025-06-19 07:31:31,892 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/commits/main HTTP/1.1" 200 9525
+2025-06-19 07:31:32,077 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/discussions?p=0 HTTP/1.1" 200 30397
+2025-06-19 07:31:32,280 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/commits/refs%2Fpr%2F118 HTTP/1.1" 200 10490
+2025-06-19 07:31:32,450 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/refs%2Fpr%2F118/model.safetensors.index.json HTTP/1.1" 404 0
+2025-06-19 07:31:32,597 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/refs%2Fpr%2F118/model.safetensors HTTP/1.1" 302 0
+2025-06-19 07:31:38,398 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-m3/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-06-19 07:31:38,563 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-06-19 07:31:41,990 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3/revision/main HTTP/1.1" 200 5219
+2025-06-19 07:31:42,150 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-m3 HTTP/1.1" 200 5219
+2025-06-19 07:31:47,630 - embedding_model - ERROR - Erro ao carregar modelo: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 6.00 GiB of which 3.28 GiB is free. Of the allocated memory 1.70 GiB is allocated by PyTorch, and 4.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 58: character maps to <undefined>
+Call stack:
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 68, in <module>
+    success = test_retriever_initialization()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\test_retriever_init.py", line 39, in test_retriever_initialization
+    result = retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\rag_retriever.py", line 237, in initialize
+    success = self.pytorch_retriever.initialize()
+  File "C:\Users\rosas\OneDrive\Documentos\Obisidian DB\\U0001f7e2 Projects\\U0001f9d1\U0001f3fb\u200d\U0001f4bc Recoloca.AI\rag_infra\core_logic\pytorch_gpu_retriever.py", line 151, in initialize
+    logger.error("\u274c Falha ao inicializar modelo de embedding")
+Message: '\u274c Falha ao inicializar modelo de embedding'
+Arguments: ()
+2025-06-19 07:31:48,374 - pytorch_gpu_retriever - ERROR - \u274c Falha ao inicializar modelo de embedding
+2025-06-19 07:31:48,377 - rag_retriever - ERROR - Falha ao inicializar PyTorchGPURetriever
+2025-06-19 07:31:48,377 - __main__ - INFO - Resultado da inicializaþÒo: False
+2025-06-19 07:31:48,377 - __main__ - ERROR - \u274c Falha na inicializaþÒo
+=== Teste de InicializaþÒo do Retriever RAG ===
+
+=== Resultado Final: FALHA ===

@@ -1,0 +1,20 @@
+﻿{
+  "timestamp": "2025-06-18T23:29:54.538132",
+  "backup_created": true,
+  "inconsistency_fixed": false,
+  "index_rebuilt": true,
+  "documents_processed": 1,
+  "chunks_created": 281,
+  "embeddings_generated": 0,
+  "final_status": {
+    "documents_count": 281,
+    "metadata_count": 281,
+    "consistent": true,
+    "files_present": [
+      "documents.json",
+      "metadata.json"
+    ],
+    "index_loadable": false
+  },
+  "errors": []
+}

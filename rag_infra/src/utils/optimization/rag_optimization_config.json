@@ -1,0 +1,60 @@
+﻿{
+  "metadata": {
+    "created_at": 1750291385.387784,
+    "gpu_info": {
+      "cuda_available": true,
+      "gpu_name": "NVIDIA GeForce RTX 2060",
+      "gpu_count": 1,
+      "is_rtx2060": true,
+      "faiss_gpu_available": false
+    },
+    "optimized_for": "RTX 2060",
+    "version": "1.0"
+  },
+  "cache": {
+    "enabled": true,
+    "ttl_seconds": 1800,
+    "max_entries": 1000,
+    "memory_limit_mb": 256,
+    "cleanup_interval": 300,
+    "persistence_enabled": true,
+    "persistence_file": "rag_cache_rtx2060.pkl"
+  },
+  "batch": {
+    "enabled": true,
+    "size": 6,
+    "max_workers": 2,
+    "timeout_seconds": 30,
+    "auto_scaling": true,
+    "min_batch_size": 2,
+    "max_batch_size": 16
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics_collection": true,
+    "alert_thresholds": {
+      "response_time_p95": 2.0,
+      "cache_hit_rate": 0.3,
+      "error_rate": 0.05,
+      "memory_usage": 0.8
+    },
+    "export_interval": 60,
+    "retention_days": 7
+  },
+  "gpu": {
+    "force_pytorch": true,
+    "use_optimizations": true,
+    "memory_fraction": 0.7,
+    "enable_fallback": true,
+    "vram_limit_mb": 4096,
+    "batch_processing": true
+  },
+  "load_testing": {
+    "concurrent_users": 5,
+    "queries_per_user": 10,
+    "ramp_up_time": 30,
+    "test_duration": 300,
+    "target_qps": 15,
+    "max_response_time": 3.0
+  }
+}

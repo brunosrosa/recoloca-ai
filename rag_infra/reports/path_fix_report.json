@@ -1,0 +1,25 @@
+{
+  "total_files_checked": 297,
+  "files_updated": 9,
+  "files_with_errors": 6,
+  "success_rate": 0.9797979797979798,
+  "updated_files": [
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//results_and_reports//index_loading_fix_report.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//results_and_reports//rtx2060_config.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//results_and_reports//sync_state.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//data_index//faiss_index_bge_m3//pytorch_conversion_info.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//data_index//faiss_index_bge_m3//backup//backup_20250618_232954//metadata.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//data_index//faiss_index_bge_m3//backup//backup_20250618_232954//pytorch_conversion_info.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//data_index//faiss_index_bge_m3//backup//backup_20250619_034639//pytorch_conversion_info.json",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//scripts//fix_paths_after_rename.py",
+    "C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//README.md"
+  ],
+  "errors": [
+    "Erro ao processar C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//logs//embedding_model.log: 'utf-8' codec can't decode byte 0xf3 in position 9974: invalid continuation byte",
+    "Erro ao processar C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//logs//faiss_to_pytorch_converter.log: 'utf-8' codec can't decode byte 0xe3 in position 61: invalid continuation byte",
+    "Erro ao processar C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//logs//pytorch_gpu_retriever.log: 'utf-8' codec can't decode byte 0xe3 in position 789: invalid continuation byte",
+    "Erro ao processar C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//logs//rag_indexer.log: 'utf-8' codec can't decode byte 0xe7 in position 190: invalid continuation byte",
+    "Erro ao processar C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//logs//rag_retriever.log: 'utf-8' codec can't decode byte 0xe7 in position 177: invalid continuation byte",
+    "Erro ao processar C://Users//rosas//OneDrive//Documentos//Obisidian DB//🟢 Projects//Projects/Recoloca.AI//rag_infra//logs//sync.log: 'utf-8' codec can't decode byte 0xe7 in position 54: invalid continuation byte"
+  ]
+}
