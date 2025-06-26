@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # 💼 Recoloca.AI
-=======
-# Projects/Recoloca.AI
->>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 
 > **Micro-SaaS para Recolocação Profissional no Brasil**  
 > *Desenvolvido com Metodologia "Solo Ágil Aumentado por IA"*
@@ -42,14 +38,10 @@ O **Recoloca.AI** é um "Cockpit do Candidato" - uma plataforma integrada que of
 - **Material Design 3** - Sistema de design
 
 ### IA e Dados
-- **Gemini/OpenRouter** - LLMs para processamento de linguagem natural
-- **BAAI/bge-m3** - Modelo de embedding multilíngue
-- **RAG (Retrieval Augmented Generation)** - Sistema de conhecimento aumentado
+
 
 ### Infraestrutura
-- **Vercel** - Deploy do frontend
-- **Render/Railway** - Deploy do backend
-- **Pipedream** - Automações e integrações
+
 
 ## 📋 Status do Projeto
 
@@ -105,11 +97,7 @@ Todos os agentes têm acesso à **"Documentação Viva"** do projeto através de
 ## 📁 Estrutura do Projeto
 
 ```
-<<<<<<< HEAD
 💼 Recoloca.AI/
-=======
-Projects/Recoloca.AI/
->>>>>>> 1d8d89e (Messy. Needs to Refactore.)
 ├── 📄 README.md                    # Este arquivo
 ├── 📁 docs/                        # Documentação Viva
 │   ├── 📁 00_Gerenciamento_Projeto/ # Kanban, Tasks, Planejamento
