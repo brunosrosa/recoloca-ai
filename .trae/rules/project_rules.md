@@ -1,6 +1,6 @@
 ```
 ---
-# METADADOS DO PROJETO (Para uso do Maestro.AI)
+# METADADOS DO PROJETO 
 project_name: 'Recoloca.AI'
 codex_framework_version: '3.0' # Baseado na versão do Codex Prime Framework
 tech_lead: 'Bruno S. Rosa'
@@ -14,14 +14,13 @@ repository_url: 'https://github.com/brunosrosa/recoloca-ai'
 
 ## 1. Diretrizes Gerais e Metodologia
 
-- **Objetivo Principal:** Desenvolver o `Recoloca.AI`, um Micro-SaaS focado em ser o "cockpit" para profissionais brasileiros em busca de recolocação. Este projeto é o primeiro produto a ser construído pela "Fábrica Janus" e servirá como a validação final da nossa metodologia de desenvolvimento aumentado por IA.
+- **Objetivo Principal:** Desenvolver o `Recoloca.AI`, um Micro-SaaS focado em ser o "cockpit" para profissionais brasileiros em busca de recolocação. Este projeto é o primeiro produto a ser construído pela "Fábrica Janus" (na Arandu PoC), por meio do Maestro.AI e servirá como a validação final da nossa metodologia de desenvolvimento aumentado por IA.
     
 - **Metodologia:** Desenvolvimento Full-Stack Ágil Aumentado por IA, com foco na entrega de valor contínuo para o usuário final, seguindo o roadmap do MVP.
     
 - **Repositório Principal:** `https://github.com/brunosrosa/recoloca-ai`
     
-- **Caminho da Documentação:** A documentação viva deste projeto é uma instância do `Codex Prime Framework` e reside na pasta `./docs/` na raiz deste repositório.
-    
+- **Caminho da Documentação:** A documentação viva deste projeto é uma instância do `Codex Prime Framework` e reside na pasta `/Recoloca.AI/.codex/`.
 
 ## 2. Stack de Tecnologia e Ferramentas
 
