@@ -85,7 +85,7 @@ Em caso de conflito ou ambiguidade entre diferentes fontes de regras, a seguinte
     
 3. **`user_rules.md`:** As regras e preferências globais do Maestro.
     
-4. **`Regras_do_Jogo.md`:** A constituição geral do ecossistema.
+4. **`CONSTITUICAO-PRINCIPIOS_FUNDAMENTAIS-v1.0.md`:** A constituição geral do ecossistema.
     
 5. **Documentação Técnica Viva do Projeto:** Decisões formalizadas em ADRs, HLDs e outros documentos na pasta `./docs/`.
     
