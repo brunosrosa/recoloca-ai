@@ -1,0 +1,64 @@
+---
+title: "Template: 04_PBP_PROJECT_BUDGET_PLAN"
+doc_id: "CODEX-PRIME-PROJECT-MANAGEMENT-04-PBP-PROJECT-BUDGET-PLAN-V1.0"
+version: "1.0"
+migrated_at: "2025-08-19 22:10:06"
+timezone: "America/Sao_Paulo"
+status: "Template"
+owner: "@ArquitetoDoCodex"
+tags: [template, codex-prime, v1.0, project-management]
+description: "Template migrated from .codex to .codex-prime in version 1.0"
+source_path: "\02_Gestao_de_Projetos_Project_Management\en-us\02_MANAGEMENT_PLANS\04_PBP_PROJECT_BUDGET_PLAN.md"
+---
+
+# [PROJECT_BUDGET_PLAN]
+
+[DOCUMENT_METADATA]
+
+## [INTRODUCTION]
+
+[BUDGET_PLAN_OBJECTIVE]
+
+[BUDGET_SCOPE]
+
+## [BUDGET_STRUCTURE]
+
+[COST_CATEGORIES]
+
+[COST_CENTERS]
+
+[BUDGET_ACCOUNTS]
+
+## [COST_ESTIMATES]
+
+[DIRECT_COSTS]
+
+[INDIRECT_COSTS]
+
+[CONTINGENCY_RESERVES]
+
+## [FINANCIAL_SCHEDULE]
+
+[PROJECT_CASH_FLOW]
+
+[FINANCIAL_MILESTONES]
+
+## [BUDGET_CONTROL]
+
+[FINANCIAL_PERFORMANCE_METRICS]
+
+[EXPENSE_APPROVAL_PROCESS]
+
+[FINANCIAL_REPORTS]
+
+## [BUDGET_CHANGE_MANAGEMENT]
+
+[BUDGET_CHANGE_PROCESS]
+
+[REQUIRED_APPROVALS]
+
+## [APPROVAL_CONTROL]
+
+[APPROVAL_RESPONSIBLE]
+
+[REVISION_HISTORY]

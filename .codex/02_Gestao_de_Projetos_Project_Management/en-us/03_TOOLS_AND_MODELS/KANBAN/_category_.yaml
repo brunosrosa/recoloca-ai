@@ -1,0 +1,7 @@
+label: "KANBAN"
+position: 1
+link:
+  type: generated-index
+  title: "Kanban Templates"
+  description: "Collection of Kanban board templates for different project management scenarios"
+  slug: /templates/project-management/tools-models/kanban

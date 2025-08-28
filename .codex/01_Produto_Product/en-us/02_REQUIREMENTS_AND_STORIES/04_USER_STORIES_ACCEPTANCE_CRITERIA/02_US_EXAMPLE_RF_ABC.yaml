@@ -1,0 +1,12 @@
+doc_id: PROD_REQ_005
+title: User Story Example - RF-ABC
+description: >
+  Practical example of a User Story and its Acceptance Criteria for
+  functional requirement RF-ABC. Serves as a guide for the team.
+type: Example
+status: Active
+owner: Product_Owner
+tags:
+  - example
+  - user story
+  - agile

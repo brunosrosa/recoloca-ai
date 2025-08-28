@@ -1,0 +1,14 @@
+doc_id: PROD_REQ_004
+title: Template de História de Usuário e Critérios de Aceite
+description: >
+  Modelo padrão para a escrita de Histórias de Usuário (HU) seguindo o formato
+  'Como um [persona], eu quero [ação], para que [benefício]' e a definição de
+  Critérios de Aceite (AC) claros e testáveis.
+type: Template
+status: Ativo
+owner: Product_Owner
+tags:
+  - história de usuário
+  - critério de aceite
+  - template
+  - agile

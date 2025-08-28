@@ -1,0 +1,18 @@
+doc_id: CPF_EST_001
+title: Plano Mestre do Codex Prime Framework
+description: >
+  O documento central que define a visão, objetivos e diretrizes do Codex Prime Framework
+  como sistema de documentação viva para agentes de IA e humanos.
+type: Estratégia
+status: Ativo
+owner: Maestro
+author: "@ArquitetoDoCodex"
+version: "2.0"
+language: pt-br
+created_date: "2025-05-15"
+updated_date: "2025-07-23 18:20:10"
+tags:
+  - codex-prime
+  - documentação-viva
+  - framework
+  - diátaxis

@@ -1,0 +1,38 @@
+﻿---
+title: "Template: 03_PGC_PLANO_GERENCIAMENTO_CUSTOS"
+doc_id: "CODEX-PRIME-GESTAO-PROJETOS-03-PGC-PLANO-GERENCIAMENTO-CUSTOS-V1.0"
+version: "1.0"
+migrated_at: "2025-08-19 22:10:06"
+timezone: "America/Sao_Paulo"
+status: "Template"
+owner: "@ArquitetoDoCodex"
+tags: [template, codex-prime, v1.0, gestao-projetos]
+description: "Template migrado do .codex para .codex-prime na versao 1.0"
+source_path: "\02_Gestao_de_Projetos_Project_Management\pt-br\02_PLANOS_DE_GERENCIAMENTO\03_PGC_PLANO_GERENCIAMENTO_CUSTOS.md"
+---
+
+# [PLANO_GERENCIAMENTO_CUSTOS]
+
+[METADADOS_DOCUMENTO]
+
+[INTRODUCAO]
+
+[METODOLOGIA_GERENCIAMENTO_CUSTOS]
+
+[PRINCIPIOS_GESTAO_FINANCEIRA]
+
+[ESTRUTURA_CUSTOS_PROJETO]
+
+[ESTIMATIVAS_CUSTOS]
+
+[ORCAMENTO_DETALHADO]
+
+[CONTROLE_CUSTOS]
+
+[METRICAS_PERFORMANCE_FINANCEIRA]
+
+[GESTAO_RESERVAS_CONTINGENCIAS]
+
+[RELATORIOS_FINANCEIROS]
+
+[APROVACAO_CONTROLE]

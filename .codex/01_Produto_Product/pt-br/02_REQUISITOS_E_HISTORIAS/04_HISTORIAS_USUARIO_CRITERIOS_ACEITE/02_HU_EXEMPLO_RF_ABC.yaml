@@ -1,0 +1,12 @@
+doc_id: PROD_REQ_005
+title: Exemplo de História de Usuário - RF-ABC
+description: >
+  Exemplo prático de uma História de Usuário e seus Critérios de Aceite para
+  o requisito funcional RF-ABC. Serve como guia para a equipe.
+type: Exemplo
+status: Ativo
+owner: Product_Owner
+tags:
+  - exemplo
+  - história de usuário
+  - agile

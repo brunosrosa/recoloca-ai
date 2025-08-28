@@ -1,0 +1,13 @@
+doc_id: PROD_REQ_006
+title: Histórias de Usuário para o MVP da Jornada do Usuário
+description: >
+  Conjunto de Histórias de Usuário que compõem o escopo do Mínimo Produto Viável (MVP)
+  para a implementação da jornada do usuário principal.
+type: Especificação
+status: Em Elaboração
+owner: Product_Manager
+tags:
+  - mvp
+  - história de usuário
+  - jornada do usuário
+  - escopo

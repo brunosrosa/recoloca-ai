@@ -1,0 +1,558 @@
+---
+doc_id: '[GTM-PROJETO-v1.0]'
+version: '1.0'
+status: 'template'
+owner: '@ArquitetoDoCodex'
+tags:
+  - template
+  - gtm
+  - marketing
+  - estratégia
+  - lançamento
+description: 'Template para Estratégia Go-to-Market, aguardando preenchimento com dados específicos do projeto.'
+---
+
+# ESTRATÉGIA GO-TO-MARKET - [NOME_DO_PROJETO]
+
+## 🎯 VISÃO GERAL DA ESTRATÉGIA
+
+### Objetivo Central
+[OBJETIVO_CENTRAL_DA_ESTRATEGIA]
+
+### Proposta de Valor Única
+[PROPOSTA_DE_VALOR_UNICA]
+
+---
+
+## 🎯 SEGMENTAÇÃO E TARGETING
+
+### Público-Alvo Primário: [SEGMENTO_PRINCIPAL]
+
+#### Perfil Demográfico
+- **Idade**: [FAIXA_ETARIA]
+- **Localização**: [LOCALIZACAO_GEOGRAFICA]
+- **Renda**: [FAIXA_RENDA]
+- **Escolaridade**: [NIVEL_EDUCACIONAL]
+
+#### Perfil Profissional
+- **Experiência**: [ANOS_EXPERIENCIA]
+- **Cargos**: [CARGOS_ALVO]
+- **Tecnologias/Habilidades**: [SKILLS_RELEVANTES]
+- **Situação**: [CONTEXTO_PROFISSIONAL]
+
+#### Perfil Comportamental
+- **Características**: [COMPORTAMENTOS_CHAVE]
+- **Hábitos**: [HABITOS_RELEVANTES]
+- **Preferências**: [PREFERENCIAS_IMPORTANTES]
+
+#### Perfil Psicográfico
+- **Valores**: [VALORES_PRINCIPAIS]
+- **Motivações**: [MOTIVACOES_CHAVE]
+- **Frustrações**: [DORES_PRINCIPAIS]
+
+### Segmentos Secundários (Futuro)
+- **[SEGMENTO_2]** (expansão em [ANO])
+- **[SEGMENTO_3]** (expansão em [ANO])
+- **[SEGMENTO_B2B]** (modelo B2B) (expansão em [ANO])
+
+---
+
+## 🗺️ JORNADA DO CLIENTE
+
+### Estágio 1: Awareness (Consciência)
+**Gatilho**: [GATILHO_AWARENESS]
+
+**Pontos de Contato**:
+- [PONTO_CONTATO_1]
+- [PONTO_CONTATO_2]
+- [PONTO_CONTATO_3]
+- [SEO_KEYWORDS]
+
+**Objetivo**: [OBJETIVO_AWARENESS]
+
+### Estágio 2: Consideration (Consideração)
+**Gatilho**: [GATILHO_CONSIDERATION]
+
+**Pontos de Contato**:
+- [PONTO_CONTATO_1]
+- [PONTO_CONTATO_2]
+- [PONTO_CONTATO_3]
+- [PONTO_CONTATO_4]
+
+**Objetivo**: [OBJETIVO_CONSIDERATION]
+
+### Estágio 3: Trial (Experimentação)
+**Gatilho**: [GATILHO_TRIAL]
+
+**Pontos de Contato**:
+- [PONTO_CONTATO_1]
+- [PONTO_CONTATO_2]
+- [PONTO_CONTATO_3]
+- [PONTO_CONTATO_4]
+
+**Objetivo**: [OBJETIVO_TRIAL]
+
+### Estágio 4: Purchase (Compra)
+**Gatilho**: [GATILHO_PURCHASE]
+
+**Pontos de Contato**:
+- [PONTO_CONTATO_1]
+- [PONTO_CONTATO_2]
+- [PONTO_CONTATO_3]
+- [PONTO_CONTATO_4]
+
+**Objetivo**: [OBJETIVO_PURCHASE]
+
+### Estágio 5: Success (Sucesso)
+**Gatilho**: [GATILHO_SUCCESS]
+
+**Pontos de Contato**:
+- [PONTO_CONTATO_1]
+- [PONTO_CONTATO_2]
+- [PONTO_CONTATO_3]
+- [PONTO_CONTATO_4]
+
+**Objetivo**: [OBJETIVO_SUCCESS]
+
+### Estágio 6: Advocacy (Advocacia)
+**Gatilho**: [GATILHO_ADVOCACY]
+
+**Pontos de Contato**:
+- [PONTO_CONTATO_1]
+- [PONTO_CONTATO_2]
+- [PONTO_CONTATO_3]
+- [PONTO_CONTATO_4]
+
+**Objetivo**: [OBJETIVO_ADVOCACY]
+
+---
+
+## 📢 ESTRATÉGIA DE CANAIS
+
+### Canais Primários (Foco Inicial)
+
+#### 1. [CANAL_PRIMARIO_1]
+**Objetivo**: [OBJETIVO_CANAL_1]
+
+**Táticas**:
+- [TATICA_1]
+- [TATICA_2]
+- [TATICA_3]
+- [TATICA_4]
+
+**Métricas**: [METRICAS_CANAL_1]
+
+#### 2. [CANAL_PRIMARIO_2]
+**Objetivo**: [OBJETIVO_CANAL_2]
+
+**Táticas**:
+- [TATICA_1]
+- [TATICA_2]
+- [TATICA_3]
+- [TATICA_4]
+- [TATICA_5]
+
+**Métricas**: [METRICAS_CANAL_2]
+
+#### 3. [CANAL_PRIMARIO_3]
+**Objetivo**: [OBJETIVO_CANAL_3]
+
+**Táticas**:
+- [TATICA_1]
+- [TATICA_2]
+- [TATICA_3]
+- [TATICA_4]
+
+**Métricas**: [METRICAS_CANAL_3]
+
+### Canais Secundários (Expansão Futura)
+
+#### 4. [CANAL_SECUNDARIO_1]
+**Objetivo**: [OBJETIVO_CANAL_4]
+
+**Táticas**:
+- [TATICA_1]
+- [TATICA_2]
+- [TATICA_3]
+
+#### 5. [CANAL_SECUNDARIO_2]
+**Objetivo**: [OBJETIVO_CANAL_5]
+
+**Táticas**:
+- [TATICA_1]
+- [TATICA_2]
+- [TATICA_3]
+
+#### 6. [CANAL_SECUNDARIO_3]
+**Objetivo**: [OBJETIVO_CANAL_6]
+
+**Táticas**:
+- [TATICA_1]
+- [TATICA_2]
+- [TATICA_3]
+
+---
+
+## 💰 ESTRATÉGIA DE PRECIFICAÇÃO
+
+### [MODELO_PRECIFICACAO]
+**[PLANO_1]**:
+- [FEATURE_1]
+- [FEATURE_2]
+- [FEATURE_3]
+
+**[PLANO_2] ([PRECO_PLANO_2])**:
+- [FEATURE_1]
+- [FEATURE_2]
+- [FEATURE_3]
+- [FEATURE_4]
+- [FEATURE_5]
+
+**[PLANO_3] ([PRECO_PLANO_3])**:
+- [FEATURE_ADICIONAL_1]
+- [FEATURE_ADICIONAL_2]
+- [FEATURE_ADICIONAL_3]
+- [FEATURE_ADICIONAL_4]
+
+### Estratégia de Pricing
+- [ESTRATEGIA_1]
+- [ESTRATEGIA_2]
+- [ESTRATEGIA_3]
+- [ESTRATEGIA_4]
+
+---
+
+## 📅 CRONOGRAMA DE LANÇAMENTO
+
+### [FASE_1]: [NOME_FASE_1] ([PERIODO_FASE_1])
+**Objetivo**: [OBJETIVO_FASE_1]
+
+#### [SUBFASE_1_1]: [NOME_SUBFASE_1_1]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [ATIVIDADE_4]
+- [ATIVIDADE_5]
+
+#### [SUBFASE_1_2]: [NOME_SUBFASE_1_2]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [ATIVIDADE_4]
+- [ATIVIDADE_5]
+
+#### [SUBFASE_1_3]: [NOME_SUBFASE_1_3]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [ATIVIDADE_4]
+
+### [FASE_2]: [NOME_FASE_2] ([PERIODO_FASE_2])
+**Objetivo**: [OBJETIVO_FASE_2]
+
+#### [SUBFASE_2_1]: [NOME_SUBFASE_2_1]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [ATIVIDADE_4]
+
+#### [SUBFASE_2_2]: [NOME_SUBFASE_2_2]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [ATIVIDADE_4]
+
+### [FASE_3]: [NOME_FASE_3] ([PERIODO_FASE_3])
+**Objetivo**: [OBJETIVO_FASE_3]
+
+#### [SUBFASE_3_1]: [NOME_SUBFASE_3_1]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [META_1]
+
+#### [SUBFASE_3_2]: [NOME_SUBFASE_3_2]
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [META_2]
+
+### [FASE_4]: [NOME_FASE_4] ([PERIODO_FASE_4])
+**Objetivo**: [OBJETIVO_FASE_4]
+
+- [ATIVIDADE_1]
+- [ATIVIDADE_2]
+- [ATIVIDADE_3]
+- [META_FINAL]
+
+---
+
+## 📊 MÉTRICAS E KPIS
+
+### Framework [FRAMEWORK_METRICAS]
+
+#### 1. [METRICA_CATEGORIA_1]
+- **[METRICA_1]**: [DESCRICAO_METRICA_1]
+- **[METRICA_2]**: [DESCRICAO_METRICA_2]
+- **[METRICA_3]**: [DESCRICAO_METRICA_3]
+- **[METRICA_4]**: [DESCRICAO_METRICA_4]
+
+**Meta [PERIODO_META_1]**: [VALOR_META_1]
+
+#### 2. [METRICA_CATEGORIA_2]
+- **[METRICA_1]**: [DESCRICAO_METRICA_1]
+- **[METRICA_2]**: [DESCRICAO_METRICA_2]
+- **[METRICA_3]**: [DESCRICAO_METRICA_3]
+- **[METRICA_4]**: [DESCRICAO_METRICA_4]
+
+**Meta [PERIODO_META_2]**: [VALOR_META_2]
+
+#### 3. [METRICA_CATEGORIA_3]
+- **[METRICA_1]**: [DESCRICAO_METRICA_1]
+- **[METRICA_2]**: [DESCRICAO_METRICA_2]
+- **[METRICA_3]**: [DESCRICAO_METRICA_3]
+- **[METRICA_4]**: [DESCRICAO_METRICA_4]
+
+**Meta [PERIODO_META_3]**: [VALOR_META_3]
+
+#### 4. [METRICA_CATEGORIA_4]
+- **[METRICA_1]**: [DESCRICAO_METRICA_1]
+- **[METRICA_2]**: [DESCRICAO_METRICA_2]
+- **[METRICA_3]**: [DESCRICAO_METRICA_3]
+- **[METRICA_4]**: [DESCRICAO_METRICA_4]
+
+**Meta [PERIODO_META_4]**: [VALOR_META_4]
+
+#### 5. [METRICA_CATEGORIA_5]
+- **[METRICA_1]**: [DESCRICAO_METRICA_1]
+- **[METRICA_2]**: [DESCRICAO_METRICA_2]
+- **[METRICA_3]**: [DESCRICAO_METRICA_3]
+- **[METRICA_4]**: [DESCRICAO_METRICA_4]
+
+**Meta [PERIODO_META_5]**: [VALOR_META_5]
+
+#### 6. [METRICA_CATEGORIA_6]
+- **[METRICA_1]**: [DESCRICAO_METRICA_1]
+- **[METRICA_2]**: [DESCRICAO_METRICA_2]
+- **[METRICA_3]**: [DESCRICAO_METRICA_3]
+- **[METRICA_4]**: [DESCRICAO_METRICA_4]
+
+**Meta [PERIODO_META_6]**: [VALOR_META_6]
+
+---
+
+## 🎯 METAS ESPECÍFICAS POR FASE
+
+### [FASE_1] ([PERIODO_1])
+- **[CATEGORIA_META_1]**: [VALOR_META_1]
+- **[CATEGORIA_META_2]**: [VALOR_META_2]
+- **[CATEGORIA_META_3]**: [VALOR_META_3]
+- **[CATEGORIA_META_4]**: [VALOR_META_4]
+
+### [FASE_2] ([PERIODO_2])
+- **[CATEGORIA_META_1]**: [VALOR_META_1]
+- **[CATEGORIA_META_2]**: [VALOR_META_2]
+- **[CATEGORIA_META_3]**: [VALOR_META_3]
+- **[CATEGORIA_META_4]**: [VALOR_META_4]
+
+### [FASE_3] ([PERIODO_3])
+- **[CATEGORIA_META_1]**: [VALOR_META_1]
+- **[CATEGORIA_META_2]**: [VALOR_META_2]
+- **[CATEGORIA_META_3]**: [VALOR_META_3]
+- **[CATEGORIA_META_4]**: [VALOR_META_4]
+
+### [FASE_4] ([PERIODO_4])
+- **[CATEGORIA_META_1]**: [VALOR_META_1]
+- **[CATEGORIA_META_2]**: [VALOR_META_2]
+- **[CATEGORIA_META_3]**: [VALOR_META_3]
+- **[CATEGORIA_META_4]**: [VALOR_META_4]
+
+---
+
+## 🛠️ FERRAMENTAS E STACK DE MARKETING
+
+### [CATEGORIA_FERRAMENTA_1]
+- **[FERRAMENTA_1]**: [DESCRICAO_FERRAMENTA_1]
+- **[FERRAMENTA_2]**: [DESCRICAO_FERRAMENTA_2]
+- **[FERRAMENTA_3]**: [DESCRICAO_FERRAMENTA_3]
+- **[FERRAMENTA_4]**: [DESCRICAO_FERRAMENTA_4]
+
+### [CATEGORIA_FERRAMENTA_2]
+- **[FERRAMENTA_1]**: [DESCRICAO_FERRAMENTA_1]
+- **[FERRAMENTA_2]**: [DESCRICAO_FERRAMENTA_2]
+- **[FERRAMENTA_3]**: [DESCRICAO_FERRAMENTA_3]
+- **[FERRAMENTA_4]**: [DESCRICAO_FERRAMENTA_4]
+
+### [CATEGORIA_FERRAMENTA_3]
+- **[FERRAMENTA_1]**: [DESCRICAO_FERRAMENTA_1]
+- **[FERRAMENTA_2]**: [DESCRICAO_FERRAMENTA_2]
+- **[FERRAMENTA_3]**: [DESCRICAO_FERRAMENTA_3]
+- **[FERRAMENTA_4]**: [DESCRICAO_FERRAMENTA_4]
+
+### [CATEGORIA_FERRAMENTA_4]
+- **[FERRAMENTA_1]**: [DESCRICAO_FERRAMENTA_1]
+- **[FERRAMENTA_2]**: [DESCRICAO_FERRAMENTA_2]
+- **[FERRAMENTA_3]**: [DESCRICAO_FERRAMENTA_3]
+
+### [CATEGORIA_FERRAMENTA_5]
+- **[FERRAMENTA_1]**: [DESCRICAO_FERRAMENTA_1]
+- **[FERRAMENTA_2]**: [DESCRICAO_FERRAMENTA_2]
+- **[FERRAMENTA_3]**: [DESCRICAO_FERRAMENTA_3]
+
+### [CATEGORIA_FERRAMENTA_6]
+- **[FERRAMENTA_1]**: [DESCRICAO_FERRAMENTA_1]
+- **[FERRAMENTA_2]**: [DESCRICAO_FERRAMENTA_2]
+- **[FERRAMENTA_3]**: [DESCRICAO_FERRAMENTA_3]
+
+---
+
+## 💡 ESTRATÉGIAS DE DIFERENCIAÇÃO
+
+### 1. [ESTRATEGIA_DIFERENCIACAO_1]
+**[DESCRICAO_ESTRATEGIA_1]**
+
+**Vantagens**:
+- [VANTAGEM_1]
+- [VANTAGEM_2]
+- [VANTAGEM_3]
+- [VANTAGEM_4]
+
+### 2. [ESTRATEGIA_DIFERENCIACAO_2]
+**[DESCRICAO_ESTRATEGIA_2]**
+
+**Vantagens**:
+- [VANTAGEM_1]
+- [VANTAGEM_2]
+- [VANTAGEM_3]
+- [VANTAGEM_4]
+
+### 3. [ESTRATEGIA_DIFERENCIACAO_3]
+**[DESCRICAO_ESTRATEGIA_3]**
+
+**Vantagens**:
+- [VANTAGEM_1]
+- [VANTAGEM_2]
+- [VANTAGEM_3]
+- [VANTAGEM_4]
+
+### 4. [ESTRATEGIA_DIFERENCIACAO_4]
+**[DESCRICAO_ESTRATEGIA_4]**
+
+**Vantagens**:
+- [VANTAGEM_1]
+- [VANTAGEM_2]
+- [VANTAGEM_3]
+- [VANTAGEM_4]
+
+---
+
+## 🚀 PLANOS DE CONTINGÊNCIA
+
+### Se [CENARIO_CONTINGENCIA_1]
+- **[ACAO_1]**: [DESCRICAO_ACAO_1]
+- **[ACAO_2]**: [DESCRICAO_ACAO_2]
+- **[ACAO_3]**: [DESCRICAO_ACAO_3]
+- **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+### Se [CENARIO_CONTINGENCIA_2]
+- **[ACAO_1]**: [DESCRICAO_ACAO_1]
+- **[ACAO_2]**: [DESCRICAO_ACAO_2]
+- **[ACAO_3]**: [DESCRICAO_ACAO_3]
+- **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+### Se [CENARIO_CONTINGENCIA_3]
+- **[ACAO_1]**: [DESCRICAO_ACAO_1]
+- **[ACAO_2]**: [DESCRICAO_ACAO_2]
+- **[ACAO_3]**: [DESCRICAO_ACAO_3]
+- **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+### Se [CENARIO_CONTINGENCIA_4]
+- **[ACAO_1]**: [DESCRICAO_ACAO_1]
+- **[ACAO_2]**: [DESCRICAO_ACAO_2]
+- **[ACAO_3]**: [DESCRICAO_ACAO_3]
+- **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+---
+
+## 📋 PRÓXIMOS PASSOS IMEDIATOS
+
+### [PERIODO_1]
+1. **[ACAO_1]**: [DESCRICAO_ACAO_1]
+2. **[ACAO_2]**: [DESCRICAO_ACAO_2]
+3. **[ACAO_3]**: [DESCRICAO_ACAO_3]
+4. **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+### [PERIODO_2]
+1. **[ACAO_1]**: [DESCRICAO_ACAO_1]
+2. **[ACAO_2]**: [DESCRICAO_ACAO_2]
+3. **[ACAO_3]**: [DESCRICAO_ACAO_3]
+4. **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+### [PERIODO_3]
+1. **[ACAO_1]**: [DESCRICAO_ACAO_1]
+2. **[ACAO_2]**: [DESCRICAO_ACAO_2]
+3. **[ACAO_3]**: [DESCRICAO_ACAO_3]
+4. **[ACAO_4]**: [DESCRICAO_ACAO_4]
+
+---
+
+**Responsável**: [RESPONSAVEL]
+**Apoio**: [APOIO]
+**Revisão**: [FREQUENCIA_REVISAO]
+**Status**: [STATUS_ATUAL]
+
+---
+
+## 🔄 [SECAO_CONSIDERACOES]
+
+### [SUBSECAO_1]
+- **[ITEM_1]**: [DESCRICAO_ITEM_1]
+- **[ITEM_2]**: [DESCRICAO_ITEM_2]
+- **[ITEM_3]**: [DESCRICAO_ITEM_3]
+- **[ITEM_4]**: [DESCRICAO_ITEM_4]
+
+### [SUBSECAO_2]
+- ✅ **[CRITERIO_1]**: [DESCRICAO_CRITERIO_1]
+- ✅ **[CRITERIO_2]**: [DESCRICAO_CRITERIO_2]
+- ✅ **[CRITERIO_3]**: [DESCRICAO_CRITERIO_3]
+- ✅ **[CRITERIO_4]**: [DESCRICAO_CRITERIO_4]
+
+### [SUBSECAO_3]
+- **[ALINHAMENTO_1]**: [DESCRICAO_ALINHAMENTO_1]
+- **[ALINHAMENTO_2]**: [DESCRICAO_ALINHAMENTO_2]
+- **[ALINHAMENTO_3]**: [DESCRICAO_ALINHAMENTO_3]
+- **[ALINHAMENTO_4]**: [DESCRICAO_ALINHAMENTO_4]
+
+## 📊 Histórico de Versões
+
+| Versão | Data | Autor | Mudanças |
+|--------|------|-------|----------|
+| [VERSAO] | [DATA] | [AUTOR] | [DESCRICAO_MUDANCAS] |
+| [VERSAO] | [DATA] | [AUTOR] | [DESCRICAO_MUDANCAS] |
+| [VERSAO] | [DATA] | [AUTOR] | [DESCRICAO_MUDANCAS] |
+| [VERSAO] | [DATA] | [AUTOR] | [DESCRICAO_MUDANCAS] |
+
+## 📚 Documentos Relacionados
+
+### [CATEGORIA_1]
+- [[DOCUMENTO_1]] - [DESCRICAO_DOCUMENTO_1]
+- [[DOCUMENTO_2]] - [DESCRICAO_DOCUMENTO_2]
+- [[DOCUMENTO_3]] - [DESCRICAO_DOCUMENTO_3]
+
+### [CATEGORIA_2]
+- [[DOCUMENTO_1]] - [DESCRICAO_DOCUMENTO_1]
+- [[DOCUMENTO_2]] - [DESCRICAO_DOCUMENTO_2]
+- [[DOCUMENTO_3]] - [DESCRICAO_DOCUMENTO_3]
+
+### [CATEGORIA_3]
+- [[DOCUMENTO_1]] - [DESCRICAO_DOCUMENTO_1]
+- [[DOCUMENTO_2]] - [DESCRICAO_DOCUMENTO_2]
+- [[DOCUMENTO_3]] - [DESCRICAO_DOCUMENTO_3]
+
+---
+
+**Última Atualização**: [DATA_ATUALIZACAO]  
+**Próxima Revisão**: [DATA_PROXIMA_REVISAO]  
+**Status**: [STATUS_DOCUMENTO]
+
+--- FIM DO DOCUMENTO ESTRATEGIA_GO_TO_MARKET.md (v1.1) ---

@@ -1,0 +1,40 @@
+﻿---
+title: "Template: 02_PGE_PLANO_GERENCIAMENTO_ESCOPO"
+doc_id: "CODEX-PRIME-GESTAO-PROJETOS-02-PGE-PLANO-GERENCIAMENTO-ESCOPO-V1.0"
+version: "1.0"
+migrated_at: "2025-08-19 22:10:06"
+timezone: "America/Sao_Paulo"
+status: "Template"
+owner: "@ArquitetoDoCodex"
+tags: [template, codex-prime, v1.0, gestao-projetos]
+description: "Template migrado do .codex para .codex-prime na versao 1.0"
+source_path: "\02_Gestao_de_Projetos_Project_Management\pt-br\02_PLANOS_DE_GERENCIAMENTO\02_PGE_PLANO_GERENCIAMENTO_ESCOPO.md"
+---
+
+# [PLANO_GERENCIAMENTO_ESCOPO]
+
+[METADADOS_DOCUMENTO]
+
+[INTRODUCAO]
+
+[METODOLOGIA_GERENCIAMENTO_ESCOPO]
+
+[PROCESSO_DEFINICAO_ESCOPO]
+
+[ORQUESTRACAO_AGENTES_IA]
+
+[ESTRUTURA_ANALITICA_PROJETO]
+
+[CONTROLE_MUDANCAS_ESCOPO]
+
+[VALIDACAO_ENTREGAS]
+
+[GESTAO_REQUISITOS]
+
+[METRICAS_CONTROLE_ESCOPO]
+
+[RISCOS_ESCOPO]
+
+[LICOES_APRENDIDAS]
+
+[APROVACAO_CONTROLE]
